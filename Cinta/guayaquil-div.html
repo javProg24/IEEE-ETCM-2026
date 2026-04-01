@@ -1,0 +1,377 @@
+<div class="gye-card" data-gye-card>
+    <div class="gye-glow gye-glow-a"></div>
+    <div class="gye-glow gye-glow-b"></div>
+
+    <div class="gye-media">
+        <img
+            src="/images/guayaquil2%20(1).jpg"
+            alt="Panoramic view of Guayaquil, Ecuador"
+        >
+        <div class="gye-overlay"></div>
+        <div class="gye-caption">
+            <span class="gye-pill">Coastal Ecuador</span>
+            <strong>Home of Malecon 2000</strong>
+        </div>
+    </div>
+
+    <div class="gye-panel">
+        <div class="gye-header">
+            <span class="gye-kicker">City Profile</span>
+            <h2>Guayaquil</h2>
+            <p>
+                Guayaquil is Ecuador's largest city and one of the country's main economic,
+                commercial, and port hubs. Set along the Guayas River, it combines
+                waterfront renewal, urban energy, and strong regional identity.
+            </p>
+        </div>
+
+        <div class="gye-highlight" data-gye-highlight>
+            <div class="gye-highlight-label">Now showing</div>
+            <div class="gye-highlight-value" data-gye-value>Major Port City</div>
+            <div class="gye-highlight-text" data-gye-text>
+                A strategic logistics and trade center connected to Ecuador's coastal economy.
+            </div>
+        </div>
+
+        <div class="gye-grid">
+            <article class="gye-item">
+                <h3>Location</h3>
+                <p>Located in western Ecuador, on the banks of the Guayas River near the Pacific corridor.</p>
+            </article>
+            <article class="gye-item">
+                <h3>Character</h3>
+                <p>Known for entrepreneurship, port activity, large-scale commerce, and fast-paced urban growth.</p>
+            </article>
+            <article class="gye-item">
+                <h3>Landmarks</h3>
+                <p>Malecon 2000, Las Penas, Santa Ana Hill, and La Rotonda are among its best-known attractions.</p>
+            </article>
+            <article class="gye-item">
+                <h3>Climate</h3>
+                <p>Tropical and warm, with humid conditions shaping much of the city's atmosphere year-round.</p>
+            </article>
+        </div>
+    </div>
+</div>
+
+<style>
+    .gye-card,
+    .gye-card * {
+        box-sizing: border-box;
+    }
+
+    .gye-card {
+        --gye-navy: #082c4d;
+        --gye-blue: #0a6c94;
+        --gye-cyan: #5fd1df;
+        --gye-sand: #f3d4a6;
+        --gye-ice: #eef7ff;
+        --gye-white: #ffffff;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1.08fr 1fr;
+        width: 100%;
+        overflow: hidden;
+        border: 1px solid rgba(10, 108, 148, 0.12);
+        border-radius: 28px;
+        background:
+            radial-gradient(circle at top left, rgba(95, 209, 223, 0.18), transparent 32%),
+            linear-gradient(135deg, #f6fbff 0%, #e8f4fb 100%);
+        box-shadow: 0 24px 60px rgba(8, 44, 77, 0.16);
+        font-family: Arial, sans-serif;
+        isolation: isolate;
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    .gye-card.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .gye-glow {
+        position: absolute;
+        border-radius: 999px;
+        filter: blur(20px);
+        opacity: 0.45;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .gye-glow-a {
+        top: -20px;
+        left: -40px;
+        width: 180px;
+        height: 180px;
+        background: rgba(95, 209, 223, 0.4);
+    }
+
+    .gye-glow-b {
+        right: -40px;
+        bottom: -50px;
+        width: 200px;
+        height: 200px;
+        background: rgba(243, 212, 166, 0.4);
+    }
+
+    .gye-media,
+    .gye-panel {
+        position: relative;
+        z-index: 1;
+    }
+
+    .gye-media {
+        min-height: 100%;
+        overflow: hidden;
+        background: #d8ebf4;
+    }
+
+    .gye-media img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 470px;
+        object-fit: cover;
+        transform: scale(1.04);
+        transition: transform 7s ease;
+    }
+
+    .gye-card:hover .gye-media img {
+        transform: scale(1.1);
+    }
+
+    .gye-overlay {
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(180deg, rgba(8, 44, 77, 0.1) 0%, rgba(8, 44, 77, 0.55) 100%);
+    }
+
+    .gye-caption {
+        position: absolute;
+        left: 26px;
+        right: 26px;
+        bottom: 24px;
+        display: grid;
+        gap: 8px;
+        color: var(--gye-white);
+    }
+
+    .gye-pill {
+        display: inline-flex;
+        width: fit-content;
+        padding: 7px 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.16);
+        backdrop-filter: blur(10px);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .gye-caption strong {
+        font-size: 28px;
+        line-height: 1.1;
+        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .gye-panel {
+        padding: 34px;
+        color: var(--gye-navy);
+    }
+
+    .gye-kicker {
+        display: inline-block;
+        margin-bottom: 10px;
+        color: var(--gye-blue);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+    }
+
+    .gye-header h2 {
+        margin: 0 0 12px;
+        font-size: 42px;
+        line-height: 1;
+    }
+
+    .gye-header p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.7;
+        color: rgba(8, 44, 77, 0.82);
+    }
+
+    .gye-highlight {
+        margin: 24px 0 20px;
+        padding: 20px;
+        border: 1px solid rgba(10, 108, 148, 0.16);
+        border-radius: 20px;
+        background:
+            linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(233, 247, 255, 0.9));
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+        transition: transform 250ms ease, box-shadow 250ms ease;
+    }
+
+    .gye-highlight.is-switching {
+        transform: translateY(2px);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 8px 20px rgba(8, 44, 77, 0.08);
+    }
+
+    .gye-highlight-label {
+        margin-bottom: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(10, 108, 148, 0.8);
+    }
+
+    .gye-highlight-value {
+        margin-bottom: 8px;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: var(--gye-navy);
+    }
+
+    .gye-highlight-text {
+        font-size: 14px;
+        line-height: 1.6;
+        color: rgba(8, 44, 77, 0.8);
+    }
+
+    .gye-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .gye-item {
+        padding: 18px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.62);
+        border: 1px solid rgba(10, 108, 148, 0.12);
+        backdrop-filter: blur(8px);
+        transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+    }
+
+    .gye-item:hover {
+        transform: translateY(-3px);
+        border-color: rgba(10, 108, 148, 0.28);
+        box-shadow: 0 12px 24px rgba(8, 44, 77, 0.08);
+    }
+
+    .gye-item h3 {
+        margin: 0 0 8px;
+        font-size: 17px;
+        color: var(--gye-navy);
+    }
+
+    .gye-item p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.6;
+        color: rgba(8, 44, 77, 0.78);
+    }
+
+    @media (max-width: 920px) {
+        .gye-card {
+            grid-template-columns: 1fr;
+        }
+
+        .gye-media img {
+            min-height: 280px;
+            max-height: 340px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .gye-panel {
+            padding: 24px 20px;
+        }
+
+        .gye-header h2 {
+            font-size: 34px;
+        }
+
+        .gye-caption strong {
+            font-size: 22px;
+        }
+
+        .gye-highlight-value {
+            font-size: 24px;
+        }
+
+        .gye-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<script>
+    (function () {
+        var card = document.querySelector('[data-gye-card]');
+        if (!card) {
+            return;
+        }
+
+        var highlight = card.querySelector('[data-gye-highlight]');
+        var value = card.querySelector('[data-gye-value]');
+        var text = card.querySelector('[data-gye-text]');
+
+        var facts = [
+            {
+                value: 'Major Port City',
+                text: 'A strategic logistics and trade center connected to Ecuador\'s coastal economy.'
+            },
+            {
+                value: 'Riverfront Landmark',
+                text: 'Its urban identity is strongly tied to the Guayas River and the Malecon waterfront.'
+            },
+            {
+                value: 'Cultural Contrast',
+                text: 'Historic hillsides and modern development coexist across one of Ecuador\'s most dynamic cities.'
+            }
+        ];
+
+        var index = 0;
+
+        function applyFact(nextIndex) {
+            if (!highlight || !value || !text) {
+                return;
+            }
+
+            highlight.classList.add('is-switching');
+
+            window.setTimeout(function () {
+                value.textContent = facts[nextIndex].value;
+                text.textContent = facts[nextIndex].text;
+                highlight.classList.remove('is-switching');
+            }, 180);
+        }
+
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        card.classList.add('is-visible');
+                        observer.disconnect();
+                    }
+                });
+            }, { threshold: 0.25 });
+
+            observer.observe(card);
+        } else {
+            card.classList.add('is-visible');
+        }
+
+        window.setInterval(function () {
+            index = (index + 1) % facts.length;
+            applyFact(index);
+        }, 3200);
+    }());
+</script>

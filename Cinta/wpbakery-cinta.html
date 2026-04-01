@@ -1,0 +1,195 @@
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .banner {
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-track {
+            display: flex;
+            width: max-content;
+            will-change: transform;
+            animation: sideToSide 36s ease-in-out infinite alternate;
+        }
+
+        .banner-content {
+            display: flex;
+            align-items: center;
+            flex: 0 0 auto;
+            gap: 60px;
+            padding: 30px 40px 42px;
+            white-space: nowrap;
+        }
+
+        .event-info {
+            display: flex;
+            align-items: center;
+            background: white;
+            flex: 0 0 auto;
+        }
+
+        .event-logo {
+            height: 100px;
+        }
+
+        .organizers {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex: 0 0 auto;
+        }
+
+        .org-section {
+            flex: 0 0 auto;
+        }
+
+        .org-section h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            white-space: nowrap;
+        }
+
+        .org-section img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .org-section img[src*="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/ieee.png"],
+        .org-section img[src*="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/ieee.png"] {
+            filter: invert(1) grayscale(1) contrast(100);
+        }
+
+        .co-org-logos {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .chapters-section {
+            max-width: none;
+        }
+
+        .chapter-logos {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .chapter-logos img {
+            height: 68px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .banner-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: linear-gradient(90deg, #003d7a 0%, #003d7a 70%, #4a7ba7 100%);
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+        }
+
+        @keyframes sideToSide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(100vw - 100%));
+            }
+        }
+
+        .banner:hover .banner-track {
+            animation-play-state: paused;
+        }
+
+        @media (max-width: 1100px) {
+            .banner-content {
+                gap: 36px;
+                padding: 24px 28px 36px;
+            }
+
+            .organizers {
+                gap: 30px;
+            }
+
+            .org-section h3 {
+                font-size: 14px;
+            }
+
+            .org-section img {
+                height: 50px;
+            }
+
+            .chapter-logos {
+                gap: 16px;
+            }
+
+            .chapter-logos img {
+                height: 68px;
+            }
+        }
+    </style>
+
+<div class="banner">
+    <div class="banner-track">
+        <div class="banner-content">
+            <div class="event-info">
+                <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/etcm.jpeg" alt="IEEE ETCM 2026" class="event-logo">
+            </div>
+            <div class="organizers">
+                <div class="org-section">
+                    <h3>Organized by:</h3>
+                    <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/ieee.png" alt="IEEE Ecuador">
+                </div>
+                <div class="org-section">
+                    <h3>Co-organized with:</h3>
+                    <div class="co-org-logos">
+                        <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/LOGO-ITB-UNIVERSITARIO-1-1.png" alt="Instituto Bolivariano">
+                        <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/LOGO-UBE-ROJO-PARA-FONDO-BLANCO-e1773597480882.png" alt="Universidad Bolivariana">
+                    </div>
+                </div>
+                <div class="org-section chapters-section">
+                    <h3>Supported by Ecuadorian Chapters:</h3>
+                    <div class="chapter-logos">
+                        <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/logo-CAS-EDS-EC-color.png" alt="CAS EDS Ecuador Chapter">
+                        <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/logo-CIS-EC-color.png" alt="CIS Ecuador Chapter">
+                        <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/logo-ComSoc-EC-color.png" alt="ComSoc Ecuador Chapter">
+                        <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/logo-CS-EC-color.png" alt="CS Ecuador Chapter">
+                        <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/logo-CSS-IES-EC-color-scaled.png" alt="CSS IES Ecuador Chapter">
+                        <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/logo-EdSoc-EC-color-scaled.png" alt="EdSoc Ecuador Chapter">
+                        <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/logo-EMBS-EC-color.png" alt="EMBS Ecuador Chapter">
+                        <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/logo-IAS-RS-EC-color-scaled.png" alt="IAS RS Ecuador Chapter">
+                        <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/logo-PES-EC-color.png" alt="PES Ecuador Chapter">
+                        <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/logo-RAS-EC-color.png" alt="RAS Ecuador Chapter">
+                        <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/logo-TEMS-EC-color.png" alt="TEMS Ecuador Chapter">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner-stripe"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('Cinta de logos cargada');
+    });
+</script>

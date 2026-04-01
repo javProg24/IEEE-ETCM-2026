@@ -1,0 +1,11 @@
+- logo-CAS-EDS-EC-color.png
+- logo-CIS-EC-color.png
+- logo-ComSoc-EC-color.png
+- logo-CS-EC-color.png
+- logo-CSS-IES-EC-color.png
+- logo-EdSoc-EC-color.png
+- logo-EMBS-EC-color.png
+- logo-IAS-RS-EC-color.png
+- logo-PES-EC-color.png
+- logo-RAS-EC-color.png
+- logo-TEMS-EC-color.png
