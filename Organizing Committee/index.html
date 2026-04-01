@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE ETCM 2026 Organizing Committee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="oc-wrap">
+        <header class="oc-header">
+            <p class="oc-eyebrow">IEEE ETCM 2026</p>
+            <h1>Organizing Committee</h1>
+            <p class="oc-subtitle">Select a card to view contact details and academic profiles.</p>
+        </header>
+
+        <section class="oc-board" aria-label="Organizing committee members">
+            <div class="oc-row top" id="top-row"></div>
+            <div class="oc-row middle" id="middle-row"></div>
+            <div class="oc-row bottom" id="bottom-row"></div>
+        </section>
+
+        <p class="oc-hint">Each card shows role, photo and name. Click to open the full profile.</p>
+    </main>
+
+    <div class="oc-modal" id="profile-modal" aria-hidden="true">
+        <div class="oc-modal-backdrop" data-close-modal></div>
+        <div class="oc-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+            <button class="oc-modal-close" type="button" aria-label="Close profile" data-close-modal>&times;</button>
+            <div class="oc-modal-grid">
+                <img id="modal-photo" class="oc-modal-photo" src="" alt="">
+                <div class="oc-modal-content">
+                    <p id="modal-role" class="oc-modal-role"></p>
+                    <h2 id="modal-name" class="oc-modal-name"></h2>
+                    <a id="modal-email" class="oc-modal-link" href=""></a>
+                    <a id="modal-linkedin" class="oc-modal-link" href="" target="_blank" rel="noopener">LinkedIn Profile</a>
+                    <a id="modal-scholar" class="oc-modal-link" href="" target="_blank" rel="noopener">Google Scholar Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body> 
+</html>
