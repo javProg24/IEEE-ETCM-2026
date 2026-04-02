@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camera Ready Tutorial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="top-nav">
+      <div>
+        <p class="top-nav__eyebrow">Camera Ready</p>
+        <h1 class="top-nav__title">Quick Navigation</h1>
+      </div>
+      <nav class="top-nav__menu">
+        <button class="top-nav__link is-active" type="button" data-target="overview">Overview</button>
+        <button class="top-nav__link" type="button" data-target="phase-1">Phase 1</button>
+        <button class="top-nav__link" type="button" data-target="phase-2">Phase 2</button>
+        <button class="top-nav__link" type="button" data-target="phase-3">Phase 3</button>
+        <button class="top-nav__link" type="button" data-target="phase-4">Phase 4</button>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="section tab-panel is-active" id="overview">
+        <div class="section__header">
+          <p class="section__kicker">Publication Workflow</p>
+          <h2>Camera Ready Instructions</h2>
+          <p class="section__lede">
+            Dear authors, to formalize the publication of your paper on IEEE Xplore, you need to complete the four
+            required phases and submit the final version by <strong>10/08/2025</strong>.
+          </p>
+        </div>
+
+        <div class="overview-grid">
+          <article class="overview-card">
+            <span>01</span>
+            <h2>Paper style adjustment according to the IEEE template</h2>
+            <!--<p>Adjust the manuscript to the IEEE format, review authors and affiliations, and add the required copyright notice.</p>-->
+          </article>
+          <article class="overview-card">
+            <span>02</span>
+            <h2>PDF eXpress verification</h2>
+            <!--<p>Create the conference account, validate the PDF, correct any reported errors, and approve the passed file.</p>-->
+          </article>
+          <article class="overview-card">
+            <span>03</span>
+            <h2>Final version submission on EasyChair.</h2>
+            <!--<p>Upload the PDF generated in Phase 2 through the Final Version menu and check the paper metadata.</p>-->
+          </article>
+          <article class="overview-card">
+            <span>04</span>
+            <h2>Copyright agreement signature.</h2>
+            <!--<p>Complete the copyright form and make sure the article title and authors match EasyChair exactly.</p>-->
+          </article>
+        </div>
+        <div>
+          <p>Next, each of the phases will be detailed, keeping the order: <button class="top-nav__link" type="button" data-target="phase-1">Phase 1</button></p>
+        </div>
+      </section>
+
+      <section class="section tab-panel" id="phase-1" hidden>
+        <div class="section__header">
+          <p class="section__kicker">Phase 1</p>
+          <h2>Paper Style Adjustment According to the IEEE Template</h2>
+        </div>
+        <div class="phase-text">
+          <p>
+            At this stage it is needed to adjust the paper style according to the IEEE format. Those papers using the
+            LaTeX sources, must replace the phrase <code>Index Terms</code> with <code>Keywords</code>. Likewise, be
+            attentive to the information of the authors and affiliations. Additionally, the Copyright notice must be
+            included in the document. Papers must not exceed six pages in length. Ignore the header, and please do not
+            number your pages.
+          </p>
+          <ul>
+            <li>
+              <a href="https://drive.usercontent.google.com/u/0/uc?id=11E_pOCovsNs17kBm1RgLzbrHCC8K7JJm&amp;export=download" target="_blank" rel="noreferrer">Word template</a>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1ePhjnCEcdu_hUg0yakphMWUm3d5FRBRI/view?usp=sharing" target="_blank" rel="noreferrer">Latex template</a>
+            </li>
+            <li>
+              <strong>Copyright notice, included in the template (must be included manually by authors):</strong>
+            </li>
+          </ul>
+          
+          <p>For papers in which all authors are employed by the US government, the copyright notice is:</p>
+          <p><code>U.S. Government work not protected by U.S. copyright</code></p>
+          <p>For papers in which all authors are employed by a Crown government (UK, Canada, and Australia), the copyright notice is:</p>
+          <p><code>979-8-3503-9158-9/24/$31.00 © 2024 Crown</code></p>
+          <p>For papers in which all authors are employed by the European Union, the copyright notice is:</p>
+          <p><code>979-8-3503-9158-9/24/$31.00 © 2024 European Union</code></p>
+          <p>For all other papers the copyright notice is:</p>
+          <p><code>979-8-3503-9158-9/24/$31.00 ©2024 IEEE</code></p>
+        </div>
+      </section>
+
+      <section class="section tab-panel" id="phase-2" hidden>
+        <div class="section__header">
+          <p class="section__kicker">Phase 2</p>
+          <h2>PDF eXpress Verification</h2>
+          <p>Create the ETCM conference account in IEEE PDF eXpress and validate the manuscript before uploading anything to EasyChair.</p>
+        </div>
+          <div class="content-grid">
+            <article class="content-card">
+              <h3>Main flow</h3>
+              <ol>
+                <li>Create or access a PDF eXpress account for conference ID <code>63562X</code>.</li>
+                <li>Upload the manuscript for validation.</li>
+                <li>If the result fails, download the PDF check report and resolve all marked errors.</li>
+                <li>Submit again until the report passes.</li>
+                <li>When the file passes, select <code>Approve for Collection</code>.</li>
+                <li>Download the PDF from the title link or from the icon highlighted in red in PDF eXpress.</li>
+              </ol>
+            </article>
+            <article class="content-card">
+              <h3>What to confirm</h3>
+              <ul>
+                <li>Authors will receive an email with the PDF generated by PDF eXpress.</li>
+                <li>There is a limit of attempts, so it is better to fix all errors before trying again.</li>
+                <li>The document properties should show that the application was certified by IEEE PDF eXpress.</li>
+                <li>Only the passed PDF must be uploaded later to EasyChair.</li>
+              </ul>
+              <p class="content-card__link">
+                Access PDF eXpress:
+                <a href="https://ieee-pdf-express.org/account/login?ReturnUrl=%2F" target="_blank" rel="noreferrer">ieee-pdf-express.org</a>
+              </p>
+            </article>
+          </div>
+          <div class="tutorial" data-tutorial="phase-2">
+            <div class="tutorial__viewport">
+              <figure class="tutorial-step gallery__item is-active">
+                <img src="assets/image1.png" alt="Phase 2 screenshot 1" loading="lazy">
+                <figcaption>Step 1. Create the PDF eXpress account for conference ID 63562X.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image2.png" alt="Phase 2 screenshot 2" loading="lazy">
+                <figcaption>Step 2. Access the conference workspace and confirm the event details.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image3.png" alt="Phase 2 screenshot 3" loading="lazy">
+                <figcaption>Step 3. Start the upload workflow for the manuscript file.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image4.png" alt="Phase 2 screenshot 4" loading="lazy">
+                <figcaption>Step 4. Review the submission details before sending the file for checking.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image5.png" alt="Phase 2 screenshot 5" loading="lazy">
+                <figcaption>Step 5. Wait for the validation process and review the generated status.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image6.png" alt="Phase 2 screenshot 6" loading="lazy">
+                <figcaption>Step 6. Open the result screen and inspect the reported outcome.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image7.png" alt="Phase 2 screenshot 7" loading="lazy">
+                <figcaption>Step 7. If the file fails, download the PDF check report and correct every marked error.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image8.png" alt="Phase 2 screenshot 8" loading="lazy">
+                <figcaption>Step 8. Try again only after applying all fixes because PDF eXpress limits submission attempts.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image9.png" alt="Phase 2 screenshot 9" loading="lazy">
+                <figcaption>Step 9. When the result passes, download the PDF from the highlighted icon or title link.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image10.png" alt="Phase 2 screenshot 10" loading="lazy">
+                <figcaption>Step 10. Confirm in document properties that the file was certified by IEEE PDF eXpress.</figcaption>
+              </figure>
+            </div>
+            <div class="tutorial__controls">
+              <button class="tutorial__button" type="button" data-action="prev">Previous</button>
+              <p class="tutorial__status" aria-live="polite">Step 1 of 10</p>
+              <button class="tutorial__button" type="button" data-action="next">Next</button>
+            </div>
+          </div>
+      </section>
+
+      <section class="section tab-panel" id="phase-3" hidden>
+        <div class="section__header">
+          <p class="section__kicker">Phase 3</p>
+          <h2>Final Version Submission on EasyChair</h2>
+          <p>The document generated in Phase 2 must be uploaded to EasyChair through the Final Version workflow.</p>
+        </div>
+          <div class="content-grid">
+            <article class="content-card">
+              <h3>Submission steps</h3>
+              <ol>
+                <li>Enter EasyChair and open the <code>Final Version</code> menu.</li>
+                <li>Accepted papers have a Final Version Access Link in <code>My Submissions</code>.</li>
+                <li>You can also access it through the <code>proceedings author (IEEE Proceedings)</code> role.</li>
+                <li>Upload the PDF approved in PDF eXpress.</li>
+              </ol>
+            </article>
+            <article class="content-card">
+              <h3>Metadata review</h3>
+              <ul>
+                <li>If needed, update the paper title.</li>
+                <li>If needed, update author details before finishing the process.</li>
+                <li>Keep the metadata consistent with the manuscript.</li>
+              </ul>
+            </article>
+          </div>
+          <div class="tutorial" data-tutorial="phase-3">
+            <div class="tutorial__viewport">
+              <figure class="tutorial-step gallery__item is-active">
+                <img src="assets/image11.png" alt="Phase 3 screenshot 1" loading="lazy">
+                <figcaption>Step 1. Open EasyChair and locate the Final Version workflow for the accepted paper.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image12.png" alt="Phase 3 screenshot 2" loading="lazy">
+                <figcaption>Step 2. Access the submission using the Final Version link or the proceedings author role.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image13.png" alt="Phase 3 screenshot 3" loading="lazy">
+                <figcaption>Step 3. Upload the approved PDF and update title or author details if needed.</figcaption>
+              </figure>
+            </div>
+            <div class="tutorial__controls">
+              <button class="tutorial__button" type="button" data-action="prev">Previous</button>
+              <p class="tutorial__status" aria-live="polite">Step 1 of 3</p>
+              <button class="tutorial__button" type="button" data-action="next">Next</button>
+            </div>
+          </div>
+      </section>
+
+      <section class="section tab-panel" id="phase-4" hidden>
+        <div class="section__header">
+          <p class="section__kicker">Phase 4</p>
+          <h2>Copyright Agreement Signature</h2>
+          <p>The final step is filling in the copyright section and verifying that all data matches EasyChair.</p>
+        </div>
+          <div class="content-grid">
+            <article class="content-card">
+              <h3>Final actions</h3>
+              <ol>
+                <li>Open the copyright section after the final version upload.</li>
+                <li>Fill in the required publication and rights fields.</li>
+                <li>Verify the article title and author list before submission.</li>
+                <li>If there is an error, update it in EasyChair first and then start the copyright form again.</li>
+              </ol>
+            </article>
+            <article class="content-card">
+              <h3>Consistency rule</h3>
+              <p>
+                Article title and authors must be exactly the same as in EasyChair. If there is any mismatch, correct it in
+                EasyChair before completing the copyright process.
+              </p>
+            </article>
+          </div>
+          <div class="tutorial" data-tutorial="phase-4">
+            <div class="tutorial__viewport">
+              <figure class="tutorial-step gallery__item is-active">
+                <img src="assets/image14.png" alt="Phase 4 screenshot 1" loading="lazy">
+                <figcaption>Step 1. Open the copyright section after finishing the final version upload.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image15.png" alt="Phase 4 screenshot 2" loading="lazy">
+                <figcaption>Step 2. Review the publication form and start filling in the required rights information.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image16.png" alt="Phase 4 screenshot 3" loading="lazy">
+                <figcaption>Step 3. Continue the copyright workflow with the requested publication details.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image17.png" alt="Phase 4 screenshot 4" loading="lazy">
+                <figcaption>Step 4. Verify the title, author list, and ownership information carefully.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image18.png" alt="Phase 4 screenshot 5" loading="lazy">
+                <figcaption>Step 5. Confirm each field before moving to the next form screen.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image19.png" alt="Phase 4 screenshot 6" loading="lazy">
+                <figcaption>Step 6. Keep the metadata consistent with EasyChair throughout the whole process.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image20.png" alt="Phase 4 screenshot 7" loading="lazy">
+                <figcaption>Step 7. Review the confirmation page before final submission.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image21.png" alt="Phase 4 screenshot 8" loading="lazy">
+                <figcaption>Step 8. If title or author data is wrong, return to EasyChair and correct it first.</figcaption>
+              </figure>
+              <figure class="tutorial-step gallery__item">
+                <img src="assets/image22.png" alt="Phase 4 screenshot 9" loading="lazy">
+                <figcaption>Step 9. Restart the copyright form only after the EasyChair data is correct.</figcaption>
+              </figure>
+            </div>
+            <div class="tutorial__controls">
+              <button class="tutorial__button" type="button" data-action="prev">Previous</button>
+              <p class="tutorial__status" aria-live="polite">Step 1 of 9</p>
+              <button class="tutorial__button" type="button" data-action="next">Next</button>
+            </div>
+          </div>
+      </section>
+
+    </main>
+  </div>
+
+  <dialog class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close image">Close</button>
+    <img id="lightbox-image" alt="">
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
