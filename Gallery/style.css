@@ -1,0 +1,137 @@
+:root {
+  --bg: #edf4ff;
+  --panel: #ffffff;
+  --text: #12304a;
+  --accent: #0b63ce;
+  --shadow: 0 24px 60px rgba(18, 48, 74, 0.16);
+  --slide-height: min(86vh, 700px);
+  --slide-height-mobile: min(66vh, 520px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(11, 99, 206, 0.18), transparent 35%),
+    
+}
+
+.gallery-page {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 32px 16px;
+}
+
+.carousel {
+  width: min(1280px, 100%);
+  padding: 32px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow);
+}
+
+.carousel__header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.intro {
+  margin: 10px auto 0;
+  max-width: 640px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.carousel__viewport {
+  overflow: hidden;
+  border-radius: 22px;
+  background: #d6e3f5;
+}
+
+.carousel__track {
+  display: flex;
+  align-items: center;
+  will-change: transform;
+}
+
+.slide {
+  width: 100%;
+  flex: 0 0 100%;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  min-height: 740px;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: var(--slide-height);
+  max-width: 100%;
+  max-height: var(--slide-height);
+  border-radius: 16px;
+  box-shadow: 0 16px 36px rgba(18, 48, 74, 0.16);
+  object-fit: contain;
+}
+
+.slide--landscape img {
+  width: 100%;
+  max-width: 1040px;
+  height: var(--slide-height);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.slide--portrait img {
+  width: auto;
+  max-width: 100%;
+  height: var(--slide-height);
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .slide {
+    padding: 12px;
+    min-height: 580px;
+  }
+
+  .slide--landscape img {
+    height: var(--slide-height-mobile);
+    max-height: var(--slide-height-mobile);
+  }
+
+  .slide--portrait img {
+    height: var(--slide-height-mobile);
+  }
+
+  .slide img {
+    height: var(--slide-height-mobile);
+    max-height: var(--slide-height-mobile);
+  }
+}
