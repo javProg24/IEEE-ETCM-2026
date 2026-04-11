@@ -16,40 +16,66 @@ if (track) {
     track.appendChild(firstClone);
 
     let currentIndex = 1;
-    let autoplayId;
+    let autoplayId = null;
+    let isResetting = false;
 
     const setPosition = (withTransition = true) => {
       track.style.transition = withTransition ? "transform 900ms ease" : "none";
       track.style.transform = `translateX(-${currentIndex * 100}%)`;
     };
 
+    const goToNextSlide = () => {
+      if (isResetting) {
+        return;
+      }
+
+      currentIndex += 1;
+      setPosition(true);
+    };
+
     const startAutoplay = () => {
-      autoplayId = window.setInterval(() => {
-        currentIndex += 1;
-        setPosition(true);
-      }, 4000);
+      stopAutoplay();
+      autoplayId = window.setInterval(goToNextSlide, 4000);
     };
 
     const stopAutoplay = () => {
-      if (autoplayId) {
+      if (autoplayId !== null) {
         window.clearInterval(autoplayId);
+        autoplayId = null;
       }
     };
 
     track.addEventListener("transitionend", () => {
-      if (currentIndex === slideCount + 1) {
+      if (currentIndex >= slideCount + 1) {
+        isResetting = true;
         currentIndex = 1;
         setPosition(false);
+        requestAnimationFrame(() => {
+          isResetting = false;
+        });
       }
 
-      if (currentIndex === 0) {
+      if (currentIndex <= 0) {
+        isResetting = true;
         currentIndex = slideCount;
         setPosition(false);
+        requestAnimationFrame(() => {
+          isResetting = false;
+        });
       }
     });
 
     track.addEventListener("mouseenter", stopAutoplay);
     track.addEventListener("mouseleave", startAutoplay);
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        stopAutoplay();
+        return;
+      }
+
+      startAutoplay();
+    });
 
     setPosition(false);
     startAutoplay();
