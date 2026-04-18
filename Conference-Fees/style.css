@@ -1,7 +1,64 @@
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 24px;
+}
+
+.registration-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 280px;
+    padding: 14px 30px;
+    border: 1px solid #0b5ed7;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #0b5ed7 0%, #3da5ff 100%);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.registration-button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.03);
+}
+
+.registration-button:active {
+    transform: translateY(0);
+}
+
+.registration-button:focus-visible {
+    outline: 3px solid rgba(61, 165, 255, 0.35);
+    outline-offset: 4px;
+}
+
+#tablaGeneral,
+#tablaTutorials {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.payment-info {
+    width: min(1100px, 96%);
+    margin: 24px auto 40px;
+    text-align: center;
+}
+
+.payment-info p {
+    margin: 0 0 14px;
+    line-height: 1.6;
+}
+
 table {
     border-collapse: collapse;
     width: 60%;
-    margin: 20px 0;
+    margin: 20px auto;
 }
 th, td {
     border: 1px solid #333;
