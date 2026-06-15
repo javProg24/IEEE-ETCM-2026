@@ -1,0 +1,165 @@
+/* CSS PERSONALIZADO PARA WPBAKERY - Call for Papers */
+/* Copia este código en: Apariencia > Personalizar > CSS Adicional */
+
+.ieee-call-for-papers-wrapper {
+    --bg: #eef4fb;
+    --surface: rgba(255, 255, 255, 0.84);
+    --surface-strong: #ffffff;
+    --text: #16345f;
+    --muted: #4f6486;
+    --border: rgba(178, 194, 217, 0.7);
+    --accent: #c84a44;
+    --blue-accent: #1a6ba8;
+    --shadow: 0 24px 60px rgba(17, 41, 79, 0.12);
+    --glow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+.ieee-call-for-papers-wrapper {
+    position: relative;
+    padding: 56px 32px 72px;
+    background: radial-gradient(circle at top left, rgba(106, 156, 224, 0.22), transparent 28%),
+                radial-gradient(circle at 90% 20%, rgba(200, 74, 68, 0.16), transparent 18%),
+                linear-gradient(180deg, #f6f9fd 0%, var(--bg) 100%);
+}
+
+.ieee-call-for-papers-wrapper .call-for-papers {
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 42px clamp(22px, 4vw, 44px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(247, 250, 255, 0.86));
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow), var(--glow);
+}
+
+.ieee-call-for-papers-wrapper .call-for-papers h1 {
+    margin: 0 0 32px;
+    font-size: 1.8rem;
+    letter-spacing: 0.05em;
+    color: var(--blue-accent);
+    font-weight: 700;
+}
+
+.ieee-call-for-papers-wrapper .main-content p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.ieee-call-for-papers-wrapper .main-content h2 {
+    margin: 30px 0 15px;
+    font-size: 1.5rem;
+    color: var(--text);
+    font-weight: 700;
+}
+
+.ieee-call-for-papers-wrapper .main-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: var(--text);
+}
+
+.ieee-call-for-papers-wrapper .old-date {
+    text-decoration: line-through;
+    color: var(--muted);
+}
+
+.ieee-call-for-papers-wrapper .new-date {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.ieee-call-for-papers-wrapper .main-content ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.ieee-call-for-papers-wrapper .main-content ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.ieee-call-for-papers-wrapper .links-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(17, 41, 79, 0.08);
+}
+
+.ieee-call-for-papers-wrapper .link-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4db8e8, var(--blue-accent));
+    color: white !important;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 999px;
+    box-shadow: 0 8px 16px rgba(26, 107, 168, 0.3);
+    transition: all 0.2s ease;
+}
+
+.ieee-call-for-papers-wrapper .link-button:hover {
+    background: linear-gradient(135deg, #3a9fd4, #155a8a);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(26, 107, 168, 0.4);
+}
+
+.ieee-call-for-papers-wrapper .templates ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.ieee-call-for-papers-wrapper .templates ul li {
+    margin-bottom: 8px;
+}
+
+.ieee-call-for-papers-wrapper .templates ul li a {
+    color: var(--blue-accent);
+    text-decoration: none;
+}
+
+.ieee-call-for-papers-wrapper .templates ul li a:hover {
+    text-decoration: underline;
+}
+
+.ieee-call-for-papers-wrapper .banner-image {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(17, 41, 79, 0.15);
+}
+
+.ieee-call-for-papers-wrapper .banner-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .ieee-call-for-papers-wrapper {
+        padding: 40px 18px 56px;
+    }
+    
+    .ieee-call-for-papers-wrapper .call-for-papers {
+        padding: 28px 18px;
+    }
+    
+    .ieee-call-for-papers-wrapper .links-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .ieee-call-for-papers-wrapper .call-for-papers h1 {
+        font-size: 1.5rem;
+    }
+}
