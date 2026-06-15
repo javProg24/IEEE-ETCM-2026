@@ -2,7 +2,7 @@ const speakers = [
   {
     foto: "https://i0.wp.com/2026.ubiquitousrobots.org/wp-content/uploads/tolley.jpg?w=449&ssl=1",
     nombre: "Michael Tolley",
-    cap_tec:"RAS",
+    logo:"https://edu.ieee.org/mx-uae/wp-content/uploads/sites/184/RAS-IEEE.png",
     country: "USA",
     bandera: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/1920px-Flag_of_the_United_States_%28Pantone%29.svg.png",
     tema: "Biologically Inspired Soft Robotics",
@@ -18,7 +18,7 @@ const speakers = [
   {
     foto:"https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/Picture-SergioGutierrez.png",
     nombre:"Sergio Armando Gutiérrez",
-    cap_tec:"ComSoc",
+    logo:"https://innovationatwork.ieee.org/wp-content/uploads/2018/05/ieee-comsoc.png",
     country:"Colombia",
     bandera:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/250px-Flag_of_Colombia.svg.png",
     tema: "Self-Driving Networks: The present-future of networking",
@@ -67,11 +67,14 @@ function renderSpeakers() {
     const speakerElement = document.createElement("article");
 
     const speakerName = escapeHTML(speaker.nombre);
-    const speakerTechnicalChapter = speaker.cap_tec
-      ? '<p class="speaker-technical-chapter">' +
-          "Technical Chapter: " +
-          escapeHTML(speaker.cap_tec) +
-        "</p>"
+    const speakerTechnicalChapter = speaker.logo
+      ? '<div class="speaker-technical-chapter">' +
+          '<img class="technical-chapter-logo" src="' +
+            escapeHTML(speaker.logo) +
+            '" alt="Technical chapter logo for ' +
+            speakerName +
+          '">' +
+        "</div>"
       : "";
     const speakerCountry = escapeHTML(speaker.country);
     const speakerTopic = escapeHTML(speaker.tema);
