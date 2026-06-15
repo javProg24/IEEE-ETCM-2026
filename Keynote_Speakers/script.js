@@ -1,98 +1,135 @@
-(function () {
-    const speakers = [
-      {
-        nombre: "Daniel Campos Delgado",
-        cargoCorto: "Professor · UASLP, Mexico",
-        cargoCompleto: "Professor · Universidad Autónoma de San Luis Potosí · Mexico",
-        foto: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop",
-        bio: "Daniel Campos Delgado is a distinguished researcher whose work focuses on control systems, intelligent automation and advanced engineering applications. His keynote addresses emerging challenges in applied research, innovation and technological development for future-oriented engineering solutions.",
-        perfil: "#",
-        scholar: "#"
-      },
-      {
-        nombre: "Bikash Pal",
-        cargoCorto: "Professor · Imperial College London",
-        cargoCompleto: "Professor · Imperial College London · United Kingdom",
-        foto: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop",
-        bio: "Bikash Pal has contributed significantly to power systems, system dynamics and renewable energy integration. His keynote provides a strong academic and practical perspective on resilient infrastructures, sustainable energy systems and intelligent engineering strategies.",
-        perfil: "#",
-        scholar: "#"
-      },
-      {
-        nombre: "María Fernanda López",
-        cargoCorto: "Researcher · Smart Systems Institute",
-        cargoCompleto: "Researcher · Smart Systems Institute · Ecuador",
-        foto: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop",
-        bio: "María Fernanda López specializes in digital transformation, smart systems and interdisciplinary innovation. Her keynote emphasizes how technology, research and collaboration can strengthen engineering education and scientific impact in contemporary environments.",
-        perfil: "#",
-        scholar: "#"
-      },
-      {
-        nombre: "Andrés Villacís",
-        cargoCorto: "Professor · Advanced Energy Lab",
-        cargoCompleto: "Professor · Advanced Energy Lab · Colombia",
-        foto: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop",
-        bio: "Andrés Villacís works on smart grids, industrial energy systems and modern infrastructure optimization. His keynote contributes a practical and strategic view of current energy, sustainability and technology challenges in engineering.",
-        perfil: "#",
-        scholar: "#"
-      }
-    ];
+const speakers = [
+  {
+    foto: "https://i0.wp.com/2026.ubiquitousrobots.org/wp-content/uploads/tolley.jpg?w=449&ssl=1",
+    nombre: "Michael Tolley",
+    cap_tec:"RAS",
+    country: "USA",
+    bandera: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/1920px-Flag_of_the_United_States_%28Pantone%29.svg.png",
+    tema: "Biologically Inspired Soft Robotics",
+    resumen: "Robotics has the potential to address many of today’s pressing problems in fields ranging from healthcare to manufacturing to disaster relief. However, the traditional approaches used on the factory floor do not perform well in unstructured environments. The key to solving many of these challenges is to explore new, non-traditional designs. Fortunately, nature surrounds us with examples of novel ways to navigate and interact with the real world. Dr. Tolley’s Bioinspired Robotics and Design Lab seeks to borrow the key principles of operation from biological systems and apply them to robotic design. This talk will give an overview of recent projects in the lab that investigate the ways in which the use of non-traditional materials can help solve challenging problems in robotics. These projects seek to develop bioinspired systems capable of navigating the world by walking, digging, and swimming (inspired by animals like turtles, worms, and the oarfish) and of interacting safely with humans and delicate objects.",
+    biografia: [
+      "Michael T. Tolley is Associate Professor in Mechanical and Aerospace Engineering, and Director of the Bioinspired Robotics and Design Lab at the Jacobs School of Engineering, UC San Diego (bioinspired.ucsd.edu).",
+      "Before joining the mechanical engineering faculty at UCSD in the fall of 2014, he was a postdoctoral fellow at the Wyss Institute for Biologically Inspired Engineering, Harvard University. He received the Ph.D. and M.S. degrees in mechanical engineering with a minor in computer science from Cornell University in 2009 and 2011, respectively.",
+      "His research seeks inspiration from nature to design robotic systems with the versatility, resilience, and efficiency of biological organisms. His work has appeared in leading academic journals including Science and Nature, and has been recognized by various awards including a US Office of Naval Research Young Investigator Program award.",
+      "He is active in the robotics community, serving in multiple associate editor and conference organizer roles including as Program Chair of the IEEE International Conference on Soft Robotics (RoboSoft) in 2020 and General Chair in 2024.",
+      "Prof. Tolley is a Senior Fellow of the Institute of Electrical and Electronics Engineers (IEEE), a member of the IEEE Robotics and Automation Society (RAS), and of the American Society of Mechanical Engineers (ASME), and is currently a Distinguished Lecturer of the IEEE Robotics and Automation Society."
+    ]
+  },
+  {
+    foto:"https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/Picture-SergioGutierrez.png",
+    nombre:"Sergio Armando Gutiérrez",
+    cap_tec:"ComSoc",
+    country:"Colombia",
+    bandera:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/250px-Flag_of_Colombia.svg.png",
+    tema: "Self-Driving Networks: The present-future of networking",
+    resumen:[
+      "Size and complexity of computer networks are increasing at a high pace. The number of connected devices, the complexity of interactions among them and their associated traffic patterns, and above all the criticity of services depending on these networks introduce challenges that can not be managed by human operators in timely and accurate ways. This talk presents an overview of the concept of self-driving networks, which encompasses the adoption of artificial network artifacts and autonomic computings as the response to manage the growing demands in the field of network management. Also the talk discusses the challenges associated, and the role of human operators, which are nevertheless a key element in network engineering, operation, monitoring and support. Finally, the talk presents the future perspectives regarding the autonomous nature of computer networks."
+    ],
+    biografia:[
+      "Sergio Armando Gutiérrez Betancur holds the degrees of Bachelor in Computer Science of Universidad de San Buenaventura in Medellin Colombia (2008) Master in Engineering - Systems Engineering (2001) and PhD in Engineering - Systems and Informatics (2018), both from Universidad Nacional de Colombia. He is currently an Assistant Professor in Universidad de Antioquia in Medellin, Colombia and a researcher in the GITA Lab research group in the same institution, where we is a former Postdoctoral Fellow Researcher. He has been a lecturer and researcher in institutions such as Universidad Autónoma Latinoamericana, Universidad de Medellin and Universidad Nacional de Colombia. Professor Gutiérrez has around 38 publications in different Conferences and Journals, and he has presented tutorials in the area of Programmable Data Planes in conferences such as IEEE ANDESCON, IEEE LATINCOM, IEEE/IFIP NOMS and IEEE COLCOM. His research interests cover Software Defined Networking, Programmable Data Planes, Cybersecurity and applications of Artificial Intelligence and Pattern Recognition to the solving of Computer Network Challenges. Professor Gutiérrez is an IEEE Senior member, current Chair of the IEEE ComSoc Colombia Chapter, he is on charge of Technical and Professional Activities in IEEE Colombia Section and he is a member of the IEEE ComSoc Latin America Region Board, in the Membership Development Committee."
+    ]
+  }
+];
 
-    const grid = document.getElementById("ks4Grid");
 
-    function crearItem(speaker, index) {
-      const item = document.createElement("div");
-      item.className = "ks4-item";
-      item.dataset.index = index;
+const container = document.getElementById("speakers-container");
 
-      item.innerHTML = `
-        <div class="ks4-shell">
-          <div class="ks4-left">
-            <div class="ks4-card-top">
-              <div class="ks4-photo-wrap">
-                <img src="${speaker.foto}" alt="${speaker.nombre}">
-              </div>
+function escapeHTML(value) {
+  const element = document.createElement("div");
+  element.textContent = String(value);
+  return element.innerHTML;
+}
 
-              <div class="ks4-head">
-                <h3 class="ks4-name">${speaker.nombre}</h3>
-                <p class="ks4-role">${speaker.cargoCorto}</p>
-              </div>
+function renderParagraphs(content) {
+  const paragraphs = Array.isArray(content)
+    ? content
+    : String(content).split(/\n\s*\n/);
 
-              <div class="ks4-plus">+</div>
-            </div>
-          </div>
+  return paragraphs
+    .map(function (paragraph) {
+      return String(paragraph).trim();
+    })
+    .filter(Boolean)
+    .map(function (paragraph) {
+      return "<p>" + escapeHTML(paragraph) + "</p>";
+    })
+    .join("");
+}
 
-          <div class="ks4-right">
-            <div class="ks4-right-inner">
-              <h4 class="ks4-panel-title">${speaker.nombre}</h4>
-              <div class="ks4-meta">${speaker.cargoCompleto}</div>
-              <p class="ks4-bio">${speaker.bio}</p>
+function renderSpeakers() {
+  if (!container) {
+    return;
+  }
 
-              <div class="ks4-actions">
-                <a class="ks4-link" href="${speaker.perfil}" target="_blank" rel="noopener">View Profile</a>
-                <a class="ks4-link" href="${speaker.scholar}" target="_blank" rel="noopener">Google Scholar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      `;
+  container.innerHTML = "";
 
-      item.querySelector(".ks4-left").addEventListener("click", function () {
-        const abierto = item.classList.contains("is-open");
+  speakers.forEach(function (speaker) {
+    const speakerElement = document.createElement("article");
 
-        document.querySelectorAll(".ks4-item").forEach((otro) => {
-          otro.classList.remove("is-open");
-        });
+    const speakerName = escapeHTML(speaker.nombre);
+    const speakerTechnicalChapter = speaker.cap_tec
+      ? '<p class="speaker-technical-chapter">' +
+          "Technical Chapter: " +
+          escapeHTML(speaker.cap_tec) +
+        "</p>"
+      : "";
+    const speakerCountry = escapeHTML(speaker.country);
+    const speakerTopic = escapeHTML(speaker.tema);
 
-        if (!abierto) {
-          item.classList.add("is-open");
-        }
-      });
+    const flagMarkup = speaker.bandera
+      ? '<img class="flag-icon" src="' +
+        escapeHTML(speaker.bandera) +
+        '" alt="Flag of ' +
+        speakerCountry +
+        '">'
+      : "";
 
-      return item;
-    }
+    const summaryMarkup = renderParagraphs(speaker.resumen);
+    const biographyMarkup = renderParagraphs(speaker.biografia || "");
 
-    speakers.forEach((speaker, index) => {
-      grid.appendChild(crearItem(speaker, index));
-    });
-  })();
+    speakerElement.className = "speaker-layout";
+
+    speakerElement.innerHTML =
+      '<div class="profile-card">' +
+        '<div class="profile-header"></div>' +
+        '<img class="speaker-photo" src="' +
+          escapeHTML(speaker.foto) +
+          '" alt="' +
+          speakerName +
+        '">' +
+        '<h2 class="speaker-name">' +
+          speakerName +
+        "</h2>" +
+        speakerTechnicalChapter +
+        '<div class="profile-divider"></div>' +
+        '<p class="speaker-country">' +
+          flagMarkup +
+          "<span>" +
+            speakerCountry +
+          "</span>" +
+        "</p>" +
+      "</div>" +
+
+      '<div class="talk-card">' +
+        '<p class="talk-label">Presentation topic</p>' +
+        '<h3 class="talk-title">' +
+          speakerTopic +
+        "</h3>" +
+        '<div class="summary-divider"></div>' +
+        '<p class="summary-label">Summary of the talk</p>' +
+        '<div class="summary-text">' +
+          summaryMarkup +
+        "</div>" +
+        '<details class="bio-details">' +
+          '<summary class="bio-label">Biography</summary>' +
+          '<div class="bio-text">' +
+            biographyMarkup +
+          "</div>" +
+        "</details>" +
+      "</div>";
+
+    container.appendChild(speakerElement);
+  });
+}
+
+renderSpeakers();
