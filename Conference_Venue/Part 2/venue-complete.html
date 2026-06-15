@@ -1,0 +1,650 @@
+<style>
+.venue-page {
+    --bg: #eef4fb;
+    --surface: rgba(255, 255, 255, 0.84);
+    --surface-strong: #ffffff;
+    --text: #16345f;
+    --muted: #4f6486;
+    --border: rgba(178, 194, 217, 0.7);
+    --accent: #c84a44;
+    --blue-accent: #1a6ba8;
+    --shadow: 0 24px 60px rgba(17, 41, 79, 0.12);
+    --glow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+.venue-page,
+.venue-page * {
+    box-sizing: border-box;
+}
+
+.venue-page {
+    position: relative;
+    padding: 56px 32px 72px;
+    overflow: hidden;
+    background: radial-gradient(circle at top left, rgba(106, 156, 224, 0.22), transparent 28%),
+                radial-gradient(circle at 90% 20%, rgba(200, 74, 68, 0.16), transparent 18%),
+                linear-gradient(180deg, #f6f9fd 0%, var(--bg) 100%);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+.venue-page .venue-layout {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.venue-page .venue-orb {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(8px);
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.venue-page .venue-orb--left {
+    width: 240px;
+    height: 240px;
+    top: 90px;
+    left: -110px;
+    background: radial-gradient(circle, rgba(33, 118, 188, 0.24) 0%, rgba(33, 118, 188, 0.02) 70%);
+    animation: floatOrb 12s ease-in-out infinite;
+}
+
+.venue-page .venue-orb--right {
+    width: 280px;
+    height: 280px;
+    top: 420px;
+    right: -140px;
+    background: radial-gradient(circle, rgba(200, 74, 68, 0.2) 0%, rgba(200, 74, 68, 0.02) 72%);
+    animation: floatOrb 14s ease-in-out infinite reverse;
+}
+
+.venue-page .venue-main {
+    position: relative;
+    padding: 42px clamp(22px, 4vw, 44px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(247, 250, 255, 0.86));
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow), var(--glow);
+}
+
+.venue-page .section-title {
+    margin: 0 0 32px;
+    font-size: 1.8rem;
+    letter-spacing: 0.05em;
+    color: var(--blue-accent);
+    font-weight: 700;
+}
+
+.venue-page .location-section,
+.venue-page .getting-there-section,
+.venue-page .accommodation-section {
+    margin-bottom: 60px;
+}
+
+.venue-page .location-section:last-child,
+.venue-page .getting-there-section:last-child,
+.venue-page .accommodation-section:last-child {
+    margin-bottom: 0;
+}
+
+.venue-page .venue-info {
+    display: grid;
+    grid-template-columns: minmax(320px, 1.05fr) minmax(300px, 0.95fr);
+    align-items: start;
+    gap: clamp(28px, 4vw, 56px);
+    margin-bottom: 32px;
+}
+
+.venue-page .venue-images {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(17, 41, 79, 0.15);
+}
+
+.venue-page .venue-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.venue-page .venue-gallery img {
+    width: 100%;
+    height: clamp(86px, 8vw, 128px);
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.venue-page .venue-main-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.venue-page .venue-details h3 {
+    margin: 0 0 8px;
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+.venue-page .rating-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: var(--blue-accent);
+    color: white;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.venue-page .venue-description {
+    margin: 0 0 24px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.venue-page .venue-details p {
+    margin: 0 0 16px;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.venue-page .detail-item {
+    margin-bottom: 20px;
+}
+
+.venue-page .label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+.venue-page .detail-item p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.venue-page .detail-item a,
+.venue-page .venue-description a,
+.venue-page .getting-there-section a,
+.venue-page .rate-content a {
+    color: var(--blue-accent);
+    text-decoration: none;
+}
+
+.venue-page .detail-item a:hover,
+.venue-page .venue-description a:hover,
+.venue-page .getting-there-section a:hover,
+.venue-page .rate-content a:hover {
+    text-decoration: underline;
+}
+
+.venue-page .venue-map-card {
+    margin-top: 28px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: var(--surface-strong);
+}
+
+.venue-page .venue-map-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 20px;
+    background: linear-gradient(180deg, rgba(247, 250, 255, 0.96), rgba(232, 239, 249, 0.92));
+    border-bottom: 1px solid rgba(178, 194, 217, 0.55);
+}
+
+.venue-page .venue-map-card__tag {
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #355785;
+}
+
+.venue-page .venue-map-card__pulse {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #2bb673;
+    box-shadow: 0 0 0 rgba(43, 182, 115, 0.6);
+    animation: pulseDot 2.2s infinite;
+}
+
+.venue-page .venue-map-card iframe {
+    display: block;
+    width: 100%;
+    min-height: 430px;
+    border: 0;
+}
+
+.venue-page .map-address {
+    padding: 16px 20px;
+    background: rgba(247, 250, 255, 0.96);
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.venue-page .hero-video {
+    margin-bottom: 32px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(17, 41, 79, 0.15);
+}
+
+.venue-page .hero-video img {
+    width: 100%;
+    display: block;
+}
+
+.venue-page .getting-there-section h3,
+.venue-page .rate-content h4 {
+    margin: 24px 0 16px;
+    font-size: 1.2rem;
+    color: var(--text);
+    font-weight: 700;
+}
+
+.venue-page .transport-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.venue-page .transport-card {
+    padding: 24px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 20px rgba(17, 41, 79, 0.08);
+}
+
+.venue-page .card-icon {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--blue-accent);
+    margin-bottom: 16px;
+    padding: 8px 12px;
+    background: rgba(26, 107, 168, 0.1);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.venue-page .transport-card p {
+    margin: 0 0 12px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.venue-page .transport-card p:last-child {
+    margin-bottom: 0;
+}
+
+.venue-page .transport-detail {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.9rem !important;
+}
+
+.venue-page .travel-tip {
+    padding: 18px 24px;
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 152, 0, 0.1));
+    border-left: 4px solid #ff9800;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 24px;
+}
+
+.venue-page .rate-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(17, 41, 79, 0.15);
+    background: var(--surface-strong);
+}
+
+.venue-page .rate-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px 32px;
+    background: linear-gradient(135deg, rgba(17, 62, 117, 0.96), rgba(28, 109, 163, 0.92));
+    color: white;
+}
+
+.venue-page .rate-header h3 {
+    margin: 0 0 8px;
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+.venue-page .rate-header p {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.venue-page .special-badge {
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #ffc107, #ff9800);
+    color: #000;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.venue-page .rate-content {
+    padding: 32px;
+}
+
+.venue-page .rate-content p {
+    margin: 0 0 16px;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.venue-page .rate-includes h4 {
+    margin: 0 0 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+}
+
+.venue-page .benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.venue-page .benefits-list li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.venue-page .rate-notice {
+    padding: 20px 24px;
+    background: rgba(26, 107, 168, 0.08);
+    border-left: 3px solid var(--blue-accent);
+    border-radius: 8px;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.venue-page .book-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--blue-accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.venue-page .rate-content a.book-button {
+    color: #ffffff;
+}
+
+.venue-page .book-button:hover {
+    background: #155a8a;
+    text-decoration: none;
+}
+
+.venue-page .rate-content a.book-button:hover {
+    color: #ffffff;
+}
+
+.venue-page [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.venue-page.is-enhanced [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes floatOrb {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(22px); }
+}
+
+@keyframes pulseDot {
+    0% { box-shadow: 0 0 0 0 rgba(43, 182, 115, 0.52); }
+    70% { box-shadow: 0 0 0 14px rgba(43, 182, 115, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(43, 182, 115, 0); }
+}
+
+@media (max-width: 768px) {
+    .venue-page {
+        padding: 40px 18px 56px;
+    }
+
+    .venue-page .venue-main {
+        padding: 28px 18px;
+    }
+
+    .venue-page .venue-info {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .venue-page .transport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .venue-page .benefits-list {
+        grid-template-columns: 1fr;
+    }
+
+    .venue-page .rate-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .venue-page .venue-map-card iframe {
+        min-height: 320px;
+    }
+}
+</style>
+
+<div class="venue-page">
+    <div class="venue-orb venue-orb--left" aria-hidden="true"></div>
+    <div class="venue-orb venue-orb--right" aria-hidden="true"></div>
+
+    <section class="venue-layout">
+        <div class="venue-main" data-reveal>
+            
+            <section class="location-section" data-reveal data-reveal-delay="100">
+                <h2 class="section-title">Hotel Oro Verde Guayaquil</h2>
+                
+                <div class="venue-info">
+                    <div class="venue-images">
+                        <img src="https://www.hotelesoroverde.com/wp-content/uploads/GUAYQUIL-scaled.jpg" alt="Hotel Oro Verde Guayaquil - IEEE ETCM 2026 Conference Venue" class="venue-main-img">
+                        <div class="venue-gallery">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/a9/0e/b2/terrace.jpg?w=900&h=-1&s=1" alt="Hotel Oro Verde Lobby">
+                            <img src="https://www.oroverdeguayaquil.com/wp-content/uploads/oro-verde-guayaquil-hotel-02-1024x683.jpg" alt="Hotel Oro Verde Garden">
+                            <img src="https://idealoec.com/wp-content/uploads/2022/11/ORO-VERDE-5.jpg" alt="Hotel Oro Verde Room">
+                        </div>
+                    </div>
+                    
+                    <div class="venue-details">
+                        <h3>★★★★★</h3>
+                        <div class="rating-badge">4.7 / 5 8,000+ verified reviews</div>
+                        <p class="venue-description">The official conference hotel of <a href="https://attend.ieee.org/etcm-2026/" title="IEEE ETCM 2026 Homepage">IEEE ETCM 2026</a>. One of Ecuador's most acclaimed luxury properties, combining world-class conference facilities with exceptional hospitality in the heart of Guayaquil.</p>
+                        
+                        <div class="detail-item">
+                            <span class="label">ADDRESS</span>
+                            <p>Av. 9 de Octubre y García Moreno 414, Guayaquil 090311, Ecuador</p>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="label">PHONE</span>
+                            <p><a href="tel:+59342611000">+593 4-361-1000</a></p>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="label">WEBSITE</span>
+                            <p><a href="https://oroverdeguayaquil.com" target="_blank" rel="noopener">oroverdeguayaquil.com →</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="venue-map-card" data-reveal data-reveal-delay="200">
+                    <div class="venue-map-card__header">
+                        <span class="venue-map-card__tag">LOCATION</span>
+                        <span class="venue-map-card__pulse" aria-hidden="true"></span>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.9697!2d-79.8897!3d-2.1897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d9e8e8e8e8e%3A0x8e8e8e8e8e8e8e8e!2sHotel%20Oro%20Verde%20Guayaquil!5e0!3m2!1sen!2sec!4v1234567890" allowfullscreen="" loading="lazy" title="Hotel Oro Verde Guayaquil Map - IEEE ETCM 2026 Venue Location"></iframe>
+                    <div class="map-address">
+                        <strong>Hotel Oro Verde Guayaquil</strong><br>
+                        Av. 9 de Octubre y García Moreno 414, Guayaquil 090311, Ecuador
+                    </div>
+                </div>
+            </section>
+
+            <section class="getting-there-section" data-reveal data-reveal-delay="300">
+                <h2 class="section-title">Getting There</h2>
+                
+                <div class="hero-video">
+                    <img src="https://www.latintrails.com/wp-content/uploads/2021/08/Guayaquil-2-1024x493.jpg" alt="Guayaquil Skyline" style="width:100%; border-radius:12px;">
+                </div>
+
+                <div class="transport-grid">
+                    <div class="transport-card">
+                        <div class="card-icon">✈️ BY AIR</div>
+                        <p><strong>José Joaquín de Olmedo International Airport (GYE)</strong> is Guayaquil's main airport, located 15–20 minutes from the hotel.</p>
+                        <p class="transport-detail">Direct flights from Quito, Bogotá, Lima, Panama City, Miami, Madrid, and other major hubs.</p>
+                    </div>
+
+                    <div class="transport-card">
+                        <div class="card-icon">🚕 TAXI & RIDE SHARE</div>
+                        <p>Taxis and <strong>Uber</strong> are widely available outside arrivals. Estimated fare to the hotel: <strong>USD 8–12</strong> depending on traffic.</p>
+                        <p class="transport-detail">The hotel also offers an <strong>airport shuttle service</strong> — contact the hotel in advance to arrange a pickup.</p>
+                    </div>
+
+                    <div class="transport-card">
+                        <div class="card-icon">🏙️ CITY CENTRE</div>
+                        <p>Hotel Oro Verde is in the <strong>heart of downtown Guayaquil</strong>, steps from the Malecón 2000 waterfront promenade and the Las Peñas cultural district.</p>
+                        <p class="transport-detail">Valet parking available on-site for attendees arriving by car.</p>
+                    </div>
+                </div>
+
+                <div class="travel-tip">
+                    <strong>Travel tip:</strong> Ecuador uses the US Dollar (USD) as its official currency. No currency exchange needed for travelers arriving from the United States.
+                </div>
+            </section>
+
+            <section class="accommodation-section" data-reveal data-reveal-delay="400">
+                <h2 class="section-title">Accommodation</h2>
+                
+                <div class="rate-card">
+                    <div class="rate-header">
+                        <div>
+                            <h3>Preferential Room Rate — ETCM 2026 Attendees</h3>
+                            <p>Exclusive rate at Hotel Oro Verde Guayaquil, the official conference hotel</p>
+                        </div>
+                        <span class="special-badge">★ SPECIAL RATE</span>
+                    </div>
+
+                    <div class="rate-content">
+                        <div class="rate-includes">
+                            <h4>RATE INCLUDES</h4>
+                            <ul class="benefits-list">
+                                <li>✓ Discounted room rate for ETCM attendees</li>
+                                <li>✓ Access to hotel fitness center & pool</li>
+                                <li>✓ Proximity to all conference rooms</li>
+                                <li>✓ Complimentary high-speed Wi-Fi</li>
+                                <li>✓ Business center access</li>
+                                <li>✓ Valet parking available on-site</li>
+                            </ul>
+                        </div>
+
+                        <div class="rate-notice">
+                            <strong>Important:</strong> The preferential rate is exclusively available to registered ETCM 2026 attendees and is subject to room availability. Rooms must be booked using the link below. The organizing committee recommends booking early as the block of reserved rooms is limited.
+                            
+                            <div style="margin-top:20px;">
+                                <a href="https://reservations.oroverdehotels.com/114490?domain=2026.ieee-ihtc.org&RatePlanId=11256441#/guestsandrooms" class="book-button">Book Your Room →</a>
+                                <p style="margin-top:10px; font-size:14px;">Use this link to access the ETCM 2026 preferential rate.<br>Questions? Contact us at <a href="mailto:marco.vinueza@ieee.org">marco.vinueza@ieee.org</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </section>
+</div>
+
+<script>
+(function() {
+    var root = document.querySelector('.venue-page');
+    if (!root) return;
+    root.classList.add("is-enhanced");
+
+    var revealNodes = root.querySelectorAll("[data-reveal]");
+
+    revealNodes.forEach(function(node) {
+        var delay = node.getAttribute("data-reveal-delay");
+        if (delay) {
+            node.style.setProperty("--reveal-delay", delay + "ms");
+        }
+    });
+
+    if ("IntersectionObserver" in window && revealNodes.length) {
+        var revealObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        }, {
+            threshold: 0.18,
+            rootMargin: "0px 0px -8% 0px"
+        });
+
+        revealNodes.forEach(function(node) {
+            revealObserver.observe(node);
+        });
+    } else {
+        revealNodes.forEach(function(node) {
+            node.classList.add("is-visible");
+        });
+    }
+})();
+</script>

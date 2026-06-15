@@ -1,0 +1,508 @@
+<style>
+.venue-page-wrapper {
+    --bg: #eef4fb;
+    --surface-strong: #ffffff;
+    --text: #16345f;
+    --muted: #4f6486;
+    --border: rgba(178, 194, 217, 0.7);
+    --blue-accent: #1a6ba8;
+    --shadow: 0 24px 60px rgba(17, 41, 79, 0.12);
+    --glow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+.venue-page-wrapper * {
+    box-sizing: border-box;
+}
+
+.venue-page-wrapper {
+    position: relative;
+    padding: 56px 32px 72px;
+    overflow: hidden;
+    background: radial-gradient(circle at top left, rgba(106, 156, 224, 0.22), transparent 28%),
+                radial-gradient(circle at 90% 20%, rgba(200, 74, 68, 0.16), transparent 18%),
+                linear-gradient(180deg, #f6f9fd 0%, var(--bg) 100%);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+.venue-page-wrapper .venue-layout {
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.venue-page-wrapper .venue-main {
+    position: relative;
+    padding: 42px clamp(22px, 4vw, 44px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(247, 250, 255, 0.86));
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow), var(--glow);
+}
+
+.venue-page-wrapper .section-title {
+    margin: 0 0 32px;
+    font-size: 1.8rem;
+    letter-spacing: 0.05em;
+    color: var(--blue-accent);
+    font-weight: 700;
+}
+
+.venue-page-wrapper .location-section,
+.venue-page-wrapper .getting-there-section,
+.venue-page-wrapper .accommodation-section {
+    margin-bottom: 60px;
+}
+
+.venue-page-wrapper .location-section:last-child,
+.venue-page-wrapper .getting-there-section:last-child,
+.venue-page-wrapper .accommodation-section:last-child {
+    margin-bottom: 0;
+}
+
+.venue-page-wrapper .venue-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.venue-page-wrapper .venue-images {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(17, 41, 79, 0.15);
+}
+
+.venue-page-wrapper .venue-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.venue-page-wrapper .venue-details h3 {
+    margin: 0 0 16px;
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+.venue-page-wrapper .venue-description {
+    margin: 0 0 24px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.venue-page-wrapper .venue-details p {
+    margin: 0 0 16px;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.venue-page-wrapper .detail-item {
+    margin-bottom: 20px;
+}
+
+.venue-page-wrapper .label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.venue-page-wrapper .detail-item p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.venue-page-wrapper a {
+    color: var(--blue-accent);
+    text-decoration: none;
+}
+
+.venue-page-wrapper a:hover {
+    text-decoration: underline;
+}
+
+.venue-page-wrapper .venue-map-card {
+    margin-top: 28px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: var(--surface-strong);
+}
+
+.venue-page-wrapper .venue-map-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 20px;
+    background: linear-gradient(180deg, rgba(247, 250, 255, 0.96), rgba(232, 239, 249, 0.92));
+    border-bottom: 1px solid rgba(178, 194, 217, 0.55);
+}
+
+.venue-page-wrapper .venue-map-card__tag {
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #355785;
+}
+
+.venue-page-wrapper .venue-map-card__pulse {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #2bb673;
+    animation: pulseDot 2.2s infinite;
+}
+
+.venue-page-wrapper .venue-map-card iframe {
+    display: block;
+    width: 100%;
+    min-height: 430px;
+    border: 0;
+}
+
+.venue-page-wrapper .hero-video {
+    margin-bottom: 32px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(17, 41, 79, 0.15);
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.venue-page-wrapper .hero-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.venue-page-wrapper .getting-there-section h3,
+.venue-page-wrapper .rate-content h4 {
+    margin: 24px 0 16px;
+    font-size: 1.2rem;
+    color: var(--text);
+    font-weight: 700;
+}
+
+.venue-page-wrapper .getting-there-section > p {
+    margin-bottom: 24px;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.venue-page-wrapper .transport-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.venue-page-wrapper .transport-card {
+    padding: 24px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 20px rgba(17, 41, 79, 0.08);
+}
+
+.venue-page-wrapper .card-icon {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--blue-accent);
+    margin-bottom: 16px;
+    padding: 8px 12px;
+    background: rgba(26, 107, 168, 0.1);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.venue-page-wrapper .transport-card p {
+    margin: 0 0 12px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.venue-page-wrapper .transport-card p:last-child {
+    margin-bottom: 0;
+}
+
+.venue-page-wrapper .transport-detail {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.9rem !important;
+}
+
+.venue-page-wrapper .travel-tip {
+    padding: 18px 24px;
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 152, 0, 0.1));
+    border-left: 4px solid #ff9800;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 24px;
+}
+
+.venue-page-wrapper .rate-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(17, 41, 79, 0.15);
+    background: var(--surface-strong);
+}
+
+.venue-page-wrapper .rate-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px 32px;
+    background: linear-gradient(135deg, rgba(17, 62, 117, 0.96), rgba(28, 109, 163, 0.92));
+    color: white;
+}
+
+.venue-page-wrapper .rate-header h3 {
+    margin: 0 0 8px;
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+.venue-page-wrapper .rate-header p {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.venue-page-wrapper .special-badge {
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #ffc107, #ff9800);
+    color: #000;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.venue-page-wrapper .rate-content {
+    padding: 32px;
+}
+
+.venue-page-wrapper .rate-content p {
+    margin: 0 0 16px;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.venue-page-wrapper .rate-includes h4 {
+    margin: 0 0 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    text-transform: uppercase;
+}
+
+.venue-page-wrapper .benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.venue-page-wrapper .benefits-list li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.venue-page-wrapper .rate-notice {
+    padding: 20px 24px;
+    background: rgba(26, 107, 168, 0.08);
+    border-left: 3px solid var(--blue-accent);
+    border-radius: 8px;
+    margin-bottom: 28px;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+@keyframes pulseDot {
+    0% { box-shadow: 0 0 0 0 rgba(43, 182, 115, 0.52); }
+    70% { box-shadow: 0 0 0 14px rgba(43, 182, 115, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(43, 182, 115, 0); }
+}
+
+@media (max-width: 768px) {
+    .venue-page-wrapper {
+        padding: 40px 18px 56px;
+    }
+
+    .venue-page-wrapper .venue-main {
+        padding: 28px 18px;
+    }
+
+    .venue-page-wrapper .venue-info {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .venue-page-wrapper .transport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .venue-page-wrapper .benefits-list {
+        grid-template-columns: 1fr;
+    }
+
+    .venue-page-wrapper .rate-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .venue-page-wrapper .venue-map-card iframe {
+        min-height: 320px;
+    }
+}
+</style>
+
+<div class="venue-page-wrapper">
+    <section class="venue-layout">
+        <div class="venue-main">
+            
+            <section class="location-section">
+                <h2 class="section-title">Conference Venue Location</h2>
+                
+                <div class="venue-info">
+                    <div class="venue-images">
+                        <img src="https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/itb2.png" alt="Instituto Superior Universitario Bolivariano de Tecnologia - IEEE ETCM 2026 Conference Venue" class="venue-main-img">
+                    </div>
+                    
+                    <div class="venue-details">
+                        <h3>Instituto Superior Universitario Bolivariano de Tecnologia</h3>
+                        <p class="venue-description">The official conference venue of <a href="https://attend.ieee.org/etcm-2026/" title="IEEE ETCM 2026 Homepage">IEEE ETCM 2026</a>. One of Ecuador's most acclaimed educational institutions, combining world-class conference facilities with exceptional hospitality in the heart of Guayaquil.</p>
+                        
+                        <p>The Instituto Superior Universitario Bolivariano de Tecnología (ITB) is a leading technical university in Ecuador. It provides state-of-the-art facilities for academic conferences and technical meetings. The campus features modern auditoriums, advanced audio-visual equipment, and comfortable spaces designed for networking and collaboration.</p>
+                        
+                        <div class="detail-item">
+                            <span class="label">Address</span>
+                            <p>Av. Victor Manuel Rendon 236 y Pedro Carbo, Guayaquil, Ecuador</p>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="label">Contact</span>
+                            <p>For venue inquiries: <a href="mailto:info@etcm2026.org">info@etcm2026.org</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="venue-map-card">
+                    <div class="venue-map-card__header">
+                        <span class="venue-map-card__tag">Campus Location</span>
+                        <span class="venue-map-card__pulse"></span>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12934.799874145874!2d-79.90449046722986!3d-2.189807110449409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6e78c85d7d21%3A0x14a1fa5073d9b961!2sITB%20Instituto%20Superior%20Universitario%20Bolivariano%20de%20Tecnolog%C3%ADa!5e0!3m2!1ses-419!2sec!4v1774457658958!5m2!1ses-419!2sec" allowfullscreen="" loading="lazy" title="ITB Campus Map - IEEE ETCM 2026 Venue Location"></iframe>
+                </div>
+            </section>
+
+            <section class="getting-there-section">
+                <h2 class="section-title">Getting to Guayaquil</h2>
+                
+                <p>Guayaquil is Ecuador's largest city and main economic hub. The city is well-connected internationally through José Joaquín de Olmedo International Airport. Whether you're traveling from North America, South America, or Europe, reaching Guayaquil is convenient with multiple daily flights from major cities.</p>
+                
+                <div class="hero-video">
+                    <iframe src="https://www.youtube.com/embed/NuVv8pgz-XY?autoplay=0&mute=1&controls=1&loop=1&playlist=NuVv8pgz-XY&playsinline=1&rel=0&modestbranding=1" title="Discover Guayaquil Ecuador - IEEE ETCM 2026 Host City" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </div>
+
+                <h3>Transportation Options to the Conference Venue</h3>
+
+                <div class="transport-grid">
+                    <div class="transport-card">
+                        <div class="card-icon">✈️ BY AIR</div>
+                        <p><strong>José Joaquín de Olmedo International Airport (GYE)</strong> is Guayaquil's main airport. It is located approximately 15–20 minutes from the ITB campus by car.</p>
+                        <p class="transport-detail">Direct flights available from Quito, Bogotá, Lima, Panama City, Miami, Madrid, and other major international hubs.</p>
+                    </div>
+
+                    <div class="transport-card">
+                        <div class="card-icon">🚕 TAXI & RIDE SHARE</div>
+                        <p>Taxis and <strong>Uber</strong> are widely available outside the airport arrivals terminal. Estimated fare to ITB: <strong>USD 8–12</strong> depending on traffic conditions.</p>
+                        <p class="transport-detail">We recommend using official airport taxis or ride-sharing apps for safety and convenience.</p>
+                    </div>
+
+                    <div class="transport-card">
+                        <div class="card-icon">🏙️ CITY CENTRE</div>
+                        <p>ITB is located in <strong>downtown Guayaquil</strong>, making it easily accessible from major city landmarks, hotels, and transportation hubs.</p>
+                        <p class="transport-detail">Walking distance to Malecón 2000, restaurants, and cultural attractions.</p>
+                    </div>
+                </div>
+
+                <div class="travel-tip">
+                    <strong>Travel tip:</strong> Ecuador uses the US Dollar (USD) as its official currency. No currency exchange is needed for travelers arriving from the United States. ATMs are widely available throughout Guayaquil.
+                </div>
+                
+                <h3>Additional Travel Information</h3>
+                <p>International attendees should check visa requirements for Ecuador before traveling. Many countries have visa-free access for tourism and business purposes. For more information, visit the <a href="https://www.cancilleria.gob.ec/" target="_blank" rel="noopener">Ecuador Ministry of Foreign Affairs website</a>.</p>
+            </section>
+
+            <section class="accommodation-section">
+                <h2 class="section-title">Accommodation & Venue Facilities</h2>
+                
+                <p>The IEEE ETCM 2026 conference will be held entirely at the ITB campus facilities. We recommend booking accommodation at nearby hotels in downtown Guayaquil for convenient access to the venue and local attractions.</p>
+                
+                <div class="rate-card">
+                    <div class="rate-header">
+                        <div>
+                            <h3>Conference Venue — ETCM 2026</h3>
+                            <p>Instituto Superior Universitario Bolivariano de Tecnologia, Guayaquil</p>
+                        </div>
+                        <span class="special-badge">★ VENUE INFO</span>
+                    </div>
+
+                    <div class="rate-content">
+                        <div class="rate-includes">
+                            <h4>Venue Facilities</h4>
+                            <ul class="benefits-list">
+                                <li>✓ Modern conference rooms with capacity for 500+ attendees</li>
+                                <li>✓ High-speed Wi-Fi access throughout the campus</li>
+                                <li>✓ Professional audio-visual equipment and technical support</li>
+                                <li>✓ Accessible facilities for attendees with disabilities</li>
+                                <li>✓ On-campus dining options and coffee breaks</li>
+                                <li>✓ Secure parking available for registered attendees</li>
+                                <li>✓ Poster presentation areas and exhibition spaces</li>
+                                <li>✓ Breakout rooms for workshops and meetings</li>
+                            </ul>
+                        </div>
+
+                        <div class="rate-notice">
+                            <strong>Note:</strong> All conference sessions, workshops, and networking events will be held at the ITB campus. Attendees are encouraged to arrange accommodation at nearby hotels in downtown Guayaquil for convenient access to the venue and to explore the city's vibrant culture and attractions.
+                        </div>
+                        
+                        <h4>Recommended Hotels Near the Venue</h4>
+                        <p>Several quality hotels are located within walking distance or a short taxi ride from ITB. We recommend booking early to secure the best rates. For a list of recommended hotels, please visit our <a href="https://attend.ieee.org/etcm-2026/accommodation/" title="ETCM 2026 Accommodation Guide">accommodation page</a>.</p>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </section>
+</div>
