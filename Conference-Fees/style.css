@@ -47,12 +47,16 @@
 .payment-info {
     width: min(1100px, 96%);
     margin: 24px auto 40px;
-    text-align: center;
+    text-align: left;
 }
 
 .payment-info p {
     margin: 0 0 14px;
     line-height: 1.6;
+}
+
+.payment-centered {
+    text-align: center;
 }
 
 table {
