@@ -28,11 +28,13 @@ const speakers = [
     biografia:[
       "Sergio Armando Gutiérrez Betancur holds the degrees of Bachelor in Computer Science of Universidad de San Buenaventura in Medellin Colombia (2008) Master in Engineering - Systems Engineering (2001) and PhD in Engineering - Systems and Informatics (2018), both from Universidad Nacional de Colombia. He is currently an Assistant Professor in Universidad de Antioquia in Medellin, Colombia and a researcher in the GITA Lab research group in the same institution, where we is a former Postdoctoral Fellow Researcher. He has been a lecturer and researcher in institutions such as Universidad Autónoma Latinoamericana, Universidad de Medellin and Universidad Nacional de Colombia. Professor Gutiérrez has around 38 publications in different Conferences and Journals, and he has presented tutorials in the area of Programmable Data Planes in conferences such as IEEE ANDESCON, IEEE LATINCOM, IEEE/IFIP NOMS and IEEE COLCOM. His research interests cover Software Defined Networking, Programmable Data Planes, Cybersecurity and applications of Artificial Intelligence and Pattern Recognition to the solving of Computer Network Challenges. Professor Gutiérrez is an IEEE Senior member, current Chair of the IEEE ComSoc Colombia Chapter, he is on charge of Technical and Professional Activities in IEEE Colombia Section and he is a member of the IEEE ComSoc Latin America Region Board, in the Membership Development Committee."
     ]
-  },{
+  },
+  {
     foto:"https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/Luis-Nando-Ochoa-page-00001-scaled.jpg",
+    fotoPosition:"center 20%",
     nombre:"Prof. Luis (Nando) Ochoa",
     logo:"https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/logo-PES-EC-color-e1783197351585.png",
-    country:"Austraila",
+    country:"Australia",
     bandera:"https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg",
     tema:"The Future of DER Hosting Capacity and DER Orchestration",
     resumen:[
@@ -112,7 +114,11 @@ function renderSpeakers() {
           escapeHTML(speaker.foto) +
           '" alt="' +
           speakerName +
-        '">' +
+          '"' +
+          (speaker.fotoPosition
+            ? ' style="object-position: ' + escapeHTML(speaker.fotoPosition) + '"'
+            : "") +
+        '>' +
         '<h2 class="speaker-name">' +
           speakerName +
         "</h2>" +
