@@ -43,7 +43,30 @@ const speakers = [
     biografia:[
       "He leads one of the world’s leading research teams in smart grids. He is a professor of Smart Grids and Energy Systems at the University of Melbourne and the chief scientist and co-founder of VoltMind. He specializes in electric distribution networks, particularly in the integration of distributed energy resources (DERs) and the use of data-driven and artificial intelligence techniques to achieve smarter, low-carbon grids. He is also a distinguished lecturer and a senior member of IEEE PES, and served on the editorial board of the journal IEEE Power and Energy. Before joining the University of Melbourne, he held academic positions at the University of Manchester and a research position at the University of Edinburgh. At VoltMind, he contributes to the development of advanced software tools that meet the evolving needs of electric distribution utilities. Over the years, the research team has worked on major academic and industrial projects, resulting in more than 230 research articles (publication list and ResearchGate) in top-tier international peer-reviewed journals and conferences, more than 90 technical reports, and two patents—one filed by Psymetrix Ltd and the other by the University of Melbourne."
     ]
-  }
+  },
+  {
+    foto:"https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/Mariela_Cerrada.jpeg",
+    fotoPosition:"",
+    nombre:"Ph. D. Mariela Cerrada",
+    logo:"https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/logo-IAS-RS-EC-color-scaled.png",
+    country:["Ecuador", "USA"],
+    bandera:[
+      "https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
+    ],
+    tema:"Building Reliable Intelligent Maintenance",
+    resumen:[
+      "The increasing digitalization of industrial assets is transforming maintenance from a reactive or preventive practice into an intelligent, data-driven discipline. Advances in sensing technologies, connectivity, and artificial intelligence are enabling organizations to convert industrial data into reliable maintenance decisions that improve equipment availability, safety, and operational performance. Building such intelligent maintenance systems, however, requires much more than implementing machine learning algorithms. It demands a systematic understanding of data quality, industrial context, and emerging digital technologies.",
+      "This talk presents a practical roadmap for building reliable intelligent maintenance systems, starting with the principles of condition-based maintenance and identifying the industrial scenarios where machine learning provides measurable value. The presentation then introduces the end-to-end machine learning pipeline for maintenance applications, covering data acquisition, preprocessing, feature engineering, model development, validation, deployment, and continuous improvement.",
+      "Special emphasis is placed on the quality and contextualization of industrial data, demonstrating how data integrity, operating conditions, and domain knowledge directly influence the accuracy, robustness, and trustworthiness of AI-driven maintenance decisions. Finally, the talk explores the evolution toward Maintenance 5.0, discussing how industrial knowledge graphs, Digital Twins, large language models (LLMs), and AI copilots are expected to enhance human expertise and support more autonomous and resilient maintenance strategies.",
+      "Designed for engineers, researchers, and industry professionals, this presentation provides both a practical framework for implementing intelligent maintenance and a forward-looking perspective on the technologies that will shape the next generation of reliable industrial operations."
+    ],
+    biografia:[
+      "Mariela Cerrada, IEEE Senior member, is a professor and researcher with wide experience in applied artificial intelligence and machine learning in industrial settings. Her main line of research focuses on fault detection and diagnosis of industrial machines. Due to her extensive research trajectory, she has been recognized in the ranking of the Stanford University’s Top 2% Scientists from 2021 to 2024 editions, 2022 edition of 50 Women in Robotics you need to know about, 2021 Industry Solutions Award of the Industrial Engineering and Operations Management Society, 2020 Distinguished Researcher of the IEEE Ecuador Section. In 2024, she received the recognition ATENEA issued by the National Secretary of High Education, Science, Technology and Innovation of Ecuador for her contribution to the engineering and technology.",
+      "She received the Ph.D. degree in Automatic Systems from the National Institute of Applied Sciences (INSA) in Toulouse, France, in 2003, and was a full professor with the Universidad de Los Andes (ULA-Venezuela), Universidad Politécnica Salesiana (UPS-Ecuador), as well as invited professor at Politecnico di Milano (Italia) and Chongqing Technology and Business University (China). Currently, she is invited professor with the Universidad Estatal de Milagro (UNEMI-Ecuador).",
+      "Dr. Cerrada is an active member of IEEE, currently in the role of Associate Editor of the IEEE Transactions of Reliability and member of the R9 Milestones Ad Hoc Committee. She was the chair of the IEEE Ecuador Joint Chapter Industry Applications & Reliability in 2023-2025, IEEE Ecuador Industrial Engagement representative in 2022-2023, Counselor of the IEEE IES Student branch of UPS 2019-2025. She is also a member of the Technical Committee on Manufacturing Plant Control of the International Federation of Automatic Control (IFAC), since 2022."
+    ]
+  },
 ];
 
 
@@ -91,16 +114,31 @@ function renderSpeakers() {
           '">' +
         "</div>"
       : "";
-    const speakerCountry = escapeHTML(speaker.country);
     const speakerTopic = escapeHTML(speaker.tema);
 
-    const flagMarkup = speaker.bandera
-      ? '<img class="flag-icon" src="' +
-        escapeHTML(speaker.bandera) +
-        '" alt="Flag of ' +
-        speakerCountry +
-        '">'
-      : "";
+    const flagList = Array.isArray(speaker.bandera)
+      ? speaker.bandera
+      : speaker.bandera
+      ? [speaker.bandera]
+      : [];
+    const countryList = Array.isArray(speaker.country)
+      ? speaker.country
+      : [speaker.country];
+    const flagMarkup = flagList
+      .map(function (flagUrl, index) {
+        const rowCountry = escapeHTML(countryList[index] || countryList[0]);
+        return (
+          '<span class="country-row">' +
+            '<img class="flag-icon" src="' +
+            escapeHTML(flagUrl) +
+            '" alt="Flag of ' +
+            rowCountry +
+            '">' +
+            "<span>" + rowCountry + "</span>" +
+          "</span>"
+        );
+      })
+      .join("");
 
     const summaryMarkup = renderParagraphs(speaker.resumen);
     const biographyMarkup = renderParagraphs(speaker.biografia || "");
@@ -126,9 +164,6 @@ function renderSpeakers() {
         '<div class="profile-divider"></div>' +
         '<p class="speaker-country">' +
           flagMarkup +
-          "<span>" +
-            speakerCountry +
-          "</span>" +
         "</p>" +
       "</div>" +
 
