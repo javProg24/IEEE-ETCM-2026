@@ -176,11 +176,12 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  padding: 4px 0;
 }
 
 .about-uni-logo {
-  max-width: 90px;
-  max-height: 34px;
+  max-width: 150px;
+  max-height: 60px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -189,7 +190,7 @@
 .about-uni-fallback {
   color: var(--about-blue);
   font-weight: 700;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .about-uni-logo-link:hover .about-uni-fallback {
