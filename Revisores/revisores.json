@@ -46,7 +46,7 @@
     "nombre": "Adrián",
     "apellido": "Alarcón",
     "afiliacion": "Saesa",
-    "pais": "CL"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/250px-Flag_of_Chile.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 8,
@@ -690,7 +690,7 @@
     "nombre": "Angel",
     "apellido": "Custodio",
     "afiliacion": "Universidad Nacional Andrés Bello",
-    "pais": "CL"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/250px-Flag_of_Chile.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 100,
@@ -914,7 +914,7 @@
     "nombre": "Néstor",
     "apellido": "González",
     "afiliacion": "Universidad Mayor",
-    "pais": "CL"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/250px-Flag_of_Chile.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 132,
@@ -1124,7 +1124,7 @@
     "nombre": "Liliana",
     "apellido": "Jorquera",
     "afiliacion": "Universidad Andres Bello",
-    "pais": "CL"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/250px-Flag_of_Chile.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 162,
@@ -1572,14 +1572,14 @@
     "nombre": "Diana",
     "apellido": "Parra Meléndez",
     "afiliacion": "Universidad Andres Bello, Santiago, Chile",
-    "pais": "CL"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/250px-Flag_of_Chile.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 226,
     "nombre": "Jorge",
     "apellido": "Parraga-Alava",
     "afiliacion": "Universidad Técnica de Manabí",
-    "pais": "CL"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/250px-Flag_of_Chile.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 227,
@@ -2300,7 +2300,7 @@
     "nombre": "Juan Pablo",
     "apellido": "Vásconez",
     "afiliacion": "Universidad Andres Bello",
-    "pais": "CL"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/250px-Flag_of_Chile.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 330,
