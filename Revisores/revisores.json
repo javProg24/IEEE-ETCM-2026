@@ -641,7 +641,7 @@
     "nombre": "Erick",
     "apellido": "Cuenca",
     "afiliacion": "LIRMM",
-    "pais": "FR"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/330px-Flag_of_France.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 93,
@@ -1047,7 +1047,7 @@
     "nombre": "Eduardo",
     "apellido": "Holguin",
     "afiliacion": "Institut supérieur d'électronique de Paris",
-    "pais": "FR"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/330px-Flag_of_France.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 151,
