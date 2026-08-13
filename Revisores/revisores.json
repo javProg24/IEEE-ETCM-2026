@@ -725,7 +725,7 @@
     "nombre": "Kevin",
     "apellido": "Dekemele",
     "afiliacion": "University of Liège",
-    "pais": "BE"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/250px-Flag_of_Belgium.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 105,
@@ -998,7 +998,7 @@
     "nombre": "Ahmed",
     "apellido": "Hassan",
     "afiliacion": "Ghent University",
-    "pais": "BE"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/250px-Flag_of_Belgium.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 144,
