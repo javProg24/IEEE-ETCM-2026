@@ -816,7 +816,7 @@
     "nombre": "Edson Rodrigo",
     "apellido": "Fernandez Cornejo",
     "afiliacion": "Universidad de Piura",
-    "pais": "PE"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/5/54/War_flag_of_Peru.svg"
   },
   {
     "id": 118,
@@ -1306,14 +1306,14 @@
     "nombre": "José",
     "apellido": "Manrique Silupú",
     "afiliacion": "Universidad de Piura",
-    "pais": "PE"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/5/54/War_flag_of_Peru.svg"
   },
   {
     "id": 188,
     "nombre": "Fernando",
     "apellido": "Maradiegue",
     "afiliacion": "Investigador independiente",
-    "pais": "PE"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/5/54/War_flag_of_Peru.svg"
   },
   {
     "id": 189,
@@ -2139,7 +2139,7 @@
     "nombre": "Carlos Alfredo",
     "apellido": "Ugarte Alván",
     "afiliacion": "Universidad Nacional Agraria La Molina",
-    "pais": "PE"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/5/54/War_flag_of_Peru.svg"
   },
   {
     "id": 307,
@@ -2202,7 +2202,7 @@
     "nombre": "Juan Pablo",
     "apellido": "Vargas Machuca Bueno",
     "afiliacion": "Universidad Nacional de Ingeniería",
-    "pais": "PE"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/5/54/War_flag_of_Peru.svg"
   },
   {
     "id": 316,
