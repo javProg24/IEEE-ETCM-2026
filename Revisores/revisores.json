@@ -60,7 +60,7 @@
     "nombre": "Fatima",
     "apellido": "Almaghrabi",
     "afiliacion": "University of Edinburgh",
-    "pais": "GB"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
     "id": 10,
@@ -1796,7 +1796,7 @@
     "nombre": "Lucía",
     "apellido": "Rivadeneira",
     "afiliacion": "Universidad Técnica de Manabí",
-    "pais": "GB"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
     "id": 258,
