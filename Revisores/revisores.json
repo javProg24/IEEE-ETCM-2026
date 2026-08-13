@@ -1397,7 +1397,7 @@
     "nombre": "Fernando",
     "apellido": "Moya",
     "afiliacion": "RMIT University",
-    "pais": "AU"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
     "id": 201,
@@ -1600,7 +1600,7 @@
     "nombre": "Luis",
     "apellido": "Pesantes",
     "afiliacion": "The University of Melbourne",
-    "pais": "AU"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
     "id": 230,
