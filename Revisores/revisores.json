@@ -382,7 +382,7 @@
     "nombre": "Diego",
     "apellido": "Cabrera",
     "afiliacion": "South China University of Technology",
-    "pais": "CN"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
     "id": 56,
@@ -550,7 +550,7 @@
     "nombre": "Yuqing",
     "apellido": "Chen",
     "afiliacion": "Harbin Engineering University",
-    "pais": "CN"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
     "id": 80,
@@ -851,7 +851,7 @@
     "nombre": "Jundong",
     "apellido": "Fu",
     "afiliacion": "Tongji University",
-    "pais": "CN"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
     "id": 123,
@@ -1824,7 +1824,7 @@
     "nombre": "Viviana Lorena",
     "apellido": "Robalino Espinoza",
     "afiliacion": "Tongji University",
-    "pais": "CN"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
     "id": 262,
@@ -2307,7 +2307,7 @@
     "nombre": "Zhenlong",
     "apellido": "Wu",
     "afiliacion": "Zhengzhou University",
-    "pais": "CN"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
     "id": 331,
