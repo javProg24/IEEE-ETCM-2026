@@ -585,7 +585,7 @@
     "nombre": "Juan",
     "apellido": "Ciafardini",
     "afiliacion": "FCAG-UNLP",
-    "pais": "AR"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/250px-Flag_of_Argentina.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 85,
@@ -620,7 +620,7 @@
     "nombre": "Graciela",
     "apellido": "Colomé",
     "afiliacion": "Instituto de Energía Eléctrica Universidad Nacional de San Juan - CONICET",
-    "pais": "AR"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/250px-Flag_of_Argentina.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 90,
@@ -1131,7 +1131,7 @@
     "nombre": "Mauro",
     "apellido": "Jurado",
     "afiliacion": "Institute of Electric Energy (IEE), National University of San Juan – National Scientific Council (CONICET)",
-    "pais": "AR"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/250px-Flag_of_Argentina.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 163,
@@ -1208,7 +1208,7 @@
     "nombre": "Leonardo",
     "apellido": "León",
     "afiliacion": "Instituto de Energía Eléctrica",
-    "pais": "AR"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/250px-Flag_of_Argentina.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 174,
@@ -1327,7 +1327,7 @@
     "nombre": "Ricardo",
     "apellido": "Medina",
     "afiliacion": "Instituto de Energía Eléctrica - Universidad Nacional de San Juan - CONICET-IEE-UNSJ",
-    "pais": "AR"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/250px-Flag_of_Argentina.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 191,
