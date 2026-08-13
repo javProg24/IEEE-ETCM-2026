@@ -466,7 +466,7 @@
     "nombre": "Rocco",
     "apellido": "Cassandro",
     "afiliacion": "University of Maryland",
-    "pais": "US"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Flag_of_the_United_States_%281912-1959%29.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
     "id": 68,
@@ -669,7 +669,7 @@
     "nombre": "Fernando",
     "apellido": "Cueva",
     "afiliacion": "Rochester Institute of Technology",
-    "pais": "US"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Flag_of_the_United_States_%281912-1959%29.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
     "id": 97,
@@ -1075,7 +1075,7 @@
     "nombre": "Gabriel Andres",
     "apellido": "Intriago Velasquez",
     "afiliacion": "Expedia Group",
-    "pais": "US"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Flag_of_the_United_States_%281912-1959%29.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
     "id": 155,
@@ -2034,7 +2034,7 @@
     "nombre": "Gautam",
     "apellido": "Sihag",
     "afiliacion": "Shipt Inc",
-    "pais": "US"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Flag_of_the_United_States_%281912-1959%29.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
     "id": 292,
