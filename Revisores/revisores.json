@@ -1,0 +1,2340 @@
+[
+  {
+    "id": 1,
+    "nombre": "Patricia",
+    "apellido": "Acosta-Vargas",
+    "afiliacion": "Universidad de Las Américas",
+    "pais": "EC"
+  },
+  {
+    "id": 2,
+    "nombre": "Eliana",
+    "apellido": "Acurio",
+    "afiliacion": "Escuela Politecnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 3,
+    "nombre": "Santiago",
+    "apellido": "Acurio",
+    "afiliacion": "Pontificia Universidad Católica del Ecuador - Ambato",
+    "pais": "EC"
+  },
+  {
+    "id": 4,
+    "nombre": "Byron Alejandro",
+    "apellido": "Acuña Acurio",
+    "afiliacion": "UNICAMP",
+    "pais": "EC"
+  },
+  {
+    "id": 5,
+    "nombre": "Alexander",
+    "apellido": "Aguila Téllez",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 6,
+    "nombre": "Adriana",
+    "apellido": "Aguirre",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 7,
+    "nombre": "Adrián",
+    "apellido": "Alarcón",
+    "afiliacion": "Saesa",
+    "pais": "CL"
+  },
+  {
+    "id": 8,
+    "nombre": "Jose",
+    "apellido": "Aller",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 9,
+    "nombre": "Fatima",
+    "apellido": "Almaghrabi",
+    "afiliacion": "University of Edinburgh",
+    "pais": "GB"
+  },
+  {
+    "id": 10,
+    "nombre": "Fernando",
+    "apellido": "Almeida",
+    "afiliacion": "National Institute of Telecommunications - Inatel",
+    "pais": "BR"
+  },
+  {
+    "id": 11,
+    "nombre": "Carlos Daniel",
+    "apellido": "Altamirano",
+    "afiliacion": "Universidad de la Fuerzas Armadas ESPE",
+    "pais": "EC"
+  },
+  {
+    "id": 12,
+    "nombre": "Omar",
+    "apellido": "Alvarado",
+    "afiliacion": "Universidad Católica de Cuenca",
+    "pais": "EC"
+  },
+  {
+    "id": 13,
+    "nombre": "José",
+    "apellido": "Alvarado-Contreras",
+    "afiliacion": "Universidad Francisco de Paula Santander Ocaña",
+    "pais": "CO"
+  },
+  {
+    "id": 14,
+    "nombre": "Manuel",
+    "apellido": "Alvarez",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 15,
+    "nombre": "Marcelo",
+    "apellido": "Alvarez V.",
+    "afiliacion": "Universidad de las Fuerzas Armadas ESPE",
+    "pais": "EC"
+  },
+  {
+    "id": 16,
+    "nombre": "Luis",
+    "apellido": "Amaguaya",
+    "afiliacion": "Instituto Superior Universitario Bolivariano de Tecnologıa (ITB)",
+    "pais": "EC"
+  },
+  {
+    "id": 17,
+    "nombre": "Oscar Ivan",
+    "apellido": "Analuiza Maiza",
+    "afiliacion": "Universidad Técnica de Ambato",
+    "pais": "EC"
+  },
+  {
+    "id": 18,
+    "nombre": "Carlos Efrain",
+    "apellido": "Andrade",
+    "afiliacion": "Universidad Estatal Península de Santa Elena",
+    "pais": "EC"
+  },
+  {
+    "id": 19,
+    "nombre": "Doménica",
+    "apellido": "Apolo",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 20,
+    "nombre": "Hugo",
+    "apellido": "Arcos",
+    "afiliacion": "ESCUELA POLITECNICA NACIONAL",
+    "pais": "EC"
+  },
+  {
+    "id": 21,
+    "nombre": "Diego",
+    "apellido": "Arcos-Aviles",
+    "afiliacion": "Universidad de las Fuerzas Armadas ESPE",
+    "pais": "EC"
+  },
+  {
+    "id": 22,
+    "nombre": "Simone",
+    "apellido": "Arena",
+    "afiliacion": "University of Cagliari",
+    "pais": "IT"
+  },
+  {
+    "id": 23,
+    "nombre": "Berenice",
+    "apellido": "Arguero",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 24,
+    "nombre": "Diego",
+    "apellido": "Arias",
+    "afiliacion": "Universidad Tecnológica Centroamericana (UNITEC)",
+    "pais": "EC"
+  },
+  {
+    "id": 25,
+    "nombre": "F. Jose",
+    "apellido": "Arques",
+    "afiliacion": "Universidad Politécnica de Madrid",
+    "pais": "ES"
+  },
+  {
+    "id": 26,
+    "nombre": "Fabian",
+    "apellido": "Astudillo",
+    "afiliacion": "Universidad de Cuenca",
+    "pais": "EC"
+  },
+  {
+    "id": 27,
+    "nombre": "Juan Carlos",
+    "apellido": "Astudillo",
+    "afiliacion": "Investigador independiente",
+    "pais": "EC"
+  },
+  {
+    "id": 28,
+    "nombre": "Allan",
+    "apellido": "Avendano Sudario",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 29,
+    "nombre": "Jonathan",
+    "apellido": "Aviles-Cedeno",
+    "afiliacion": "Delft University of Technology",
+    "pais": "NL"
+  },
+  {
+    "id": 30,
+    "nombre": "David",
+    "apellido": "Ayabaca",
+    "afiliacion": "Investigador independiente",
+    "pais": "EC"
+  },
+  {
+    "id": 31,
+    "nombre": "Paul",
+    "apellido": "Ayala",
+    "afiliacion": "Universidad de las Fuerzas Armadas",
+    "pais": "EC"
+  },
+  {
+    "id": 32,
+    "nombre": "Manuel",
+    "apellido": "Ayala-Chauvin",
+    "afiliacion": "Universidad Tecnológica Indoamérica",
+    "pais": "EC"
+  },
+  {
+    "id": 33,
+    "nombre": "Roberto",
+    "apellido": "Barba",
+    "afiliacion": "CENACE",
+    "pais": "EC"
+  },
+  {
+    "id": 34,
+    "nombre": "Hernan",
+    "apellido": "Barba Molina",
+    "afiliacion": "Escuela Politecnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 35,
+    "nombre": "Carlos",
+    "apellido": "Barrera-Singaña",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 36,
+    "nombre": "Julio",
+    "apellido": "Barzola-Monteses",
+    "afiliacion": "Department of Computer Science and Artificial Intelligence",
+    "pais": "ES"
+  },
+  {
+    "id": 37,
+    "nombre": "Carmelo J. A.",
+    "apellido": "Bastos Filho",
+    "afiliacion": "University of Pernambuco",
+    "pais": "BR"
+  },
+  {
+    "id": 38,
+    "nombre": "Roberto",
+    "apellido": "Bayas",
+    "afiliacion": "Universidad Politécnica Salesiana (UPS)",
+    "pais": "EC"
+  },
+  {
+    "id": 39,
+    "nombre": "John",
+    "apellido": "Bedón-Molina",
+    "afiliacion": "Universidad de las Fuerzas Armadas ESPE",
+    "pais": "EC"
+  },
+  {
+    "id": 40,
+    "nombre": "Selma",
+    "apellido": "Ben Ftima",
+    "afiliacion": "Centro Nacional del Hidrogeno Puertollano Ciudad Real",
+    "pais": "ES"
+  },
+  {
+    "id": 41,
+    "nombre": "Wafa",
+    "apellido": "Benaatou",
+    "afiliacion": "TIM",
+    "pais": "MA"
+  },
+  {
+    "id": 42,
+    "nombre": "Alejandro",
+    "apellido": "Benalcázar",
+    "afiliacion": "CELEC",
+    "pais": "EC"
+  },
+  {
+    "id": 43,
+    "nombre": "Eduardo",
+    "apellido": "Benavides",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 44,
+    "nombre": "Leonardo",
+    "apellido": "Betancur",
+    "afiliacion": "Universidad Pontificia Bolivariana",
+    "pais": "CO"
+  },
+  {
+    "id": 45,
+    "nombre": "Isabela",
+    "apellido": "Birs",
+    "afiliacion": "Technical University of Cluj-Napoca",
+    "pais": "RO"
+  },
+  {
+    "id": 46,
+    "nombre": "Rodolfo Xavier",
+    "apellido": "Bojorque Chasi",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 47,
+    "nombre": "Omar Gustavo",
+    "apellido": "Bravo Quezada",
+    "afiliacion": "Salesian Polytechnic University",
+    "pais": "EC"
+  },
+  {
+    "id": 48,
+    "nombre": "Wilson",
+    "apellido": "Brito",
+    "afiliacion": "CENACE",
+    "pais": "EC"
+  },
+  {
+    "id": 49,
+    "nombre": "Jorge",
+    "apellido": "Buele",
+    "afiliacion": "Universidad Tecnológica Indoamerica",
+    "pais": "EC"
+  },
+  {
+    "id": 50,
+    "nombre": "Freddy L.",
+    "apellido": "Bueno-Palomeque",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 51,
+    "nombre": "Pablo-Andres",
+    "apellido": "Buestan-Andrade",
+    "afiliacion": "Universidad Católica de Cuenca",
+    "pais": "EC"
+  },
+  {
+    "id": 52,
+    "nombre": "Alejandro",
+    "apellido": "Bustos",
+    "afiliacion": "UNED",
+    "pais": "ES"
+  },
+  {
+    "id": 53,
+    "nombre": "Dennys",
+    "apellido": "Báez-Sanchez",
+    "afiliacion": "Universidad Politecnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 54,
+    "nombre": "Ana",
+    "apellido": "Cabrera",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 55,
+    "nombre": "Diego",
+    "apellido": "Cabrera",
+    "afiliacion": "South China University of Technology",
+    "pais": "CN"
+  },
+  {
+    "id": 56,
+    "nombre": "Ronny",
+    "apellido": "Cabrera",
+    "afiliacion": "IEEE Ecuador Section",
+    "pais": "EC"
+  },
+  {
+    "id": 57,
+    "nombre": "Andy Xavier",
+    "apellido": "Cabrera Tituana",
+    "afiliacion": "Profesional independiente",
+    "pais": "EC"
+  },
+  {
+    "id": 58,
+    "nombre": "Darwin",
+    "apellido": "Caina",
+    "afiliacion": "Universidad Central del Ecuador",
+    "pais": "EC"
+  },
+  {
+    "id": 59,
+    "nombre": "Oscar",
+    "apellido": "Camacho",
+    "afiliacion": "Universidad San Francisco de Quito",
+    "pais": "EC"
+  },
+  {
+    "id": 60,
+    "nombre": "Paul",
+    "apellido": "Cardenas",
+    "afiliacion": "Universidad de Cuenca",
+    "pais": "EC"
+  },
+  {
+    "id": 61,
+    "nombre": "Angela",
+    "apellido": "Carrera Rivera",
+    "afiliacion": "Escuela Superior Politecnica del Litoral",
+    "pais": "ES"
+  },
+  {
+    "id": 62,
+    "nombre": "Andrea",
+    "apellido": "Carrión",
+    "afiliacion": "Investigador independiente",
+    "pais": "EC"
+  },
+  {
+    "id": 63,
+    "nombre": "María de Los Ángeles",
+    "apellido": "Carrión",
+    "afiliacion": "Business IT",
+    "pais": "EC"
+  },
+  {
+    "id": 64,
+    "nombre": "Jorge Enrique",
+    "apellido": "Carrión González",
+    "afiliacion": "UNIVERSIDAD NACIONAL DE LOJA",
+    "pais": "EC"
+  },
+  {
+    "id": 65,
+    "nombre": "Christian P.",
+    "apellido": "Carvajal",
+    "afiliacion": "Universidad Indoamerica",
+    "pais": "EC"
+  },
+  {
+    "id": 66,
+    "nombre": "Henry Ramiro",
+    "apellido": "Carvajal Mora",
+    "afiliacion": "Universidad San Francisco de Quito, USFQ",
+    "pais": "EC"
+  },
+  {
+    "id": 67,
+    "nombre": "Rocco",
+    "apellido": "Cassandro",
+    "afiliacion": "University of Maryland",
+    "pais": "US"
+  },
+  {
+    "id": 68,
+    "nombre": "Marco",
+    "apellido": "Castelo",
+    "afiliacion": "IST BOLIVAR",
+    "pais": "EC"
+  },
+  {
+    "id": 69,
+    "nombre": "Jessica",
+    "apellido": "Castillo",
+    "afiliacion": "Universidad Tecnica de Cotopaxi",
+    "pais": "EC"
+  },
+  {
+    "id": 70,
+    "nombre": "Thiago",
+    "apellido": "Cavalcanti",
+    "afiliacion": "Universidade de Pernambuco (UPE)",
+    "pais": "BR"
+  },
+  {
+    "id": 71,
+    "nombre": "Priscila",
+    "apellido": "Cedillo",
+    "afiliacion": "Universidad de Cuenca",
+    "pais": "EC"
+  },
+  {
+    "id": 72,
+    "nombre": "Jaime",
+    "apellido": "Cepeda",
+    "afiliacion": "Operador Nacional de Electricidad CENACE",
+    "pais": "EC"
+  },
+  {
+    "id": 73,
+    "nombre": "Yesenia",
+    "apellido": "Cevallos",
+    "afiliacion": "University of Calabria",
+    "pais": "IT"
+  },
+  {
+    "id": 74,
+    "nombre": "Lorenzo",
+    "apellido": "Cevallos Torres",
+    "afiliacion": "UNIVERSIDAD DE GUAYAQUIL",
+    "pais": "EC"
+  },
+  {
+    "id": 75,
+    "nombre": "Santiago",
+    "apellido": "Chamba",
+    "afiliacion": "Subgerencia de investigación y desarrollo CENACE",
+    "pais": "EC"
+  },
+  {
+    "id": 76,
+    "nombre": "Luis",
+    "apellido": "Chamba-Eras",
+    "afiliacion": "Universidad Nacional de Loja",
+    "pais": "EC"
+  },
+  {
+    "id": 77,
+    "nombre": "William",
+    "apellido": "Chamorro",
+    "afiliacion": "Escuela Politécncia Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 78,
+    "nombre": "Patricia",
+    "apellido": "Chavez-Burbano",
+    "afiliacion": "Escuela Superior Politecnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 79,
+    "nombre": "Yuqing",
+    "apellido": "Chen",
+    "afiliacion": "Harbin Engineering University",
+    "pais": "CN"
+  },
+  {
+    "id": 80,
+    "nombre": "Fernando A.",
+    "apellido": "Chicaiza",
+    "afiliacion": "Universidad Indoamérica",
+    "pais": "EC"
+  },
+  {
+    "id": 81,
+    "nombre": "Paulo",
+    "apellido": "Chiliguano",
+    "afiliacion": "Queen Mary University of London",
+    "pais": "EC"
+  },
+  {
+    "id": 82,
+    "nombre": "Luis",
+    "apellido": "Chiza",
+    "afiliacion": "ESCUELA POLITÉCNICA NACIONAL",
+    "pais": "EC"
+  },
+  {
+    "id": 83,
+    "nombre": "Luis Enrique",
+    "apellido": "Chuquimarca Jimenez",
+    "afiliacion": "UNIVERSIDAD PENINSULA DE SANTA ELENA",
+    "pais": "EC"
+  },
+  {
+    "id": 84,
+    "nombre": "Juan",
+    "apellido": "Ciafardini",
+    "afiliacion": "FCAG-UNLP",
+    "pais": "AR"
+  },
+  {
+    "id": 85,
+    "nombre": "Anthony",
+    "apellido": "Claudett",
+    "afiliacion": "ITB",
+    "pais": "EC"
+  },
+  {
+    "id": 86,
+    "nombre": "Roger",
+    "apellido": "Clotet",
+    "afiliacion": "UNEMI, UPS, VIU, USB, UCAB",
+    "pais": "EC"
+  },
+  {
+    "id": 87,
+    "nombre": "Mateo Fernando",
+    "apellido": "Cobos Maldonado",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 88,
+    "nombre": "Adriana",
+    "apellido": "Collaguazo",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 89,
+    "nombre": "Graciela",
+    "apellido": "Colomé",
+    "afiliacion": "Instituto de Energía Eléctrica Universidad Nacional de San Juan - CONICET",
+    "pais": "AR"
+  },
+  {
+    "id": 90,
+    "nombre": "Joffre",
+    "apellido": "Constante",
+    "afiliacion": "ARCONEL",
+    "pais": "EC"
+  },
+  {
+    "id": 91,
+    "nombre": "Alisson",
+    "apellido": "Constantine",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 92,
+    "nombre": "Erick",
+    "apellido": "Cuenca",
+    "afiliacion": "LIRMM",
+    "pais": "FR"
+  },
+  {
+    "id": 93,
+    "nombre": "Milton",
+    "apellido": "Cuenca",
+    "afiliacion": "UNIVERSIDAD TECNICA ESTATAL DE QUEVEDO",
+    "pais": "EC"
+  },
+  {
+    "id": 94,
+    "nombre": "Carlos",
+    "apellido": "Cuenca Cabrera",
+    "afiliacion": "Escuela Superior Politecnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 95,
+    "nombre": "Julio",
+    "apellido": "Cuenca Tinitana",
+    "afiliacion": "Universidad Nacional de Loja",
+    "pais": "EC"
+  },
+  {
+    "id": 96,
+    "nombre": "Fernando",
+    "apellido": "Cueva",
+    "afiliacion": "Rochester Institute of Technology",
+    "pais": "US"
+  },
+  {
+    "id": 97,
+    "nombre": "Myriam",
+    "apellido": "Cumbajin",
+    "afiliacion": "Universidad Tecnológica Indoamérica",
+    "pais": "EC"
+  },
+  {
+    "id": 98,
+    "nombre": "Michael",
+    "apellido": "Curipallo",
+    "afiliacion": "Departamento de Electrónica, Telecomunicaciones y Redes de Información",
+    "pais": "EC"
+  },
+  {
+    "id": 99,
+    "nombre": "Angel",
+    "apellido": "Custodio",
+    "afiliacion": "Universidad Nacional Andrés Bello",
+    "pais": "CL"
+  },
+  {
+    "id": 100,
+    "nombre": "Andrés",
+    "apellido": "Cárdenas",
+    "afiliacion": "Universidad de Las Américas (UDLA)",
+    "pais": "EC"
+  },
+  {
+    "id": 101,
+    "nombre": "Oscar",
+    "apellido": "Cárdenas",
+    "afiliacion": "UNIVERSIDAD TECNICA DE MACHALA",
+    "pais": "EC"
+  },
+  {
+    "id": 102,
+    "nombre": "Karim",
+    "apellido": "Dasuki",
+    "afiliacion": "i-Cluster Corporation",
+    "pais": "CO"
+  },
+  {
+    "id": 103,
+    "nombre": "Iesus",
+    "apellido": "Davila",
+    "afiliacion": "Profesional independiente",
+    "pais": "EC"
+  },
+  {
+    "id": 104,
+    "nombre": "Kevin",
+    "apellido": "Dekemele",
+    "afiliacion": "University of Liège",
+    "pais": "BE"
+  },
+  {
+    "id": 105,
+    "nombre": "Luis",
+    "apellido": "Dutan",
+    "afiliacion": "CELEC EP TRANSELECTRIC",
+    "pais": "EC"
+  },
+  {
+    "id": 106,
+    "nombre": "Aarón",
+    "apellido": "Echeverría",
+    "afiliacion": "Universidad de Málaga",
+    "pais": "ES"
+  },
+  {
+    "id": 107,
+    "nombre": "Josué",
+    "apellido": "Enríquez Zárate",
+    "afiliacion": "AP ENGINEERING INNOVACIÓN TECNOLÓGICA EN ENERGÍAS S.A DE C.V.",
+    "pais": "MX"
+  },
+  {
+    "id": 108,
+    "nombre": "Andres",
+    "apellido": "Erazo",
+    "afiliacion": "University of British Columbia",
+    "pais": "CA"
+  },
+  {
+    "id": 109,
+    "nombre": "Ivan",
+    "apellido": "Escandon",
+    "afiliacion": "Universidad Politecnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 110,
+    "nombre": "César",
+    "apellido": "Espin-Riofrio",
+    "afiliacion": "Universidad de Guayaquil",
+    "pais": "EC"
+  },
+  {
+    "id": 111,
+    "nombre": "Albert",
+    "apellido": "Espinal Santana",
+    "afiliacion": "Escuela Superior Politecnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 112,
+    "nombre": "Ernesto",
+    "apellido": "Fabregas",
+    "afiliacion": "National University of Distance Education of Spain",
+    "pais": "ES"
+  },
+  {
+    "id": 113,
+    "nombre": "Sixifo",
+    "apellido": "Falcones",
+    "afiliacion": "Escuela Superior Politecnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 114,
+    "nombre": "Valdemar",
+    "apellido": "Farré",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 115,
+    "nombre": "Christian",
+    "apellido": "Feican-Campoverde",
+    "afiliacion": "Pontifícia Universidade Católica do Paraná (PUCPR)",
+    "pais": "BR"
+  },
+  {
+    "id": 116,
+    "nombre": "Renzo",
+    "apellido": "Fernandez",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 117,
+    "nombre": "Edson Rodrigo",
+    "apellido": "Fernandez Cornejo",
+    "afiliacion": "Universidad de Piura",
+    "pais": "PE"
+  },
+  {
+    "id": 118,
+    "nombre": "Xavier",
+    "apellido": "Fierro",
+    "afiliacion": "Instituto Superior Universitario Bolivariano de Tecnologıa (ITB)",
+    "pais": "EC"
+  },
+  {
+    "id": 119,
+    "nombre": "Alexandra Macarena",
+    "apellido": "Flores",
+    "afiliacion": "Escuela Superior Politécnica de Chimborazo",
+    "pais": "EC"
+  },
+  {
+    "id": 120,
+    "nombre": "Verónica",
+    "apellido": "Flores",
+    "afiliacion": "Investigador independiente",
+    "pais": "EC"
+  },
+  {
+    "id": 121,
+    "nombre": "Luigi O.",
+    "apellido": "Freire",
+    "afiliacion": "UTC",
+    "pais": "EC"
+  },
+  {
+    "id": 122,
+    "nombre": "Jundong",
+    "apellido": "Fu",
+    "afiliacion": "Tongji University",
+    "pais": "CN"
+  },
+  {
+    "id": 123,
+    "nombre": "Carlos",
+    "apellido": "Gallardo",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 124,
+    "nombre": "Jesús",
+    "apellido": "García",
+    "afiliacion": "Universidad Nacional Experimental del Táchira",
+    "pais": "VE"
+  },
+  {
+    "id": 125,
+    "nombre": "José",
+    "apellido": "García",
+    "afiliacion": "Profesional independiente",
+    "pais": "EC"
+  },
+  {
+    "id": 126,
+    "nombre": "Patricia",
+    "apellido": "Gavela",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 127,
+    "nombre": "Carlos Enrique",
+    "apellido": "George-Reyes",
+    "afiliacion": "Universidad Bolivariana del Ecuador",
+    "pais": "MX"
+  },
+  {
+    "id": 128,
+    "nombre": "Angel",
+    "apellido": "Gil",
+    "afiliacion": "Laboratorio de Prototipos, Universidad Nacional Experimental del Táchira",
+    "pais": "EC"
+  },
+  {
+    "id": 129,
+    "nombre": "Luis",
+    "apellido": "Godoy Montiel",
+    "afiliacion": "Universidad Técnica Estatal de Quevedo",
+    "pais": "EC"
+  },
+  {
+    "id": 130,
+    "nombre": "Vicente",
+    "apellido": "Gonzalez-Posadas",
+    "afiliacion": "Universidad Politécnica de Madrid",
+    "pais": "ES"
+  },
+  {
+    "id": 131,
+    "nombre": "Néstor",
+    "apellido": "González",
+    "afiliacion": "Universidad Mayor",
+    "pais": "CL"
+  },
+  {
+    "id": 132,
+    "nombre": "María Obdulia",
+    "apellido": "González Fernandez",
+    "afiliacion": "CUAltos",
+    "pais": "MX"
+  },
+  {
+    "id": 133,
+    "nombre": "Fausto",
+    "apellido": "Granda",
+    "afiliacion": "ESPE",
+    "pais": "EC"
+  },
+  {
+    "id": 134,
+    "nombre": "Nelson",
+    "apellido": "Granda",
+    "afiliacion": "ESCUELA POLITECNICA NACIONAL",
+    "pais": "EC"
+  },
+  {
+    "id": 135,
+    "nombre": "Felipe",
+    "apellido": "Grijalva",
+    "afiliacion": "Universidad San Francisco de Quito",
+    "pais": "EC"
+  },
+  {
+    "id": 136,
+    "nombre": "Adriana",
+    "apellido": "Guamán",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 137,
+    "nombre": "Wilson",
+    "apellido": "Guamán",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 138,
+    "nombre": "Galo",
+    "apellido": "Guarderas",
+    "afiliacion": "Universidad de las Fuerzas Armadas - ESPE",
+    "pais": "EC"
+  },
+  {
+    "id": 139,
+    "nombre": "Jose Guillermo",
+    "apellido": "Guarnizo Marin",
+    "afiliacion": "Universidad Distrital Francisco Jose de Caldas",
+    "pais": "CO"
+  },
+  {
+    "id": 140,
+    "nombre": "Laura-Rosa",
+    "apellido": "Guerra-Torrealba",
+    "afiliacion": "Pontificia Universidad Católica del Ecuador sede Ibarra",
+    "pais": "EC"
+  },
+  {
+    "id": 141,
+    "nombre": "Marcos",
+    "apellido": "Guerrero",
+    "afiliacion": "UNEMI",
+    "pais": "EC"
+  },
+  {
+    "id": 142,
+    "nombre": "Sergio",
+    "apellido": "Gutierrez",
+    "afiliacion": "Universidad de Antioquia",
+    "pais": "CO"
+  },
+  {
+    "id": 143,
+    "nombre": "Ahmed",
+    "apellido": "Hassan",
+    "afiliacion": "Ghent University",
+    "pais": "BE"
+  },
+  {
+    "id": 144,
+    "nombre": "Carlos",
+    "apellido": "Helguero",
+    "afiliacion": "Escuela Superior Politécnica del Litoral Polytechnic University",
+    "pais": "EC"
+  },
+  {
+    "id": 145,
+    "nombre": "Wilmar",
+    "apellido": "Hernandez",
+    "afiliacion": "Universidad de Las Américas",
+    "pais": "EC"
+  },
+  {
+    "id": 146,
+    "nombre": "Jorge L.",
+    "apellido": "Hernandez-Ambato",
+    "afiliacion": "Escuela Superior Politécnica de Chimborazo",
+    "pais": "EC"
+  },
+  {
+    "id": 147,
+    "nombre": "Silvia Mireya",
+    "apellido": "Hernández Hermosillo",
+    "afiliacion": "Universidad Autonoma del Estado de Hidalgo",
+    "pais": "MX"
+  },
+  {
+    "id": 148,
+    "nombre": "Jorge",
+    "apellido": "Herrera-Tapia",
+    "afiliacion": "Universidad Laica Eloy Alfaro de Manabí",
+    "pais": "EC"
+  },
+  {
+    "id": 149,
+    "nombre": "Ruben",
+    "apellido": "Hidalgo",
+    "afiliacion": "Escuela Superior Politecnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 150,
+    "nombre": "Eduardo",
+    "apellido": "Holguin",
+    "afiliacion": "Institut supérieur d'électronique de Paris",
+    "pais": "FR"
+  },
+  {
+    "id": 151,
+    "nombre": "Joofre",
+    "apellido": "Honores Tapia",
+    "afiliacion": "Universidad Técnica de Machala",
+    "pais": "EC"
+  },
+  {
+    "id": 152,
+    "nombre": "Monica",
+    "apellido": "Huerta",
+    "afiliacion": "Universidad Estatal del Milagro",
+    "pais": "EC"
+  },
+  {
+    "id": 153,
+    "nombre": "Víctor Manuel",
+    "apellido": "Huilcapi Subia",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 154,
+    "nombre": "Gabriel Andres",
+    "apellido": "Intriago Velasquez",
+    "afiliacion": "Expedia Group",
+    "pais": "US"
+  },
+  {
+    "id": 155,
+    "nombre": "Ramiro",
+    "apellido": "Isa-Jara",
+    "afiliacion": "Escuela Superior Politécnica de Chimborazo",
+    "pais": "EC"
+  },
+  {
+    "id": 156,
+    "nombre": "Andrés",
+    "apellido": "Jacho",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 157,
+    "nombre": "Oscar",
+    "apellido": "Jarrin",
+    "afiliacion": "Universidad de las Américas",
+    "pais": "EC"
+  },
+  {
+    "id": 158,
+    "nombre": "Jose Luis",
+    "apellido": "Jimenez",
+    "afiliacion": "UPM",
+    "pais": "ES"
+  },
+  {
+    "id": 159,
+    "nombre": "Carlos",
+    "apellido": "Jiménez Farfán",
+    "afiliacion": "IRI-UPC",
+    "pais": "ES"
+  },
+  {
+    "id": 160,
+    "nombre": "Deiver",
+    "apellido": "Jiménez-Santín",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 161,
+    "nombre": "Liliana",
+    "apellido": "Jorquera",
+    "afiliacion": "Universidad Andres Bello",
+    "pais": "CL"
+  },
+  {
+    "id": 162,
+    "nombre": "Mauro",
+    "apellido": "Jurado",
+    "afiliacion": "Institute of Electric Energy (IEE), National University of San Juan – National Scientific Council (CONICET)",
+    "pais": "AR"
+  },
+  {
+    "id": 163,
+    "nombre": "Jesús",
+    "apellido": "Játiva",
+    "afiliacion": "Escuela Politecnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 164,
+    "nombre": "René",
+    "apellido": "Játiva E.",
+    "afiliacion": "Universidad San Francisco de Quito",
+    "pais": "EC"
+  },
+  {
+    "id": 165,
+    "nombre": "Diego",
+    "apellido": "L. Jimenez",
+    "afiliacion": "Universidad Técnica de Cotopaxi",
+    "pais": "EC"
+  },
+  {
+    "id": 166,
+    "nombre": "Alexandra",
+    "apellido": "La Cruz",
+    "afiliacion": "Universidad de Ibagué",
+    "pais": "CO"
+  },
+  {
+    "id": 167,
+    "nombre": "Erick",
+    "apellido": "Lamilla Rubio",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 168,
+    "nombre": "Fernando",
+    "apellido": "Lara",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 169,
+    "nombre": "Roman",
+    "apellido": "Lara",
+    "afiliacion": "ESPE",
+    "pais": "EC"
+  },
+  {
+    "id": 170,
+    "nombre": "Roberto Alejandro",
+    "apellido": "Larrea Luzuriaga",
+    "afiliacion": "Profesional independiente",
+    "pais": "EC"
+  },
+  {
+    "id": 171,
+    "nombre": "Leticia",
+    "apellido": "Lemus Cárdenas",
+    "afiliacion": "Universidad de Guadalajara",
+    "pais": "MX"
+  },
+  {
+    "id": 172,
+    "nombre": "Maikel Yelandi",
+    "apellido": "Leyva-Vázquez",
+    "afiliacion": "Universidad de Guayaquil",
+    "pais": "EC"
+  },
+  {
+    "id": 173,
+    "nombre": "Leonardo",
+    "apellido": "León",
+    "afiliacion": "Instituto de Energía Eléctrica",
+    "pais": "AR"
+  },
+  {
+    "id": 174,
+    "nombre": "Gabriel A.",
+    "apellido": "León-Paredes",
+    "afiliacion": "Politécnica Salesiana University",
+    "pais": "EC"
+  },
+  {
+    "id": 175,
+    "nombre": "Juan Fernando",
+    "apellido": "Lima",
+    "afiliacion": "Universidad del Azuay",
+    "pais": "EC"
+  },
+  {
+    "id": 176,
+    "nombre": "Aníbal",
+    "apellido": "Llanga-Vargas",
+    "afiliacion": "UE TESLA",
+    "pais": "EC"
+  },
+  {
+    "id": 177,
+    "nombre": "Francis",
+    "apellido": "Loayza",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 178,
+    "nombre": "Julio César",
+    "apellido": "Loja Quezada",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 179,
+    "nombre": "Carlos",
+    "apellido": "Lozada",
+    "afiliacion": "CENACE",
+    "pais": "EC"
+  },
+  {
+    "id": 180,
+    "nombre": "Andrés",
+    "apellido": "López",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 181,
+    "nombre": "Rudy",
+    "apellido": "López",
+    "afiliacion": "Instituto Superior Universitario Bolivariano de Tecnología (ITB)",
+    "pais": "EC"
+  },
+  {
+    "id": 182,
+    "nombre": "Jean Carlo",
+    "apellido": "Macancela",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 183,
+    "nombre": "Byron Joao",
+    "apellido": "Macas Poma",
+    "afiliacion": "ESPOCH",
+    "pais": "EC"
+  },
+  {
+    "id": 184,
+    "nombre": "Darwin",
+    "apellido": "Macas-Poma",
+    "afiliacion": "Technical Independent Researcher",
+    "pais": "EC"
+  },
+  {
+    "id": 185,
+    "nombre": "Luis",
+    "apellido": "Macías",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 186,
+    "nombre": "Ali",
+    "apellido": "Mammadov",
+    "afiliacion": "University of Exeter",
+    "pais": "AZ"
+  },
+  {
+    "id": 187,
+    "nombre": "José",
+    "apellido": "Manrique Silupú",
+    "afiliacion": "Universidad de Piura",
+    "pais": "PE"
+  },
+  {
+    "id": 188,
+    "nombre": "Fernando",
+    "apellido": "Maradiegue",
+    "afiliacion": "Investigador independiente",
+    "pais": "PE"
+  },
+  {
+    "id": 189,
+    "nombre": "Fabricio Rolando",
+    "apellido": "Marcillo Vera",
+    "afiliacion": "Instituto Superior Universitario Japón",
+    "pais": "EC"
+  },
+  {
+    "id": 190,
+    "nombre": "Ricardo",
+    "apellido": "Medina",
+    "afiliacion": "Instituto de Energía Eléctrica - Universidad Nacional de San Juan - CONICET-IEE-UNSJ",
+    "pais": "AR"
+  },
+  {
+    "id": 191,
+    "nombre": "Ruben",
+    "apellido": "Medina",
+    "afiliacion": "Universidad de Los andes",
+    "pais": "VE"
+  },
+  {
+    "id": 192,
+    "nombre": "Ricardo",
+    "apellido": "Mena",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 193,
+    "nombre": "Erick",
+    "apellido": "Mendoza",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 194,
+    "nombre": "Jaime",
+    "apellido": "Meza",
+    "afiliacion": "Universitat Politècnica de Catalunya",
+    "pais": "ES"
+  },
+  {
+    "id": 195,
+    "nombre": "Rodrigo",
+    "apellido": "Monteiro",
+    "afiliacion": "Universidade de Pernambuco",
+    "pais": "BR"
+  },
+  {
+    "id": 196,
+    "nombre": "Diana",
+    "apellido": "Montenegro",
+    "afiliacion": "Universidade Estadual de Campinas (UNICAMP)",
+    "pais": "BR"
+  },
+  {
+    "id": 197,
+    "nombre": "Hugo",
+    "apellido": "Moreno Aviles",
+    "afiliacion": "Escuela Superior Politecnica de Chimborazo",
+    "pais": "EC"
+  },
+  {
+    "id": 198,
+    "nombre": "Patricio Xavier",
+    "apellido": "Moreno-Vallejo",
+    "afiliacion": "ESCUELA SUPERIOR POLITECNICA DE CHIMBORAZO",
+    "pais": "EC"
+  },
+  {
+    "id": 199,
+    "nombre": "Manuel Eugenio",
+    "apellido": "Morocho Cayamcela",
+    "afiliacion": "Yachay Tech University",
+    "pais": "EC"
+  },
+  {
+    "id": 200,
+    "nombre": "Fernando",
+    "apellido": "Moya",
+    "afiliacion": "RMIT University",
+    "pais": "AU"
+  },
+  {
+    "id": 201,
+    "nombre": "Viviana",
+    "apellido": "Moya",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 202,
+    "nombre": "Yun Prihantina",
+    "apellido": "Mulyani",
+    "afiliacion": "Gadjah Mada University",
+    "pais": "ID"
+  },
+  {
+    "id": 203,
+    "nombre": "Emanuel",
+    "apellido": "Muñoz",
+    "afiliacion": "Universidad Técnica de Manabí",
+    "pais": "EC"
+  },
+  {
+    "id": 204,
+    "nombre": "Marcelo",
+    "apellido": "Muñoz",
+    "afiliacion": "mdmuniozc@utn.edu.ec",
+    "pais": "EC"
+  },
+  {
+    "id": 205,
+    "nombre": "Jaime",
+    "apellido": "Nasimba",
+    "afiliacion": "Investigador independiente",
+    "pais": "EC"
+  },
+  {
+    "id": 206,
+    "nombre": "Marlon",
+    "apellido": "Navia Mendoza",
+    "afiliacion": "Universidad Técnica de Manabí",
+    "pais": "EC"
+  },
+  {
+    "id": 207,
+    "nombre": "Sylvia",
+    "apellido": "Novillo-Villegas",
+    "afiliacion": "Universidad de las Américas",
+    "pais": "EC"
+  },
+  {
+    "id": 208,
+    "nombre": "Fernanda",
+    "apellido": "Núñez",
+    "afiliacion": "Universidad Tecnológica Indoamérica",
+    "pais": "EC"
+  },
+  {
+    "id": 209,
+    "nombre": "Alejandro",
+    "apellido": "Olivas",
+    "afiliacion": "University of Alicante",
+    "pais": "ES"
+  },
+  {
+    "id": 210,
+    "nombre": "Gonzalo",
+    "apellido": "Olmedo",
+    "afiliacion": "Universidad de las Fuerzas Armadas ESPE",
+    "pais": "EC"
+  },
+  {
+    "id": 211,
+    "nombre": "Fabricio",
+    "apellido": "Ordoñez",
+    "afiliacion": "CELEC EP",
+    "pais": "EC"
+  },
+  {
+    "id": 212,
+    "nombre": "Esteban-Fernando",
+    "apellido": "Ordoñez-Morales",
+    "afiliacion": "Universidad Politecnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 213,
+    "nombre": "Ricardo",
+    "apellido": "Ordóñez Ávila",
+    "afiliacion": "Departamento de Sistemas Computacionales, Universidad Técnica de Manabí, Portoviejo, Ecuador.",
+    "pais": "EC"
+  },
+  {
+    "id": 214,
+    "nombre": "Rogelio",
+    "apellido": "Orizondo",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 215,
+    "nombre": "Alvaro D.",
+    "apellido": "Orjuela-Cañón",
+    "afiliacion": "Universidad del Rosario - IEEE CIS Colombia",
+    "pais": "CO"
+  },
+  {
+    "id": 216,
+    "nombre": "Nathaly",
+    "apellido": "Orozco",
+    "afiliacion": "Universidad de las Américas, UDLA",
+    "pais": "EC"
+  },
+  {
+    "id": 217,
+    "nombre": "Luis-Renato",
+    "apellido": "Ortega Lucero",
+    "afiliacion": "Universidad de Cuenca",
+    "pais": "EC"
+  },
+  {
+    "id": 218,
+    "nombre": "Diego",
+    "apellido": "Ortiz",
+    "afiliacion": "Universidad de las Fuerzas Armadas ESPE",
+    "pais": "EC"
+  },
+  {
+    "id": 219,
+    "nombre": "José",
+    "apellido": "Oscullo",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 220,
+    "nombre": "William",
+    "apellido": "Oñate",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 221,
+    "nombre": "Diego",
+    "apellido": "Paguay",
+    "afiliacion": "Operador Nacional de Electricidad - CENACE",
+    "pais": "EC"
+  },
+  {
+    "id": 222,
+    "nombre": "César",
+    "apellido": "Palacios-Arias",
+    "afiliacion": "Universitat Politècnica de Catalunya",
+    "pais": "ES"
+  },
+  {
+    "id": 223,
+    "nombre": "David",
+    "apellido": "Panchi",
+    "afiliacion": "CENACE",
+    "pais": "EC"
+  },
+  {
+    "id": 224,
+    "nombre": "Jorge",
+    "apellido": "Paredes",
+    "afiliacion": "Escuela Superior Politécnica de Chimborazo",
+    "pais": "EC"
+  },
+  {
+    "id": 225,
+    "nombre": "Diana",
+    "apellido": "Parra Meléndez",
+    "afiliacion": "Universidad Andres Bello, Santiago, Chile",
+    "pais": "CL"
+  },
+  {
+    "id": 226,
+    "nombre": "Jorge",
+    "apellido": "Parraga-Alava",
+    "afiliacion": "Universidad Técnica de Manabí",
+    "pais": "CL"
+  },
+  {
+    "id": 227,
+    "nombre": "Nathalia-Michelle",
+    "apellido": "Peralta-Vasconez",
+    "afiliacion": "Facultad de Informática y Ciencias de la Computación, Universidad Católica de Cuenca",
+    "pais": "EC"
+  },
+  {
+    "id": 228,
+    "nombre": "Fabian",
+    "apellido": "Perez-Yauli",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 229,
+    "nombre": "Luis",
+    "apellido": "Pesantes",
+    "afiliacion": "The University of Melbourne",
+    "pais": "AU"
+  },
+  {
+    "id": 230,
+    "nombre": "Mario Patricio",
+    "apellido": "Peña Ortega",
+    "afiliacion": "Universidad de Cuenca",
+    "pais": "EC"
+  },
+  {
+    "id": 231,
+    "nombre": "Andrea",
+    "apellido": "Pilco",
+    "afiliacion": "Universidad Internacional del Ecuador",
+    "pais": "EC"
+  },
+  {
+    "id": 232,
+    "nombre": "Pablo",
+    "apellido": "Pintado",
+    "afiliacion": "Universidad del Azuay",
+    "pais": "EC"
+  },
+  {
+    "id": 233,
+    "nombre": "Juan Carlos",
+    "apellido": "Pisco Jordán",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 234,
+    "nombre": "Frank",
+    "apellido": "Porras",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 235,
+    "nombre": "Darwin",
+    "apellido": "Pozo",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 236,
+    "nombre": "Marcelo",
+    "apellido": "Pozo",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 237,
+    "nombre": "Nataly",
+    "apellido": "Pozo",
+    "afiliacion": "Universidad San Francisco de Quito",
+    "pais": "EC"
+  },
+  {
+    "id": 238,
+    "nombre": "Verónica",
+    "apellido": "Proaño",
+    "afiliacion": "Universidad de Santiago de Chile - USACH; Universidad de las Fuerzas Armadas - ESPE",
+    "pais": "EC"
+  },
+  {
+    "id": 239,
+    "nombre": "Gary",
+    "apellido": "Pulla Zambrano",
+    "afiliacion": "Instituto Superior Tecnológico Bolivariano de Tecnología",
+    "pais": "EC"
+  },
+  {
+    "id": 240,
+    "nombre": "Fransk",
+    "apellido": "Puma Flores",
+    "afiliacion": "Unicamp",
+    "pais": "BR"
+  },
+  {
+    "id": 241,
+    "nombre": "Ignacio de Loyola",
+    "apellido": "Páez Ubieta",
+    "afiliacion": "Universidad de Alicante",
+    "pais": "ES"
+  },
+  {
+    "id": 242,
+    "nombre": "Milton Fabricio",
+    "apellido": "Pérez Gutiérrez",
+    "afiliacion": "Universidad de las Fuerzas Armadas  ESPE",
+    "pais": "EC"
+  },
+  {
+    "id": 243,
+    "nombre": "Antonio",
+    "apellido": "Pérez-Torres",
+    "afiliacion": "Universidad Politécnica de Valencia",
+    "pais": "ES"
+  },
+  {
+    "id": 244,
+    "nombre": "Carlos Ivan",
+    "apellido": "Quinatoa Caiza",
+    "afiliacion": "Universidad Técnica de Cotopaxi",
+    "pais": "EC"
+  },
+  {
+    "id": 245,
+    "nombre": "Isabel",
+    "apellido": "Quinde",
+    "afiliacion": "Universidad Técnica del Norte",
+    "pais": "EC"
+  },
+  {
+    "id": 246,
+    "nombre": "William",
+    "apellido": "Quitiaquez",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 247,
+    "nombre": "Angélica",
+    "apellido": "Quito",
+    "afiliacion": "International University of Ecuador, UIDE",
+    "pais": "EC"
+  },
+  {
+    "id": 248,
+    "nombre": "Ciro Diego",
+    "apellido": "Radicelli García",
+    "afiliacion": "Universidad Nacional de Chimborazo (UNACH)",
+    "pais": "EC"
+  },
+  {
+    "id": 249,
+    "nombre": "Juan",
+    "apellido": "Ramirez",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 250,
+    "nombre": "Omar",
+    "apellido": "Ramos",
+    "afiliacion": "Operador Nacional de Electricidad CENACE",
+    "pais": "EC"
+  },
+  {
+    "id": 251,
+    "nombre": "Luis",
+    "apellido": "Ramos Pozo",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 252,
+    "nombre": "Miguel",
+    "apellido": "Realpe",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 253,
+    "nombre": "Angel",
+    "apellido": "Recalde",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 254,
+    "nombre": "Jefferson Alexander",
+    "apellido": "Ribadeneira Ramirez",
+    "afiliacion": "ESPOCH",
+    "pais": "EC"
+  },
+  {
+    "id": 255,
+    "nombre": "Dewar",
+    "apellido": "Rico-Bautista",
+    "afiliacion": "Universidad Francisco de Paula Santander Ocaña",
+    "pais": "CO"
+  },
+  {
+    "id": 256,
+    "nombre": "Jonathan",
+    "apellido": "Riofrio",
+    "afiliacion": "Technical University of Denmark",
+    "pais": "DK"
+  },
+  {
+    "id": 257,
+    "nombre": "Lucía",
+    "apellido": "Rivadeneira",
+    "afiliacion": "Universidad Técnica de Manabí",
+    "pais": "GB"
+  },
+  {
+    "id": 258,
+    "nombre": "David",
+    "apellido": "Rivas",
+    "afiliacion": "Universdiad de las Fuerzas Armadas ESPE",
+    "pais": "EC"
+  },
+  {
+    "id": 259,
+    "nombre": "Francklin",
+    "apellido": "Rivas",
+    "afiliacion": "Universidad de Los Andes",
+    "pais": "VE"
+  },
+  {
+    "id": 260,
+    "nombre": "Dulce Milagro",
+    "apellido": "Rivero Albarrán",
+    "afiliacion": "Pontificia Universidad Católica del Ecuador sede Ibarra",
+    "pais": "EC"
+  },
+  {
+    "id": 261,
+    "nombre": "Viviana Lorena",
+    "apellido": "Robalino Espinoza",
+    "afiliacion": "Tongji University",
+    "pais": "CN"
+  },
+  {
+    "id": 262,
+    "nombre": "Roberto",
+    "apellido": "Robledo Fava",
+    "afiliacion": "Universidad Autónoma de Nuevo León",
+    "pais": "MX"
+  },
+  {
+    "id": 263,
+    "nombre": "Jorge",
+    "apellido": "Rodas-Silva",
+    "afiliacion": "University of Milagro",
+    "pais": "EC"
+  },
+  {
+    "id": 264,
+    "nombre": "Shendry",
+    "apellido": "Rosero Vázquez",
+    "afiliacion": "UPSE",
+    "pais": "EC"
+  },
+  {
+    "id": 265,
+    "nombre": "Milton",
+    "apellido": "Ruiz",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 266,
+    "nombre": "Dayron",
+    "apellido": "Rumbaut Rangel",
+    "afiliacion": "UNIVERSIDAD BOLIVARIANA DEL ECUADOR UBE",
+    "pais": "EC"
+  },
+  {
+    "id": 267,
+    "nombre": "Erwin",
+    "apellido": "Sacoto-Cabrera",
+    "afiliacion": "Universidad Politecnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 268,
+    "nombre": "Juan",
+    "apellido": "Saeteros Macias",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 269,
+    "nombre": "Giovanni",
+    "apellido": "Sagbay Sacaquirin",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 270,
+    "nombre": "Christian",
+    "apellido": "Salamea",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 271,
+    "nombre": "Carlos",
+    "apellido": "Salazar",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 272,
+    "nombre": "Eduardo",
+    "apellido": "Salazar",
+    "afiliacion": "Catalonia Institute for Energy Research",
+    "pais": "ES"
+  },
+  {
+    "id": 273,
+    "nombre": "Gabriel",
+    "apellido": "Salazar",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 274,
+    "nombre": "Gustavo",
+    "apellido": "Salazar",
+    "afiliacion": "Universidad Nacional de la Plata - UNLP",
+    "pais": "EC"
+  },
+  {
+    "id": 275,
+    "nombre": "Luis",
+    "apellido": "Salazar",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 276,
+    "nombre": "Roberto",
+    "apellido": "Salazar",
+    "afiliacion": "Universidad Técnica de Cotopaxi",
+    "pais": "EC"
+  },
+  {
+    "id": 277,
+    "nombre": "César",
+    "apellido": "Salazar-Tovar",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 278,
+    "nombre": "Jocelyne",
+    "apellido": "Salgado",
+    "afiliacion": "Escuela Superior Politécnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 279,
+    "nombre": "Sandra",
+    "apellido": "Sanchez-Gordon",
+    "afiliacion": "Escuela Politecnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 280,
+    "nombre": "Lady",
+    "apellido": "Sangacha",
+    "afiliacion": "Universidad de Jaen",
+    "pais": "ES"
+  },
+  {
+    "id": 281,
+    "nombre": "Daniel",
+    "apellido": "Santillán",
+    "afiliacion": "UNACH",
+    "pais": "EC"
+  },
+  {
+    "id": 282,
+    "nombre": "Angel",
+    "apellido": "Sappa",
+    "afiliacion": "Computer Vision Center",
+    "pais": "ES"
+  },
+  {
+    "id": 283,
+    "nombre": "José Luis",
+    "apellido": "Saquinaula Brito",
+    "afiliacion": "Universidad Estatal de Milagro",
+    "pais": "EC"
+  },
+  {
+    "id": 284,
+    "nombre": "Franklin",
+    "apellido": "Saquinga",
+    "afiliacion": "University of Campinas (UNICAMP), Campinas, Brazil",
+    "pais": "BR"
+  },
+  {
+    "id": 285,
+    "nombre": "Fernando",
+    "apellido": "Saá",
+    "afiliacion": "Universidad Tecnológica Indoamérica",
+    "pais": "EC"
+  },
+  {
+    "id": 286,
+    "nombre": "Luis Javier",
+    "apellido": "Serpa Andrade",
+    "afiliacion": "Universidad Politecnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 287,
+    "nombre": "Jairo",
+    "apellido": "Serrano",
+    "afiliacion": "Universidad Tecnológica de Bolívar",
+    "pais": "CO"
+  },
+  {
+    "id": 288,
+    "nombre": "Erika",
+    "apellido": "Severeyn Varela",
+    "afiliacion": "Universidad Simon Bolivar",
+    "pais": "VE"
+  },
+  {
+    "id": 289,
+    "nombre": "Mariani",
+    "apellido": "Sfredo Da Luz",
+    "afiliacion": "Federal University of Parana",
+    "pais": "BR"
+  },
+  {
+    "id": 290,
+    "nombre": "Julio Fernando",
+    "apellido": "Siguencia",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 291,
+    "nombre": "Gautam",
+    "apellido": "Sihag",
+    "afiliacion": "Shipt Inc",
+    "pais": "US"
+  },
+  {
+    "id": 292,
+    "nombre": "Soraya",
+    "apellido": "Sinche",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 293,
+    "nombre": "Juan Carlos",
+    "apellido": "Solano Jiménez",
+    "afiliacion": "Universidad Nacional de Loja",
+    "pais": "ES"
+  },
+  {
+    "id": 294,
+    "nombre": "Edison",
+    "apellido": "Solorzano",
+    "afiliacion": "Universidad de Málaga",
+    "pais": "EC"
+  },
+  {
+    "id": 295,
+    "nombre": "Dayanna",
+    "apellido": "Soria",
+    "afiliacion": "Instituto Superior Universitario Bolivariano de Tecnologıa",
+    "pais": "EC"
+  },
+  {
+    "id": 296,
+    "nombre": "Mauricio",
+    "apellido": "Soria",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 297,
+    "nombre": "Alberto",
+    "apellido": "Sánchez",
+    "afiliacion": "Universidad San Francisco de Quito",
+    "pais": "EC"
+  },
+  {
+    "id": 298,
+    "nombre": "Wilson",
+    "apellido": "Sánchez",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 299,
+    "nombre": "Roberto Gonzalo",
+    "apellido": "Sánchez Albán",
+    "afiliacion": "University of Fribourg",
+    "pais": "EC"
+  },
+  {
+    "id": 300,
+    "nombre": "René Vinicio",
+    "apellido": "Sánchez Loja",
+    "afiliacion": "UNIVERSIDAD POLITÉCNICA SALESIANA",
+    "pais": "EC"
+  },
+  {
+    "id": 301,
+    "nombre": "Juan Sebastián",
+    "apellido": "Sánchez-Gómez",
+    "afiliacion": "Universidad de los Andes",
+    "pais": "CO"
+  },
+  {
+    "id": 302,
+    "nombre": "Diego Mauricio",
+    "apellido": "Tauta Rúa",
+    "afiliacion": "Investigador independiente",
+    "pais": "CO"
+  },
+  {
+    "id": 303,
+    "nombre": "Luis",
+    "apellido": "Tello-Oquendo",
+    "afiliacion": "Universidad Nacional de Chimborazo",
+    "pais": "EC"
+  },
+  {
+    "id": 304,
+    "nombre": "Alexis F.",
+    "apellido": "Tinoco-S",
+    "afiliacion": "Universidad de las Americas - UDLA",
+    "pais": "EC"
+  },
+  {
+    "id": 305,
+    "nombre": "Fabricio",
+    "apellido": "Tipantocta",
+    "afiliacion": "IST Sucre",
+    "pais": "EC"
+  },
+  {
+    "id": 306,
+    "nombre": "Carlos Alfredo",
+    "apellido": "Ugarte Alván",
+    "afiliacion": "Universidad Nacional Agraria La Molina",
+    "pais": "PE"
+  },
+  {
+    "id": 307,
+    "nombre": "Hernan",
+    "apellido": "Ullon",
+    "afiliacion": "UNICAMP",
+    "pais": "BR"
+  },
+  {
+    "id": 308,
+    "nombre": "Leticia",
+    "apellido": "Vaca-Cardenas",
+    "afiliacion": "Universidad Técnica de Manabí",
+    "pais": "EC"
+  },
+  {
+    "id": 309,
+    "nombre": "Edwin",
+    "apellido": "Valarezo Añazco",
+    "afiliacion": "Escuela Superior Politecnica del Litoral",
+    "pais": "EC"
+  },
+  {
+    "id": 310,
+    "nombre": "Fausto",
+    "apellido": "Valencia",
+    "afiliacion": "Escuela Politecnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 311,
+    "nombre": "Freddy",
+    "apellido": "Valenzuela",
+    "afiliacion": "Yachay Tech",
+    "pais": "EC"
+  },
+  {
+    "id": 312,
+    "nombre": "Silvana Fabiola",
+    "apellido": "Varela Chamorro",
+    "afiliacion": "Investigador independiente",
+    "pais": "EC"
+  },
+  {
+    "id": 313,
+    "nombre": "José",
+    "apellido": "Varela-Aldás",
+    "afiliacion": "Universidad Tecnológica Indomérica",
+    "pais": "EC"
+  },
+  {
+    "id": 314,
+    "nombre": "Walter",
+    "apellido": "Vargas",
+    "afiliacion": "Electricity Corporation of Ecuador",
+    "pais": "EC"
+  },
+  {
+    "id": 315,
+    "nombre": "Juan Pablo",
+    "apellido": "Vargas Machuca Bueno",
+    "afiliacion": "Universidad Nacional de Ingeniería",
+    "pais": "PE"
+  },
+  {
+    "id": 316,
+    "nombre": "Paul",
+    "apellido": "Vasquez",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  },
+  {
+    "id": 317,
+    "nombre": "Rafael",
+    "apellido": "Vasquez",
+    "afiliacion": "Universidad Pontificia Bolivariana",
+    "pais": "CO"
+  },
+  {
+    "id": 318,
+    "nombre": "Ramiro Mauricio",
+    "apellido": "Vasquez Villarruel",
+    "afiliacion": "UNIVERSIDAD TECNICA DEL NORTE",
+    "pais": "EC"
+  },
+  {
+    "id": 319,
+    "nombre": "Leonel",
+    "apellido": "Vasquez-Cevallos",
+    "afiliacion": "Universidad Ecotec",
+    "pais": "EC"
+  },
+  {
+    "id": 320,
+    "nombre": "Jose Luis",
+    "apellido": "Vazquez-Gonzalez",
+    "afiliacion": "Universidad de las Americas, Puebla",
+    "pais": "MX"
+  },
+  {
+    "id": 321,
+    "nombre": "José",
+    "apellido": "Vega",
+    "afiliacion": "Universidad San Francisco de Quito",
+    "pais": "EC"
+  },
+  {
+    "id": 322,
+    "nombre": "Edison Patricio",
+    "apellido": "Velasco Sánchez",
+    "afiliacion": "AUROVA",
+    "pais": "ES"
+  },
+  {
+    "id": 323,
+    "nombre": "Jose Luis",
+    "apellido": "Villa",
+    "afiliacion": "U. Tecnológica de Bolívar",
+    "pais": "CO"
+  },
+  {
+    "id": 324,
+    "nombre": "Anacecilia",
+    "apellido": "Villa-Parra",
+    "afiliacion": "UFES",
+    "pais": "BR"
+  },
+  {
+    "id": 325,
+    "nombre": "Mauricio",
+    "apellido": "Villacis",
+    "afiliacion": "UNIVERSIDAD POLITÉCNICA SALESIANA",
+    "pais": "EC"
+  },
+  {
+    "id": 326,
+    "nombre": "Ronald Oswaldo",
+    "apellido": "Villamar-Torres",
+    "afiliacion": "Carrera Agropecuaria, Facultad de Ciencias Pecuarias, Universidad Técnica Estatal de Quevedo (UTEQ)",
+    "pais": "EC"
+  },
+  {
+    "id": 327,
+    "nombre": "Marcos",
+    "apellido": "Villarreal",
+    "afiliacion": "Universidad de Cuenca",
+    "pais": "EC"
+  },
+  {
+    "id": 328,
+    "nombre": "César",
+    "apellido": "Viloria-Núñez",
+    "afiliacion": "Universidad del Norte",
+    "pais": "CO"
+  },
+  {
+    "id": 329,
+    "nombre": "Juan Pablo",
+    "apellido": "Vásconez",
+    "afiliacion": "Universidad Andres Bello",
+    "pais": "CL"
+  },
+  {
+    "id": 330,
+    "nombre": "Zhenlong",
+    "apellido": "Wu",
+    "afiliacion": "Zhengzhou University",
+    "pais": "CN"
+  },
+  {
+    "id": 331,
+    "nombre": "Enrique",
+    "apellido": "Yeguas Bolívar",
+    "afiliacion": "Universidad de Córdoba",
+    "pais": "ES"
+  },
+  {
+    "id": 332,
+    "nombre": "Alcibar",
+    "apellido": "Yánez",
+    "afiliacion": "University of Guayaquil",
+    "pais": "EC"
+  },
+  {
+    "id": 333,
+    "nombre": "Julio Cesar",
+    "apellido": "Zambrano Abad",
+    "afiliacion": "Universidad Politécnica Salesiana",
+    "pais": "EC"
+  },
+  {
+    "id": 334,
+    "nombre": "Jonathan",
+    "apellido": "Zea",
+    "afiliacion": "Escuela Politécnica Nacional",
+    "pais": "EC"
+  }
+]

@@ -1,0 +1,63 @@
+<!--
+  COMITÉ CIENTÍFICO Y REVISORES — IEEE ETCM 2026
+  ================================================
+  Esta versión (index.html + style.css + script.js) es para
+  previsualizar localmente en el navegador. Para pegar en
+  WordPress + WP Bakery, usa el archivo autocontenido
+  "wpbakery-revisores.html" (todo en un solo bloque Raw HTML).
+
+  Para reemplazar el listado de revisores, edita el arreglo
+  dentro de "revisores.json". No requiere plugins, base de datos
+  ni backend: todo corre en el navegador del visitante.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+
+<section id="ieee-revisores">
+
+  <div class="ir-header">
+    <p class="ir-eyebrow">IEEE ETCM 2026</p>
+    <h2 class="ir-title">Comité Científico y Revisores</h2>
+    <p class="ir-sub">Consulta el listado de revisores que participan en el proceso de evaluación por pares del congreso.</p>
+  </div>
+
+  <div class="ir-searchbar">
+    <div class="ir-search-form" id="ir-form">
+      <input type="text" id="ir-input" placeholder="Ej: Acosta, Universidad de Las Américas…" autocomplete="off">
+      <button type="button" id="ir-btn-buscar">Buscar</button>
+    </div>
+    <div class="ir-filters">
+      <label for="ir-country-filter">País</label>
+      <select id="ir-country-filter">
+        <option value="">Todos los países</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="ir-meta-row">
+    <span class="ir-count">Mostrando <strong id="ir-count-num">0</strong> de <strong id="ir-count-total">0</strong> revisores</span>
+    <span id="ir-query-echo"></span>
+  </div>
+
+  <div class="ir-table-wrap">
+    <table class="ir-table">
+      <thead>
+        <tr>
+          <th>Nombre completo</th>
+          <th>Afiliación</th>
+          <th>País</th>
+        </tr>
+      </thead>
+      <tbody id="ir-results"></tbody>
+    </table>
+  </div>
+
+  <div class="ir-pagination" id="ir-pagination"></div>
+
+</section>
+
+<script src="script.js"></script>
