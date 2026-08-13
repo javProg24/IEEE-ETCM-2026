@@ -151,7 +151,7 @@
     "nombre": "Simone",
     "apellido": "Arena",
     "afiliacion": "University of Cagliari",
-    "pais": "IT"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/330px-Flag_of_Italy.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 23,
@@ -508,7 +508,7 @@
     "nombre": "Yesenia",
     "apellido": "Cevallos",
     "afiliacion": "University of Calabria",
-    "pais": "IT"
+    "pais": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/330px-Flag_of_Italy.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 74,
