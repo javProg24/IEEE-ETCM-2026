@@ -1,4 +1,3 @@
-
 (function () {
   var PAGE_SIZE = 12;
 
@@ -14,7 +13,7 @@
   var countTotal = document.getElementById('ic-count-total');
   var queryEcho = document.getElementById('ic-query-echo');
 
-  function normalizar(s) {
+  function normalize(s) {
     return (s || '')
       .toString()
       .toLowerCase()
@@ -32,17 +31,17 @@
       .replace(/'/g, '&#39;');
   }
 
-  function collectTracks(articulos) {
+  function collectTracks(articles) {
     var seen = {};
     var list = [];
-    articulos.forEach(function (a) {
+    articles.forEach(function (a) {
       if (!seen[a.track]) { seen[a.track] = true; list.push(a.track); }
     });
     list.sort();
     return list;
   }
 
-  function poblarTracks() {
+  function populateTracks() {
     TRACKS.forEach(function (t) {
       var opt = document.createElement('option');
       opt.value = t;
@@ -51,13 +50,13 @@
     });
   }
 
-  function render(lista) {
+  function render(list) {
     results.innerHTML = '';
-    if (lista.length === 0) {
-      results.innerHTML = '<div class="ic-empty">No se encontraron artículos que coincidan con tu búsqueda.</div>';
+    if (list.length === 0) {
+      results.innerHTML = '<div class="ic-empty">No articles found matching your search.</div>';
       return;
     }
-    lista.forEach(function (a) {
+    list.forEach(function (a) {
       var card = document.createElement('article');
       card.className = 'ic-card';
       card.tabIndex = 0;
@@ -69,16 +68,16 @@
       }).join('');
 
       card.innerHTML =
-        '<h3 class="ic-card-title">' + escapeHtml(a.titulo) + '</h3>' +
-        '<p class="ic-card-authors">' + escapeHtml(a.autores) + '</p>' +
-        '<p class="ic-card-abstract ic-abstract-short">' + escapeHtml(a.resumenCorto) + '</p>' +
+        '<h3 class="ic-card-title">' + escapeHtml(a.title) + '</h3>' +
+        '<p class="ic-card-authors">' + escapeHtml(a.authors) + '</p>' +
+        '<p class="ic-card-abstract ic-abstract-short">' + escapeHtml(a.shortAbstract) + '</p>' +
         '<p class="ic-card-abstract ic-abstract-full">' + escapeHtml(a.abstract) + '</p>' +
         '<div class="ic-card-footer">' +
           '<div class="ic-tags">' +
             '<span class="ic-tag ic-tag-track">' + escapeHtml(a.track) + '</span>' +
             keywordsHtml +
           '</div>' +
-          '<a class="ic-link" href="#" data-ic-link="1">Ver artículo →</a>' +
+          '<a class="ic-link" href="#" data-ic-link="1">View article →</a>' +
         '</div>';
 
       var link = card.querySelector('[data-ic-link]');
@@ -118,7 +117,7 @@
     }
   }
 
-  function irAPagina(n) {
+  function goToPage(n) {
     currentPage = n;
     renderPage(true);
   }
@@ -130,60 +129,60 @@
     var prevBtn = document.createElement('button');
     prevBtn.type = 'button';
     prevBtn.className = 'ic-page-btn';
-    prevBtn.textContent = '← Anterior';
+    prevBtn.textContent = '← Previous';
     prevBtn.disabled = currentPage <= 1;
-    prevBtn.addEventListener('click', function () { irAPagina(currentPage - 1); });
+    prevBtn.addEventListener('click', function () { goToPage(currentPage - 1); });
 
     var info = document.createElement('span');
     info.className = 'ic-page-info';
-    info.textContent = 'Página ' + currentPage + ' de ' + totalPages;
+    info.textContent = 'Page ' + currentPage + ' of ' + totalPages;
 
     var nextBtn = document.createElement('button');
     nextBtn.type = 'button';
     nextBtn.className = 'ic-page-btn';
-    nextBtn.textContent = 'Siguiente →';
+    nextBtn.textContent = 'Next →';
     nextBtn.disabled = currentPage >= totalPages;
-    nextBtn.addEventListener('click', function () { irAPagina(currentPage + 1); });
+    nextBtn.addEventListener('click', function () { goToPage(currentPage + 1); });
 
     pagination.appendChild(prevBtn);
     pagination.appendChild(info);
     pagination.appendChild(nextBtn);
   }
 
-  function buscar() {
+  function search() {
     var query = input.value.trim();
-    var q = normalizar(query);
+    var q = normalize(query);
     var track = trackSelect.value;
 
     countTotal.textContent = ETCM_ARTICLES.length;
 
-    var filtrados = ETCM_ARTICLES.filter(function (a) {
+    var filtered = ETCM_ARTICLES.filter(function (a) {
       if (track && a.track !== track) return false;
       if (!q) return true;
-      var campo = normalizar(a.titulo) + ' ' + normalizar(a.autores) + ' ' +
-                  normalizar((a.keywords || []).join(' ')) + ' ' + normalizar(a.track);
-      return campo.indexOf(q) !== -1;
+      var field = normalize(a.title) + ' ' + normalize(a.authors) + ' ' +
+                  normalize((a.keywords || []).join(' ')) + ' ' + normalize(a.track);
+      return field.indexOf(q) !== -1;
     });
 
-    queryEcho.textContent = query ? 'Resultados para "' + query + '"' : '';
-    countNum.textContent = filtrados.length;
-    currentResults = filtrados;
+    queryEcho.textContent = query ? 'Results for "' + query + '"' : '';
+    countNum.textContent = filtered.length;
+    currentResults = filtered;
     currentPage = 1;
     renderPage(false);
   }
 
-  document.getElementById('ic-btn-buscar').addEventListener('click', buscar);
+  document.getElementById('ic-btn-search').addEventListener('click', search);
 
   input.addEventListener('keydown', function (e) {
     if (e.key === 'Enter') {
       e.preventDefault();
-      buscar();
+      search();
     }
   });
 
-  trackSelect.addEventListener('change', buscar);
+  trackSelect.addEventListener('change', search);
 
   TRACKS = collectTracks(ETCM_ARTICLES);
-  poblarTracks();
-  buscar();
+  populateTracks();
+  search();
 })();

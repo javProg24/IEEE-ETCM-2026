@@ -3,12 +3,12 @@
   var PAGE_SIZE = 25;
 
   var COUNTRY_NAMES = {
-    AR: 'Argentina', AU: 'Australia', AZ: 'Azerbaiyán', BE: 'Bélgica',
-    BR: 'Brasil', CA: 'Canadá', CL: 'Chile', CN: 'China', CO: 'Colombia',
-    DK: 'Dinamarca', EC: 'Ecuador', ES: 'España', FR: 'Francia',
-    GB: 'Reino Unido', ID: 'Indonesia', IT: 'Italia', MA: 'Marruecos',
-    MX: 'México', NL: 'Países Bajos', PE: 'Perú', RO: 'Rumania',
-    US: 'Estados Unidos', VE: 'Venezuela'
+    AR: 'Argentina', AU: 'Australia', AZ: 'Azerbaijan', BE: 'Belgium',
+    BR: 'Brazil', CA: 'Canada', CL: 'Chile', CN: 'China', CO: 'Colombia',
+    DK: 'Denmark', EC: 'Ecuador', ES: 'Spain', FR: 'France',
+    GB: 'United Kingdom', ID: 'Indonesia', IT: 'Italy', MA: 'Morocco',
+    MX: 'Mexico', NL: 'Netherlands', PE: 'Peru', RO: 'Romania',
+    US: 'United States', VE: 'Venezuela'
   };
 
   var currentResults = [];
@@ -21,7 +21,7 @@
   var countTotal = document.getElementById('ir-count-total');
   var queryEcho = document.getElementById('ir-query-echo');
 
-  function normalizar(s) {
+  function normalize(s) {
     return (s || '')
       .toString()
       .toLowerCase()
@@ -39,30 +39,30 @@
       .replace(/'/g, '&#39;');
   }
 
-  function nombreCompleto(r) {
-    return r.nombre + ' ' + r.apellido;
+  function fullName(r) {
+    return r.firstName + ' ' + r.lastName;
   }
 
-  function nombrePais(r) {
-    return COUNTRY_NAMES[r.codigo] || '';
+  function countryName(r) {
+    return COUNTRY_NAMES[r.countryCode] || '';
   }
 
-  function render(lista) {
+  function render(list) {
     results.innerHTML = '';
-    if (lista.length === 0) {
+    if (list.length === 0) {
       var emptyRow = document.createElement('tr');
-      emptyRow.innerHTML = '<td colspan="3"><div class="ir-empty">No se encontraron revisores que coincidan con tu búsqueda.</div></td>';
+      emptyRow.innerHTML = '<td colspan="3"><div class="ir-empty">No reviewers found matching your search.</div></td>';
       results.appendChild(emptyRow);
       return;
     }
-    lista.forEach(function (r) {
+    list.forEach(function (r) {
       var row = document.createElement('tr');
       row.innerHTML =
-        '<td class="ir-name">' + escapeHtml(nombreCompleto(r)) + '</td>' +
-        '<td class="ir-affiliation">' + escapeHtml(r.afiliacion) + '</td>' +
+        '<td class="ir-name">' + escapeHtml(fullName(r)) + '</td>' +
+        '<td class="ir-affiliation">' + escapeHtml(r.affiliation) + '</td>' +
         '<td class="ir-country">' +
-          '<img class="ir-flag" src="' + escapeHtml(r.pais) + '" alt="" loading="lazy">' +
-          '<span class="ir-country-name">' + escapeHtml(nombrePais(r)) + '</span>' +
+          '<img class="ir-flag" src="' + escapeHtml(r.flag) + '" alt="" loading="lazy">' +
+          '<span class="ir-country-name">' + escapeHtml(countryName(r)) + '</span>' +
         '</td>';
       results.appendChild(row);
     });
@@ -82,7 +82,7 @@
     }
   }
 
-  function irAPagina(n) {
+  function goToPage(n) {
     currentPage = n;
     renderPage(true);
   }
@@ -94,53 +94,53 @@
     var prevBtn = document.createElement('button');
     prevBtn.type = 'button';
     prevBtn.className = 'ir-page-btn';
-    prevBtn.textContent = '← Anterior';
+    prevBtn.textContent = '← Previous';
     prevBtn.disabled = currentPage <= 1;
-    prevBtn.addEventListener('click', function () { irAPagina(currentPage - 1); });
+    prevBtn.addEventListener('click', function () { goToPage(currentPage - 1); });
 
     var info = document.createElement('span');
     info.className = 'ir-page-info';
-    info.textContent = 'Página ' + currentPage + ' de ' + totalPages;
+    info.textContent = 'Page ' + currentPage + ' of ' + totalPages;
 
     var nextBtn = document.createElement('button');
     nextBtn.type = 'button';
     nextBtn.className = 'ir-page-btn';
-    nextBtn.textContent = 'Siguiente →';
+    nextBtn.textContent = 'Next →';
     nextBtn.disabled = currentPage >= totalPages;
-    nextBtn.addEventListener('click', function () { irAPagina(currentPage + 1); });
+    nextBtn.addEventListener('click', function () { goToPage(currentPage + 1); });
 
     pagination.appendChild(prevBtn);
     pagination.appendChild(info);
     pagination.appendChild(nextBtn);
   }
 
-  function buscar() {
+  function search() {
     var query = input.value.trim();
-    var q = normalizar(query);
+    var q = normalize(query);
 
     countTotal.textContent = REVISORES.length;
 
-    var filtrados = REVISORES.filter(function (r) {
+    var filtered = REVISORES.filter(function (r) {
       if (!q) return true;
-      var campo = normalizar(r.nombre) + ' ' + normalizar(r.apellido) + ' ' + normalizar(r.afiliacion);
-      return campo.indexOf(q) !== -1;
+      var field = normalize(r.firstName) + ' ' + normalize(r.lastName) + ' ' + normalize(r.affiliation);
+      return field.indexOf(q) !== -1;
     });
 
-    queryEcho.textContent = query ? 'Resultados para "' + query + '"' : '';
-    countNum.textContent = filtrados.length;
-    currentResults = filtrados;
+    queryEcho.textContent = query ? 'Results for "' + query + '"' : '';
+    countNum.textContent = filtered.length;
+    currentResults = filtered;
     currentPage = 1;
     renderPage(false);
   }
 
-  document.getElementById('ir-btn-buscar').addEventListener('click', buscar);
+  document.getElementById('ir-btn-search').addEventListener('click', search);
 
   input.addEventListener('keydown', function (e) {
     if (e.key === 'Enter') {
       e.preventDefault();
-      buscar();
+      search();
     }
   });
 
-  buscar();
+  search();
 })();
