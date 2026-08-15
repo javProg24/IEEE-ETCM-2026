@@ -40,24 +40,26 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 
   #ieee-revisores {
-    --navy: #0b1f3a;
-    --navy-soft: #16305a;
-    --paper: #f6f3ec;
-    --card: #fffdf8;
-    --ink: #1c2530;
-    --ink-soft: #5a6474;
-    --gold: #b8863c;
-    --rule: #dcd5c4;
+    --navy: #0a1b38;
+    --navy-soft: #123a66;
+    --bg: #ffffff;
+    --card: #ffffff;
+    --card-alt: #f3f6fa;
+    --ink: #1d2530;
+    --ink-soft: #59626f;
+    --accent: #0f5fa8;
+    --accent-dark: #0c4c86;
+    --rule: #d7dde5;
 
     box-sizing: border-box;
-    background: var(--paper);
+    background: var(--bg);
     color: var(--ink);
-    font-family: 'IBM Plex Sans', sans-serif;
-    padding: 48px 24px 64px;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    padding: 0 0 64px;
     max-width: 980px;
     margin: 0 auto;
   }
@@ -69,44 +71,33 @@
     background: var(--navy);
     color: #fff;
     padding: 36px 32px;
-    border-radius: 4px;
-    position: relative;
-    overflow: hidden;
-  }
-  .ir-header::after {
-    content: "";
-    position: absolute;
-    right: -40px; top: -40px;
-    width: 160px; height: 160px;
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 50%;
+    border-radius: 2px;
   }
   .ir-eyebrow {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 12px;
+    font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: #7fb3e0;
     margin: 0 0 10px;
   }
   .ir-title {
-    font-family: 'Source Serif 4', serif;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 700;
-    font-size: clamp(26px, 4vw, 38px);
+    font-size: clamp(24px, 4vw, 34px);
     margin: 0 0 8px;
-    line-height: 1.15;
+    line-height: 1.2;
   }
   .ir-sub {
     font-size: 14.5px;
-    color: rgba(255,255,255,0.75);
+    color: rgba(255,255,255,0.78);
     margin: 0;
     max-width: 60ch;
   }
 
   .ir-searchbar {
-    margin-top: -24px;
-    position: relative;
-    z-index: 2;
+    margin-top: 24px;
     padding: 0 4px;
   }
   .ir-search-form {
@@ -114,16 +105,15 @@
     gap: 0;
     background: var(--card);
     border: 1px solid var(--rule);
-    border-radius: 4px;
-    box-shadow: 0 6px 20px rgba(11,31,58,0.10);
+    border-radius: 2px;
     overflow: hidden;
   }
   .ir-search-form input[type="text"] {
     flex: 1;
     border: none;
     background: transparent;
-    padding: 16px 18px;
-    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 15px 18px;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 15px;
     color: var(--ink);
     outline: none;
@@ -133,52 +123,22 @@
   }
   .ir-search-form button {
     border: none;
-    background: var(--gold);
-    color: var(--navy);
-    font-family: 'IBM Plex Mono', monospace;
+    background: var(--accent);
+    color: #fff;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 600;
     font-size: 13px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
     padding: 0 26px;
     cursor: pointer;
     transition: background 0.15s ease;
   }
-  .ir-search-form button:hover { background: #a67833; }
+  .ir-search-form button:hover { background: var(--accent-dark); }
   .ir-search-form button:focus-visible,
   .ir-search-form input:focus-visible {
     outline: 2px solid var(--navy);
     outline-offset: -2px;
-  }
-
-  .ir-filters {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-top: 10px;
-    padding: 0 4px;
-  }
-  .ir-filters label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11.5px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-  }
-  .ir-filters select {
-    flex: 1;
-    max-width: 320px;
-    border: 1px solid var(--rule);
-    border-radius: 4px;
-    background: var(--card);
-    color: var(--ink);
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 13.5px;
-    padding: 8px 10px;
-  }
-  .ir-filters select:focus-visible {
-    outline: 2px solid var(--navy);
-    outline-offset: -1px;
   }
 
   .ir-meta-row {
@@ -186,17 +146,17 @@
     justify-content: space-between;
     align-items: baseline;
     margin: 34px 2px 14px;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 12px;
     color: var(--ink-soft);
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
   }
   .ir-meta-row span.ir-count strong { color: var(--navy); }
 
   .ir-table-wrap {
     background: var(--card);
     border: 1px solid var(--rule);
-    border-radius: 3px;
+    border-radius: 2px;
     overflow-x: auto;
   }
 
@@ -207,12 +167,13 @@
   }
   .ir-table thead th {
     text-align: left;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.05em;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #fff;
-    background: var(--navy-soft);
+    background: var(--navy);
     padding: 12px 16px;
     white-space: nowrap;
   }
@@ -221,11 +182,14 @@
     border-top: 1px solid var(--rule);
     vertical-align: top;
   }
+  .ir-table tbody tr:nth-child(even) {
+    background: var(--card-alt);
+  }
   .ir-table tbody tr:hover {
-    background: #f2eee2;
+    background: #eaf1f9;
   }
   .ir-name {
-    font-weight: 500;
+    font-weight: 600;
     color: var(--navy);
     white-space: nowrap;
   }
@@ -235,16 +199,20 @@
   .ir-country {
     white-space: nowrap;
     color: var(--ink-soft);
+    text-align: center;
   }
-  .ir-country-code {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10.5px;
-    letter-spacing: 0.03em;
-    color: var(--navy-soft);
-    background: #eef1f6;
-    padding: 2px 6px;
+  .ir-flag {
+    width: 28px;
+    height: 20px;
+    object-fit: cover;
     border-radius: 2px;
-    margin-right: 6px;
+    border: 1px solid var(--rule);
+    display: block;
+    margin: 0 auto 4px;
+  }
+  .ir-country-name {
+    display: block;
+    font-size: 11.5px;
   }
 
   .ir-pagination {
@@ -258,18 +226,18 @@
     border: 1px solid var(--rule);
     background: var(--card);
     color: var(--navy);
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 12.5px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.02em;
     padding: 9px 16px;
-    border-radius: 4px;
+    border-radius: 2px;
     cursor: pointer;
     transition: border-color 0.15s ease, background 0.15s ease;
   }
   .ir-page-btn:hover:not(:disabled) {
-    border-color: var(--gold);
-    background: #fff;
+    border-color: var(--accent);
+    background: #eaf1f9;
   }
   .ir-page-btn:focus-visible {
     outline: 2px solid var(--navy);
@@ -280,20 +248,20 @@
     cursor: default;
   }
   .ir-page-info {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 12px;
     color: var(--ink-soft);
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
   }
 
   .ir-empty {
     text-align: center;
     padding: 48px 20px;
     color: var(--ink-soft);
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 13px;
-    border: 1px dashed var(--rule);
-    border-radius: 4px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
     background: var(--card);
   }
 
