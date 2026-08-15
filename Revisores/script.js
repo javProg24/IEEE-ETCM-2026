@@ -3,11 +3,16 @@
   /* =========================================================
     ETCM 2026 — COMITÉ CIENTÍFICO Y REVISORES
     Fuente: ETCM_2026_Revisores - web pages.xlsx (334 revisores).
-    Campos publicados: nombre, apellido, afiliación, país (código ISO).
+    Campos publicados: nombre, apellido, afiliación, país (bandera + nombre).
 
     Los revisores viven en revisores.json (no en este archivo), para
     que reemplazar el listado sea editar un solo JSON. Campos por
-    revisor: id, nombre, apellido, afiliacion, pais (código ISO de 2 letras).
+    revisor: id, nombre, apellido, afiliacion, pais (URL de imagen de
+    la bandera, ej. banderas-mundo.es), codigo (código ISO de 2 letras,
+    solo para referencia del equipo — no se muestra tal cual en la
+    página, se usa para resolver el nombre del país que aparece debajo
+    de la bandera). No hay filtro por país (no hace falta un <select>
+    para 334 revisores repartidos en pocos países).
 
     IMPORTANTE: al abrir index.html localmente con doble clic
     (protocolo file://), el navegador bloquea el fetch() de
@@ -33,7 +38,6 @@
   var currentPage = 1;
 
   var input = document.getElementById('ir-input');
-  var countrySelect = document.getElementById('ir-country-filter');
   var results = document.getElementById('ir-results');
   var pagination = document.getElementById('ir-pagination');
   var countNum = document.getElementById('ir-count-num');
@@ -62,29 +66,8 @@
     return r.nombre + ' ' + r.apellido;
   }
 
-  function nombrePais(codigo) {
-    return COUNTRY_NAMES[codigo] || codigo;
-  }
-
-  function collectCountries(revisores) {
-    var seen = {};
-    var list = [];
-    revisores.forEach(function (r) {
-      if (!seen[r.pais]) { seen[r.pais] = true; list.push(r.pais); }
-    });
-    list.sort(function (a, b) {
-      return nombrePais(a).localeCompare(nombrePais(b), 'es');
-    });
-    return list;
-  }
-
-  function poblarPaises() {
-    collectCountries(REVISORES).forEach(function (codigo) {
-      var opt = document.createElement('option');
-      opt.value = codigo;
-      opt.textContent = nombrePais(codigo) + ' (' + codigo + ')';
-      countrySelect.appendChild(opt);
-    });
+  function nombrePais(r) {
+    return COUNTRY_NAMES[r.codigo] || '';
   }
 
   function render(lista) {
@@ -97,14 +80,13 @@
     }
     lista.forEach(function (r) {
       var row = document.createElement('tr');
-      var esUrl = /^https?:\/\//i.test(r.pais);
-      var paisHtml = esUrl
-        ? '<img class="ir-flag" src="' + escapeHtml(r.pais) + '" alt="" loading="lazy">'
-        : escapeHtml(r.pais);
       row.innerHTML =
         '<td class="ir-name">' + escapeHtml(nombreCompleto(r)) + '</td>' +
         '<td class="ir-affiliation">' + escapeHtml(r.afiliacion) + '</td>' +
-        '<td class="ir-country">' + paisHtml + '</td>';
+        '<td class="ir-country">' +
+          '<img class="ir-flag" src="' + escapeHtml(r.pais) + '" alt="" loading="lazy">' +
+          '<span class="ir-country-name">' + escapeHtml(nombrePais(r)) + '</span>' +
+        '</td>';
       results.appendChild(row);
     });
   }
@@ -158,12 +140,10 @@
   function buscar() {
     var query = input.value.trim();
     var q = normalizar(query);
-    var pais = countrySelect.value;
 
     countTotal.textContent = REVISORES.length;
 
     var filtrados = REVISORES.filter(function (r) {
-      if (pais && r.pais !== pais) return false;
       if (!q) return true;
       var campo = normalizar(r.nombre) + ' ' + normalizar(r.apellido) + ' ' + normalizar(r.afiliacion);
       return campo.indexOf(q) !== -1;
@@ -185,8 +165,6 @@
     }
   });
 
-  countrySelect.addEventListener('change', buscar);
-
   fetch('revisores.json')
     .then(function (res) {
       if (!res.ok) throw new Error('HTTP ' + res.status);
@@ -194,7 +172,6 @@
     })
     .then(function (data) {
       REVISORES = data;
-      poblarPaises();
       buscar();
     })
     .catch(function (err) {
