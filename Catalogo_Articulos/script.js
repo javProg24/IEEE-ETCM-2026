@@ -1,28 +1,7 @@
 
 (function () {
-  /* =========================================================
-    ETCM 2026 — CATÁLOGO DE ARTÍCULOS (v2)
-    Fuente: ETCM_2026_Accepted_Articles_by_Track_Superscript_Affiliations.docx
-    189 artículos, 13 tracks. Corte de datos: 4 de agosto de 2026.
-    Nota: algunos autores aún pueden corregirse (Julio Barzola).
-    No se publica el PDF de cada artículo (política de derechos de autor IEEE).
+  var PAGE_SIZE = 12;
 
-    Los artículos viven en articulos.json (no en este archivo), para
-    que reemplazar el listado sea editar un solo JSON. Campos por
-    artículo: id, titulo, autores, track, keywords (5 por artículo),
-    resumenCorto (~155 caracteres), abstract (texto completo).
-
-    IMPORTANTE: al abrir index.html localmente con doble clic
-    (protocolo file://), el navegador bloquea el fetch() de
-    articulos.json por CORS. Sirve la carpeta con un servidor local
-    (ej. "npx serve", "python -m http.server", Live Server de VSCode)
-    para previsualizar. Una vez subido a un hosting real (http/https)
-    funciona sin problema.
-    ========================================================= */
-
-  var PAGE_SIZE = 12; // artículos por página — ajusta este número si hace falta
-
-  var ETCM_ARTICLES = [];
   var TRACKS = [];
   var currentResults = [];
   var currentPage = 1;
@@ -106,7 +85,6 @@
       link.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
-        // Pendiente: aún no hay destino real por artículo (ver instrucciones).
       });
 
       function toggleExpand() {
@@ -205,18 +183,7 @@
 
   trackSelect.addEventListener('change', buscar);
 
-  fetch('articulos.json')
-    .then(function (res) {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      return res.json();
-    })
-    .then(function (data) {
-      ETCM_ARTICLES = data;
-      TRACKS = collectTracks(ETCM_ARTICLES);
-      poblarTracks();
-      buscar();
-    })
-    .catch(function (err) {
-      results.innerHTML = '<div class="ic-empty">No se pudo cargar articulos.json (' + err.message + '). Si abriste este archivo con doble clic, sirve la carpeta con un servidor local.</div>';
-    });
+  TRACKS = collectTracks(ETCM_ARTICLES);
+  poblarTracks();
+  buscar();
 })();

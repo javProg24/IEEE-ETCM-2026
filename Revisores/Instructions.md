@@ -6,7 +6,7 @@
 - Corte de datos: 12 de agosto de 2026.
 
 ## Campos que se publican
-Por cada revisor, en `revisores.json`:
+Por cada revisor, en `revisores-data.js`:
 - `id`: correlativo numérico (1–334).
 - `nombre`: First name.
 - `apellido`: Last name.
@@ -21,20 +21,29 @@ El nombre completo de cada país (para el filtro por país y para la columna
 código de país nuevo que no esté en ese mapa, se muestra el código tal cual
 en vez del nombre — hay que agregarlo a `COUNTRY_NAMES` a mano.
 
+## Estructura de archivos
+- `revisores-data.js`: fuente editable — declara `var REVISORES = [...]`
+  como variable global. Se carga con su propio
+  `<script src="revisores-data.js">` ANTES que `script.js` en
+  `index.html`.
+- `script.js`: toda la lógica (búsqueda, paginación, render). Usa la
+  variable global `REVISORES` que expone `revisores-data.js`; no la
+  declara ni la contiene.
+- `wpbakery-revisores.html`: versión autocontenida para WordPress, con
+  su propia copia del arreglo `REVISORES` incrustada dentro del
+  `<script>` (a propósito, para que el bloque Raw HTML siga siendo un
+  solo pegado sin depender de subir un archivo aparte al hosting).
+
 ## Cómo actualizar el listado
-1. **Archivos locales (index.html + script.js + revisores.json):**
-   reemplaza el arreglo completo de `revisores.json` por el nuevo listado
-   (mismo formato: `id`, `nombre`, `apellido`, `afiliacion`, `pais`).
-2. **Archivo para WP Bakery (`wpbakery-revisores.html`):** este archivo NO
-   lee `revisores.json` — lleva el arreglo `REVISORES` incrustado
-   directamente dentro del `<script>`, para que el bloque Raw HTML siga
-   siendo un solo pegado sin depender de subir un JSON al hosting. Cuando
-   actualices `revisores.json`, hay que reconstruir `wpbakery-revisores.html`
-   pegando el nuevo arreglo también ahí (mismos campos, notación de objeto
-   JS con claves sin comillas: `{ id: 1, nombre: "...", apellido: "...",
-   afiliacion: "...", pais: "EC" }`).
-3. Si cambian nuevos países, agrégalos a `COUNTRY_NAMES` en ambos archivos
-   (`script.js` y `wpbakery-revisores.html`).
+1. **`revisores-data.js`:** edita el arreglo `REVISORES` directamente
+   (mismo formato: `id`, `nombre`, `apellido`, `afiliacion`, `pais`,
+   `codigo`).
+2. **`wpbakery-revisores.html`:** replica el mismo cambio dentro de su
+   `<script>`, con notación de objeto JS con claves sin comillas:
+   `{ id: 1, nombre: "...", apellido: "...", afiliacion: "...",
+   pais: "..." , codigo: "EC" }`.
+3. Si aparecen países nuevos, agrégalos a `COUNTRY_NAMES` en ambos
+   archivos (`script.js` y `wpbakery-revisores.html`).
 
 ## Cómo integrar en WP Bakery
 1. En la página del sitio (WordPress + WP Bakery) donde va el listado,
@@ -49,11 +58,10 @@ en vez del nombre — hay que agregarlo a `COUNTRY_NAMES` a mano.
    de WP Bakery (el preview puede sandboxear el `<script>`).
 
 ## Previsualización local
-`index.html` carga `revisores.json` vía `fetch()`, así que abrir el archivo
-con doble clic (protocolo `file://`) falla por CORS. Sirve la carpeta con
-un servidor local para probar (`npx serve`, `python -m http.server`, Live
-Server de VSCode, etc.). Una vez subido a un hosting real (http/https)
-funciona sin problema.
+`revisores-data.js` declara el arreglo `REVISORES` como variable global (no
+se hace `fetch()` de ningún archivo), así que `index.html` se puede abrir
+directamente con doble clic (protocolo `file://`) sin necesidad de
+servidor local.
 
 ## Pendiente
 - **Confirmar con Julio Barzola** si "Reviewers" va como página propia en

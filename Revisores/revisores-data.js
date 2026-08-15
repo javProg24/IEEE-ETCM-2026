@@ -1,4 +1,4 @@
-[
+var REVISORES = [
   {
     "id": 1,
     "nombre": "Patricia",
@@ -2671,4 +2671,4 @@
     "pais": "https://www.banderas-mundo.es/data/flags/w580/ec.png",
     "codigo": "EC"
   }
-]
+];

@@ -1,43 +1,3 @@
-<!--
-  COMITE CIENTIFICO Y REVISORES -- IEEE ETCM 2026
-  ================================================
-  COMO USARLO EN WORDPRESS + WP BAKERY:
-  1. En la pagina donde quieras el listado, agrega un elemento
-     "Raw HTML" (NO "Text Block", para evitar que wpautop corrompa
-     el HTML/JS al insertar <p> y <br> automaticos).
-  2. Pega TODO este archivo dentro de ese elemento, tal cual.
-  3. No usa <form>: toda la interaccion va por addEventListener,
-     asi que no depende de un submit de formulario.
-  4. Prueba siempre en la pagina YA PUBLICADA, no en el preview del
-     editor de WP Bakery (el preview puede sandboxear el <script>).
-
-  FUENTE DE DATOS
-  ----------------
-  ETCM_2026_Revisores - web pages.xlsx (hoja "Reviewers").
-  334 revisores. Corte de datos: 12 de agosto de 2026.
-
-  CONTENIDO PUBLICADO POR REVISOR
-  ----------------------------------
-  Nombre, apellido, afiliacion y pais (codigo ISO de 2 letras,
-  mostrado junto al nombre del pais).
-
-  PARA ACTUALIZAR EL LISTADO
-  ----------------------------
-  Esta version para WP Bakery lleva el arreglo REVISORES incrustado
-  directamente en el <script> de abajo (a proposito: asi el bloque
-  Raw HTML sigue siendo un solo pegado, sin depender de subir un
-  JSON aparte al hosting). Los archivos locales (index.html +
-  script.js + revisores.json) si separan los datos en un JSON aparte
-  para facilitar la edicion dia a dia -- cuando actualices
-  revisores.json, reconstruye este archivo pegando el nuevo arreglo
-  aqui tambien.
-
-  PENDIENTE
-  -----------
-  - Confirmar con Julio Barzola si esta pagina va sola en el menu
-    o anidada bajo "Committee".
--->
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -320,18 +280,7 @@
 <script>
 
 (function () {
-
-  /* =========================================================
-    ETCM 2026 -- COMITE CIENTIFICO Y REVISORES
-    Fuente: ETCM_2026_Revisores - web pages.xlsx (334 revisores).
-    Campos publicados: nombre, apellido, afiliacion, pais (codigo ISO).
-
-    Para actualizar el listado completo, reemplaza por completo el
-    arreglo REVISORES de abajo. Campos por revisor:
-      id, nombre, apellido, afiliacion, pais (codigo ISO de 2 letras)
-    ========================================================= */
-
-  var PAGE_SIZE = 25; // revisores por página — ajusta este número si hace falta
+  var PAGE_SIZE = 25;
 
   var COUNTRY_NAMES = {
     AR: 'Argentina', AU: 'Australia', AZ: 'Azerbaiyán', BE: 'Bélgica',

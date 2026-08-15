@@ -1,48 +1,3 @@
-<!--
-  CATÁLOGO DE ARTÍCULOS CIENTÍFICOS — IEEE ETCM 2026 (v2)
-  ====================================================
-  CÓMO USARLO EN WORDPRESS + WP BAKERY:
-  1. En la página donde quieras el catálogo, agrega un elemento
-     "Raw HTML" (NO "Text Block", para evitar que wpautop corrompa
-     el HTML/JS al insertar <p> y <br> automáticos).
-  2. Pega TODO este archivo dentro de ese elemento, tal cual.
-  3. No usa <form>: toda la interacción va por addEventListener,
-     así que no depende de un submit de formulario.
-  4. Prueba siempre en la página YA PUBLICADA, no en el preview del
-     editor de WP Bakery (el preview puede sandboxear el <script>).
-
-  FUENTE DE DATOS
-  ----------------
-  ETCM_2026_Accepted_Articles_by_Track_Superscript_Affiliations.docx
-  189 artículos, 13 tracks. Corte de datos: 4 de agosto de 2026.
-  Nota: algunos autores aún pueden corregirse (Julio Barzola).
-  NO se publica el PDF de cada artículo (política de derechos de
-  autor IEEE).
-
-  CONTENIDO PUBLICADO POR ARTÍCULO
-  ----------------------------------
-  Título, autores, track, las 5 palabras clave, resumen corto
-  (~155 caracteres) y abstract completo (visible solo al expandir
-  la tarjeta).
-
-  PARA ACTUALIZAR EL LISTADO
-  ----------------------------
-  Esta versión para WP Bakery lleva el arreglo ETCM_ARTICLES
-  incrustado directamente en el <script> de abajo (a propósito:
-  así el bloque Raw HTML sigue siendo un solo pegado, sin depender
-  de subir un JSON aparte al hosting). Los archivos locales
-  (index.html + script.js + articulos.json) sí separan los datos
-  en un JSON aparte para facilitar la edición día a día — cuando
-  actualices articulos.json, reconstruye este archivo pegando el
-  nuevo arreglo aquí también.
-
-  PENDIENTES
-  -----------
-  - Definir el destino real de "Ver artículo →" por artículo
-    (hoy es un placeholder visible, sin acción — preventDefault).
-  - Reemplazar ETCM_ARTICLES cuando Julio envíe el listado corregido.
--->
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -370,18 +325,6 @@
 <script>
 
 (function () {
-  /* =========================================================
-    ETCM 2026 — CATÁLOGO DE ARTÍCULOS (v2)
-    Fuente: ETCM_2026_Accepted_Articles_by_Track_Superscript_Affiliations.docx
-    189 artículos, 13 tracks. Corte de datos: 4 de agosto de 2026.
-    Nota: algunos autores aún pueden corregirse (Julio Barzola).
-    No se publica el PDF de cada artículo (política de derechos de autor IEEE).
-
-    Para actualizar el listado completo, reemplaza por completo el
-    arreglo ETCM_ARTICLES de abajo. Campos por artículo:
-      id, titulo, autores, track, keywords (5 por artículo),
-      resumenCorto (~155 caracteres), abstract (texto completo)
-    ========================================================= */
   var ETCM_ARTICLES = [
     {
       id: "2",
@@ -2094,7 +2037,7 @@
     return list;
   })();
 
-  var PAGE_SIZE = 12; // artículos por página — ajusta este número si hace falta
+  var PAGE_SIZE = 12;
 
   var input = document.getElementById('ic-input');
   var trackSelect = document.getElementById('ic-track-filter');
@@ -2168,7 +2111,6 @@
       link.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
-        // Pendiente: aún no hay destino real por artículo (ver instrucciones).
       });
 
       function toggleExpand() {

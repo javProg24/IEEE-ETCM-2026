@@ -1,28 +1,6 @@
 
 (function () {
-  /* =========================================================
-    ETCM 2026 — COMITÉ CIENTÍFICO Y REVISORES
-    Fuente: ETCM_2026_Revisores - web pages.xlsx (334 revisores).
-    Campos publicados: nombre, apellido, afiliación, país (bandera + nombre).
-
-    Los revisores viven en revisores.json (no en este archivo), para
-    que reemplazar el listado sea editar un solo JSON. Campos por
-    revisor: id, nombre, apellido, afiliacion, pais (URL de imagen de
-    la bandera, ej. banderas-mundo.es), codigo (código ISO de 2 letras,
-    solo para referencia del equipo — no se muestra tal cual en la
-    página, se usa para resolver el nombre del país que aparece debajo
-    de la bandera). No hay filtro por país (no hace falta un <select>
-    para 334 revisores repartidos en pocos países).
-
-    IMPORTANTE: al abrir index.html localmente con doble clic
-    (protocolo file://), el navegador bloquea el fetch() de
-    revisores.json por CORS. Sirve la carpeta con un servidor local
-    (ej. "npx serve", "python -m http.server", Live Server de VSCode)
-    para previsualizar. Una vez subido a un hosting real (http/https)
-    funciona sin problema.
-    ========================================================= */
-
-  var PAGE_SIZE = 25; // revisores por página — ajusta este número si hace falta
+  var PAGE_SIZE = 25;
 
   var COUNTRY_NAMES = {
     AR: 'Argentina', AU: 'Australia', AZ: 'Azerbaiyán', BE: 'Bélgica',
@@ -33,7 +11,6 @@
     US: 'Estados Unidos', VE: 'Venezuela'
   };
 
-  var REVISORES = [];
   var currentResults = [];
   var currentPage = 1;
 
@@ -165,16 +142,5 @@
     }
   });
 
-  fetch('revisores.json')
-    .then(function (res) {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      return res.json();
-    })
-    .then(function (data) {
-      REVISORES = data;
-      buscar();
-    })
-    .catch(function (err) {
-      results.innerHTML = '<tr><td colspan="3"><div class="ir-empty">No se pudo cargar revisores.json (' + err.message + '). Si abriste este archivo con doble clic, sirve la carpeta con un servidor local.</div></td></tr>';
-    });
+  buscar();
 })();
