@@ -279,19 +279,7 @@
 
 <script>
 
-(function () {
-  var PAGE_SIZE = 25;
-
-  var COUNTRY_NAMES = {
-    AR: 'Argentina', AU: 'Australia', AZ: 'Azerbaiyán', BE: 'Bélgica',
-    BR: 'Brasil', CA: 'Canadá', CL: 'Chile', CN: 'China', CO: 'Colombia',
-    DK: 'Dinamarca', EC: 'Ecuador', ES: 'España', FR: 'Francia',
-    GB: 'Reino Unido', ID: 'Indonesia', IT: 'Italia', MA: 'Marruecos',
-    MX: 'México', NL: 'Países Bajos', PE: 'Perú', RO: 'Rumania',
-    US: 'Estados Unidos', VE: 'Venezuela'
-  };
-
-  var REVISORES = [
+window.ETCM_REVISORES_DATA = [
     { id: 1, nombre: "Patricia", apellido: "Acosta-Vargas", afiliacion: "Universidad de Las Américas", pais: "EC" },
     { id: 2, nombre: "Eliana", apellido: "Acurio", afiliacion: "Escuela Politecnica Nacional", pais: "EC" },
     { id: 3, nombre: "Santiago", apellido: "Acurio", afiliacion: "Pontificia Universidad Católica del Ecuador - Ambato", pais: "EC" },
@@ -627,6 +615,28 @@
     { id: 333, nombre: "Julio Cesar", apellido: "Zambrano Abad", afiliacion: "Universidad Politécnica Salesiana", pais: "EC" },
     { id: 334, nombre: "Jonathan", apellido: "Zea", afiliacion: "Escuela Politécnica Nacional", pais: "EC" },
   ];
+
+(function () {
+  var REVISORES = window.ETCM_REVISORES_DATA;
+
+  if (!REVISORES || !Array.isArray(REVISORES)) {
+    var errorContainer = document.getElementById('ir-results');
+    if (errorContainer) {
+      errorContainer.innerHTML = '<tr><td colspan="3"><div class="ir-empty">No se pudieron cargar los datos de revisores.</div></td></tr>';
+    }
+    return;
+  }
+
+  var PAGE_SIZE = 25;
+
+  var COUNTRY_NAMES = {
+    AR: 'Argentina', AU: 'Australia', AZ: 'Azerbaiyán', BE: 'Bélgica',
+    BR: 'Brasil', CA: 'Canadá', CL: 'Chile', CN: 'China', CO: 'Colombia',
+    DK: 'Dinamarca', EC: 'Ecuador', ES: 'España', FR: 'Francia',
+    GB: 'Reino Unido', ID: 'Indonesia', IT: 'Italia', MA: 'Marruecos',
+    MX: 'México', NL: 'Países Bajos', PE: 'Perú', RO: 'Rumania',
+    US: 'Estados Unidos', VE: 'Venezuela'
+  };
   var currentResults = [];
   var currentPage = 1;
 

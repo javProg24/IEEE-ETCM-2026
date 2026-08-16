@@ -6,73 +6,81 @@
 - Corte de datos: 12 de agosto de 2026.
 
 ## Campos que se publican
-Por cada revisor, en el arreglo `REVISORES` dentro de `revisores-data.js`:
+Por cada revisor, en el arreglo asignado a `window.ETCM_REVISORES_DATA`
+dentro de `revisores-data.js`:
 - `id`: correlativo numérico (1–334).
-- `nombre`: First name.
-- `apellido`: Last name.
-- `afiliacion`: Affiliation, tal cual viene en el Excel.
-- `pais`: Country code, normalizado a 2 letras en mayúscula (ISO 3166-1 alfa-2).
+- `firstName`: First name.
+- `lastName`: Last name.
+- `affiliation`: Affiliation, tal cual viene en el Excel.
+- `flag`: URL de la imagen de la bandera del país.
+- `countryCode`: Country code, normalizado a 2 letras en mayúscula (ISO 3166-1 alfa-2).
 
 No se publican correos, LinkedIn ni ningún otro dato de contacto — el Excel fuente no los trae.
 
-El nombre completo de cada país (para el filtro por país y para la columna
-"País" de la tabla) se resuelve con el objeto `COUNTRY_NAMES` dentro de
-`script.js` (y su copia embebida en `wpbakery-revisores.html`). Si aparece un
+El nombre completo de cada país (para la columna "Country" de la tabla) se
+resuelve con el objeto `COUNTRY_NAMES` dentro de `script.js`. Si aparece un
 código de país nuevo que no esté en ese mapa, se muestra el código tal cual
 en vez del nombre — hay que agregarlo a `COUNTRY_NAMES` a mano.
 
-## Estructura de archivos
-- `revisores-data.js`: fuente editable — declara `var REVISORES = [...]`
-  (334 registros) y nada más. No lo referencia `index.html` directamente;
-  lo carga `script.js` por código (ver abajo).
-- `script.js`: toda la lógica (búsqueda, paginación, render,
-  `COUNTRY_NAMES`), envuelta en un IIFE. `index.html` solo incluye
-  `<script src="script.js">`; ese único script es el que, en tiempo de
-  ejecución, inyecta un segundo `<script>` para cargar
-  `revisores-data.js` y recién entonces inicializa la búsqueda/render.
-  Concretamente:
-  1. En la primera línea del archivo (antes de cualquier otro código)
-     captura `document.currentScript` en `IR_SCRIPT_EL` — solo es
-     confiable si se lee de forma síncrona, apenas arranca el parseo.
-  2. Con `IR_SCRIPT_EL.src` (la URL absoluta de su propio `<script>`)
-     deriva la URL del archivo hermano con
-     `new URL('revisores-data.js', selfUrl)`, cambiando únicamente el
-     nombre de archivo al final del path. Esto funciona igual si
-     `script.js` se sirve desde una ruta relativa local
-     (`Revisores/script.js`) que si se sirve desde jsDelivr/GitHub
-     (`https://cdn.jsdelivr.net/gh/usuario/repo@rama/Revisores/script.js`
-     → resuelve a `.../Revisores/revisores-data.js` automáticamente).
-  3. Crea ese `<script>` con la URL derivada y lo agrega al documento.
-     En su `onload`, si `typeof REVISORES !== 'undefined'`, recién ahí
-     corre `init()` (búsqueda, paginación, listeners). Si `REVISORES`
-     sigue sin existir, o si dispara `onerror` (el archivo no cargó),
-     muestra un mensaje de error visible dentro de `#ir-results` en vez
-     de fallar en silencio.
+`wpbakery-revisores.html` usa un esquema propio y distinto (ver "Estructura
+de archivos" abajo): claves en español (`nombre`, `apellido`, `afiliacion`,
+`pais`), sin `flag`, y con su propio filtro por país — no es un simple
+duplicado del `revisores-data.js` local.
 
-  Por qué así: antes `index.html` declaraba dos `<script src>` separados
-  (`revisores-data.js` + `script.js`) y dependía de que el navegador los
-  ejecutara en ese orden. Al pegar el bloque en WP Bakery (Raw HTML +
-  wpautop) ese orden no estaba garantizado, y a veces la lógica corría
-  antes de que `REVISORES` existiera (`ReferenceError: REVISORES is not
-  defined`, visible solo en la página publicada, no en el editor). Ahora
-  el orden lo garantiza JavaScript (`onload` del script inyectado), no
-  cómo se pegue el HTML — da igual que se pegue como un bloque o como
-  dos, y da igual si `script.js` se sirve en local o desde un CDN.
-- `wpbakery-revisores.html`: versión autocontenida para WordPress, con
-  su propia copia del arreglo `REVISORES` incrustada dentro del
-  `<script>` (a propósito, para que el bloque Raw HTML siga siendo un
-  solo pegado sin depender de subir un archivo aparte al hosting). Por
-  ahora sigue con su propio mecanismo, sin el loader dinámico — se
-  revisará en un paso aparte.
+## Estructura de archivos
+- `revisores-data.js`: fuente editable — solo contiene
+  `window.ETCM_REVISORES_DATA = [...]` (334 registros). Asignación
+  explícita a `window` (no `var REVISORES`), para que la variable quede
+  en el ámbito global sin importar cómo un plugin o el propio WP Bakery
+  trate el bloque pegado.
+- `script.js`: toda la lógica (búsqueda, paginación, render,
+  `COUNTRY_NAMES`), envuelta en un IIFE. Como primera línea del IIFE crea
+  un alias local: `var REVISORES = window.ETCM_REVISORES_DATA;` y valida
+  de inmediato: si `window.ETCM_REVISORES_DATA` es `undefined` o no es un
+  array, muestra "No se pudieron cargar los datos de revisores." dentro
+  de `#ir-results` y hace `return` — corta ahí en vez de seguir y romper
+  más abajo con errores silenciosos. El resto de la lógica sigue usando
+  la variable local `REVISORES` sin cambios.
+- `index.html`: dos `<script src>` en orden — primero
+  `revisores-data.js`, después `script.js`. En local (protocolo
+  `file://`) el navegador los ejecuta en ese orden de forma confiable;
+  el problema de orden que motivó todo este historial solo aparecía
+  dentro del bloque Raw HTML de WP Bakery, no aquí.
+- `wpbakery-revisores.html`: versión autocontenida para WordPress — UN
+  SOLO `<script>` con, en este orden exacto: (a) `window.ETCM_REVISORES_DATA
+  = [...]`, (b) el alias `var REVISORES = window.ETCM_REVISORES_DATA;` con
+  su misma validación, (c) el resto de la lógica. Al ser un único bloque
+  pegado, el orden de ejecución no depende de cómo WP Bakery / wpautop
+  trate dos `<script>` separados — ya viene concatenado. **Nota:** este
+  archivo mantiene su propio esquema de datos y UI en español (`nombre`,
+  `apellido`, `afiliacion`, `pais`, filtro por país, sin banderas) que ya
+  divergía de `revisores-data.js`/`script.js` (inglés, con `flag`) antes
+  de este cambio; esta actualización solo tocó el mecanismo de carga de
+  datos, no esa divergencia de esquema/UI — sincronizarlos es un trabajo
+  aparte si se decide hacerlo.
+
+Historial del mecanismo de carga (por qué se llegó a esto): primero se
+fusionaron datos y lógica en un solo `script.js` para evitar depender del
+orden de dos `<script src>`. Luego se probó una carga dinámica
+(`document.currentScript` + `onload`) para poder separar los archivos sin
+perder esa garantía de orden. Se descartó ese enfoque a favor del actual:
+mantener los archivos separados en el repo (más fácil de editar) y usar
+`window.ETCM_REVISORES_DATA` + validación explícita en `script.js`, con
+`wpbakery-revisores.html` resolviendo el problema de orden por su cuenta
+al ser un único bloque pegado con datos y lógica ya concatenados.
 
 ## Cómo actualizar el listado
-1. **`revisores-data.js`:** edita el arreglo `REVISORES` directamente
-   (mismo formato: `id`, `nombre`, `apellido`, `afiliacion`, `pais`,
-   `codigo`). No hace falta tocar `script.js`.
-2. **`wpbakery-revisores.html`:** replica el mismo cambio dentro de su
-   `<script>`, con notación de objeto JS con claves sin comillas:
+1. **`revisores-data.js`:** edita el arreglo de
+   `window.ETCM_REVISORES_DATA` directamente (mismo formato: `id`,
+   `firstName`, `lastName`, `affiliation`, `flag`, `countryCode`). No
+   hace falta tocar `script.js`.
+2. **`wpbakery-revisores.html`:** este archivo tiene su propio esquema en
+   español y sin `flag` (ver nota en "Estructura de archivos"), así que
+   el mismo revisor se agrega con distinta forma — dentro del
+   `window.ETCM_REVISORES_DATA = [...]` de ese `<script>`, con notación
+   de objeto JS con claves sin comillas:
    `{ id: 1, nombre: "...", apellido: "...", afiliacion: "...",
-   pais: "..." , codigo: "EC" }`.
+   pais: "EC" }`.
 3. Si aparecen países nuevos, agrégalos a `COUNTRY_NAMES` en ambos
    archivos (`script.js` y `wpbakery-revisores.html`).
 
@@ -89,11 +97,11 @@ en vez del nombre — hay que agregarlo a `COUNTRY_NAMES` a mano.
    de WP Bakery (el preview puede sandboxear el `<script>`).
 
 ## Previsualización local
-`script.js` carga `revisores-data.js` inyectando un `<script src="...">`
-(no usa `fetch()`, que sí estaría bloqueado por CORS bajo `file://`), así
-que `index.html` se puede abrir directamente con doble clic (protocolo
-`file://`) sin necesidad de servidor local, y sigue funcionando igual si
-`script.js` se sirve luego desde un CDN como jsDelivr.
+`index.html` declara `revisores-data.js` y `script.js` como dos
+`<script src>` normales, en ese orden — no se hace `fetch()` de ningún
+archivo (que sí estaría bloqueado por CORS bajo `file://`) — así que se
+puede abrir directamente con doble clic (protocolo `file://`) sin
+necesidad de servidor local.
 
 ## Pendiente
 - **Confirmar con Julio Barzola** si "Reviewers" va como página propia en

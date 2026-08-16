@@ -1,4 +1,4 @@
-var REVISORES = [
+window.ETCM_REVISORES_DATA = [
   {
     "id": 1,
     "firstName": "Patricia",

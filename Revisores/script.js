@@ -1,6 +1,14 @@
-var IR_SCRIPT_EL = document.currentScript;
-
 (function () {
+  var REVISORES = window.ETCM_REVISORES_DATA;
+
+  if (!REVISORES || !Array.isArray(REVISORES)) {
+    var errorContainer = document.getElementById('ir-results');
+    if (errorContainer) {
+      errorContainer.innerHTML = '<tr><td colspan="3"><div class="ir-empty">No se pudieron cargar los datos de revisores.</div></td></tr>';
+    }
+    return;
+  }
+
   var PAGE_SIZE = 25;
 
   var COUNTRY_NAMES = {
@@ -15,7 +23,12 @@ var IR_SCRIPT_EL = document.currentScript;
   var currentResults = [];
   var currentPage = 1;
 
-  var input, results, pagination, countNum, countTotal, queryEcho;
+  var input = document.getElementById('ir-input');
+  var results = document.getElementById('ir-results');
+  var pagination = document.getElementById('ir-pagination');
+  var countNum = document.getElementById('ir-count-num');
+  var countTotal = document.getElementById('ir-count-total');
+  var queryEcho = document.getElementById('ir-query-echo');
 
   function normalize(s) {
     return (s || '')
@@ -129,59 +142,14 @@ var IR_SCRIPT_EL = document.currentScript;
     renderPage(false);
   }
 
-  function showLoadError() {
-    var container = document.getElementById('ir-results');
-    if (!container) return;
-    container.innerHTML = '<tr><td colspan="3"><div class="ir-empty">No se pudieron cargar los datos de revisores. Intenta recargar la página.</div></td></tr>';
-  }
+  document.getElementById('ir-btn-search').addEventListener('click', search);
 
-  function init() {
-    input = document.getElementById('ir-input');
-    results = document.getElementById('ir-results');
-    pagination = document.getElementById('ir-pagination');
-    countNum = document.getElementById('ir-count-num');
-    countTotal = document.getElementById('ir-count-total');
-    queryEcho = document.getElementById('ir-query-echo');
-
-    document.getElementById('ir-btn-search').addEventListener('click', search);
-
-    input.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        search();
-      }
-    });
-
-    search();
-  }
-
-  function loadReviewersData() {
-    var selfUrl = IR_SCRIPT_EL && IR_SCRIPT_EL.src;
-    if (!selfUrl) {
-      var fallback = document.querySelector('script[src$="script.js"]');
-      selfUrl = fallback && fallback.src;
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      search();
     }
-    if (!selfUrl) {
-      showLoadError();
-      return;
-    }
+  });
 
-    var dataUrl = new URL('revisores-data.js', selfUrl).href;
-
-    var dataScript = document.createElement('script');
-    dataScript.src = dataUrl;
-    dataScript.onload = function () {
-      if (typeof REVISORES === 'undefined') {
-        showLoadError();
-        return;
-      }
-      init();
-    };
-    dataScript.onerror = function () {
-      showLoadError();
-    };
-    document.head.appendChild(dataScript);
-  }
-
-  loadReviewersData();
+  search();
 })();
