@@ -1,5 +1,4 @@
-
-  #ieee-catalogo {
+#ieee-catalogo {
     --navy: #0a1b38;
     --navy-soft: #123a66;
     --bg: #ffffff;
@@ -12,9 +11,9 @@
     --rule: #d7dde5;
 
     box-sizing: border-box;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg) !important;
+    color: var(--ink) !important;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
     padding: 0 0 64px;
     max-width: 980px;
     margin: 0 auto;
@@ -23,264 +22,275 @@
     box-sizing: border-box;
   }
 
-  .ic-header {
-    background: var(--navy);
-    color: #fff;
+  #ieee-catalogo .ic-header {
+    background: var(--navy) !important;
+    color: #fff !important;
     padding: 36px 32px;
     border-radius: 2px;
   }
-  .ic-eyebrow {
+  #ieee-catalogo .ic-eyebrow {
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #7fb3e0;
+    text-transform: uppercase !important;
+    color: #7fb3e0 !important;
     margin: 0 0 10px;
   }
-  .ic-title {
+  #ieee-catalogo .ic-title {
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 700;
     font-size: clamp(24px, 4vw, 34px);
     margin: 0 0 8px;
     line-height: 1.2;
+    color: #fff !important;
   }
-  .ic-sub {
+  #ieee-catalogo .ic-sub {
     font-size: 14.5px;
-    color: rgba(255,255,255,0.78);
+    color: rgba(255,255,255,0.78) !important;
     margin: 0;
     max-width: 60ch;
   }
 
-  .ic-searchbar {
+  #ieee-catalogo .ic-searchbar {
     margin-top: 24px;
     padding: 0 4px;
   }
-  .ic-search-form {
+  #ieee-catalogo .ic-search-form {
     display: flex;
     gap: 0;
-    background: var(--card);
-    border: 1px solid var(--rule);
+    background: var(--card) !important;
+    border: 1px solid var(--rule) !important;
     border-radius: 2px;
     overflow: hidden;
   }
-  .ic-search-form input[type="text"] {
+  #ieee-catalogo .ic-search-form input[type="text"] {
     flex: 1;
-    border: none;
-    background: transparent;
+    border: none !important;
+    background: transparent !important;
     padding: 15px 18px;
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 15px;
-    color: var(--ink);
+    color: var(--ink) !important;
     outline: none;
+    text-transform: none !important;
+    border-radius: 0 !important;
   }
-  .ic-search-form input[type="text"]::placeholder {
-    color: #9aa2af;
+  #ieee-catalogo .ic-search-form input[type="text"]::placeholder {
+    color: #9aa2af !important;
   }
-  .ic-search-form button {
-    border: none;
-    background: var(--accent);
-    color: #fff;
+  #ieee-catalogo .ic-search-form button {
+    border: none !important;
+    background: var(--accent) !important;
+    background-color: var(--accent) !important;
+    color: #fff !important;
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 600;
     font-size: 13px;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
-    padding: 0 26px;
+    text-transform: uppercase !important;
+    padding: 0 26px !important;
     cursor: pointer;
     transition: background 0.15s ease;
+    border-radius: 2px !important;
   }
-  .ic-search-form button:hover { background: var(--accent-dark); }
-  .ic-search-form button:focus-visible,
-  .ic-search-form input:focus-visible {
-    outline: 2px solid var(--navy);
+  #ieee-catalogo .ic-search-form button:hover {
+    background: var(--accent-dark) !important;
+    background-color: var(--accent-dark) !important;
+  }
+  #ieee-catalogo .ic-search-form button:focus-visible,
+  #ieee-catalogo .ic-search-form input:focus-visible {
+    outline: 2px solid var(--navy) !important;
     outline-offset: -2px;
   }
 
-  .ic-filters {
+  #ieee-catalogo .ic-filters {
     display: flex;
     gap: 10px;
     align-items: center;
     margin-top: 12px;
     padding: 0 4px;
   }
-  .ic-filters label {
+  #ieee-catalogo .ic-filters label {
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 11.5px;
     font-weight: 600;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
+    text-transform: uppercase !important;
+    color: var(--ink-soft) !important;
   }
-  .ic-filters select {
+  #ieee-catalogo .ic-filters select {
     flex: 1;
     max-width: 320px;
-    border: 1px solid var(--rule);
-    border-radius: 2px;
-    background: var(--card);
-    color: var(--ink);
+    border: 1px solid var(--rule) !important;
+    border-radius: 2px !important;
+    background: var(--card) !important;
+    color: var(--ink) !important;
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 13.5px;
     padding: 8px 10px;
   }
-  .ic-filters select:focus-visible {
-    outline: 2px solid var(--navy);
+  #ieee-catalogo .ic-filters select:focus-visible {
+    outline: 2px solid var(--navy) !important;
     outline-offset: -1px;
   }
 
-  .ic-meta-row {
+  #ieee-catalogo .ic-meta-row {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin: 34px 2px 14px;
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 12px;
-    color: var(--ink-soft);
+    color: var(--ink-soft) !important;
     letter-spacing: 0.02em;
   }
-  .ic-meta-row span.ic-count strong { color: var(--navy); }
+  #ieee-catalogo .ic-meta-row span.ic-count strong { color: var(--navy) !important; }
 
-  .ic-results {
+  #ieee-catalogo .ic-results {
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--rule);
+    border: 1px solid var(--rule) !important;
     border-radius: 2px;
     overflow: hidden;
   }
 
-  .ic-card {
-    background: var(--card);
-    border-bottom: 1px solid var(--rule);
+  #ieee-catalogo .ic-card {
+    background: var(--card) !important;
+    border-bottom: 1px solid var(--rule) !important;
     padding: 20px 22px 18px;
     position: relative;
     cursor: pointer;
     transition: background 0.15s ease;
   }
-  .ic-results .ic-card:last-child { border-bottom: none; }
-  .ic-results .ic-card:nth-child(even) { background: var(--card-alt); }
-  .ic-card:hover {
-    background: #eaf1f9;
+  #ieee-catalogo .ic-results .ic-card:last-child { border-bottom: none !important; }
+  #ieee-catalogo .ic-results .ic-card:nth-child(even) { background: var(--card-alt) !important; }
+  #ieee-catalogo .ic-card:hover {
+    background: #eaf1f9 !important;
   }
-  .ic-card:focus-visible {
-    outline: 2px solid var(--navy);
+  #ieee-catalogo .ic-card:focus-visible {
+    outline: 2px solid var(--navy) !important;
     outline-offset: -2px;
   }
-  .ic-abstract-full { display: none; }
-  .ic-card.ic-expanded .ic-abstract-short { display: none; }
-  .ic-card.ic-expanded .ic-abstract-full { display: block; }
-  .ic-card-title {
+  #ieee-catalogo .ic-abstract-full { display: none; }
+  #ieee-catalogo .ic-card.ic-expanded .ic-abstract-short { display: none; }
+  #ieee-catalogo .ic-card.ic-expanded .ic-abstract-full { display: block; }
+  #ieee-catalogo .ic-card-title {
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 700;
     font-size: 17.5px;
-    color: var(--navy);
+    color: var(--navy) !important;
     margin: 0 0 6px;
     line-height: 1.35;
   }
-  .ic-card-authors {
+  #ieee-catalogo .ic-card-authors {
     font-size: 13px;
-    color: var(--ink-soft);
+    color: var(--ink-soft) !important;
     margin: 0 0 10px;
   }
-  .ic-card-abstract {
+  #ieee-catalogo .ic-card-abstract {
     font-size: 14px;
     line-height: 1.55;
-    color: var(--ink);
+    color: var(--ink) !important;
     margin: 0 0 14px;
   }
-  .ic-card-footer {
+  #ieee-catalogo .ic-card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    border-top: 1px solid var(--rule);
+    border-top: 1px solid var(--rule) !important;
     padding-top: 12px;
   }
-  .ic-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-  .ic-tag {
+  #ieee-catalogo .ic-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  #ieee-catalogo .ic-tag {
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 10.5px;
     font-weight: 600;
     letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: var(--navy-soft);
-    background: #e4ecf5;
+    text-transform: uppercase !important;
+    color: var(--navy-soft) !important;
+    background: #e4ecf5 !important;
     padding: 3px 8px;
     border-radius: 2px;
+    border: none !important;
   }
-  .ic-tag-track {
-    color: #fff;
-    background: var(--navy);
+  #ieee-catalogo .ic-tag-track {
+    color: #fff !important;
+    background: var(--navy) !important;
   }
-  .ic-tag-keyword {
-    text-transform: none;
+  #ieee-catalogo .ic-tag-keyword {
+    text-transform: none !important;
     font-weight: 400;
-    color: var(--ink-soft);
-    background: transparent;
-    border: 1px solid var(--rule);
+    color: var(--ink-soft) !important;
+    background: transparent !important;
+    border: 1px solid var(--rule) !important;
   }
-  .ic-link {
+  #ieee-catalogo .ic-link {
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 12.5px;
     font-weight: 600;
-    color: var(--accent);
-    text-decoration: none;
+    color: var(--accent) !important;
+    text-decoration: none !important;
     white-space: nowrap;
   }
-  .ic-link:hover { color: var(--accent-dark); text-decoration: underline; }
+  #ieee-catalogo .ic-link:hover { color: var(--accent-dark) !important; text-decoration: underline !important; }
 
-  .ic-pagination {
+  #ieee-catalogo .ic-pagination {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 16px;
     margin-top: 26px;
   }
-  .ic-page-btn {
-    border: 1px solid var(--rule);
-    background: var(--card);
-    color: var(--navy);
+  #ieee-catalogo .ic-page-btn {
+    border: 1px solid var(--rule) !important;
+    background: var(--card) !important;
+    background-color: var(--card) !important;
+    color: var(--navy) !important;
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 12.5px;
     font-weight: 600;
     letter-spacing: 0.02em;
-    padding: 9px 16px;
-    border-radius: 2px;
+    padding: 9px 16px !important;
+    border-radius: 2px !important;
     cursor: pointer;
     transition: border-color 0.15s ease, background 0.15s ease;
+    text-transform: none !important;
   }
-  .ic-page-btn:hover:not(:disabled) {
-    border-color: var(--accent);
-    background: #eaf1f9;
+  #ieee-catalogo .ic-page-btn:hover:not(:disabled) {
+    border-color: var(--accent) !important;
+    background: #eaf1f9 !important;
   }
-  .ic-page-btn:focus-visible {
-    outline: 2px solid var(--navy);
+  #ieee-catalogo .ic-page-btn:focus-visible {
+    outline: 2px solid var(--navy) !important;
     outline-offset: 1px;
   }
-  .ic-page-btn:disabled {
-    color: #b7bec9;
+  #ieee-catalogo .ic-page-btn:disabled {
+    color: #b7bec9 !important;
     cursor: default;
   }
-  .ic-page-info {
+  #ieee-catalogo .ic-page-info {
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 12px;
-    color: var(--ink-soft);
+    color: var(--ink-soft) !important;
     letter-spacing: 0.02em;
   }
 
-  .ic-empty {
+  #ieee-catalogo .ic-empty {
     text-align: center;
     padding: 48px 20px;
-    color: var(--ink-soft);
+    color: var(--ink-soft) !important;
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     font-size: 13px;
-    border: 1px solid var(--rule);
+    border: 1px solid var(--rule) !important;
     border-radius: 2px;
-    background: var(--card);
+    background: var(--card) !important;
   }
 
   @media (max-width: 560px) {
-    .ic-search-form { flex-direction: column; }
-    .ic-search-form button { padding: 14px; }
-    .ic-meta-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+    #ieee-catalogo .ic-search-form { flex-direction: column; }
+    #ieee-catalogo .ic-search-form button { padding: 14px !important; }
+    #ieee-catalogo .ic-meta-row { flex-direction: column; align-items: flex-start; gap: 4px; }
   }

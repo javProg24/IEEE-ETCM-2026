@@ -1,3 +1,2840 @@
+var ETCM_ARTICLES = [
+  {
+    "id": "2",
+    "title": "Informational Indoor Orientation in University Environments Using a RAG Agent over Structured Knowledge",
+    "authors": "Anddy Camacho-Romero; Oscar M. Cumbicus-Pineda; Luis Chamba-Eras",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Informational Indoor Orientation",
+      "RAG Agent over Structured Knowledge",
+      "University Environments",
+      "ROUGE-1",
+      "Reranking"
+    ],
+    "shortAbstract": "This paper presents a Retrieval-Augmented Generation (RAG)-based agent for indoor localization of academic spaces in a university environment. The…",
+    "abstract": "This paper presents a Retrieval-Augmented Generation (RAG)-based agent for indoor localization of academic spaces in a university environment. The proposal is implemented on a JSON-based structured knowledge base and a hybrid retrieval pipeline with rank fusion, faceted filtering, and evidence reranking before generation. The agent uses Mistral-7B-Instruct-Q4KM as the generative model, executed locally using llama.cpp on consumer-grade hardware equipped with an NVIDIA RTX 3050 Ti GPU. The case study was restricted to Building 2 of the Universidad Nacional de Loja; the evaluation set comprises 69 natural-language queries covering direct location questions and constraint-based queries (e.g., space type, floor, or administrative unit), constructed from the structured domain knowledge of the building, with gold-standard reference answers manually authored from the JSON knowledge base to ensure domain grounding. Performance was quantified using ROUGE-1 and faithfulness as complementary metrics; the proposed agent achieved ROUGE-1 Precision = 0.8952, ROUGE-1 F1 = 0.8665, and faithfulness = 0.9335, with a 95% confidence interval of [0.8018, 0.9507] for ROUGE-1 F1 across the evaluation set. The ablation study showed that constraint-based filtering consistently improves fidelity, whereas reranking exhibits non-monotonic behavior under these metrics. The results support the viability of a software-first solution for informational indoor orientation without relying on specialized physical infrastructure."
+  },
+  {
+    "id": "3",
+    "title": "LoRA-Based Adaptation of LLaMA 2 for Robust Emotion Detection in Spanish: A Multi-Corpus Approach",
+    "authors": "Joseph Ríos-Salas; Oscar M. Cumbicus-Pineda; Luis Chamba-Eras",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "LoRA-Based Adaptation of LLaMA 2",
+      "Robust Emotion Detection",
+      "Spanish",
+      "LLMs",
+      "Resources"
+    ],
+    "shortAbstract": "Emotion detection in Spanish text remains a challenging task due to the scarcity of high-quality annotated resources and the linguistic variability of the…",
+    "abstract": "Emotion detection in Spanish text remains a challenging task due to the scarcity of high-quality annotated resources and the linguistic variability of the language. While large language models (LLMs) have shown strong performance in English, their effectiveness in Spanish is still limited, particularly in low-resource and domain-diverse scenarios. In this study, we propose a LoRA-based adaptation of LLaMA 2 for robust emotion classification in Spanish, leveraging a multi-corpus approach that integrates four heterogeneous public datasets. A unified preprocessing pipeline was designed, including data cleaning, translation, normalization, and class balancing, following the CRISP-ML(Q) framework to ensure reproducibility and data quality. The model was fine-tuned using parameter-efficient techniques with 4-bit quantization, enabling efficient training under constrained computational resources. Experimental results show a significant improvement over the base model, increasing accuracy from 30.48% to 89.04%, with a macro F1-score of 89.02%. These findings demonstrate that combining LoRA-based fine-tuning with multi-source data integration enables LLMs to effectively capture complex emotional patterns in Spanish. The proposed approach provides a scalable and efficient solution for emotion detection, with potential applications in mental health, education, and social computing."
+  },
+  {
+    "id": "4",
+    "title": "Evaluating Zero-Shot Multimodal LLMs and Supervised CNN Classifiers for Glove Detection in PPE Use Compliance",
+    "authors": "Jorge Parraga-Alava; Jorge Rodas-Silva",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Evaluating Zero-Shot Multimodal LLMs and Supervised CNN Classifiers",
+      "PPE Use Compliance",
+      "Glove Detection",
+      "Sonnet",
+      "Fine-tuned"
+    ],
+    "shortAbstract": "Non-compliance with Personal Protective Equipment (PPE) regulations, particularly safety glove wearing, remains a critical occupational safety challenge…",
+    "abstract": "Non-compliance with Personal Protective Equipment (PPE) regulations, particularly safety glove wearing, remains a critical occupational safety challenge. Automated detection systems based on fine-tuned Convolutional Neural Networks (CNNs) have shown strong results for PPE use monitoring, but their effectiveness depends on sufficiently large annotated datasets that are often unavailable in early-stage deployments. This study evaluates whether zero-shot multimodal Large Language Models (LLMs) can serve as an effective alternative under data scarcity conditions. Three fine-tuned CNN classifiers (EfficientNet-B0, MobileNetV3-Large, ResNet50) and three zero-shot Claude models (Opus 4.6, Sonnet 4.6, Haiku 4.5) are compared on a purpose-built binary glove detection benchmark containing 327 images annotated by three independent raters ($\\kappa = 0.94$). The zero-shot LLMs consistently outperform the fine-tuned CNNs across all six evaluation metrics: Claude Sonnet 4.6 achieves the highest F1-score (0.962) and accuracy (0.964), exceeding the best CNN, ResNet50, by +0.107 and +0.102, respectively. False negatives drop from 24 (EfficientNet-B0) to 2 (Sonnet 4.6), a 12-fold reduction in missed safety violations. These results indicate that, when annotated data is scarce, zero-shot multimodal inference provides a viable, training-free alternative for PPE glove use compliance."
+  },
+  {
+    "id": "5",
+    "title": "Real-Time Deepfake and Face Spoofing Detection Using Deep Learning",
+    "authors": "Rohith K; P Sunil Chowdary; R Yugha",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Real-Time Deepfake and Face Spoofing Detection",
+      "Deep Learning",
+      "Video",
+      "Fake",
+      "Authentication"
+    ],
+    "shortAbstract": "Deep learning technology has advanced an ever-increasing rate and the use of biometric authentication and digital media verification systems are at a…",
+    "abstract": "Deep learning technology has advanced an ever-increasing rate and the use of biometric authentication and digital media verification systems are at a point where they are susceptible to more sophisticated spoofing and deep fake attack methods. These new attack vectors present significant security, privacy, and trust related obstacles for users of digital platforms. The purpose of this paper is to present a unified and robust framework that enables face spoofing and deep fake detection using a hybrid deep learning solution. The proposed framework combines a YOLO object detection model to efficiently detect and track human faces in real-time video streams with high speed and accuracy. The framework also uses CNNs to extract rich spatial features from each video frame to obtain a detailed representation of the video content. Temporal modelling approaches are used to analyze motion patterns and identify subtle inconsistencies in the sequences of video frames that may indicate that the video content has been manipulated or spoofed. The framework allows for processing both live video streams and recorded videos, which enhances its utility in real-world applications. The framework can utilize various visualization techniques, including heatmaps and prediction graphs, to help improve both the interpretability of results as well as the performance assessment of the work performed. The experimental results for the proposed framework demonstrate: Accuracy 96.8, Precision 95.7 and generalizability to a wide variety of datasets, which indicates that this framework can be considered a viable solution to today's requirements for digital media authentication."
+  },
+  {
+    "id": "22",
+    "title": "Enhancing operational efficiency of spraying drones: a swarm intelligence approach via ABC algorithm and SfM reconstruction",
+    "authors": "Fabricio Rolando Marcillo Vera; Jericko Gandy Tenorio Cordero; Víctor Adriel Aveiga Chuez; Sebastian Andrés Guzmán Torres; David Sebastián Vargas Muñoz; Marcos Francisco Morales Sanchez",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "swarm intelligence approach",
+      "ABC algorithm and SfM reconstruction",
+      "Enhancing operational efficiency of spraying drones",
+      "PA",
+      "UAVs"
+    ],
+    "shortAbstract": "Precision agriculture (PA) has become increasingly important due to its benefits for the environment as well as for producers’ efficiency and profit…",
+    "abstract": "Precision agriculture (PA) has become increasingly important due to its benefits for the environment as well as for producers’ efficiency and profit margins. A key feature of PA is the use of various tools that facilitate its proper implementation; one such tool is Unmanned Aerial Vehicles (UAVs), which follow pre-established routes for both crop monitoring and the application of plant protection products. Determining the routes used by UAVs plays a crucial role, as production progress depends on this to a certain extent. This study implemented the Artificial Bee Colony (ABC) metaheuristic algorithm to determine the optimal flight path that minimizes the total mission time and distance. This was evaluated on two plots of land with different areas; it was found that the use of the ABC algorithm, compared to conventional route-planning methods, improves distance efficiency by an average of 10%, while time efficiency is close to 9.5%."
+  },
+  {
+    "id": "58",
+    "title": "Modeling of Thermal Comfort Using Artificial Neural Networks for HVAC System Control",
+    "authors": "Juan José Laínez Bolaños; Douglas Antonio Plaza Guingla; Carolina Alexandra Casal Quintero; Juan José Laínez Casal",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Modeling of Thermal Comfort",
+      "Artificial Neural Networks",
+      "HVAC System Control",
+      "Comfort adaptive correlational air-conditioned",
+      "Students collected"
+    ],
+    "shortAbstract": "This study evaluated thermal comfort using an adaptive correlational approach in air-conditioned buildings at the University of Guayaquil. Data from 650…",
+    "abstract": "This study evaluated thermal comfort using an adaptive correlational approach in air-conditioned buildings at the University of Guayaquil. Data from 650 students were collected between 2023 and 2025 using ISO and ASHRAE standards. Statistical analysis and artificial neural networks were used to relate environmental and personal variables to thermal and comfort sensation, generating mathematical models for thermal comfort prediction."
+  },
+  {
+    "id": "78",
+    "title": "A Hybrid Dual-Branch Pipeline for Automated Network Threat Triage in Security Operations Centers",
+    "authors": "Alexander Rafael González García; Manuel Eugenio Morocho-Cayamcela",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Automated Network Threat Triage",
+      "Security Operations Centers",
+      "Hybrid Dual-Branch Pipeline",
+      "Traffic f1",
+      "SPECTRAX"
+    ],
+    "shortAbstract": "Alert fatigue is a critical bottleneck in security operations centers. Analysts dismiss 62% of daily alerts without review due to volume overload…",
+    "abstract": "Alert fatigue is a critical bottleneck in security operations centers. Analysts dismiss 62% of daily alerts without review due to volume overload, increasing the risk of missing genuine threats. Automated triage approaches (e.g., signature-based systems, machine learning classifiers, and LLM pipelines) each address part of this problem but fail to preserve the auditability of individual evidence sources when multiple signals are combined. This paper presents SPECTRAX AI, a hybrid dual-branch triage pipeline for firewall log classification. An application programming interface branch aggregates weighted scores from four threat intelligence platforms; an LLM branch runs three independent model agents with real-time web augmentation, consolidated by an adversarial supervisor. Both branches operate in strict isolation and are integrated only by a final agent, ensuring complete attribution of every verdict to its constituent evidence sources. Evaluated on 600 balanced firewall logs, SPECTRAX AI achieves 100% precision and 98.7% recall on malicious traffic (F1\\,=\\,99.3%), 100% precision and 87.7% recall on clean traffic (F1\\,=\\,93.4%), with zero cross-class misclassifications and 6.8% of logs escalated as suspicious for analyst review. Median end-to-end latency is 202 seconds per log."
+  },
+  {
+    "id": "94",
+    "title": "GRU-ANFIS: A Neuro-Fuzzy Adaptive Controller for Wind Turbine Pitch Optimization Learned from SCADA Data",
+    "authors": "Lia-Nicole Pesantez-González; Francis-Nicole Benitez-Montalvo; Nathalia-Michelle Peralta-Vasconez; Pablo-Andrés Buestán-Andrade",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Wind Turbine Pitch Optimization Learned",
+      "Neuro-Fuzzy Adaptive Controller",
+      "Pred",
+      "ANFIS",
+      "GRU-ANFIS"
+    ],
+    "shortAbstract": "Wind turbine blade pitch control under stochastic aerodynamic conditions remains a critical challenge for maxi- mizing energy yield while limiting…",
+    "abstract": "Wind turbine blade pitch control under stochastic aerodynamic conditions remains a critical challenge for maxi- mizing energy yield while limiting mechanical fatigue. This paper proposes GRU-ANFIS, a two-stage hybrid neuro-fuzzy controller trained entirely from SCADA data recorded on a 3.5 MW wind turbine. A GRU module first predicts short-term active power with R2 = 0.9708, providing a normalized power-deviation signal that, together with wind speed and wind direction, drives a Takagi-Sugeno ANFIS controller. The ANFIS is trained via supervised distillation of a 28-rule Mamdani FLC, learning 125 rules encoded in only 530 trainable parameters. A two- phase optimization strategy—warm-up of consequent parameters followed by joint premise-consequent fine-tuning—achieves a final pitch RMSE of 2.265◦ against the Mamdani reference, while converging to an equivalent mean operating pitch of 43.17◦ compared to 43.37◦ for the baseline. Critically, the Takagi- Sugeno formulation replaces centroid defuzzification with a single differentiable dot product, yielding a ×1,037 inference speedup (1 402 021 pred/s versus 1 352 pred/s). The learned control surface is globally smooth and continuous, reducing abrupt actuator commands that contribute to mechanical wear. These results demonstrate that GRU-ANFIS is a compact, interpretable, and real-time-capable alternative to classical fuzzy pitch controllers, well-suited for deployment on embedded wind turbine controllers in industrial environments"
+  },
+  {
+    "id": "127",
+    "title": "Automatic Identification of Guayusa and Urtica Leaves Using Explainable Convolutional Neural Networks",
+    "authors": "Lorena Guachi-Guachi; Juan Soto; Jhoel Zumba",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Automatic Identification of Guayusa and Urtica Leaves",
+      "Explainable Convolutional Neural Networks",
+      "Medicinal",
+      "MobileNetV2",
+      "CNN"
+    ],
+    "shortAbstract": "Medicinal plants play an important role in traditional healthcare systems and biodiversity conservation in Latin America. However, automatic recognition…",
+    "abstract": "Medicinal plants play an important role in traditional healthcare systems and biodiversity conservation in Latin America. However, automatic recognition systems for underrepresented medicinal species remain limited due to dataset scarcity and geographical bias in existing plant classification platforms. This paper presents a preliminary computer vision study for the automatic identification of Ilex guayusa and Urtica dioica leaves using a locally curated image dataset acquired under controlled conditions. The proposed methodology integrates image preprocessing, online data augmentation, transfer learning, and explainable artificial intelligence (XAI) techniques to develop an interpretable and computationally efficient classification pipeline. Three convolutional neural network (CNN)-based models were evaluated: a lightweight CNN trained from scratch, VGG16, and MobileNetV2 using ImageNet pretrained weights. The classification problem included three classes: guayusa, urtica, and “other leaves” introduced to improve feature discrimination and reduce background dependency. Among the evaluated models, MobileNetV2 achieved the best trade-off between accuracy and computational efficiency. Grad-CAM visualizations further confirmed that the proposed approach focuses on biologically meaningful leaf regions."
+  },
+  {
+    "id": "128",
+    "title": "Analysis of Interlinguistic Bias in Generative Artificial Intelligence Models",
+    "authors": "Gema Bravo-Navarrete; Lucía Rivadeneira",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Interlinguistic Bias",
+      "Generative Artificial Intelligence Models",
+      "Depth",
+      "DeepSeek",
+      "Responses"
+    ],
+    "shortAbstract": "Abstract— As generative artificial intelligence tools based on large language models continue to expand across multilingual contexts, limited research has…",
+    "abstract": "Abstract— As generative artificial intelligence tools based on large language models continue to expand across multilingual contexts, limited research has examined whether these systems generate comparable responses in different languages. To address this gap, this study analyses interlinguistic bias in two models, namely ChatGPT and DeepSeek, through the evaluation of responses generated in English and Spanish to data science-related queries. To achieve this, a quantitative methodology based on human evaluation was applied, in which four reliability metrics related to technical accuracy, completeness, depth, and explanatory clarity were analysed using statistical tests and bias measures. Among the evaluated metrics, depth proved to be the most robust according to the statistical results; therefore, this dimension was used to determine the bias analysis. The findings reveal that both models generate biased responses towards English, with ChatGPT showing a depth bias of 0.923 and DeepSeek 0.888, leading to the conclusion that outputs are more elaborated in this language compared with Spanish. The implications of this research may contribute to the development of more equitable models in linguistically diverse environments."
+  },
+  {
+    "id": "137",
+    "title": "Uncertainty-Aware Academic Performance Analysis Using Natural Gradient Boosting and Socioeconomic Attributes",
+    "authors": "Jorge Iván Pincay-Ponce; José Jacinto Reyes-Cárdenas; Anthony Cristopher Legarda-Albiño; Gary Reyes; Maira Moncerrate Menéndez-Otacoma; Gabriela Maholy Velásquez-Moreira",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Natural Gradient Boosting and Socioeconomic Attributes",
+      "Uncertainty-Aware Academic Performance Analysis",
+      "NGBoost",
+      "CatBoost",
+      "Minority"
+    ],
+    "shortAbstract": "Academic performance is a multifactorial phenomenon where predictive uncertainty quantification is as critical as classification accuracy. Under the…",
+    "abstract": "Academic performance is a multifactorial phenomenon where predictive uncertainty quantification is as critical as classification accuracy. Under the CRISP-DM methodology, this study proposes a probabilistic approach using Natural Gradient Boosting (NGBoost) to model primary student performance utilizing 6,808 records from Ecuador. Preprocessing resolved class imbalance via a controlled Synthetic Minority Over-sampling Technique (SMOTE) for a unified Academic Risk category (Class 2). Empirical results demonstrate that NGBoost strictly outperforms the CatBoost baseline, elevating overall accuracy from 69.2% to 72.2% and optimizing LogLoss from 0.67 to 0.57. While CatBoost suffered a catastrophic recall collapse (6%), NGBoost stabilized this minority class with 74% precision and 32% recall. Shannon entropy mapped error distributions, isolating an average uncertainty of 0.6778 in incorrect predictions against 0.5478 in confident classifications. Modeling epistemic boundaries enables a Reject Option Classification protocol, deferring ambiguous borderline profiles to human pedagogical auditing."
+  },
+  {
+    "id": "149",
+    "title": "Deep learning-based temporal classification of ecchymosis using colorimetric feature fusion and transfer learning",
+    "authors": "Brayan Duran; Dalet Carrillo; Marlon Soza; Viviana Moya; Alvaro Prado",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Deep learning-based temporal classification of ecchymosis",
+      "colorimetric feature fusion and transfer learning",
+      "Forensic image",
+      "Standardized",
+      "HSV spaces"
+    ],
+    "shortAbstract": "Accurate temporal estimation of cutaneous ecchymosis remains a challenging problem in forensic image analysis due to the subjectivity and limited…",
+    "abstract": "Accurate temporal estimation of cutaneous ecchymosis remains a challenging problem in forensic image analysis due to the subjectivity and limited reproducibility of conventional visual assessment methods, which report diagnostic accuracies between 50--76%. This work presents an automated deep learning framework for temporal classification of ecchymosis based on an adapted VGG16 architecture with a three-phase transfer learning strategy. The proposed approach classifies lesions into four temporal intervals (0-2, 3-7, 8-14, and 15-21 days) using a forensic-oriented colorimetric representation combining LAB and HSV spaces to capture chromatic evolution patterns. The model is trained on a curated dataset of 2,847 standardized in vivo images, using a class-balanced loss to address data imbalance. Experimental results show an overall accuracy of 94.2%, outperforming ResNet-50, DenseNet-121, and EfficientNet-B3 under identical settings. The framework also exhibits consistent inference behavior with low variability and an average processing time of 2.3 seconds per sample. These results demonstrate the effectiveness of transfer learning and colorimetric modeling for scalable and standardized temporal ecchymosis classification, supporting computational decision-assistance workflows in forensic image analysis."
+  },
+  {
+    "id": "153",
+    "title": "Semantic Prompt Analysis for YOLOE Open-Vocabulary Kiwifruit Detection in Agricultural Environments",
+    "authors": "Piero Giomar Vilcapoma; Ingrid Nicole Vásconez; Miryam Valenzuela; Guillermo Toro; Juan Pablo Vásconez",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "YOLOE Open-Vocabulary Kiwifruit Detection",
+      "Semantic Prompt Analysis",
+      "Agricultural Environments",
+      "Prompts",
+      "Scenes"
+    ],
+    "shortAbstract": "Open-vocabulary detection models have recently become a promising alternative for agricultural perception, since they can localize unseen objects through…",
+    "abstract": "Open-vocabulary detection models have recently become a promising alternative for agricultural perception, since they can localize unseen objects through textual prompts without requiring task-specific retraining. However, their performance depends on how the target object is described during inference, an aspect that has still not been sufficiently studied in real agricultural scenarios. This work analyzes the influence of semantic prompt formulation on zero-shot kiwi detection using the open-vocabulary YOLOE-26L model. A balanced subset of 240 images was selected from real kiwifruit orchard videos, covering simple scenes, medium-range views, occlusion scenes, and complex orchard backgrounds. Twelve textual prompts were designed and grouped into four categories: nominal, descriptive, contextual, and hybrid. Each prompt was evaluated using the same zero-shot inference configuration to measure its effect on detection performance. The results show that prompt wording has a clear impact on the detection behavior of YOLOE. Descriptive prompts achieved the best overall performance, with the prompt “small oval brown fruit” obtaining the highest mAP@0.5 of 83.37%. In contrast, some contextual prompts showed lower performance due to semantic ambiguity in occluded scenes, highlighting the importance of prompt design for the application of open-vocabulary vision models in agricultural environments."
+  },
+  {
+    "id": "166",
+    "title": "Multi-Architecture Benchmark of Anomaly Detection Models for Vehicular Hijacking from GPS Trajectories",
+    "authors": "Edison Solorzano; Jorge Parraga-Alava; Enrique Dominguez",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Vehicular Hijacking",
+      "GPS Trajectories",
+      "Multi-Architecture Benchmark of Anomaly Detection Models",
+      "LSTM Autoencoder",
+      "GB RAM"
+    ],
+    "shortAbstract": "Vehicular hijacking and cargo theft pose critical security threats to freight logistics networks. Real-time detection requires analyzing GPS trajectories…",
+    "abstract": "Vehicular hijacking and cargo theft pose critical security threats to freight logistics networks. Real-time detection requires analyzing GPS trajectories to identify anomalous behavior, yet no single architecture dominates across detection quality, memory footprint, and inference time simultaneously. In this paper, we present a multi-architecture benchmark of five anomaly detection models for vehicular hijacking from GPS trajectories: an LSTM Autoencoder, a Gated Recurrent Unit (GRU), a hybrid Conv1D-LSTM, a Transformer, and a classical Isolation Forest. All models are trained and evaluated on a large dataset of over 200 million real-world telemetry records from Orbitrack SAS, spanning three years of operation of a commercial fleet in Ecuador, under three simulated attack patterns (progressive GPS spoofing, hybrid speed-and-course drift, and Gaussian coordinate noise) with 30 iterations per attack. A paired Wilcoxon signed-rank test confirms the statistical significance of every pairwise difference (p<10^-15 in almost all comparisons). The results reveal a clear trade-off: the Transformer attains the highest detection scores (F1 = 0.930, specificity = 0.949) but at substantially higher resource cost (22.7 GB RAM, 185.8 s inference time); the Isolation Forest is the most efficient (4.5 GB RAM, 15.5 s) but with much weaker detection (F1 = 0.575); and the LSTM Autoencoder, GRU, and Conv1D-LSTM occupy intermediate positions, with the LSTM Autoencoder offering a competitive balance (F1 = 0.836, 12.2 GB RAM, 48.7 s)."
+  },
+  {
+    "id": "175",
+    "title": "Explainable Machine Learning for SME Success Prediction in Public Procurement: A SHAP-Based Analysis Using European Tender Data",
+    "authors": "Maria Fernanda Molina Miranda",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "SME Success Prediction",
+      "Public Procurement",
+      "Explainable Machine Learning",
+      "Tenders",
+      "Contract"
+    ],
+    "shortAbstract": "Small and medium-sized enterprises (SMEs) face persistent structural barriers to participation in public procurement processes, limiting their access to…",
+    "abstract": "Small and medium-sized enterprises (SMEs) face persistent structural barriers to participation in public procurement processes, limiting their access to significant economic opportunities. Despite advances in machine learning applied to public contracting, existing approaches lack interpretability mechanisms that allow stakeholders to understand and act on predictive outputs. This paper presents an explainable machine learning framework for predicting SME award probability in public tenders, trained on the European Union’s TED (Tenders Electronic Daily) dataset comprising hundreds of thousands of procurement records. We evaluate four classification algorithms — Random Forest, LightGBM, Decision Tree, and Logistic Regression—and identify Random Forest as the best-performing model, achieving a ROC AUC of 0.83, accuracy of 74%, and F1- score of 0.80. SHAP (SHapley Additive exPlanations) analysis reveals that historical participation experience is the single strongest predictor of award success (17.3% relative importance), surpassing contract value and sectoral competition. Additional findings demonstrate a 1.91× gap in average contract value between large enterprises and SMEs, and significant crosscountry heterogeneity across EU member states. Model insights are validated through a survey of 75 SMEs in Guayaquil, Ecuador, confirming structural alignment between European patterns and local procurement barriers. Results are deployed as an interactive web prototype to support data-driven SME decision-making."
+  },
+  {
+    "id": "186",
+    "title": "Reinforcement Learning-Based Navigation in a Discret Grid Environments: A Comparative Study of Q-Learning, DQN, and Discret SAC",
+    "authors": "Alejandra Pinzon Farfan; Pamela P. Alvarez; Juan M. Calderón; Marco E. Benalcázar; Juan Pablo Vásconez",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Comparative Study of Q-Learning, DQN, and Discret SAC",
+      "Reinforcement Learning-Based Navigation",
+      "Discret Grid Environments",
+      "Obstacle",
+      "Actor-Critic"
+    ],
+    "shortAbstract": "Autonomous navigation in search-and-rescue scenarios requires agents that can adapt to uncertain environments and irregular obstacle configurations. This…",
+    "abstract": "Autonomous navigation in search-and-rescue scenarios requires agents that can adapt to uncertain environments and irregular obstacle configurations. This work compares three reinforcement learning algorithms for discret navigation: Q learning, Deep Q Network (DQN), and Discret Soft Actor-Critic (Discret SAC). The experiments were carried out in a 20 × 20 grid environment, where an agent must reach a randomly placed target while avoiding different obstacle layouts: a straight wall, an L-shaped obstacle, and a U-shaped obstacle. The action space included four movement actions and a “remain still” action, allowing the evaluation of both target reaching and stability after arrival. A reward function was designed to guide the agent toward the goal, discourage collisions and obstacle proximity, and reduce unstable movements once the target was reached. The algorithms were evaluated using navigation and stability metrics such as accumulated reward, success rate, minimum distance to the goal, first reach step, obstacle collisions, episode time, and weighted time. This comparison highlights how tabular, deep value-based, and actor-critic methods behave as obstacle complexity increases."
+  },
+  {
+    "id": "187",
+    "title": "Demand Forecasting and Analysis in the Hardware Retail Sector Utilizing Machine Learning Models",
+    "authors": "Oliver Correa-Ramírez; Anthony Rodríguez-Zambrano; Tania Rojas; David Cárdenas-Villacres",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Hardware Retail Sector Utilizing Machine Learning Models",
+      "Demand Forecasting and Analysis",
+      "XGBoost",
+      "Forest",
+      "Stockouts rigorous non-linear machine"
+    ],
+    "shortAbstract": "The systematic optimization of inventory frame works within the hardware retail sector constitutes a critical operational challenge, primarily concerning…",
+    "abstract": "The systematic optimization of inventory frame works within the hardware retail sector constitutes a critical operational challenge, primarily concerning the mitigation of capital immobilization and supply chain stockouts. This study provides a rigorous comparative evaluation of three non-linear machine learning architectures—Prophet, Random Forest, and XGBoost—deployed for weekly demand forecasting within an Ecuadorian enterprise. Utilizing historical transaction ledgers, a multidimensional dataset was engineered to encapsulate temporal dependencies, including lagged sales vectors, rolling averages, promotional indicators, and stock levels. Computational execu tion was performed via open-source Python libraries, and model validation was mathematically quantified using MAE, RMSE, and MAPE. The empirical outcomes demonstrate that the Ran dom Forest paradigm achieved superior global predictive con sistency, whereas XGBoost exhibited competitive local precision for structured consumption patterns. Consequently, these findings validate the technical viability of deploying advanced algorithmic forecasting within small and medium-sized enterprises (SMEs) without requiring capital-intensive digital infrastructure."
+  },
+  {
+    "id": "194",
+    "title": "Multi-Fruit Tracking and Counting in Tree Tomato Orchards Using Deep Learning and Kalman Filtering",
+    "authors": "Ingrid Nicole Vásconez; Pablo Vargas; Andrea Pilco; Luis A. Córdova-Tandazo; Leonardo Guevara; Juan Pablo Vasconez",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Deep Learning and Kalman Filtering",
+      "Tree Tomato Orchards",
+      "Multi-Fruit Tracking and Counting",
+      "Orchard",
+      "Fruit"
+    ],
+    "shortAbstract": "This study presents an automated framework for tree tomato detection, tracking, and counting in orchard environments. The proposed approach combines a…",
+    "abstract": "This study presents an automated framework for tree tomato detection, tracking, and counting in orchard environments. The proposed approach combines a Faster R-CNN detector with a ResNet50 backbone for fruit localization and a Kalman Filter for multi-object tracking and counting. A dataset of 580 annotated images obtained through data augmentation, was used to train and evaluate twelve model configurations under two orchard scenarios with different fruit densities and occlusion levels. The results show that the proposed framework can reliably detect and track fruits under real field conditions, achieving a maximum Average Precision (AP) of 71.61%. The tracking module improved counting consistency by maintaining fruit identities across consecutive frames, although performance decreased in highly dense and occluded scenes due to association errors and missed detections. The main contribution of this work is the integration of Deep Learning-based detection and temporal tracking for automated tree tomato counting, providing a practical solution for orchard monitoring and yield estimation."
+  },
+  {
+    "id": "199",
+    "title": "A CRISP-DM-Based Pipeline for Predicting Early University Dropouts: A Real-World Case Study",
+    "authors": "Dayron Rumbaut Rangel; Carlos Enrique George-Reyes; Gary Reyes; Franklin Parrales-Bravo; Peggy Ricaurte-Ulloa; Roberto Tolozano-Benites",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Predicting Early University Dropouts",
+      "CRISP-DM-Based Pipeline",
+      "Dropout",
+      "Reproducible",
+      "Real-world"
+    ],
+    "shortAbstract": "Student dropout rates in online higher education affect the quality, completion rates, and sustainability of selffinanced institutions. This paper…",
+    "abstract": "Student dropout rates in online higher education affect the quality, completion rates, and sustainability of selffinanced institutions. This paper presents a reproducible pipeline, structured according to the CRISP-DM methodology, for the early detection of dropout risk based on academic, demographic, and socioeconomic variables. A real-world dataset of 12,685 online students (13.65% dropout rate) was used, extracted from the Academic Management System of a private Ecuadorian university. The workflow integrates data cleaning and imputation, one-hot encoding, variable selection based on information gain, balancing with SMOTE applied only to the training set, and stratified cross-validation with ten partitions. Eight supervised classifiers were compared; XGBoost achieved the best performance on an independent test set, with an accuracy of 94.3%, an F1 score of 76.5%, and an AUC of 0.942. Interpretability was addressed using SHAP values, which identified average attendance, average grades, and months elapsed since enrollment as dominant predictors. Finally, a cloud deployment architecture (Microsoft Azure) is proposed, featuring periodic retraining, a REST API, a visualization dashboard, and traceability. The study provides a reproducible methodological baseline and a real-world case that can guide future work and developments in early warning for student dropout."
+  },
+  {
+    "id": "209",
+    "title": "Drone Inspection of the Agoy\\'an Hydroelectric Dam using Faster R-CNN and ResNet50",
+    "authors": "Juan Pablo Vasconez; Pablo Vargas; Oswaldo Menéndez; Lorena Isabel Barona López; Ángel Leonardo Valdivieso Caraguay; Marco E. Benalcázar",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Faster R-CNN and ResNet50",
+      "Drone Inspection of the Agoy\\'an Hydroelectric Dam",
+      "Gate",
+      "Floating debris",
+      "Water flow"
+    ],
+    "shortAbstract": "Visual inspection of hydroelectric dams is challenging due to hazardous operating conditions, restricted accessibility, and dynamic environmental factors…",
+    "abstract": "Visual inspection of hydroelectric dams is challenging due to hazardous operating conditions, restricted accessibility, and dynamic environmental factors such as water flow, gate states, and floating debris. This work proposes an object detection framework based on Faster R-CNN with a ResNet-50 backbone for the identification of critical assets in hydroelectric dam environments. The system detects six categories of interest: dam structures, turbine feed pipes, water flow patterns, gate motors, floating debris, and gate states. A dataset of 500 RGB images was acquired using a DJI Mini 3 Pro UAV from multiple viewpoints of the Agoyán hydroelectric dam in Ecuador. Several hyperparameter configurations were evaluated to determine the best-performing model. Experimental results achieved a mean Average Precision (mAP) of 74% on the validation set and 71% on the test set, indicating good generalization capability. These results demonstrate that Faster R-CNN combined with UAV imagery is a viable solution for automated hydroelectric dam inspection and monitoring."
+  },
+  {
+    "id": "214",
+    "title": "Comparison and Evaluation of Sparse Autoencoders (SAE) in Board Games",
+    "authors": "Jonathan Zea; Gilson Chango; Karina Arichavala; Lorena Barona; Angel Valdivieso; Marco Benalcazar",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Comparison and Evaluation of Sparse Autoencoders (SAE)",
+      "Board Games",
+      "Tic-Tac-Toe",
+      "OthelloGPT",
+      "BatchTopK"
+    ],
+    "shortAbstract": "Sparse Autoencoders (SAEs) are unsupervised learning methods that decompose neural network activations into sparse latent representations, enabling the…",
+    "abstract": "Sparse Autoencoders (SAEs) are unsupervised learning methods that decompose neural network activations into sparse latent representations, enabling the analysis of internal neural representations for mechanistic interpretability. This work compares three SAE variants: Standard SAE, BatchTopK SAE, and Matryoshka SAE on board game models based on Othello and Tic-Tac-Toe 5×5. The evaluation is performed using the Coverage score, which measures how well SAE latent features align with predefined board concepts. In the Tic-Tac-Toe QNN, concepts are evaluated using an absolute X/O representation, whereas in OthelloGPT both absolute and current-player-relative perspectives are considered. The results show that the player relative perspective consistently improves Coverage in OthelloGPT, achieving approximately 0.52 Coverage, matching the current state of the art, while BatchTopK achieves the highest validated Coverage in the Tic-Tac-Toe 5×5 setting."
+  },
+  {
+    "id": "221",
+    "title": "Optimization of Legal Assistance in Ecuador through RAG Architectures: Evaluation Against General-Purpose LLMs",
+    "authors": "Marco Castelo; Andrés Ojeda; René Omar Villa; Marcos Alejandro Dávalos",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Optimization of Legal Assistance",
+      "Evaluation Against General-Purpose LLMs",
+      "RAG Architectures",
+      "Clarity",
+      "Accuracy legal terminology"
+    ],
+    "shortAbstract": "This article presents a legal assistant based on Retrieval-Augmented Generation (RAG) designed for Ecuadorian law. The system combines a specialized legal…",
+    "abstract": "This article presents a legal assistant based on Retrieval-Augmented Generation (RAG) designed for Ecuadorian law. The system combines a specialized legal corpus, semantic retrieval, and large language model generation to support legal consultation and drafting tasks within a jurisdiction-specific setting. The main objective is to assess whether a retrieval-grounded architecture produces outputs perceived as more reliable than those generated by general-purpose foundation models when evaluated through blind expert review. The study followed a blind comparative design. A set of 120 legal queries was submitted to four systems—GPT-4o, Claude Sonnet 4.5, DeepSeek-V1, and the proposed RAG assistant— yielding 480 model responses. The outputs were anonymized and evaluated independently by two Ecuadorian lawyers using a 1–5 Likert scale across four dimensions: legal accuracy, legal terminology, clarity, and relevance. In total, 960 expert ratings were collected, and the reported results correspond to the mean of both evaluators. The proposed RAG system achieved the highest overall mean (4.55/5), leading in legal accuracy (4.76), legal terminology (4.68), and relevance (4.45), while GPT-4o obtained the highest clarity score (4.45). The RAG system also achieved a clarity score of 4.32. The Kruskal-Wallis test applied to the aggregated dimension-level scores indicated statistically significant differences between the compared systems (H = 13.33, p = 0.0040). These findings suggest that retrieval grounded in a specialized Ecuadorian legal corpus can improve the perceived quality of legal AI outputs. The study should be interpreted as comparative pilot evidence rather than as definitive proof of legal validity in professional practice."
+  },
+  {
+    "id": "222",
+    "title": "Monthly Demand Forecasting in the Cosmetics Sector Using Ensemble Machine Learning: A Comparative Study of Random Forest, XGBoost, and LightGBM",
+    "authors": "Juan-Sebastian Patiño-Cuesta; Paula-Renata Tenesaca-Pineda; Brian-Andersson Rivera-Emperador; Nathalia-Michelle Peralta-Vasconez",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Cosmetics Sector",
+      "Comparative Study of Random Forest, XGBoost, and LightGBM",
+      "Monthly Demand Forecasting",
+      "SMAPE",
+      "Product"
+    ],
+    "shortAbstract": "Monthly demand forecasting in the cosmetics sector represents a critical operational challenge due to high variability across product categories. This…",
+    "abstract": "Monthly demand forecasting in the cosmetics sector represents a critical operational challenge due to high variability across product categories. This study compares three ensemble machine learning algorithms---Random Forest, XGBoost, and LightGBM---applied to monthly demand prediction by product category in a cosmetics retail business. An Out-of-Time temporal cross-validation scheme was implemented over the last six months of the dataset, using MAE and SMAPE as evaluation metrics. Product category was incorporated as the main explanatory variable, along with temporal features, lag variables, and rolling statistics. LightGBM achieved the lowest error rates in most categories, particularly in high-volume series such as makeup (SMAPE = 18.9%) and fashion jewelry (SMAPE = 22.5%). Categories with limited training history, such as perfumes and skincare, exhibited errors exceeding 70% SMAPE across all models, consistent with cold-start limitations. Feature importance analysis identified Month, Year, and Lag 12m as the most influential predictors, confirming the relevance of seasonal components in cosmetics demand forecasting."
+  },
+  {
+    "id": "278",
+    "title": "Multitemporal Environmental Monitoring of Aggregate Quarry Expansion in Santa Cruz, Galápagos Using Spectral Computer Vision Techniques",
+    "authors": "Paul Rodríguez; Kevin Erazo; Paulina Vizcaíno-Imacaña; Iván Reyes-Chacón; Manuel Eugenio Morocho Cayamcela",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Multitemporal Environmental Monitoring of Aggregate Quarry Expansion",
+      "Spectral Computer Vision Techniques",
+      "Santa Cruz, Galápagos",
+      "Satellite",
+      "Vegetation"
+    ],
+    "shortAbstract": "The Galápagos Islands face a unique environmental challenge due to restrictions on importing construction materials from mainland Ecuador, forcing the…",
+    "abstract": "The Galápagos Islands face a unique environmental challenge due to restrictions on importing construction materials from mainland Ecuador, forcing the controlled extraction of local volcanic aggregates. This work presents a computer vision pipeline for multitemporal environmental monitoring of quarry expansion in Santa Cruz Island using satellite imagery from 2003 to 2024. The proposed method combines CLAHE contrast enhancement, Excess Green Index analysis, Z-score normalization, binary segmentation, and morphological post-processing to separate vegetation from exposed soil. Three extraction nodes were analyzed using 30 RGB satellite images. Results reveal a general decrease in vegetation coverage, with Node C presenting the strongest degradation trend of $-0.2381%$ per year."
+  },
+  {
+    "id": "304",
+    "title": "Face-PID: Physics-Informed Latent Diffusion for Visible-to-Thermal Face Translation",
+    "authors": "Patricio Xavier Moreno-Vallejo; Gisel Katerine Bastidas-Guacho; Angel D. Sappa",
+    "track": "Computational Intelligence",
+    "keywords": [
+      "Physics-Informed Latent Diffusion for Visible-to-Thermal Face Translation",
+      "Facial",
+      "Image",
+      "Perceptual",
+      "Diffusion backbone"
+    ],
+    "shortAbstract": "Visible-to-thermal face translation is a challenging cross-spectral image synthesis task due to the large appearance gap between visible and long-wave…",
+    "abstract": "Visible-to-thermal face translation is a challenging cross-spectral image synthesis task due to the large appearance gap between visible and long-wave infrared modalities, the limited availability of paired facial datasets, and the need to preserve facial structure across spectra. This work introduces Face-PID, a physics-informed latent diffusion framework for visible-to-thermal facial image synthesis. The proposed method adapts the Physics-Informed Diffusion backbone to the facial domain and incorporates thermal guidance through TeVNet to constrain the generation process with physical information related to thermal image formation. In addition, a decoupled post-hoc refinement stage is introduced to improve the structural and perceptual quality of the synthesized thermal faces without destabilizing the trained diffusion backbone. The framework is evaluated on TUFTS and MCXFace using standard image generation and perceptual similarity metrics, including FID, KID, LPIPS, SSIM, and PSNR. Experimental results show that Face-PID consistently improves the Phase 2 diffusion output across both datasets, producing thermal facial images with better distributional similarity, structural consistency, and perceptual quality. These results support the use of physics-informed latent diffusion with residual post-hoc refinement for cross-spectral facial image generation."
+  },
+  {
+    "id": "6",
+    "title": "Hybrid Electro-Thermal Modeling of Induction Machines Using ATP-EMTP",
+    "authors": "Anderson Maldonado; Bill Maldonado; Jose Aller",
+    "track": "Power and Energy",
+    "keywords": [
+      "Hybrid Electro-Thermal Modeling of Induction Machines",
+      "Thermal",
+      "Coupled",
+      "Electrical",
+      "Preserves steady-state"
+    ],
+    "shortAbstract": "This work presents the development of a hybrid electro-thermal model of a three-phase induction machine implemented in ATP-EMTP and ATPDraw. The model…",
+    "abstract": "This work presents the development of a hybrid electro-thermal model of a three-phase induction machine implemented in ATP-EMTP and ATPDraw. The model integrates an electrical model based on the Voltage Behind Reactance (VBR) methodology with a second-order equivalent thermal model, coupled bidirectionally. A coordinated temporal scaling strategy is proposed to reconcile the different electrical and thermal time scales, enabling physically consistent multi-scale simulations under variable-load profiles. The results demonstrate that the proposed approach preserves steady-state behavior while significantly accelerating transient dynamics, allowing a coupled evaluation of electrical losses and thermal response."
+  },
+  {
+    "id": "8",
+    "title": "Benchmarking Machine Learning Models for Anomalous Electricity Consumption Detection",
+    "authors": "Julio Pérez; Luis Morales; José Llagua; Patricio Pesántez; Carlos Gallardo; Marcelo Pozo",
+    "track": "Power and Energy",
+    "keywords": [
+      "Anomalous Electricity Consumption Detection",
+      "Benchmarking Machine Learning Models",
+      "SVM",
+      "NTL",
+      "Hourly"
+    ],
+    "shortAbstract": "Non-technical losses (NTLs) represent a major challenge for electricity distribution companies, reducing revenue and distorting the interpretation of…",
+    "abstract": "Non-technical losses (NTLs) represent a major challenge for electricity distribution companies, reducing revenue and distorting the interpretation of customer consumption behavior. Although advanced metering infrastructure (AMI) enables datadriven analysis through hourly load profiles, practical deployment requires classifiers that are both accurate and computationally efficient under limited and moderately imbalanced labeled data. This work benchmarks four supervised models for anomalous electricity consumption detection in special customers of Empresa El´ectrica Ambato Regional Centro Norte S.A. (EEASA): Support Vector Machine (SVM), Random Forest (RF), Multilayer Perceptron (MLP), and a one-dimensional Convolutional Neural Network (1D-CNN). The dataset consists of 400 hourly consumption profiles, including 100 real industrial and commercial records (2020–2021) and 300 synthetic curves representing NTL scenarios. Models are evaluated using stratified K-fold cross-validation (K = 10) with randomized hyperparameter optimization. Results show that the 1D-CNN achieves the highest average AUC–ROC and F1-score at the cost of higher computational demand, while SVM provides the best balance between discriminative performance and efficiency. These findings highlight the trade-off between accuracy and computational cost for initial NTL screening using AMI-based time series."
+  },
+  {
+    "id": "12",
+    "title": "Securing Ecuador’s Grid: BESS for Generation Adequacy After the 2024 Crisis",
+    "authors": "Manuel S. Alvarez-Alvarado; Fabricio Porras-Ortiz; David S. Mendieta-Rodas",
+    "track": "Power and Energy",
+    "keywords": [
+      "BESS for Generation Adequacy After the 2024 Crisis",
+      "Securing Ecuador’s Grid",
+      "Hydrological",
+      "Energy Storage",
+      "Enhance reliability mitigate"
+    ],
+    "shortAbstract": "Ecuador’s National Interconnected System (NIS) is highly dependent on hydropower, making it vulnerable to extreme droughts and climate variability. In…",
+    "abstract": "Ecuador’s National Interconnected System (NIS) is highly dependent on hydropower, making it vulnerable to extreme droughts and climate variability. In 2024, severe hydrological conditions triggered a major energy crisis characterized by widespread blackouts and prolonged electricity rationing, exposing critical deficiencies in generation adequacy. This paper evaluates the potential of Battery Energy Storage Systems (BESS) to enhance system reliability and mitigate energy deficits. A generation adequacy framework based on chronological simulations is used to assess the impact of BESS deployment on Energy Not Served (ENS). Results show that energy storage significantly improves system adequacy during periods of hydrological stress and reduces the economic losses associated with supply interruptions. These findings highlight the strategic role of BESS in strengthening the resilience of hydro-dominated power systems."
+  },
+  {
+    "id": "28",
+    "title": "From Simulation to Prototype: Development of a Non-Conventional Hydrokinetic Energy System",
+    "authors": "Carlos Cuenca; Jonathan Quistial-Balseca; Angel Ochoa-Villamar; Milton Cuenca; Luis Gonzaga-Bermeo",
+    "track": "Power and Energy",
+    "keywords": [
+      "From Simulation to Prototype",
+      "Non-Conventional Hydrokinetic Energy System",
+      "Computational simulation",
+      "Physical",
+      "Feasibility concept computational"
+    ],
+    "shortAbstract": "Traditional design approaches in hydrokinetic systems often rely on extensive experimental iteration or remain limited to purely computational studies…",
+    "abstract": "Traditional design approaches in hydrokinetic systems often rely on extensive experimental iteration or remain limited to purely computational studies without physical validation. In this work, computational simulation is used as a practical tool to guide the definition of system configuration and operating conditions. Based on these insights, a prototype driven by flow-induced oscillatory motion was developed and tested under controlled conditions. The system response was evaluated in terms of rotational behavior and electrical power output across different operating scenarios. The results show a clear and consistent dependence between flow conditions and energy generation, supporting the feasibility of the proposed concept. Although the computational analysis was based on simplified models, the experimental observations follow the expected physical trends. Overall, the study illustrates how combining computational simulation with targeted experimental validation can support the transition from theoretical analysis to functional prototypes, providing a structured approach for the development of hydrokinetic energy systems."
+  },
+  {
+    "id": "36",
+    "title": "Structuring and Analysis of Experimental Data on the Corona Effect for Diagnosis and Monitoring of High-Voltage Electrical Systems",
+    "authors": "Flavio Quizhpi; Bryan Jara; Mateo Quizhpi Cuesta",
+    "track": "Power and Energy",
+    "keywords": [
+      "Diagnosis and Monitoring of High-Voltage Electrical Systems",
+      "Corona",
+      "Phenomenon",
+      "Associated",
+      "Test"
+    ],
+    "shortAbstract": "This article presents a methodology for processing and organizing data obtained from corona discharge tests carried out in the High Voltage Laboratory of…",
+    "abstract": "This article presents a methodology for processing and organizing data obtained from corona discharge tests carried out in the High Voltage Laboratory of Universidad Politecnica Salesiana. The work covers the acquisition of electrical signals generated during the phenomenon, considering the controlled test conditions and the instrumentation used for their capture. A systematic structure for storing and managing the information is proposed, with the aim of ensuring the integrity, traceability, and availability of the experimental records for subsequent analyses. The methodology includes the classification of data according to operating conditions and signal characteristics, as well as the characterization of relevant parameters associated with the onset of the corona effect, such as amplitude, frequency, and environmental factors recorded at the time the test was performed. This approach makes it possible to identify patterns associated with the phenomenon, facilitate its early detection, and generate structured datasets that can be used in future studies focused on the diagnosis and monitoring of electrical systems."
+  },
+  {
+    "id": "42",
+    "title": "Dual-Regulated Wireless Charging Framework for EVs Based on Hybrid Compensation Networks",
+    "authors": "Noor Sami; Harith Al-Badrani; Marcelo Pozo",
+    "track": "Power and Energy",
+    "keywords": [
+      "Hybrid Compensation Networks",
+      "Dual-Regulated Wireless Charging Framework",
+      "Power transfer",
+      "IPT",
+      "Constant"
+    ],
+    "shortAbstract": "Many applications in biomedical devices, consumer electronics, Electric Vehicles depend on the wireless power transfer such that this technology has a…",
+    "abstract": "Many applications in biomedical devices, consumer electronics, Electric Vehicles depend on the wireless power transfer such that this technology has a favorable result. A big consideration from the researchers on the Inductive Power Transfer has been achieved because of it conveys, safety, and suitable to use. Inductive Power Transfer (IPT) is a modern charging technology with several benefits compared to traditional methods. Nonetheless, it still has some weaknesses, such as a low coupling coefficient. One way to address these issues is by using hybrid topologies. This paper presents a hybrid IPT system designed to meet the charging requirement of batteries in electric vehicles, ensuring constant current and voltage modes, and high efficiency. This paper proposes the design and simulation of a 1.85kW IPT system that uses hybrid compensation technologies, particularly Inductor-Capacitor-Capacitor-Series (LCC-S) and Inductor-Capacitor-Capacitor-Parallel (LCC-P) an arrangement, to increase power transmission efficiency. The proposed system is designed and simulated based on electromagnetic field analysis using ANSYS Maxwell and MATLAB/Simulink to validate the electrical system. This paper presents a primary-side controlled hybrid LCC compensation system that achieves load independent constant current and constant voltage outputs without requiring secondary side switches, wireless communication, or variable frequency operation."
+  },
+  {
+    "id": "107",
+    "title": "Three-State Stochastic Petri-Net Modeling of HL1 Generation Adequacy Under Derated Operation",
+    "authors": "Daniel Andrés Cevallos Valdiviezo; Holger Ignacio Cevallos Ulloa; Manuel S. Alvarez-Alvarado; Leandro Jeanpierre Chicaiza Zambrano; Eduardo Javier Rodriguez Nieto",
+    "track": "Power and Energy",
+    "keywords": [
+      "Three-State Stochastic Petri-Net Modeling of HL1 Generation Adequacy",
+      "Derated Operation",
+      "Year",
+      "Stochastic Petri",
+      "sequential Monte Carlo simulation"
+    ],
+    "shortAbstract": "Power-system adequacy studies at Hierarchical Level I (HL1) are commonly performed using binary generation-unit models, where each unit is represented as…",
+    "abstract": "Power-system adequacy studies at Hierarchical Level I (HL1) are commonly performed using binary generation-unit models, where each unit is represented as either fully available or unavailable. Although this representation is simple and widely adopted, it may overestimate reliability risk when generating units can continue operating under degraded but nonzero-capacity conditions. This paper presents a multistate HL1 reliability model based on Stochastic Petri Nets and sequential Monte Carlo simulation to explicitly represent three operating states for each generating unit: full operation, partial operation, and total outage. The proposed framework converts mean time to failure and mean time to repair parameters into hourly transition probabilities and simulates chronological annual availability histories with one-hour resolution. A reduced IEEE RTS-96-inspired case study, parameterized using auxiliary-subsystem degradation criteria, is used to evaluate the methodology. The model is validated by comparing simulated and theoretical forced outage rates, obtaining relative errors below 1%. Using 20,000 simulated years, the multistate model estimates a LOLE of 25.3951 h/year and an EENS of 2136.87 MWh/year, while a comparable binary model yields 40.0887 h/year and 3281.68 MWh/year, respectively. These results indicate reductions of 36.65% in LOLE and 34.89% in EENS when partial operation is explicitly represented. The findings show that Stochastic Petri Nets combined with sequential Monte Carlo simulation provide a more representative and operationally interpretable framework for HL1 adequacy assessment, especially when degraded generation states influence reserve margins and reliability indices."
+  },
+  {
+    "id": "115",
+    "title": "Optimal Design of a PV-BESS System: Mixed-Integer Linear Programming Approach for Project Efficiency and Feasibility",
+    "authors": "Roberto Quintana Escurra; Yoryi Walter Mercado Cerron",
+    "track": "Power and Energy",
+    "keywords": [
+      "Mixed-Integer Linear Programming Approach",
+      "Project Efficiency and Feasibility",
+      "BESS",
+      "Costs ensure reliable",
+      "Adequacy trade-off"
+    ],
+    "shortAbstract": "This article emphasizes the importance of BESS in contexts with unstable power supplies. To achieve optimal sizing, a methodology consisting of four (4)…",
+    "abstract": "This article emphasizes the importance of BESS in contexts with unstable power supplies. To achieve optimal sizing, a methodology consisting of four (4) key stages is proposed: 1) an optimizer based on Mixed-Integer Linear Programming (MILP) to determine the optimal BESS values; 2) an economic-financial analysis to assess the benefits; 3) a technical evaluation to verify the adequacy of the design; and 4) a trade-off analysis to examine the efficiency and impact on revenues generated with the obtained optimal values. This methodology aims to provide a comprehensive and practical solution for the optimal BESS design, reduce operational costs, and ensure a reliable and stable energy supply."
+  },
+  {
+    "id": "119",
+    "title": "Comparative Assessment of ELCC, ECP, and Firm Capacity Methodologies for Resource Adequacy in Renewable-Dominated Power Systems",
+    "authors": "Diego Arias-Cazco; Manuel S. Alvarez-Alvarado; Deivid Gaona-Ramos; Pablo Arias-Cazco",
+    "track": "Power and Energy",
+    "keywords": [
+      "Comparative Assessment of ELCC, ECP, and Firm Capacity Methodologies",
+      "Resource Adequacy",
+      "Renewable-Dominated Power Systems",
+      "Penetration",
+      "Peak-based"
+    ],
+    "shortAbstract": "The growing penetration of variable renewable energy has exposed the limitations of peak-based generation adequacy metrics. This paper presents a unified…",
+    "abstract": "The growing penetration of variable renewable energy has exposed the limitations of peak-based generation adequacy metrics. This paper presents a unified probabilistic-deterministic framework combining exact LOLP and LOLE evaluation via Capacity Outage Probability Table (COPT) convolution with deterministic renewable modeling for evaluating the Effective Load-Carrying Capability (ELCC), Equivalent Conventional Power (ECP), and firm capacity based on the Probability of Exceedance of Firm Power (PEPP) criterion, validated through a 24-hour illustrative case and a full 8760-hour simulation of the Ecuador SNI 2025. A sensitivity analysis across multiple aggregated PV penetration levels reveals progressive capacity credit saturation in both ELCC and ECP, while firm capacity yields zero contribution across all scenarios---a structural limitation that peak-based approaches cannot resolve. These results confirm that ELCC and ECP provide consistent, physically meaningful adequacy estimates and are essential for generation adequacy planning in modern power systems with high renewable penetration."
+  },
+  {
+    "id": "157",
+    "title": "Techno-Economic Feasibility of Floating Photovoltaics for Rural Electrification in Coastal Ecuador",
+    "authors": "Diego Peña; Banner Palacios; Samantha Puente; Jorge Murillo",
+    "track": "Power and Energy",
+    "keywords": [
+      "Rural Electrification",
+      "Coastal Ecuador",
+      "Techno-Economic Feasibility of Floating Photovoltaics",
+      "FPV",
+      "Regulated"
+    ],
+    "shortAbstract": "Rural electrification in tropical regions remains a structural challenge, particularly for communities surrounded by agricultural land and small water…",
+    "abstract": "Rural electrification in tropical regions remains a structural challenge, particularly for communities surrounded by agricultural land and small water bodies, where conventional ground-mounted photovoltaic (PV) plants compete with productive uses of land. Floating photovoltaic (FPV) systems have emerged as a promising land-efficient alternative; however, quantitative feasibility studies for community-scale installations on artificial irrigation reservoirs remain scarce in Latin America, especially in markets dominated by subsidized hydropower. This work presents a comprehensive technical and economic feasibility assessment of an FPV system designed for the rural community of El Vergel (Valencia canton, Ecuador). A mixed-methods framework is proposed, combining household-level surveys (208 of 450 dwellings, 95 % confidence level, 5 % margin of error), historical installed-load data (2019–2024), PVGIS-SARAH2 solar resource series (2005–2023), structural sizing of a floating platform with mooring system, and a comparative dimensioning of two configurations: an off-grid system with battery storage and a grid connected system regulated under ARCONEL 005/24. Demand growth is projected to 2030 by means of Holt–Winters and second-order polynomial models, and economic robustness is assessed through a one-at-a-time sensitivity analysis on discount rate and capital cost. The proposed plant requires 1118 monocrystalline modules of 615 W, 69 hybrid inverters and 261 lithium batteries, occupies 4,125 m2 with a peak capacity of 687.43 kWp, and yields an estimated 620.8 MWh per year at a global performance ratio of 84.5 %. The off-grid configuration attains a Levelized Cost of Energy (LCOE) of 0.258 USD/kWh, an Internal Rate of Return (IRR) of 41 % and a payback period of 8.27 years; nevertheless, this LCOE is incompatible with the regulated residential tariff of approximately 0.09 USD/kWh prevailing in Ecuador. The grid-connected configuration, although it shows a negative Net Present Value (NPV) at a 10 % discount rate (IRR ≈ 2.5 %), is consistent with the national hydro dominant matrix and is therefore the socially viable alternative. The contributions of this work are: (i) a reproducible mixed methods framework for sizing community-scale FPV plants on small irrigation reservoirs, integrating socioeconomic surveys, PVGIS solar-resource analysis, structural sizing of the floating platform and anchoring system, and comparative economic evaluation of off-grid and grid-connected configurations; (ii) a quantitative load-growth forecast to 2030 based on Holt–Winters and second-order polynomial models, complemented by two expansion strategies; (iii) a quantitative benchmark with national and international FPV references (Mazar–Ecuador, LesIlots Blandin–France, Huainan–China); and (iv) policy-oriented evidence for FPV deployment in subsidized electricity markets, including the explicit reconciliation of NPV and IRR indicators under regulated tariffs."
+  },
+  {
+    "id": "158",
+    "title": "State estimation using the Kalman filter in electrical networks Distribution",
+    "authors": "Edwin Patricio Aguilar Lema; Carlos Ivan Quinatoa Caiza; William La Cruz",
+    "track": "Power and Energy",
+    "keywords": [
+      "Kalman filter",
+      "electrical networks Distribution",
+      "Unbalanced",
+      "Dynamic",
+      "Uses python recursive"
+    ],
+    "shortAbstract": "The transition to active and unbalanced distribution networks demands advanced monitoring schemes, as static voltage-based estimators are limited by…",
+    "abstract": "The transition to active and unbalanced distribution networks demands advanced monitoring schemes, as static voltage-based estimators are limited by current load dynamics. This article proposes a Branch Current-based Dynamic State Estimation (BCSE) algorithm, implemented using an Iterative Extended Kalman Filter (IEKF). The co-simulation architecture uses Python for recursive filter management and OpenDSS as the three-phase power flow engine, defining the nonlinear measurement function h(x). The estimator's performance was validated on a 13-node IEEE feeder, using 24-hour residential demand profiles and Gaussian noise in the telemetry. The results confirmed the robustness of the BCSE-IEKF approach, reducing the initial error norm from 175.91 to 78.90 in fewer than five iterations. With an overall MAPE of 6.70% and an RMSE of 14.65, this methodology offers accurate dynamic monitoring and high computational efficiency for the observability of modern, unbalanced distributed systems."
+  },
+  {
+    "id": "160",
+    "title": "Photovoltaic Output Power Prediction Using Data Science: A Comparative Study of Machine Learning and Deep Learning for a Campus-Scale System in Ecuador",
+    "authors": "Angel Ivan Torres Quijije; Nayla Raquel Vargas Pilay; Eduardo Amable Samaniego Mena; Jimmy Aldrin Cedeno Barzola",
+    "track": "Power and Energy",
+    "keywords": [
+      "Photovoltaic Output Power Prediction",
+      "Comparative Study of Machine Learning and Deep Learning",
+      "RF",
+      "PV",
+      "XGBoost"
+    ],
+    "shortAbstract": "Accurate short-term forecasting of photovoltaic (PV) output power is essential for effective renewable energy management. This paper presents a…",
+    "abstract": "Accurate short-term forecasting of photovoltaic (PV) output power is essential for effective renewable energy management. This paper presents a data-science-based comparative study for predicting the 30-minute-ahead active power output of a 5.32 kWp campus-scale PV system in Quevedo, Ecuador, using exclusively on-site electrical measurements and meteorological variables—without dedicated irradiance sensors. The CRISPDM methodology guided the full pipeline: exploratory analysis, feature engineering (Pearson-filtered electrical variables, lag features, rolling statistics), session-aware temporal partitioning, model training, and statistical evaluation. Five algorithms were benchmarked: Random Forest (RF), XGBoost, Long ShortTerm Memory (LSTM), Gated Recurrent Unit (GRU), and Convolutional Neural Network (CNN). Temporal cross-validation revealed that tree-based ensembles outperformed deep learning models in predictive stability, with XGBoost achieving a mean cross-validated R2 of 0.951 (σ = 0.027) and RF reaching 0.879 (σ = 0.082). On the held-out test set, differences among algorithms were minimal (MAE: 0.047–0.049 kW; MAPE < 3.2%), and ANOVA analysis confirmed no statistically significant pairwise differences (Tukey HSD, α = 0.05). RF was selected as the deployment model owing to its interpretability, temporal stability, and low computational overhead. The reported pipeline is fully reproducible and aligned with Ecuador’s regulatory framework for renewable energy systems."
+  },
+  {
+    "id": "167",
+    "title": "Second Life Process using EV Battery Model for Confort Thermal",
+    "authors": "Efren Fernandez; Gustavo Alvarez; Julio Cuisano",
+    "track": "Power and Energy",
+    "keywords": [
+      "Second Life Process",
+      "EV Battery Model",
+      "Confort Thermal",
+      "House",
+      "Degrees celsius night"
+    ],
+    "shortAbstract": "This article describes the development and implementation of a thermal comfort system using second-life ion-lithium electric vehicle batteries. The…",
+    "abstract": "This article describes the development and implementation of a thermal comfort system using second-life ion-lithium electric vehicle batteries. The objective is to heat the interior of a house located at over 3,500 meters above sea level, where temperatures drop to -10 degrees Celsius at night during certain times of the year (June-August). The development and implementation of this system is expected to improve the thermal conditions of the house and enhance the overall thermal environment for those living in these areas of the Peruvian Andes."
+  },
+  {
+    "id": "182",
+    "title": "Multi-Period Transmission Expansion Planning under Renewable Uncertainty: A Scenario-Based Framework for Optimal Line Commissioning",
+    "authors": "Carlos Barrera-Singaña; María Paz Comech; Hugo Arcos",
+    "track": "Power and Energy",
+    "keywords": [
+      "Scenario-Based Framework for Optimal Line Commissioning",
+      "Multi-Period Transmission Expansion Planning",
+      "Renewable Uncertainty",
+      "Increase years suggesting",
+      "Approximation garver-inspired"
+    ],
+    "shortAbstract": "This paper proposes a multi-period scenario-based transmission expansion planning framework under renewable uncertainty. The model considers a 15-year…",
+    "abstract": "This paper proposes a multi-period scenario-based transmission expansion planning framework under renewable uncertainty. The model considers a 15-year horizon with demand growth, renewable expansion, and gradual retirement of conventional dispatchable generation. Renewable uncertainty is represented through scenario-dependent availability factors, while annual investment budgets and project limits are included to obtain a practical staged expansion schedule. The formulation is developed as a mixed-integer linear programming model using a DC power flow approximation. A Garver-inspired 6-bus system is used to evaluate the framework under a renewable-dominant transition pathway. The results show that early reinforcements reduce initial reliability stress, whereas renewable curtailment and expected energy not served increase in the last years, suggesting the need for complementary flexibility measures in highly renewable systems."
+  },
+  {
+    "id": "236",
+    "title": "Grid Scale BESS in the Energy Transition: Architecture, Grid Services, and Cyber Resilience",
+    "authors": "Ruben Hidalgo-Leon; Alejandra Risco-Bravo; Pritpal Singh; Stephanie Solano-Villao; Miguel Torres; Guillermo Soriano; Jorge Vega; Julio Barzola-Monteses",
+    "track": "Power and Energy",
+    "keywords": [
+      "Grid Scale BESS",
+      "Architecture, Grid Services, and Cyber Resilience",
+      "Energy Transition",
+      "Renewable",
+      "Cyber physical resilience"
+    ],
+    "shortAbstract": "The increasing penetration of variable renewable generation is reshaping the operational requirements of modern power systems, particularly in terms of…",
+    "abstract": "The increasing penetration of variable renewable generation is reshaping the operational requirements of modern power systems, particularly in terms of flexibility, stability, reliability, and cyber physical resilience. In this context, grid scale Battery Energy Storage Systems have become strategic assets because they can rapidly absorb and inject power, support renewable integration, participate in electricity markets, and provide ancillary services required for secure low carbon operation. This paper reviews the role of grid scale BESS in the energy transition by integrating three complementary perspectives: system architecture, grid support functions, and cyber physical resilience. The review discusses centralized and decentralized energy management schemes, the main components and battery technologies used in large scale installations, and the operational value of BESS in renewable integration, energy arbitrage, frequency regulation, reliability enhancement, congestion relief, and peak shaving. It also examines how the digitalization of storage assets expands the cyber attack surface through communication links among battery management systems, power conversion systems, supervisory controllers, and SCADA platforms. Recent deployments in the United States and selected Western European countries are used to illustrate how lithium ion based BESS are being implemented in practice for renewable integration, ancillary services, and grid stability. Overall, the reviewed evidence shows that BESS are evolving from flexible storage devices into critical infrastructure for renewable dominated power systems, where their value depends on stacked services, robust control architectures, safe operation, and cyber resilient integration with the grid."
+  },
+  {
+    "id": "238",
+    "title": "Repurposing EV Batteries for Second-Life Applications: Degradation and Economic Feasibility",
+    "authors": "Ruben Hidalgo-Leon; Alejandra Risco-Bravo; Pritpal Singh; Diego Campoverde-Munoz; Athar Nafis Md Wasi; Guillermo Soriano; Frank Porras; Miguel Torres",
+    "track": "Power and Energy",
+    "keywords": [
+      "Repurposing EV Batteries for Second-Life Applications",
+      "Degradation and Economic Feasibility",
+      "Retired",
+      "Recycling",
+      "Repurposing electric vehicle batteries"
+    ],
+    "shortAbstract": "The increasing adoption of electric vehicles is expected to generate a growing volume of retired lithium-ion batteries in the coming years. Although these…",
+    "abstract": "The increasing adoption of electric vehicles is expected to generate a growing volume of retired lithium-ion batteries in the coming years. Although these batteries no longer satisfy automotive performance requirements, they often retain a significant fraction of their usable capacity, creating opportunities for second-life applications before final recycling. This paper reviews the technical and economic factors that influence the feasibility of repurposing electric vehicle batteries after their first life. The analysis focuses on degradation mechanisms, end-of-life performance variability, testing and classification procedures, state-of-health assessment, battery management requirements, and cost-related barriers. Evidence from the literature shows that retired batteries can support stationary storage, backup power, renewable energy integration, and other low-demand applications when systematic characterization, regrouping, and control strategies are applied. However, heterogeneous aging, limited access to first-life operating data, uncertainty in state-of-charge and state-of-health estimation, and variability in repurposing costs remain major barriers to large-scale deployment. The review highlights the need for standardized diagnostic protocols, dedicated battery management strategies, and improved traceability mechanisms to support safe, reliable, and economically viable second-life operation. Overall, repurposing electric vehicle batteries offers a practical pathway to extend battery utilization before recycling, provided that technical assessment, economic feasibility, and regulatory support are properly aligned."
+  },
+  {
+    "id": "241",
+    "title": "Transient Stability Assessment of IBR-Dominated Power Systems: A Study on Hybrid Grid-Forming and Grid-Following Configurations",
+    "authors": "Diego Ortiz-Villalba; Álvaro Tenorio-Apaza; Miguel Challapa-Mamani; Jorge Vega-Herrera; Alex Villamarín-Jácome; Ruben Hidalgo-León",
+    "track": "Power and Energy",
+    "keywords": [
+      "Study on Hybrid Grid-Forming and Grid-Following Configurations",
+      "Transient Stability Assessment of IBR-Dominated Power Systems",
+      "GFM",
+      "GFL",
+      "Penetration"
+    ],
+    "shortAbstract": "This paper evaluates the transient stability of the two-area Kundur system with a high penetration of inverter based resources (IBRs) using…",
+    "abstract": "This paper evaluates the transient stability of the two-area Kundur system with a high penetration of inverter based resources (IBRs) using electromagnetic transient (EMT) simulations. It compares photovoltaic (PV) plants operating in grid-following (GFL) mode against hybrid GFL/grid-forming (GFM) configurations. The critical clearing time (CCT) serves as the primary stability index under three-phase and double-lineto-ground faults applied to the inter-area transmission corridor. Results show that replacing synchronous generation with GFL controlled PV plants significantly reduces the transient stability margin, while incorporating GFM control can effectively restore it. However, this improvement strongly depends on the GFM location, penetration level, and fault type. Connecting the hybrid plant at the sending area yields limited improvement, whereas a connection at the receiving area with intermediate GFM shares provides a superior and balanced response to both fault types. These findings indicate that the deployment of GFM resources should not be planned solely based on penetration levels. Notably, maximizing the GFM share severely deteriorates the CCT during unbalanced faults, highlighting that electrical location and dynamic responses to asymmetric disturbances are equally critical for system security."
+  },
+  {
+    "id": "246",
+    "title": "Comparative Analysis of Backward–Forward Sweep and BIBC–BCBV Methods for Unbalanced Radial Distribution Systems",
+    "authors": "Javier Markley",
+    "track": "Power and Energy",
+    "keywords": [
+      "Forward Sweep and BIBC",
+      "BCBV Methods for Unbalanced Radial Distribution Systems",
+      "PowerFactory",
+      "Capacitor compensation",
+      "Bibc bcbv"
+    ],
+    "shortAbstract": "This study presents the development and validation of a Python-based algorithm for unbalanced three-phase power flow analysis in a 13.8 kV medium-voltage…",
+    "abstract": "This study presents the development and validation of a Python-based algorithm for unbalanced three-phase power flow analysis in a 13.8 kV medium-voltage radial feeder consisting of 25 buses and 24 line sections. The proposed model was evaluated under operating conditions with and without capacitor compensation and validated through comparison with simulations performed in DIgSILENT PowerFactory. To this end, two computational approaches were implemented: the conventional Backward–Forward Sweep method and the matrix-based BIBC–BCBV formulation, enabling an assessment of the numerical equivalence between both techniques. The electrical modeling incorporated asymmetric load conditions, phase-dependent configurations, Carson’s equations, and Kron reduction for impedance representation. The results demonstrated a high level of agreement between the Python implementation and PowerFactory simulations in terms of both branch currents and nodal voltage profiles. Under uncompensated conditions, the main feeder section (1–2) exhibited currents of 21.27 A, 10.09 A, and 8.15 A for phases A, B, and C, respectively, closely matching the values obtained in PowerFactory. Following the integration of capacitor compensation, significant reductions in line currents and notable improvements in voltage regulation were observed. At bus 21, phase voltages reached approximately 8.219 kV, 8.063 kV, and 7.869 kV for phases A, B, and C, respectively. Furthermore, the comparison between the direct iterative method and the BIBC–BCBV formulation revealed virtually negligible numerical differences, confirming the robustness and consistency of both approaches for the analysis of unbalanced radial distribution networks. The developed tool represents a reliable, accessible, and computationally efficient alternative for the analysis and optimization of electric distribution systems. Its application can contribute to improving operational efficiency, power quality, technical loss reduction, and service reliability, particularly in modern distribution networks characterized by increasing operational complexity, thereby benefiting both utilities and end users."
+  },
+  {
+    "id": "253",
+    "title": "Low-Frequency Stability Analysis of Railway Systems Using Simplified Small-Signal Models",
+    "authors": "Paul Frutos",
+    "track": "Power and Energy",
+    "keywords": [
+      "Simplified Small-Signal Models",
+      "Low-Frequency Stability Analysis of Railway Systems",
+      "LFO",
+      "Phenomena",
+      "Source"
+    ],
+    "shortAbstract": "Power electronic converters in modern electric rail vehicles have been reported to be a source of low-frequency oscillations (LFO), which can eventually…",
+    "abstract": "Power electronic converters in modern electric rail vehicles have been reported to be a source of low-frequency oscillations (LFO), which can eventually result in instability phenomena. This paper discusses the physics of LFO phenomena in railway system using small-signal model. The models includes the constant power source behavior of the traction inverters and the dynamics of the dc link controller, which will be shown to be the main factors producing LFOs. An analytical expression for the stability limit will be obtained from the proposed analysis. Time-domain simulations will be used for to confirm the analytical predictions."
+  },
+  {
+    "id": "256",
+    "title": "Optimal Expansion Planning of Photovoltaic Distributed Generation in Power Distribution Networks Considering Unbalanced Power Flows within a Power Supplied Interruption Context",
+    "authors": "Diego Ortiz; Daniel Cabezas-Monteros; Luis Millingalle-Simba; Jimenez-De La Vega William; Llanos Jacqueline; Alex Villamarin-Jacome",
+    "track": "Power and Energy",
+    "keywords": [
+      "Optimal Expansion Planning of Photovoltaic Distributed Generation",
+      "Single-phase",
+      "Unbalanced",
+      "Total installed",
+      "Siting"
+    ],
+    "shortAbstract": "Real distribution networks commonly operate under unbalanced conditions due to asymmetric single-phase loads and non-uniform configurations, yet…",
+    "abstract": "Real distribution networks commonly operate under unbalanced conditions due to asymmetric single-phase loads and non-uniform configurations, yet expansion-planning tools frequently rely on balanced single-phase equivalent models, a simplification that can distort the siting of distributed photovoltaic generation (DPVG) even when the total installed capacity is estimated correctly. This paper proposes a unified mixed integer linear programming (MILP) framework that quantifies this planning error by comparing two approaches under a consistent objective and constraint structure: a balanced single-phase equivalent and a three-phase unbalanced model, both incorporating linearized power flows, ZIP load representation, and supply-interruption scenarios. Both are evaluated on a section of the IEEE 37-node test feeder under three operating conditions. The two approaches yield nearly identical total installed capacities, differing by less than 0.06%, yet the unbalanced model redistributes them across distinct buses and phases, providing more realistic siting and more uniform phase-voltage behavior while keeping voltages within 0.92–1.08 p.u. across all scenarios."
+  },
+  {
+    "id": "257",
+    "title": "Field Monitoring and Retrofit Assessment of CO2-Based Ventilation Performance in Tropical University Classrooms",
+    "authors": "Walter Gamarra-Yepez; Jaqueline Litardo; Frank Porras; Guillermo Soriano",
+    "track": "Power and Energy",
+    "keywords": [
+      "Tropical University Classrooms",
+      "Field Monitoring and Retrofit Assessment of CO2-Based Ventilation Performance",
+      "Outdoor",
+      "Air supply",
+      "ERV"
+    ],
+    "shortAbstract": "Maintaining adequate indoor air quality in educational buildings is particularly challenging in hot-humid climates, where the introduction of outdoor air…",
+    "abstract": "Maintaining adequate indoor air quality in educational buildings is particularly challenging in hot-humid climates, where the introduction of outdoor air can significantly increase cooling and dehumidification loads. This study evaluates indoor CO2 concentrations, thermal conditions, and ventilation retrofit alternatives in a university classroom building in Guayaquil, Ecuador, where spaces are conditioned by split-type direct expansion (DX) systems. Field measurements of indoor CO2, temperature, and relative humidity were used to assess ventilation performance during scheduled occupied periods and to compare thermal conditions against an ASHRAE 55-based screening range. Results showed recurrent exceedances of indoor CO2 levels, indicating insufficient outdoor air supply under typical classroom operation. Two ventilation retrofit scenarios were then assessed using Elite software: (i) direct outdoor air supply without energy recovery and (ii) outdoor air supply with an energy recovery ventilator (ERV). For the same ASHRAE 62.1 outdoor airflow requirement, the no-ERV scenario imposed a ventilation load of 1.75 TR per classroom, while the ERV scenario reduced this load to 0.70 TR. The ERV alternative also showed estimated annual energy savings of 368,816 kWh/year and a simple payback period of approximately 4.68 years. These findings suggest that ERV-based retrofits can support controlled outdoor air supply while reducing the cooling load penalty imposed on existing split-type systems in hot-humid educational buildings."
+  },
+  {
+    "id": "281",
+    "title": "Grid-Based Spatial Load Forecasting via Agglomerative Hierarchical Clustering: Case Study of an Electrical Distribution Utility",
+    "authors": "Eduardo Morales-Jadan; Sergio Zambrano-Asanza; Ivón Benítez González; Carlos Santos-Pérez; Reinier Herrera-Casanova",
+    "track": "Power and Energy",
+    "keywords": [
+      "Agglomerative Hierarchical Clustering",
+      "Electrical Distribution Utility",
+      "Grid-Based Spatial Load Forecasting",
+      "Monthly",
+      "Cluster"
+    ],
+    "shortAbstract": "Monthly metering data remains the primary source of demand information for many distribution utilities, limiting the use of high-resolution forecasting…",
+    "abstract": "Monthly metering data remains the primary source of demand information for many distribution utilities, limiting the use of high-resolution forecasting methods. This paper proposes an interpretable framework for spatial load forecasting that combines data cleaning, and agglomerative hierarchical clustering to segment heterogeneous consumption behaviors. The framework is evaluated with monthly consumption records from Empresa Eléctrica Regional Centro Sur (CENTROSUR), Ecuador. Customers are assigned to 200-m grid cells, transformed into statistical and seasonal load-profile features, and segmented with agglomerative hierarchical clustering. Cluster quality is assessed with Silhouette, Davies–Bouldin, and Calinski–Harabasz indices, while ARIMA and XGBoost models are compared for monthly demand forecasting. Residential results show that a 12-cluster structure provides a practical compromise between statistical separation and operational interpretability. XGBoost achieved lower validation errors in most residential clusters, including a minimum MAPE of 2.59%, and produced spatial projections that highlighted emerging demand hotspots. This framework provides a transparent, scalable decision-support tool for distribution system operators to prioritize asset allocation, transformer placement, and feeder reinforcement."
+  },
+  {
+    "id": "299",
+    "title": "River-Friendly Hydrokinetic Energy Assessment: Power Potential Evaluation in the Tomebamba River, Cuenca, Ecuador",
+    "authors": "Adrian Criollo; Ismael Minchala; Danny Ochoa; María Emilia Sisalima Jara; Diego Javier Tenesaca Malla; José Fernando Reino Criollo",
+    "track": "Power and Energy",
+    "keywords": [
+      "Tomebamba River, Cuenca, Ecuador",
+      "Power Potential Evaluation",
+      "River-Friendly Hydrokinetic Energy Assessment",
+      "Season",
+      "Flow"
+    ],
+    "shortAbstract": "This study evaluates the technical feasibility and energy potential of installing a Smart Free Stream hydrokinetic turbine in the Tomebamba River through…",
+    "abstract": "This study evaluates the technical feasibility and energy potential of installing a Smart Free Stream hydrokinetic turbine in the Tomebamba River through a probabilistic analysis of historical flow rates and flow cross-section optimization. Based on hydrological data processing and the characterization of the 5 kW generator's power curve, it was determined that the natural river velocity in sections 12 to 20 meters wide is insufficient (less than $0.6 m/s$) for sustained equipment operation. Consequently, a civil works intervention was modeled to confine the flow to a $4.0 m^{2}}$ area, increasing the average velocity to $1.96 m/s$ and achieving an estimated annual energy generation of 15.14 MWh under a conservative scenario. Results indicate an annual operational reliability of 61\\,%, with marked seasonal variability ranging from an average power of 3.1 kW during the high-flow season to 1.3 kW during the dry season. This confirms the need to integrate a storage system or a hybrid backup to ensure a continuous power supply."
+  },
+  {
+    "id": "307",
+    "title": "Impact of Source-Constrained Pumping on Pumped-Storage and Cascaded Hydropower Dispatch in Hydro-Dominated Power Systems",
+    "authors": "Iván León; Alex Villamarín; Willian Jiménez; Ariel Chancusig; Diego Ortiz; Jorge Vega",
+    "track": "Power and Energy",
+    "keywords": [
+      "Hydro-Dominated Power Systems",
+      "Pumping",
+      "Source-constrained",
+      "Dispatch",
+      "Cascaded"
+    ],
+    "shortAbstract": "Increasing hydrological variability in hydro-dominated power systems intensifies the operational value of pumped-storage hydropower (PHS) while making…",
+    "abstract": "Increasing hydrological variability in hydro-dominated power systems intensifies the operational value of pumped-storage hydropower (PHS) while making decisions on its deployment more critical. This paper evaluates the impact of source-constrained pumping on pumped-storage and cascaded hydropower dispatch. A MILP formulation is proposed to optimize the economic dispatch, incorporating the hydraulic interdependencies of a cascaded reservoir system, detailed PHS operating constraints, and a DC power flow network. Two pumping configurations are assessed: grid-connected and source-constrained, where pumping is bounded by the generation of adjacent cascade units. The proposed model is applied to a representative four-zone model of the Ecuadorian power system under contrasting hydrological conditions. Results show that source-constrained pumping reduces the peak upper-reservoir volume by 31% (from 1.24 to 0.86 Mm³), increases thermal generation by 5.7% (from 33.1 to 35.0 GWh/day), and raises daily operating cost by 3.8% (from 2,233 to 2,318 kUSD) relative to the grid-connected case. Both configurations serve demand fully under the analyzed dry-season conditions, confirming that the pumping source configuration is a determinant of operational cost and dispatch composition in hydro-dominated systems"
+  },
+  {
+    "id": "311",
+    "title": "Impact of Transmission and Distribution-Level BESS on the Operation of Hydro-Dominated Power Systems with Low Integration of Variable Renewables",
+    "authors": "Nayeli Panchi; Alex Villamarín; Willian Jiménez; Diego Ortiz",
+    "track": "Power and Energy",
+    "keywords": [
+      "Low Integration of Variable Renewables",
+      "Distribution-level",
+      "Storage",
+      "Hydro-dominated",
+      "Placement"
+    ],
+    "shortAbstract": "This paper evaluates the impact of battery energy storage systems (BESS) deployed at transmission and distribution levels on the unit commitment and…",
+    "abstract": "This paper evaluates the impact of battery energy storage systems (BESS) deployed at transmission and distribution levels on the unit commitment and economic dispatch of a hydro-dominated power system under low variable renewable energy integration. A mixed-integer linear programming formulation is applied to a four-zone system incorporating thermal and hydroelectric generation, transmission-level BESS paired with renewable units, and a distribution-level node representing behind-the-meter storage under self-consumption and net billing schemes. Four scenarios are compared, revealing that storage increases operating costs in all configurations due to thermal redispatch during charging periods. Distribution-level placement proves 22% cheaper than transmission deployment, and the combined scenario yields costs virtually identical to distribution-only, with a difference of 0.026%, confirming that the transmission-distribution transformer acts as a binding constraint that curtails the system-wide contribution of distributed resources. These findings underscore that storage value in hydro-dominated systems depends critically on placement and interface capacity."
+  },
+  {
+    "id": "122",
+    "title": "Experimental Analysis of RSSI and SNR performance in an AU915 LoRaWAN Smart Apiary Deploymen",
+    "authors": "Edzel Alejandro Escobar Cueto; Patricia Nataly Flores Ponce; Eynar Calle Viles; Edgar Roberto Ramos Silvestre",
+    "track": "Antennas and Propagation",
+    "keywords": [
+      "Experimental Analysis of RSSI and SNR performance",
+      "AU915 LoRaWAN Smart Apiary Deploymen",
+      "Gateway",
+      "Urban peri-urban",
+      "Node"
+    ],
+    "shortAbstract": "This paper presents a technical evaluation of a LoRaWAN network configured in the AU915 band for remote apiary monitoring. Unlike a general Internet of…",
+    "abstract": "This paper presents a technical evaluation of a LoRaWAN network configured in the AU915 band for remote apiary monitoring. Unlike a general Internet of Things overview, the analysis focuses on the LPWAN layer, including the frequency plan, sub-band selection, OTAA activation, device class, channelization, RSSI/SNR indicators, Heltec HTCC AB01 node configuration, and Dragino DLOS8N gateway setup. The deployment was validated in Cochabamba, Bolivia, with a 4.6 km separation between the node installed inside a beehive and the gateway located on an elevated terrace, considering compliance with the 915–928 MHz segment recognized under Bolivian regulations for narrowband IoT applications. The reception of uplinks with RSSI values between −98 dBm and −102 dBm, positive SNR values between 9.0 dB and 10.5 dB, and an SF7BW125 data rate demonstrates the feasibility of the communication link in an urban–peri-urban scenario. The beekeeping application is considered a secondary use case: LoRaWAN enabled the transmission of temperature, humidity, weight, acoustic frequency, and estimated bee activity variables without requiring IP connectivity at the hive or frequent physical inspections. The article proposes distance criteria, gateway placement recommendations, and configuration guidelines to scale the solution in urban, peri-urban, and rural environments."
+  },
+  {
+    "id": "271",
+    "title": "Comparative Analysis of NYUSIM-Based mmWave and Sub-THz Channels",
+    "authors": "René Játiva E.; José Castillo; Adrián Ávila; Marcelo Sigüenza",
+    "track": "Antennas and Propagation",
+    "keywords": [
+      "NYUSIM-Based mmWave and Sub-THz Channels",
+      "Propagation",
+      "LOS",
+      "NLOS",
+      "PLE"
+    ],
+    "shortAbstract": "The transition from millimeter-wave (mmWave) to sub-terahertz (sub-THz) frequency bands is expected to play a key role in future 6G wireless systems…",
+    "abstract": "The transition from millimeter-wave (mmWave) to sub-terahertz (sub-THz) frequency bands is expected to play a key role in future 6G wireless systems, requiring accurate channel characterization across diverse propagation environments. This paper presents a comparative analysis of NYUSIM-based propagation models at 28 GHz and 150 GHz under Line-of-Sight (LOS) and Non-Line-of-Sight (NLOS) conditions. Four representative deployment scenarios were considered, namely Indoor Hotspot (InH), Urban Microcell (UMi), Urban Macrocell (UMa), and Rural Macrocell (RMa), resulting in sixteen simulation configurations. The analysis focuses on path loss exponent (PLE), shadow fading, received-power statistics, and Ricean K-factor characterization. Results show that the InH LOS scenario at 28 GHz provides the most favorable propagation conditions, yielding a PLE of $n=1.60$, whereas the RMa NLOS scenario at 150 GHz exhibits the most severe propagation behavior with a PLE of $n=3.38$. While received power generally decreases as the carrier frequency increases from 28 GHz to 150 GHz, shadow fading tends to decrease at sub-THz frequencies, suggesting a progressively sparser channel structure dominated by fewer strong propagation components. Additionally, a K-means clustering analysis based on propagation statistics indicates that channel behavior may not be fully described by a conventional LOS/NLOS classification, revealing the presence of a third statistically significant propagation regime. These findings contribute to a better understanding of mmWave and sub-THz channel behavior and provide useful insights for the design of future 5G-Advanced, Beyond-5G, and 6G wireless systems."
+  },
+  {
+    "id": "283",
+    "title": "Comparative Analysis of Empirical Path Loss Models for 2.4 GHz Wi-Fi Propagation in Multi-Level Reinforced Concrete Residential Environments",
+    "authors": "Aaron David Cuadrado Garces; Douglas Alexander Agualsaca Guallo",
+    "track": "Antennas and Propagation",
+    "keywords": [
+      "Multi-Level Reinforced Concrete Residential Environments",
+      "2.4 GHz Wi-Fi Propagation",
+      "Empirical Path Loss Models",
+      "Multi-Wall",
+      "Rmse db"
+    ],
+    "shortAbstract": "This paper evaluates three empirical models (Keenan-Motley, ITU-R P.1238, and COST 231 Multi-Wall) for predicting 2.4 GHz Wi-Fi propagation in a…",
+    "abstract": "This paper evaluates three empirical models (Keenan-Motley, ITU-R P.1238, and COST 231 Multi-Wall) for predicting 2.4 GHz Wi-Fi propagation in a multi-level reinforced concrete residential environment. The scenario features distinct ceiling heights of 2.30 m for the first floor and 2.80 m for the second. With both the transmitter and receiver positioned at a 1.1 m height, a high-density campaign collected 356 Received Signal Strength Indicator (RSSI) measurements. Performance is assessed using Root Mean Square Error (RMSE). Results demonstrate that the COST 231 Multi-Wall model achieves the highest accuracy for vertical propagation through concrete slabs (RMSE 7.31 dB). Conversely, in cluttered horizontal Non-Line-of- Sight scenarios, the statistical ITU-R P.1238 model outperforms deterministic approaches (RMSE 15.17 dB). The study concludes that optimal network planning requires a hybrid strategy combining both models."
+  },
+  {
+    "id": "287",
+    "title": "AI-Based Reconstruction of Antenna Radiation Patterns From Sparse SDR Measurements",
+    "authors": "Danilo Gabriel Cevallos; Carlos Leónidas Yépez; Fernando Lara; Aldrin Reyes Narváez; Hernan Barba Molina",
+    "track": "Antennas and Propagation",
+    "keywords": [
+      "AI-Based Reconstruction of Antenna Radiation Patterns",
+      "Sparse SDR Measurements",
+      "Pattern",
+      "SDR-based",
+      "Measurement"
+    ],
+    "shortAbstract": "This article presents an SDR-based AI framework for reconstructing the azimuthal radiation pattern of an antenna under test from a reduced set of real…",
+    "abstract": "This article presents an SDR-based AI framework for reconstructing the azimuthal radiation pattern of an antenna under test from a reduced set of real measurements. The proposed method combines a calibrated SDR-based measurement system with a deep learning model trained on synthetic radiation-pattern data to estimate the complete pattern from sparse received-power samples. Experimental validation under real measurement conditions yielded RMSE and MAE values as low as 0.13 dB and 0.12 dB, respectively, while more challenging cases produced errors of up to 13.42 dB and 10.57 dB. These results demonstrate the feasibility of the proposed approach for antenna pattern characterization from limited angular measurements and highlight the importance of improving the agreement between analytical training models and real propagation conditions."
+  },
+  {
+    "id": "1",
+    "title": "eΦCiencia Laboratory: A Case Study of Low-Cost 3D-Printed Physics Instrumentation in Engineering Education",
+    "authors": "Luis Pabon-Orozco; Gabriel Barreto-Nunez; Carlos Cuenca-Cabrera; Gabriela Parrales-Jimenez; Angel Ochoa-Villamar; Erick Lamilla Rubio",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Low-Cost 3D-Printed Physics Instrumentation",
+      "Engineering Education",
+      "eΦCiencia Laboratory",
+      "Classrooms",
+      "Active learning"
+    ],
+    "shortAbstract": "Active learning methodologies have become essential in modern pre-university and university classrooms; however, with the rapid emergence of artificial…",
+    "abstract": "Active learning methodologies have become essential in modern pre-university and university classrooms; however, with the rapid emergence of artificial intelligence, a substantial transformation of current active learning approaches has become necessary. Under these conditions, and motivated by the need to improve the quality of learning in engineering classrooms, we designed and implemented the eΦCiencia Laboratory, an educational innovation project that integrates three main components:(1) the construction of a low-cost prototype based on 3D printing for physics instrumentation, (2) a pedagogical sequence grounded in active learning to explore physics through the constructed prototype, and (3) the use of mobile devices and free digital applications to obtain measurements of the physical phenomenon involved. In this paper, a case study applied in first-year engineering classrooms at an Ecuadorian university is presented, based on a 3D-printed AC generator used as an instructional instrument for the generation and analysis of voltage and current."
+  },
+  {
+    "id": "15",
+    "title": "Controlled Integration of Shared LLM Chatbots in Competency-Based Electrical Engineering Program: A Study of Student Adoption and Perceptions Across Curricular Levels",
+    "authors": "Danny Espín; Leonardo Vivas; Johnny Rengifo",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Controlled Integration of Shared LLM Chatbots",
+      "Student Adoption and Perceptions Across Curricular Levels",
+      "Competency-Based Electrical Engineering Program",
+      "GenAI",
+      "Basic"
+    ],
+    "shortAbstract": "This study examined the controlled integration of LLM-based chatbots trained to reflect the specific characteristics of each course in a competency-based…",
+    "abstract": "This study examined the controlled integration of LLM-based chatbots trained to reflect the specific characteristics of each course in a competency-based Electrical Engineering program across three curricular levels (basic, intermediate, and advanced). Sixty-six students participated across three undergraduate courses. Entry and exit surveys assessed baseline practices, frequency and purposes of use, perceived usefulness, and engagement with the chatbots. At baseline, 45–47% of basic- and intermediate-level students reported that LLMs frequently improved their conceptual understanding. By the end of the semester, 87–100% of students across all levels rated chatbot usefulness highly (4–5 on a five-point scale). Reported use evolved from conceptual clarification at the basic level to verification, coding, simulation, and project-oriented tasks at the advanced level. More process-oriented, responsible AI use appeared in assessed activities as curricular complexity increased. These findings indicate that guided, course-aligned GenAI integration fosters differentiated and reflective adoption patterns. The study provides empirical evidence supporting pedagogically framed implementation strategies for GenAI in competency-based engineering programs."
+  },
+  {
+    "id": "19",
+    "title": "Assessing the Industry Readiness of Graduating Gen Z Engineering Student: Identifying Key Influencing Factors",
+    "authors": "Renz Angelo Eugenio; Johanne Raymond Gaspar; Martin Luis Vibar; John Kenneth Sison; George Domantay; Channen Kyle Cruz; Maricar Navarro",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Identifying Key Influencing Factors",
+      "Employability",
+      "Graduating",
+      "Industry",
+      "Readiness"
+    ],
+    "shortAbstract": "The transition from academic learning to industry practice remains a persistent challenge for graduating engineering students as Higher Education…",
+    "abstract": "The transition from academic learning to industry practice remains a persistent challenge for graduating engineering students as Higher Education Institutions struggle to keep pace with evolving industry demands. This study intends to determine the level of employability readiness of graduating engineering students based on their technical competence skills, guided by the CareerEDGE Model and the Dreyfus Model of Skill Acquisition, while also evaluating the alignment between laboratory-based education and actual industry settings. It was observed that there is an existing gap between academic preparedness and industry expectations, especially in terms of applying theoretical knowledge to real-world situations and being psychologically ready for workplace challenges. There is a need for a broader approach to improve technical and psychological readiness through innovative curriculum design, emotional intelligence application, reflective learning, industry-relevant tools, strengthened academic-industry collaboration, and improved graduate employability outcomes."
+  },
+  {
+    "id": "52",
+    "title": "AgenteTutor-UBE: A Modality-Aware Multi-Agent Tutoring System Grounded in Psychopedagogical Principles and the 4D AI Fluency Framework for Graduate Thesis Supervision",
+    "authors": "Roger Martínez Isaac; Sonia Guerra Iglesias; Odette Martínez Pérez; Luis Enrique Silva Adriano; Manuel Fabricio Reyes Wagnio; Maikel Leyva-Vázquez Leyva-Vázquez",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Modality-Aware Multi-Agent Tutoring System Grounded",
+      "Graduate Thesis Supervision",
+      "Psychopedagogical Principles and the 4D AI Fluency Framework",
+      "Scaffolding",
+      "Ai-hallucinated references evidencing transfer"
+    ],
+    "shortAbstract": "The widespread availability of LLMs in higher education has created a critical gap: AI tools are accessible but pedagogically unstructured, frequently…",
+    "abstract": "The widespread availability of LLMs in higher education has created a critical gap: AI tools are accessible but pedagogically unstructured, frequently substituting student thinking rather than scaffolding it. This paper presents AgenteTutor-UBE, a multi-agent tutoring system for graduate thesis supervision comprising four specialized bots (TesisBot, BibliBot, RedactBot, DefensaBot) that implement 11 operational principles from 10 psychopedagogical foundations under the 4D AI Fluency Framework. A key innovation is modality-aware tutoring: the system detects whether students work on an Examen Complexivo (professional solution proposal) or an Artículo Científico (peer-reviewed article) and adapts all scaffolding accordingly. Study 1 (N=37 values survey) found 86.1% agreement that AI should acknowledge uncertainty; only 48.5% agreed AI should not complete full assignments—a tension the Socratic constraints institutionally counteract. Study 2 (N=24, 8-week pilot) demonstrated 100% Diligence adoption and independent rejection of AI-hallucinated references, evidencing transfer of epistemic honesty to autonomous student practice."
+  },
+  {
+    "id": "53",
+    "title": "Impact of a Service-Learning-Based Electrical Community Project on Engineering Competencies and Community Perception",
+    "authors": "Doménica Apolo; Jocelyne S. Salgado; Hector Plaza; Otto Alvarado",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Community",
+      "Competencies",
+      "Instructor",
+      "Service-learning",
+      "Professional"
+    ],
+    "shortAbstract": "The development of professional competencies in engineering education requires the integration of theoretical knowledge with practical experience in…",
+    "abstract": "The development of professional competencies in engineering education requires the integration of theoretical knowledge with practical experience in real-world contexts. In this regard, service-learning has emerged as an effective approach to bridge the gap between academic training and community needs. This study evaluates the impact of a service-learning-based community project on the development of engineering competencies in students and on the perceived impact in a rural community. A quantitative, non-experimental, and descriptive-comparative approach was employed, focusing on a 2025 cohort of 25 engineering students and 9 community beneficiaries. Student competencies were assessed through self-evaluation and instructor evaluation across four dimensions, while community perception was measured using satisfaction surveys. Results show high levels of competency development, with strong consistency between student and instructor evaluations (differences ranging from 0.12 to 0.25). Additionally, community perception indicated high satisfaction, with an overall average of 4.75 out of 5, reflecting positive evaluation of project implementation and impact. These findings provide empirical evidence supporting the effectiveness of service-learning in engineering education, demonstrating its potential to enhance professional competencies while generating positive outcomes in community contexts."
+  },
+  {
+    "id": "64",
+    "title": "Temporal Lexical Shifts in First-Time Virtual Reality Experiences: An Exploratory Study with Rural Girls in Ecuador",
+    "authors": "Lorena Guachi-Guachi; Mónica Vaca; Lizbeth Cruz; Robinson Guachi; Juan Gonzalez",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Rural Girls",
+      "First-Time Virtual Reality Experiences",
+      "Temporal Lexical Shifts",
+      "VR",
+      "Immersive"
+    ],
+    "shortAbstract": "Virtual Reality (VR) and Human-Computer Interaction (HCI) technologies are increasingly used to support STEM education through immersive learning…",
+    "abstract": "Virtual Reality (VR) and Human-Computer Interaction (HCI) technologies are increasingly used to support STEM education through immersive learning experiences. However, most studies focus on technologically familiar or higher-education populations, leaving under-resourced and low-exposure learners underrepresented. This study presents an exploratory qualitative analysis of first-time VR experiences among rural girls (N=20; ages 8–18) from Colta, Ecuador, with no prior exposure to immersive technologies. Participants engaged in a brief session using the First Steps VR environment on a Meta Quest 3 headset, followed by immediate and delayed (2-hour) vocabulary elicitation tasks. Results show a time-dependent change in lexical patterns: immediate responses were predominantly perceptual and action-oriented, while delayed responses included more abstract and technology-related terms. These findings suggest a temporal shift in lexical responses over time following immersive exposure. The study provides preliminary insights into how novice users from underrepresented contexts linguistically interpret first-time VR experiences in immersive virtual environments."
+  },
+  {
+    "id": "86",
+    "title": "Design of a low-cost open-source micro-scale Smart Car platform for Engineering Education in Autonomous Systems",
+    "authors": "Angel Recalde; Ricardo Alfredo Cajo Diaz; Jose Vaca; David Narvaez; Francisco Yumbla",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Design of a low-cost open-source micro-scale Smart Car platform",
+      "Engineering Education",
+      "Autonomous",
+      "Embedded control",
+      "Sensing"
+    ],
+    "shortAbstract": "Li-ion battery-powered autonomous vehicles require the integration of embedded control, sensing, communication, energy measurement, and decision-making…",
+    "abstract": "Li-ion battery-powered autonomous vehicles require the integration of embedded control, sensing, communication, energy measurement, and decision-making algorithms. However, commercial autonomous vehicle platforms are often financially inaccessible for small and medium-sized teaching laboratories, especially in developing academic contexts. This paper presents the design and construction of a low-cost, open-source, micro-scale smart car platform developed with undergraduate students as a project-based learning experience in autonomous systems. The platform integrates a Raspberry Pi 4 for high-level processing, an Arduino Mega 2560 for low-level real-time tasks, BLDC traction motors, wireless manual control, voltage and current sensing, a LIDAR sensor, and a camera module. Rather than presenting the platform as a finalized autonomous vehicle, the contribution is an educational hardware-software architecture that allows students to progressively test manual driving, embedded control, sensor acquisition, energy monitoring, and future autonomous navigation algorithms. The proposed platform reduces the entry barrier for hands-on autonomous systems education and provides a scalable foundation for laboratory activities, capstone projects, and future research-oriented validation"
+  },
+  {
+    "id": "97",
+    "title": "Preliminary Design and Functional Verification of a Mixed Reality Training Prototype for Guided PC Assembly Using Meta Quest 3",
+    "authors": "Listher Gabriel Vera Vera; Juan-Andres Garate-Peralta; Tatiana-Alexandra Cabrera-Silva; Pablo-Andrés Buestán-Andrade",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Meta Quest 3",
+      "Guided PC Assembly",
+      "SDK",
+      "Component identity",
+      "Meta XR"
+    ],
+    "shortAbstract": "Technical training in computer assembly requires learners to understand component identity, placement, orienta- tion, and procedural order before…",
+    "abstract": "Technical training in computer assembly requires learners to understand component identity, placement, orienta- tion, and procedural order before manipulating real equipment. Conventional demonstrations, manuals, and videos can explain the assembly process, but they provide limited spatial interaction and do not validate learner actions in real time. This paper presents the preliminary design and functional verification of a mixed reality training prototype for guided PC assembly using Meta Quest 3. The prototype combines passthrough visualization, virtual hardware components, guided assembly steps, grab-based manipulation, snap-zone validation, and multimodal feedback. The first functional sequence considers core components, in- cluding the motherboard, CPU, RAM, and power supply. The system was structured in Unity using Meta XR SDK, Meta XR Interaction SDK, and OpenXR-based support. The contribution of this work is threefold: first, a passthrough-based workflow for guided PC assembly training; second, a modular validation model based on component identity, position, rotation, and step order; and third, a functional verification structure that distin- guishes implemented prototype behavior from future empirical evaluation. The current version should therefore be understood as a preliminary design and implementation study rather than a completed user-evaluation study."
+  },
+  {
+    "id": "110",
+    "title": "Design and Preliminary Evaluation of a Multiplatform Virtual Tour for Interactive Exploration of University Laboratories",
+    "authors": "Matias Alexander Cabrera Navas; Jonh Luis Estrada Guayta; Listher Gabriel Vera Vera; Tatiana Alexandra Cabrera Silva",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Design and Preliminary Evaluation of a Multiplatform Virtual Tour",
+      "Interactive Exploration of University Laboratories",
+      "Gamified",
+      "Laboratory information",
+      "Formative"
+    ],
+    "shortAbstract": "Universities require interactive digital resources to communicate academic infrastructure beyond static websites or conventional institutional…",
+    "abstract": "Universities require interactive digital resources to communicate academic infrastructure beyond static websites or conventional institutional descriptions. This paper presents the design, implementation, and formative evaluation of a multiplatform virtual tour for university laboratories. The case study corresponds to the Faculty of Informatics, Computer Science, and Technological Innovation at Universidad Catolica de Cuenca, Ecuador. The first functional version was developed from on-site measurements and visual references, modeled and optimized in Blender, and deployed in Spatial through a Unity-compatible workflow. The experience is accessible through a shared link from desktop, mobile, and virtual reality devices. It includes laboratory information panels, seating interactions, a functional elevator, and a gamified coin-collection activity. A formative pilot with ten convenience participants was conducted using observation notes and open-ended feedback. The qualitative coding suggests positive initial reception regarding laboratory information, gamified exploration, and environmental interaction. The main improvement priority was the need to expand the tour with more spaces and richer content. This work contributes an applied workflow for institutional digital representation through an accessible, gamified, and multiplatform virtual environment."
+  },
+  {
+    "id": "133",
+    "title": "Acceptance of an Entrepreneurship Platform in the Latin American University Environment: A Study on Implementation and User Experience",
+    "authors": "Carlos Enrique George-Reyes; Ennio Jesús Mérida-Córdova; Gary Reyes; Miriam Cerón-Peralta",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Acceptance of an Entrepreneurship Platform",
+      "Study on Implementation and User Experience",
+      "Latin American University Environment",
+      "Elements",
+      "Scientific entrepreneurship"
+    ],
+    "shortAbstract": "This work evaluated a digital platform designed to develop complex thinking in scientific entrepreneurship. The OpenEDR4C platform was implemented in five…",
+    "abstract": "This work evaluated a digital platform designed to develop complex thinking in scientific entrepreneurship. The OpenEDR4C platform was implemented in five Latin American universities. Its acceptance by students was analyzed using a questionnaire that gathered information on the institutional identity expressed on the platform, how it uses text, the organizational structure of the contents, its navigation, the arrangement of visual elements, the design of multimedia elements, and students' general satisfaction with the learning experience. The results show a generally positive acceptance of the platform, especially regarding users’ satisfaction, textual communication, and multimedia elements. However, aspects such as institutional identity, which was not perceived equally by all participants, need improvement. The results suggest that OpenEDR4C is an effective tool for scientific entrepreneurship, highlighting its ability to satisfy users and foster the development of entrepreneurial skills. The findings indicate that it is advisable to continue developing and improving the platform to expand its impact on entrepreneurship."
+  },
+  {
+    "id": "138",
+    "title": "Student Discourse in Moodle Forums: Qualitative Learning Analytics through LEXINET",
+    "authors": "Ennio Jesús Mérida-Córdova; Hendy Maier Pérez-Barrera; Raul López-Fernández; Carlos Enrique George-Reyes",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Moodle Forums",
+      "Student Discourse",
+      "Qualitative Learning Analytics",
+      "Co-occurrence",
+      "Privacy security"
+    ],
+    "shortAbstract": "This innovation paper presents a qualitative learning analytics experience centered on student discourse in Moodle forums. The study analyzed the implicit…",
+    "abstract": "This innovation paper presents a qualitative learning analytics experience centered on student discourse in Moodle forums. The study analyzed the implicit semantic relationships among terms used by students in a virtual academic forum through LEXINET, a Python algorithm that integrates natural language processing, lexical co-occurrence, semantic network modeling, topic modeling, and dashboard visualization. The corpus consisted of 98 written contributions posted during one week in a learning analytics course at Universidad Bolivariana del Ecuador. The discussion focused on privacy, security, rights, and the ethical use of educational data. The methodological process included linguistic cleaning, tokenization, stopword removal, lemmatization, construction of a sliding-window co-occurrence matrix, graph modeling with NetworkX, calculation of degree and betweenness centrality, community detection, and topic exploration through Latent Dirichlet Allocation. The findings show that the discourse was structured around data, privacy, security, students, rights, and responsible use. These terms acted as conceptual anchors and semantic bridges between different discursive communities. The study demonstrates that qualitative discourse analytics can complement conventional quantitative indicators by providing contextual evidence for feedback, instructional decision-making, and ethical reflection in virtual learning environments."
+  },
+  {
+    "id": "139",
+    "title": "Characterizing Student Engagement through Learning Analytics and Automated Discourse Analysis in Moodle Forums",
+    "authors": "Hendy Maier Pérez-Barrera; Ennio Jesús Mérida-Córdova; Raul López-Fernández; Carlos Enrique George-Reyes",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Moodle Forums",
+      "Learning Analytics and Automated Discourse Analysis",
+      "Characterizing Student Engagement",
+      "Messages",
+      "Communicative"
+    ],
+    "shortAbstract": "This study presents an analytical workflow that combines learning analytics and natural language processing to characterize communicative patterns in…",
+    "abstract": "This study presents an analytical workflow that combines learning analytics and natural language processing to characterize communicative patterns in student messages posted in Moodle forums. A quantitative exploratory descriptive design was applied to a cleaned corpus of 222 messages written by 56 students enrolled in a master's program in education at Universidad Bolivariana del Ecuador. The analysis measured message length, useful lexical content, keyword frequency, and dominant communicative tone. The results show a strong predominance of courteous and neutral messages, indicating a respectful and task focused environment. Uncertain messages were less frequent but tended to be longer and semantically dense, suggesting that students articulated doubts with greater elaboration. Aggressive and grateful messages appeared only marginally. The visualizations also revealed heterogeneity among the most active students, showing that participation varies not only by quantity but also by tone and thematic focus. The study contributes a replicable approach for monitoring discourse quality and student engagement in virtual learning environments."
+  },
+  {
+    "id": "150",
+    "title": "AI-Powered Gamification in Higher Education Institutions:A Systematic Literature Review",
+    "authors": "Gunther Oberdam Baque Vera; Diego Sornoza Parrales; Tania Maricela Macias Parrales; Heinz Jürgen Baque Baque; Miguel Eduardo Baque Arteaga; José René Castillo Villamar",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Higher Education Institutions",
+      "AI-Powered Gamification",
+      "AI",
+      "HEIs",
+      "Database"
+    ],
+    "shortAbstract": "The convergence of gamification and artificial intelligence (AI) is reshaping teaching and learning practices in higher education institutions (HEIs), yet…",
+    "abstract": "The convergence of gamification and artificial intelligence (AI) is reshaping teaching and learning practices in higher education institutions (HEIs), yet the empirical evidence remains fragmented across disciplines, geographies and technical paradigms. This paper reports a systematic literature review (SLR) that follows the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) 2020 guideline. A search executed in the Scopus database on April 29, 2026 identified 199 records, of which 140 met the predefined inclusion criteria after a four-stage screening process. Four research questions guided the synthesis: which AI techniques are currently being coupled with gamification in HEIs, in which application domains, with which reported effects on student outcomes, and which gaps remain open. The analysis reveals a sharp publication acceleration since 2023 (84.3 percent of the included corpus), the predominance of adaptive learning, machine learning (ML) and large language model (LLM)-based assistants as integration vectors, and a clear concentration of evidence in science, technology, engineering and mathematics (STEM) programmes. Reported effects on engagement, motivation and learning achievement are largely positive but heterogeneous; a recent meta-analysis on AI chatbots provides the most robust quantitative support for this trend. Compared with prior reviews that addressed gamification or AI in higher education separately, the distinctive contribution of this work lies in consolidating, for the first time against a post-2024 corpus, the three-generation trajectory of AI-gamification integration and in mapping the specific AI techniques driving each generation. Methodological weaknesses, limited longitudinal evidence, the restriction to a single database, under-representation of low- and middle-income countries, and the absence of ethical frameworks are identified as the most critical limitations and gaps."
+  },
+  {
+    "id": "173",
+    "title": "Immersive Technologies for Computational Thinking in Engineering Education: Evidence from a Private Mexican University",
+    "authors": "Carlos Enrique George-Reyes; Miriam Cerón-Peralta",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Immersive Technologies",
+      "Computational Thinking",
+      "Evidence from a Private Mexican University",
+      "Women",
+      "Abstraction"
+    ],
+    "shortAbstract": "Engineering education requires learning experiences that enable students to translate complex problems into structured procedures. This paper analyzes an…",
+    "abstract": "Engineering education requires learning experiences that enable students to translate complex problems into structured procedures. This paper analyzes an immersive learning experience mediated by cardboards and 360-degree videos to strengthen computational thinking in engineering students. A quantitative quasi-experimental pretest-posttest design was implemented with 152 undergraduate engineering students from a private university in Mexico. The training sequence consisted of three 60-minute sessions focused on abstraction, decomposition, pattern recognition and algorithm design. The empirical analysis emphasized three result visualizations: network centrality, clustering between pretest and posttest, and gender-based t-test distributions. Findings indicate that practical dimensions, especially decomposition and algorithm design, acquired greater centrality after the experience, while abstraction showed weaker integration with the remaining skills. Clustering patterns indicate that the intervention strengthened the cohesion of applied computational-thinking dimensions, but not homogeneously across all groups. Gender comparisons show improvement for both women and men, although persistent dispersion among women suggests the need for equitable scaffolding. The paper concludes that low-cost immersive technologies can support computational-thinking development in engineering education when combined with progressive, case-based instructional design."
+  },
+  {
+    "id": "190",
+    "title": "Conceptual Model for the Implementation of Intelligent Assistants in Higher Education Institutions",
+    "authors": "Cristina Pesantez",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Higher Education Institutions",
+      "Assistants",
+      "Technological",
+      "Academic administrative",
+      "Organizational"
+    ],
+    "shortAbstract": "Higher education institutions increasingly face challenges related to the provision of academic and administrative services due to growing student…",
+    "abstract": "Higher education institutions increasingly face challenges related to the provision of academic and administrative services due to growing student populations and rising demands for information. Intelligent assistants have emerged as a promising alternative for improving service accessibility, response times, and operational efficiency. However, existing research has primarily focused on technological implementations and specific use cases, providing limited guidance regarding the factors that should be considered during implementation. This study proposes a conceptual model for the implementation of intelligent assistants in higher education institutions. The research follows the Design Science Research methodology and is based on a systematic analysis of the scientific literature. The identified factors were organized into three complementary dimensions: technological, organizational, and functional. Subsequently, the proposed model was contrasted with an institutional service automation initiative to examine its practical relevance. The results indicate that successful implementation depends not only on technological capabilities but also on organizational conditions and service-related requirements. The proposed model provides a structured framework that may support planning and decision-making processes for institutions interested in adopting intelligent assistants within academic and administrative environments."
+  },
+  {
+    "id": "201",
+    "title": "Experimental Identification and Model Predictive Control of an Educational Temperature Platform for Control Education",
+    "authors": "Luis Caiza; Diego S. Benitez; Oscar Camacho",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Control Education",
+      "MPC",
+      "EPC",
+      "Cooling",
+      "State-space"
+    ],
+    "shortAbstract": "This paper presents the identification and control of the temperature process of an Educational Control Plant (EPC) using PID and Model Predictive Control…",
+    "abstract": "This paper presents the identification and control of the temperature process of an Educational Control Plant (EPC) using PID and Model Predictive Control (MPC) strategies. Ex perimental data were used to identify a first-order plus dead-time model for the cooling mode and a multi-input state-space model using subspace identification techniques. Based on these models, PID controllers were designed for the heating and cooling stages, while an MPC controller was developed using the identified state-space representation. The controllers were experimentally evaluated using step and ladder reference trajectories. The results show that MPC outperforms the PID-based approach, providing faster settling times, fewer overshoots, and a reduced tracking error. Furthermore, the predictive capability of the MPC enables more efficient actuator operation and improved handling of the EPCthermal dynamics. The results demonstrate the effectiveness of MPC for temperature regulation and highlight the suitability of the EPC platform for teaching modern control techniques."
+  },
+  {
+    "id": "228",
+    "title": "Integrating Mathematical Modeling, Numerical Simulation, and Experimental Validation Through a Monoatomic Mass-Spring Chain in Engineering Education",
+    "authors": "José Manuel Nieto Jalil; Juan M. Martínez Huerta; Adrián Isrrael Tec Chim; Iván Gutiérrez-Cruz",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Monoatomic Mass-Spring Chain",
+      "Integrating Mathematical Modeling, Numerical Simulation, and Experimental Validation",
+      "Engineering Education",
+      "Group",
+      "Dynamic"
+    ],
+    "shortAbstract": "Mathematical modeling is a fundamental component of engineering education because it enables students to represent, analyze, and predict the behavior of…",
+    "abstract": "Mathematical modeling is a fundamental component of engineering education because it enables students to represent, analyze, and predict the behavior of physical systems through differential equations. Despite its importance, students often struggle to establish meaningful connections between mathematical formulations and the dynamic phenomena they describe. This study investigates the educational impact of integrating numerical simulation and experimental validation into the teaching of dynamic system modeling using a monoatomic mass-spring chain as the central engineering problem. The intervention was implemented in an undergraduate course entitled Engineering Modeling Through Dynamic Systems and involved 55 engineering students distributed into a control group (n = 27) and an experimental group (n = 28). Both groups developed the mathematical formulation of a four-degree-of-freedom coupled system, while the experimental group additionally performed numerical simulations and validated theoretical predictions using a PASCO-based experimental setup. Student perceptions were evaluated through pretest–posttest assessments, and academic performance was measured through a final course evaluation. Results revealed substantial improvements in engagement, perceived usefulness, and autonomy among students participating in the integrated learning experience. Furthermore, the experimental group achieved significantly higher academic performance (91.79 ± 3.78) than the control group (84.44 ± 7.75), corresponding to a large effect size (Cohen’s d = 1.21). The findings suggest that combining mathematical modeling, numerical simulation, and experimental validation provides an effective strategy for strengthening conceptual understanding, engineering reasoning, and learning outcomes in dynamic systems education."
+  },
+  {
+    "id": "232",
+    "title": "An Explainable Neutrosophic-Adaptive Web Architecture for Mathematical Competency Training with Empirically Seeded Monte Carlo Validation",
+    "authors": "Elsy Rodríguez Revelo; Lorenzo Cevallos Torres; Vicente Villegas Ricauter",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Empirically Seeded Monte Carlo Validation",
+      "Mathematical Competency Training",
+      "Explainable Neutrosophic-Adaptive Web Architecture",
+      "Percent",
+      "Insufficient"
+    ],
+    "shortAbstract": "Incoming engineering students often exhibit heterogeneous mathematical preparation. This paper presents an explainable neutrosophic-adaptive extension for…",
+    "abstract": "Incoming engineering students often exhibit heterogeneous mathematical preparation. This paper presents an explainable neutrosophic-adaptive extension for a web platform designed to train mathematical competencies. The existing artifact follows an Angular-FastAPI-MySQL client-server architecture with diagnostic quizzes, immediate feedback, tutorials, progress monitoring, gamification, and role-based access. A cleaned diagnostic dataset contained 153 valid student records and 3,060 item-level responses. Three disputed scoring keys were excluded from the verified baseline; the remaining 17 items produced a mean score of 69.97 percent. The proposed computational intelligence layer represents each topic-level learner profile through truth, indeterminacy, and falsity components. An empirically seeded Monte Carlo study generated 25,000 synthetic profiles across scenarios with sufficient, insufficient, contradictory, partially missing, and unstable evidence. Against a pre-specified synthetic oracle, the model achieved 0.7845 accuracy and 0.7204 macro F1, compared with 0.4583 and 0.4534 for a score-only baseline. The model deferred 43.24 percent of profiles when evidence was insufficient or indeterminate. A standalone local FastAPI endpoint produced a median latency of 1.837 milliseconds over 500 HTTP requests. The computational results are simulation-based and do not constitute evidence of observed learning gains"
+  },
+  {
+    "id": "240",
+    "title": "Promoting Gender Equity Through STEM Academies: A Systematic Literature Review",
+    "authors": "Karla Daniela Perez-Robles; Leticia Vaca-Cardenas",
+    "track": "Education in Engineering",
+    "keywords": [
+      "STEM Academies",
+      "Promoting Gender Equity",
+      "Female",
+      "Fields",
+      "Strategies"
+    ],
+    "shortAbstract": "The gender gap in STEM fields persists, driven by sociocultural factors, underscoring the need for effective educational strategies. This study analyzes…",
+    "abstract": "The gender gap in STEM fields persists, driven by sociocultural factors, underscoring the need for effective educational strategies. This study analyzes scientific literature on gender-focused STEM academies to identify effective pedagogical strategies, evaluate their outcomes, and assess their impact on participation. We conducted a systematic review using the SPAR-4-SLR protocol, which includes assembly, organization, and purification phases, and selected and analyzed high-quality primary studies. The findings indicate that mentoring with female role models, building support communities, and offering hands-on learning are the most effective strategies. These approaches increase female enrollment, strengthen self-efficacy, and boost interest in STEM careers. Furthermore, they reduce gender stereotypes and biases, fostering equity and female retention in these fields."
+  },
+  {
+    "id": "243",
+    "title": "From Transistors to Systems: A Proposal for an Undergraduate Digital Systems Course from HDL to Silicon",
+    "authors": "Byron Tarabata",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Undergraduate Digital Systems Course",
+      "HDL to Silicon",
+      "Open-source",
+      "Students",
+      "Redesign digital course electrical"
+    ],
+    "shortAbstract": "This article presents a proposed curriculum redesign for a Digital Systems course in electrical and electronic engineer- ing programs, aiming to overcome…",
+    "abstract": "This article presents a proposed curriculum redesign for a Digital Systems course in electrical and electronic engineer- ing programs, aiming to overcome the limitations of traditional approaches based on discrete logic and FPGA prototyping. The proposal integrates the fundamentals of digital electronics with the design of application-specific integrated circuits (ASICs) in a 16-week semester, organizing the content into three main modules: combinational design, sequential design, and digital CMOS design. The core innovation lies in enabling undergrad- uate students to complete the entire RTL to GDS design flow using only open-source tools (OpenLane, Yosys, KLayout) and the open-source standard Sky130 PDK process. As a proof of concept, students implemented an 8-bit pseudorandom number generator with a 7-segment display, demonstrating the feasibility of training students in VLSI design at an affordable cost (approximately $41 per student for hardware and $385 per group for fabrication). The proposal invites other universities to join this initiative to build a collaborative network in microelectronics in the region."
+  },
+  {
+    "id": "254",
+    "title": "An Evidence-to-Action Framework for Continuous Improvement of Student Outcomes in an Electronics and Automation Engineering Program",
+    "authors": "Daniel Andrés Cevallos Valdiviezo; Sofía Anabel López Iglesias; Jorge Williams Aragundi Rodriguez; Rafael Ignacio Bonilla Armijos; Sara Judith Ríos Orellana; Gabriela Paola Salcán Reyes; Roxana Marianela Rodríguez Silvestre",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Electronics and Automation Engineering Program",
+      "Continuous Improvement of Student Outcomes",
+      "Attainment",
+      "Intermediate",
+      "Engineering education"
+    ],
+    "shortAbstract": "Continuous improvement in engineering education requires more than reporting that a student-outcome average exceeds a threshold; it requires a traceable…",
+    "abstract": "Continuous improvement in engineering education requires more than reporting that a student-outcome average exceeds a threshold; it requires a traceable chain from evidence, to interpretation, to action, and to later verification. This paper presents an anonymized case study of the 2025 continuous-improvement cycle of an undergraduate Electronics and Automation Engineering program at a higher education institution. The study uses direct assessment from initial, intermediate, and advanced curricular levels. Attainment is computed as the percentage of rubric evidence rated Satisfactory or Exemplary, with an institutional target of 70%. Across nine outcomes and 27 outcome-level observations, the mean attainment was 82.2%, the median was 87.5%, the sample standard deviation was 17.2 percentage points, and 21 of 27 cells met the target. The results reveal consolidated strengths in complex problem solving, ethical responsibility, teamwork, and stakeholder-oriented design, but also expose priority gaps in experimentation and data analysis, technical English, intermediate autonomous learning, and intermediate engineering design. The main contribution is a reviewer-ready evidence-to-action framework that combines attainment equations, descriptive statistics, level-wise diagnosis, and verifiable improvement actions for accreditation-oriented engineering education."
+  },
+  {
+    "id": "258",
+    "title": "Adaptive Gamification Strategies for Improving Academic Performance in First-Year Engineering Students",
+    "authors": "Diego Escobar-Bermudes; Mauricio Carvache-Franco; Aleksandra Minchenkova; Orly Carvache-Franco; Wilmer Carvache-Franco; Martin Escobar Nuñez",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Adaptive Gamification Strategies",
+      "First-Year Engineering Students",
+      "Group",
+      "Points",
+      "Engineering education"
+    ],
+    "shortAbstract": "First-year engineering students frequently experience difficulties related to academic engagement, motivation, and performance, particularly in courses…",
+    "abstract": "First-year engineering students frequently experience difficulties related to academic engagement, motivation, and performance, particularly in courses that require analytical thinking and problem-solving skills. Although gamification and adaptive learning have emerged as promising educational approaches, empirical evidence regarding their combined impact in engineering education remains limited, especially in Latin American contexts. This study evaluates the effectiveness of an adaptive gamification framework for improving academic performance among first-year engineering students. A quantitative quasi-experimental design with pretest–posttest measures, including a control group and an experimental group, was employed. The sample consisted of 40 students from an Ecuadorian higher education institution. Over an eight-week intervention, the experimental group participated in an adaptive gamified learning environment integrating points, badges, progression levels, personalized activities, and learning analytics, while the control group followed traditional instructional methods. Results showed a substantial improvement in academic performance among students exposed to the intervention. The experimental group increased its mean score from 10.90 to 16.55 points, whereas the control group improved only from 11.40 to 12.35 points. Statistical analyses revealed significant differences between groups (t = 12.709, p < 0.001), accompanied by a large effect size (Cohen’s d = 1.18). These findings suggest that adaptive gamification strategies can significantly enhance academic achievement and student engagement in engineering education."
+  },
+  {
+    "id": "274",
+    "title": "Perception and Use of ChatGPT in Peruvian Teaching",
+    "authors": "Ronald Melgarejo-Solis; Denis Aguilar-Ortega; Luis Mario Saldaña Sánchez; Rony Smith Grijalva De la Cruz; Emilio Denis Enrique Cabello Villon; Juan Adrian Chipana Cueva; Jean Franco Aquino Rojas; Ramesh Chander Sharma",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Perception and Use of ChatGPT in Peruvian Teaching",
+      "Teachers",
+      "Pedagogical",
+      "Teacher-student",
+      "Interaction"
+    ],
+    "shortAbstract": "This paper analyzes Peruvian teachers' perceptions and use of ChatGPT as a support tool for teaching practice, pedagogical innovation, and professional…",
+    "abstract": "This paper analyzes Peruvian teachers' perceptions and use of ChatGPT as a support tool for teaching practice, pedagogical innovation, and professional development. The study responds to the growing presence of generative artificial intelligence in education and the need to understand how teachers evaluate its usefulness, limitations, and integration into classroom-related tasks. A quantitative descriptive design was applied using a ten-item Likert-type questionnaire administered online to a non-probability convenience sample of 60 teachers in Peru who reported basic experience with artificial intelligence tools. The instrument examined frequency of use, perceived improvement in teaching methods, development of pedagogical and technological skills, contribution to autonomous learning, teacher-student interaction, professional development, and perceived pedagogical limitations. The results show moderately positive perceptions, with the highest mean score for the development of technological competencies (4.16/5), followed by the development of pedagogical skills (4.06/5). Lower values were observed for student autonomy (3.58/5), teacher-student interaction (3.68/5), and pedagogical depth (3.13/5). The findings suggest that ChatGPT is perceived as a useful complementary resource for teacher development, but not as a substitute for contextualized pedagogy, direct interaction, or institutional digital-capacity building."
+  },
+  {
+    "id": "282",
+    "title": "Student-Centered Learning Approach for a Postgraduate Industrial Control",
+    "authors": "Camilo Andrés Sanabria Totaitive; Oscar Ivan Higuera-Martinez; Herman Fernández",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Student-Centered Learning Approach",
+      "Postgraduate Industrial Control",
+      "Concepts",
+      "Course",
+      "Controllers"
+    ],
+    "shortAbstract": "This paper focuses on transforming the process control course of the graduate program in Industrial Automation at UPTC from a traditional curriculum to a…",
+    "abstract": "This paper focuses on transforming the process control course of the graduate program in Industrial Automation at UPTC from a traditional curriculum to a student-centered one through active learning. The course focuses on learning the concepts of automatic control in industrial processes and strengthening learning outcomes. A project is developed, which has been divided into four stages: i) development of a DC motor-DC generator model plant, ii) system modeling, iii) implementation of P, PI, PID controllers in an embedded system, and iv) implementation of controllers in PLC. In each of these stages, students develop laboratory practices focused on strengthening the respective concepts, such as closed-loop control, instrumentation, modeling of mechanical, electrical, and electromechanical systems, system response, experimental modeling, PID controllers, discretization and implementation of controllers in digital systems, and closed-loop stability. At the end of the course, students receive a questionnaire that evaluates course development, focusing on conceptualization, the integration of concepts into practice, teaching and learning activities, perceptions of how the course was carried out, and skill development. The results show a positive perception among students, the development of skills that foster autonomy, greater integration of concepts, and a clearer understanding of the steps required to model and implement controllers on industrial equipment. This demonstrates that the developed intervention is effective and can be scaled to other environments, not only those focused on industrial systems but also those seeking student-centered learning environments for engineering students."
+  },
+  {
+    "id": "296",
+    "title": "Curriculum Evaluation in Undergraduate Electrical Engineering Programs: A Central American Overview",
+    "authors": "Carlos Mario Flores Lazo; Edwing Isaac Rosales Molina",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Central American Overview",
+      "Curriculum Evaluation in Undergraduate Electrical Engineering Programs",
+      "ABET",
+      "Credit",
+      "Mathematics"
+    ],
+    "shortAbstract": "This paper evaluates undergraduate electrical engineering curricula in Central America using selected ABET criteria as an international reference. Six…",
+    "abstract": "This paper evaluates undergraduate electrical engineering curricula in Central America using selected ABET criteria as an international reference. Six Central American programs were analyzed and compared with an ABET-accredited program from ESPOL, Ecuador, used as an external benchmark. The study focuses on ABET Criterion 5 (Curriculum) and reviews program-specific criteria to examine whether the curricula provide adequate foundations in mathematics and basic sciences, engineering topics, advanced mathematics, and culminating design experiences. The results show that all programs exceed the selected ABET minimum credit thresholds for mathematics and basic sciences and engineering topics. However, they do so through markedly different curricular structures, credit systems, program durations, and graduation requirements. The analysis also shows that longer duration and a higher number of courses do not necessarily indicate greater technical robustness under the selected criteria. Some shorter or more compact programs show sufficient alignment with the ABET reference, while longer programs often distribute credits across broader institutional, regulatory, or complementary components. The findings suggest that Central American electrical engineering programs have favorable basic conditions for international accreditation alignment, but direct comparisons are limited by the lack of a common academic credit definition across countries. The study highlights opportunities for curriculum adjustment, improved credit comparability, and greater visibility of emerging areas such as artificial intelligence, data analytics, research skills, and second-language training."
+  },
+  {
+    "id": "319",
+    "title": "Using Game Mechanics to Enhance Engagement and Collaborative Competition in Technology Higher Education",
+    "authors": "Diego Betancourt Anangonó; Gary Pulla Zambrano; Luis F. Ugarte",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Using Game Mechanics to Enhance Engagement and Collaborative Competition",
+      "Technology Higher Education",
+      "Gamification",
+      "Bars",
+      "Organization"
+    ],
+    "shortAbstract": "Gamification—the use of game design elements in non-game contexts—has become a widely adopted strategy for increasing motivation, engagement, and active…",
+    "abstract": "Gamification—the use of game design elements in non-game contexts—has become a widely adopted strategy for increasing motivation, engagement, and active participation in higher education. This paper reports a practical, design-oriented experience in which lightweight web platforms built with HTML, CSS, and JavaScript and published through GitHub Pages were used to embed gamification mechanics in technology courses (Information and Communication Technologies, Introduction to Online Environments, Artificial Intelligence, and Video Game Development) at an Ecuadorian higher-education institution. The platforms implement progress bars, checklists, modular content organization, and step-by-step guides to support self-regulated learning and the tracking of academic activities without requiring complex infrastructure or paid hosting. The intervention is framed within Self-Determination Theory and active-learning pedagogy, and is discussed against the empirical evidence reported by recent meta-analyses of gamification in education. A descriptive observation of student behavior across the courses suggests improvements in task organization, perceived progress, and autonomous learning, while the analysis also acknowledges the documented risks of poorly calibrated gamification. Finally, the paper outlines a roadmap toward a dynamic, teacher-configurable platform that supports challenge-based learning paths, badges, experience bars, and collaborative-competition mechanics. The contribution is a low-cost, replicable model that lowers the barrier to entry for evidence-informed gamification in resource-constrained educational settings."
+  },
+  {
+    "id": "323",
+    "title": "Design and Implementation of a 3kVA Resistive Experimental Load as a Learning Resource in Power Systems",
+    "authors": "Luis Ugarte; Xavier Fierro; Noemi Moreno; Otto Alvarado",
+    "track": "Education in Engineering",
+    "keywords": [
+      "3kVA Resistive Experimental Load as a Learning Resource",
+      "Power factor",
+      "Unit",
+      "Measurement",
+      "Safe"
+    ],
+    "shortAbstract": "This paper presents the design and implementation of a 3 kVA experimental resistive load unit intended to strengthen practical learning in power systems…",
+    "abstract": "This paper presents the design and implementation of a 3 kVA experimental resistive load unit intended to strengthen practical learning in power systems. The proposal responds to the need for a safe, modular and low-cost device that can reproduce controlled load conditions and support the measurement of voltage, current, active power, power factor, phase balance and thermal behavior. The methodology integrates technical review, electrical sizing, selection of power resistors, protective devices, ventilation, instrumentation and the preparation of didactic laboratory guides. The unit is conceived as a balanced three-phase load bank with switchable load steps, a ventilated cabinet, thermomagnetic protection, grounding and measurement points for portable power analyzers. The design is based on the relationship between power, voltage and resistance, considering that a resistive load operates with a power factor close to unity. The implemented resource enables practices related to connection, measurement, steady-state analysis under load, voltage-drop observation and protection verification. The paper concludes that the proposed unit contributes to the development of technical competencies in diagnosis, safe operation and the analysis of electrical systems."
+  },
+  {
+    "id": "325",
+    "title": "Educational Design of a 3D-Printed Skull Model for Migraine Surgery Training",
+    "authors": "Leonel Vasquez-Cevallos; Erick R. Iles Velez; Ricardo Grunauer-Robalino; Erick Lamilla-Rubio; Darwin Castillo",
+    "track": "Education in Engineering",
+    "keywords": [
+      "Migraine Surgery Training",
+      "Educational Design of a 3D-Printed Skull Model",
+      "Frontal",
+      "Craniofacial",
+      "Posterior"
+    ],
+    "shortAbstract": "This paper describes the development and educational integration of a 3D-printed skull model as a physical aid for anatomy teaching in a migraine surgery…",
+    "abstract": "This paper describes the development and educational integration of a 3D-printed skull model as a physical aid for anatomy teaching in a migraine surgery course. The model was documented through frontal, lateral, posterior, and inferior photographic views and was used to support the explanation of craniofacial landmarks associated with frontal, temporal, nasoseptal, and occipital instructional regions. The available documentation showed that the printed skull reproduced major external craniofacial features, including the frontal contour, orbital cavities, nasal aperture, zygomatic arches, maxillary region, cranial vault, and posterior skull surface. Its educational role was to complement slide-based instruction by providing a tangible three-dimensional reference for spatial orientation and region-based discussion. This first proof-of-concept report supports the feasibility of locally produced 3D anatomical models as complementary resources for procedure-oriented medical education. Future work should include technical cost documentation, expert review of anatomical fidelity, formal usability scoring, and pre/post evaluation of learner outcomes"
+  },
+  {
+    "id": "43",
+    "title": "Neutro-Safe: A Neutrosophic Digital Twin for Structural Urban Violence Diagnosis in Guayaquil, Ecuador",
+    "authors": "Maikel Leyva; Noel Batista; Lorenzo Jovanny Cevallos Torres; Alfonso Guijarro; Douglas Iturburu-Salvador; Florentin Smarandache",
+    "track": "Smart Cities & Mobility",
+    "keywords": [
+      "Neutrosophic Digital Twin",
+      "Structural Urban Violence Diagnosis",
+      "Guayaquil, Ecuador",
+      "IPVE",
+      "Structural Vulnerability"
+    ],
+    "shortAbstract": "Urban violence analysis in Latin American cities typically relies on scalar predictive indices that aggregate het erogeneous data sources, discarding the…",
+    "abstract": "Urban violence analysis in Latin American cities typically relies on scalar predictive indices that aggregate het erogeneous data sources, discarding the epistemic content of their disagreements. We propose Neutro-Safe, a five-layer neu trosophic digital twin for structural violence diagnosis applied to Guayaquil, Ecuador (n=151 survey observations, 28 sec tors, 14 structural indicators; NASA VIIRS nightlight 2023; INEC/Fiscalía gender violence data; N-fsQCA over 31 media sources with 4 LLMs). The system computes a Pluriversal Structural Vulnerability Index (IPVE) ∈ [0,1]3 via Single Valued Neutrosophic Weighted Averaging (SVNWA), preserv ing epistemic uncertainty. Empirical analysis reveals two key f indings. First, corruption perception is the strongest structural vulnerability driver (r=0.852 with IPVE), outperforming gang presence (r=0.339) and unemployment (r=0.652). Second, 8 formally illuminated central sectors (Centro Histórico, Urdesa, Centro Bancario) exhibit higher structural vulnerability (IPVE T≥0.63) than periferias despite lower illumination-risk scores — a paraconsistency between physical infrastructure quality and governance failure that scalar indices cannot detect. N fsQCA further identifies five structurally silenced media drivers (weapons trafficking ∆=−0.444; extortion ∆=−0.345). An au tomated pipeline (GitHub Actions) synchronises Layer 2 daily via RSS scraping of six Ecuadorian media outlets and 4-LLM scoring through OpenRouter, and Layer 4 monthly via NASA Earthdata, qualifying Neutro-Safe as a periodically-synchronised urban digital twin. The system operates under a Camino B ethical framework prohibiting predictive policing applications."
+  },
+  {
+    "id": "121",
+    "title": "Drift Aware Conformalized Tube Model Predictive Control for Smart City Campus Microgrid",
+    "authors": "Eduardo Benavides",
+    "track": "Smart Cities & Mobility",
+    "keywords": [
+      "Drift Aware Conformalized Tube Model Predictive Control",
+      "Smart City Campus Microgrid",
+      "Uncertainty",
+      "Storage",
+      "Energy"
+    ],
+    "shortAbstract": "Smart city energy services increasingly rely on cyber physical energy systems and data driven automation to coordinate renewable generation, storage, and…",
+    "abstract": "Smart city energy services increasingly rely on cyber physical energy systems and data driven automation to coordinate renewable generation, storage, and flexible demand. Campus microgrids are a practical smart city living lab in Latin America, where photovoltaic generation, battery energy storage systems, and electric vehicle charging must be dispatched under hard operational constraints such as state of charge safety limits and grid import caps. A key deployment challenge is nonstationary uncertainty, including forecast bias, sensor drift, and changing occupancy, which makes fixed uncertainty bounds used in robust model predictive control either unsafe or overly conservative. This paper proposes a drift aware conformalized tube model predictive control framework that calibrates residual uncertainty online using conformal prediction and translates it into time varying tube sizes for constraint tightening in a quadratic program receding horizon controller. The approach exposes an explicit risk parameter that supports engineering management, auditability, and policy compliant operation."
+  },
+  {
+    "id": "145",
+    "title": "A Hybrid Solar-Grid Charging Infrastructure Model for Sustainable Electric Bus Fleets in Quito, Ecuador",
+    "authors": "Mónica Molina Barzola; Alexandra Yépez Vera; Josué Pincay Quiroz; Wellington Maliza Crúz",
+    "track": "Smart Cities & Mobility",
+    "keywords": [
+      "Quito, Ecuador",
+      "Hybrid Solar-Grid Charging Infrastructure Model",
+      "Sustainable Electric Bus Fleets",
+      "Grid",
+      "Solar"
+    ],
+    "shortAbstract": "This paper presents a hybrid solar-grid charging infrastructure model designed to address the critical shortage of electric bus charging facilities in…",
+    "abstract": "This paper presents a hybrid solar-grid charging infrastructure model designed to address the critical shortage of electric bus charging facilities in Quito, Ecuador. By integrating photovoltaic panels with conventional grid connections at strategic terminal stops, the system ensures a continuous 24-hour energy supply. The methodology combines geospatial analysis of Quito’s Bus Rapid Transit corridors—characterized by significant topographic variability—with systematic literature reviews and stakeholder-centered qualitative frameworks. Multi-criteria decision-making frameworks weight economic factors at 25–35% and technical factors at 20–30%, while identifying socio-technical barriers like regulatory delays. The proposed architecture specifies a 400–800 kW grid connection, a 50–200 kWp solar array, 100–500 kWh battery storage, and 150–350 kW DC fast charging. Expected outcomes include a 15–35% solar energy contribution and a 20–40% grid peak reduction. Performance is evaluated using engineering resilience metrics, such as system availability and energy autonomy, alongside operational measures. Ultimately, this research offers a replicable framework for developing cities transitioning toward electric public transport, reducing operational costs and CO₂ emissions while aligning with UN Sustainable Development Goals 7, 9, and 11."
+  },
+  {
+    "id": "146",
+    "title": "Influence of air conditioning on the driving range of an electric delivery vehicle: Experimental evidence from a tropical urban environment",
+    "authors": "José Mauricio Torres-Gómez; Gabriel Carrera-Rivera; Mayken Stalin Espinoza-Andaluz; Manuel Fernando Gómez-Barrezueta; Brayan Gabriel Ordoñez-Saca",
+    "track": "Smart Cities & Mobility",
+    "keywords": [
+      "tropical urban environment",
+      "Km kwh",
+      "AC",
+      "Consumption",
+      "Driving"
+    ],
+    "shortAbstract": "The transition to electric mobility requires a precise understanding of energy consumption under real operating conditions and in specific environmental…",
+    "abstract": "The transition to electric mobility requires a precise understanding of energy consumption under real operating conditions and in specific environmental contexts. This study evaluates the energy performance of a light electric truck (DongFeng EV18) used for urban delivery operations in Guayaquil, Ecuador, based on data collected from 40 trips, of which 28 met the statistical validation criteria. Operational parameters, including distance traveled, speed, stopped time, and daily energy consumption, were analyzed in order to characterize a representative driving cycle. The results indicate an average energy performance of 2.06 km/kWh (±0.04 km/kWh, 95% CI) under highly congested conditions, in which the vehicle remained stationary for 66.40% of the total operating time and recorded an average speed of 9.87 km/h. The estimated practical driving range, considering 80% of the battery’s usable capacity, was 133.71 km. The energy demand of the air conditioning system was experimentally estimated from direct voltage and current measurements. Under a constant-power assumption, the AC system showed an estimated power demand of 1.84 kW, corresponding to 17.11 kWh over a 9.3-hour workday. This value represents approximately 39% of the measured total cycle energy and corresponds to an equivalent driving-range opportunity cost of 35.24 km. Since this estimate was based on a single operating-point measurement, these values should be interpreted as approximate indicators rather than continuously monitored AC consumption."
+  },
+  {
+    "id": "154",
+    "title": "Emulation and Performance Evaluation of an SDN-Based VANET Using ONOS, SUMO, and Mininet-WiFi",
+    "authors": "Jaison Ilbay; Pierina Zambrano; Angel Puma; Johana Del Pozo",
+    "track": "Smart Cities & Mobility",
+    "keywords": [
+      "Emulation and Performance Evaluation of an SDN-Based VANET",
+      "ONOS, SUMO, and Mininet-WiFi",
+      "SDN",
+      "Mobility",
+      "Nodes"
+    ],
+    "shortAbstract": "Intelligent vehicle networks based on Software-Defined Networking (SDN) offer an efficient solution for optimizing connectivity and dynamic traffic…",
+    "abstract": "Intelligent vehicle networks based on Software-Defined Networking (SDN) offer an efficient solution for optimizing connectivity and dynamic traffic management in intelligent transportation systems. In this work, an SDN-based VANET architecture was developed by integrating ONOS, SUMO, and Mininet-WiFi, with the aim of emulating an urban vehicular environment based on a central area of the Guano canton in Ecuador, consisting of three wireless access points and ten vehicle nodes with dynamic mobility. The implemented architecture allowed for the evaluation of performance metrics related to latency, average delay, packet delivery rate (PDR), and handover behavior during the movement of nodes within the network. The results obtained demonstrated that the proposed architecture maintained stable connectivity and continuous communication between the vehicular nodes and the SDN infrastructure during mobility and handover processes between access points. Furthermore, latency values below 0.46 ms and packet delivery rates close to 98% were recorded under stable operating conditions, demonstrating adequate network performance in dynamic mobility scenarios. Finally, the integration of SDN with vehicle mobility tools and wireless emulation made it possible to establish a flexible, scalable environment well-suited for future research focused on smart cities and intelligent transportation systems."
+  },
+  {
+    "id": "224",
+    "title": "Advances in BIM-IoT-Digital Twin Integration Toward Autonomous Smart Buildings",
+    "authors": "Luis Antonio Andrade Matute; Juan Diego Belesaca; Fabian Astudillo-Salinas",
+    "track": "Smart Cities & Mobility",
+    "keywords": [
+      "Autonomous Smart Buildings",
+      "Advances in BIM-IoT-Digital Twin Integration",
+      "DT",
+      "Interoperability",
+      "Maturity"
+    ],
+    "shortAbstract": "Smart buildings are emerging as a key enabler of decarbonization, a process that entails the integration of Building Information Modeling (BIM), the…",
+    "abstract": "Smart buildings are emerging as a key enabler of decarbonization, a process that entails the integration of Building Information Modeling (BIM), the Internet of Things (IoT), and Digital Twins (DT). However, the integration of these technologies remains fragmented, and previous reviews have rarely captured the shift towards deep learning and edge computing that has reshaped the field since 2021. This comprehensive review methodically analyzes 47 studies (2021–2026) from Scopus, IEEE Xplore, and ScienceDirect, which have been classified using a five-level DT maturity scale. The review identifies four architectural patterns: layered service-oriented, BIM-IoT bridge, edge-cloud hybrid, and BIM-centric. A close analysis of these patterns reveals a clear consolidation around MQTT and LSTM-based deep learning. A substantial proportion of the studies (approximately two-thirds) attain Intelligent or Autonomous maturity, accompanied by documented energy savings ranging from 3.8% to 60%, though the heterogeneity of the baselines hinders direct comparison. The primary obstacles pertain to semantic interoperability, scalability, and cybersecurity. These findings have been consolidated into a three-axis framework: vertical integration, horizontal interoperability, and lifecycle coverage. This framework serves as a roadmap for the field."
+  },
+  {
+    "id": "252",
+    "title": "A Low-Latency Cloud-Native Architecture for Real-time Flood-Risk Intelligence: SAR--Oceanographic Fusion in the Guayas Estuary",
+    "authors": "Guillermo Armando Veliz-Velez; Anibal Isaac Pruna Santillán; Marlon Estuardo Guadalupe Intriago; Jean Carlos Espinoza Vidal; Dennisse Marie Soledispa Avelino",
+    "track": "Smart Cities & Mobility",
+    "keywords": [
+      "Guayas Estuary",
+      "Low-Latency Cloud-Native Architecture for Real-time Flood-Risk Intelligence",
+      "SAR--Oceanographic Fusion",
+      "Auditable",
+      "SAR"
+    ],
+    "shortAbstract": "Real-time flood-risk intelligence in cloud-prone estuaries requires an architecture that remains responsive under heavy operator load and auditable in…",
+    "abstract": "Real-time flood-risk intelligence in cloud-prone estuaries requires an architecture that remains responsive under heavy operator load and auditable in safety-critical decisions. We present MangroveShield, a cloud-native, fully asynchronous microservices architecture delivering low-latency, explainable flood-risk intelligence for the Guayas Estuary, Ecuador, where dense cloud cover routinely blinds optical satellites during extreme events. An explainable Mamdani Fuzzy Inference System (FIS) fuses rainfall, live tide level, and Sentinel-1 SAR backscatter into an auditable vulnerability index, offering the rule-level traceability that opaque deep-learning classifiers cannot. The SAR observable is conditioned by an empirically calibrated, tide-aware mangrove threshold that prioritises the reduction of missed detections—the decisive error class for precautionary early warning—lowering the false-negative rate from 0.27 to 0.175 (recall 0.73 to 0.83) over the calibrated intertidal-mangrove stratum, while the detector correctly identifies over 96% of confirmed open water. Under a 500-operator peak load the platform sustains 179.65 requests/s with a 0.00% failure rate over 32,165 requests and a server-side p95 latency of 701 ms on the inference path; the 699 ms gap to the client-side p95 (1,400 ms) confirms a transport-dominated regime in which serialization and network overhead—not the Mamdani inference—dominate latency. All metrics are reproducible from the released pipeline, yielding a deployable platform for disaster risk reduction in smart coastal cities."
+  },
+  {
+    "id": "280",
+    "title": "Hybrid LSTM Model for Urban Congestion Prediction Using a Synthetic-Projected Dataset in Boyaca Street, Guayaquil, Ecuador",
+    "authors": "Jefferson Cabrera-Amaiquema; Darwin Manzano-Cuenca; Renata Cervantes-Avilés; Evelyn López-Segura",
+    "track": "Smart Cities & Mobility",
+    "keywords": [
+      "Synthetic-Projected Dataset in Boyaca Street, Guayaquil, Ecuador",
+      "Urban Congestion Prediction",
+      "Hybrid LSTM Model",
+      "Balanced accuracy macro f1-score",
+      "Traffic"
+    ],
+    "shortAbstract": "Urban traffic congestion remains a critical challenge for mobility management in Latin American cities, particularly where open, structured, and locally…",
+    "abstract": "Urban traffic congestion remains a critical challenge for mobility management in Latin American cities, particularly where open, structured, and locally contextualized datasets are limited. In this paper, we present and evaluate a Hybrid Long Short-Term Memory model for urban congestion prediction using an observation-informed synthetic-projected dataset contextualized in Boyaca Street, Guayaquil, Ecuador. The study was grounded in a bibliographic curation process that reviewed 60 academic and technical sources and selected 21 studies according to thematic relevance, methodological contribution, territorial proximity, and use of artificial intelligence or traffic modeling techniques. The dataset contains 500 observations derived from documented academic field counts and expanded through controlled synthetic projection, including traffic flow, vehicle composition, average speed, travel time, queue length, incidents, rainfall, road type, lanes, urban zone, peak-hour condition, holiday status, and congestion level. We trained and evaluated the model in two scenarios: five congestion classes and three grouped classes. The Hybrid LSTM achieved 83.84% accuracy, 69.24% balanced accuracy, and 0.6530 macro F1-score in the five-class scenario, and 91.92% accuracy, 59.56% balanced accuracy, and 0.5935 macro F1-score in the grouped scenario. Random Forest obtained the highest comparative performance; however, the Hybrid LSTM showed coherent temporal learning behavior. The research object was released through Zenodo v1.0.0 as a trainable pedagogical model and through v1.1.0 as a trained reproducible artifact with notebook, models, metrics, artifacts, and Colab results, while GitHub documented the workflow."
+  },
+  {
+    "id": "297",
+    "title": "A Digital-Twin Hardware-in-the-Loop Testbed for Evaluating Traffic Signal Control Strategies",
+    "authors": "Jose G. Quito; Galo Guzmán-Guillén; Pablo Barbecho Bautista",
+    "track": "Smart Cities & Mobility",
+    "keywords": [
+      "Digital-Twin Hardware-in-the-Loop Testbed",
+      "Evaluating Traffic Signal Control Strategies",
+      "TSC",
+      "DAQ",
+      "Detector"
+    ],
+    "shortAbstract": "Field validation of urban traffic signal controllers (TSCs) is costly, difficult to reproduce, and potentially disruptive to normal traffic operations…",
+    "abstract": "Field validation of urban traffic signal controllers (TSCs) is costly, difficult to reproduce, and potentially disruptive to normal traffic operations. This paper presents a Digital-Twin Hardware-in-the-Loop (DT-HIL) testbed for evaluating and comparing traffic signal control strategies executed through a real traffic signal controller (TSC) under reproducible Smart City scenarios before field deployment. Keeping a real TSC in the loop assesses each strategy under realistic physical execution, including signal groups, phase transitions, and detector readings, rather than idealized simulation. The platform follows a three-tier architecture: (i) a control client that executes the traffic signal control logic; (ii) a middleware server that couples the interaction between the mobility simulator and the real hardware; and (iii) a physical layer comprising a real TSC and a data-acquisition (DAQ) board. In the forward path, detector events generated in SUMO are converted by the DAQ board into electrical signals applied to the controller inputs; in the return path, SUMO continuously reads back the phases executed by the physical controller to drive the simulated signals. Three traffic control strategies from the literature are evaluated through traffic performance metrics and functional HIL validation. Results show that all maintained a mean HIL latency below 0.6 ms, confirming that the simulated-to-physical detector activation loop operates within the temporal requirements of the real-time experiment."
+  },
+  {
+    "id": "309",
+    "title": "Method to Analyze Efficiency in Electric Vehicles Case of Study Cuenca-Ecuador",
+    "authors": "Efren Fernandez; Gustavo Alvarez; Nicolas Giraldo; Julio Cuisano",
+    "track": "Smart Cities & Mobility",
+    "keywords": [
+      "Method to Analyze Efficiency",
+      "Electric Vehicles Case of Study Cuenca-Ecuador",
+      "Type",
+      "Autonomy",
+      "Vehicle"
+    ],
+    "shortAbstract": "the increase in electric vehicles (EVs) in Ecuador has allowed the introduction of new technologies which seek to provide a series of economic…",
+    "abstract": "the increase in electric vehicles (EVs) in Ecuador has allowed the introduction of new technologies which seek to provide a series of economic, environmental and social benefits. There are several brands that promote this type of vehicle in the country, but several problems detected in autonomy have generated a rejection of this type of technology, especially in high-altitude cities (more than 1800 meters above sea level). This paper shows the development of a method to analyze the efficiency in the powertrain of an electric vehicle with the purpose of obtaining real data on performance, autonomy and energy consumption in the city of Cuenca, for the validation of the method a Kangoo ze model of 44 kW of power and a data monitoring and recording system is used to obtain the different variables for subsequent data analysis"
+  },
+  {
+    "id": "314",
+    "title": "Domain Specific Multi-Objective Evolutionary Optimization for Intercantonal Electric Bus Deployment Planning",
+    "authors": "Alcibar Yánez; Gabriel Luque; Mónica Mite; Estela Yánez Benavides; Julio Barzola",
+    "track": "Smart Cities & Mobility",
+    "keywords": [
+      "Domain Specific Multi-Objective Evolutionary Optimization",
+      "Intercantonal Electric Bus Deployment Planning",
+      "Charging",
+      "Routes",
+      "Savings"
+    ],
+    "shortAbstract": "Electric-bus deployment has been widely studied in urban transport systems, where shorter routes, centralized de- pots, and terminal-based operations…",
+    "abstract": "Electric-bus deployment has been widely studied in urban transport systems, where shorter routes, centralized de- pots, and terminal-based operations simplify charging infrastruc- ture planning. Intercity and intercantonal corridors pose a dif- ferent strategic problem, since route distance, vehicle autonomy, charging availability, investment cost, expected savings, charging stops, and payback must be evaluated jointly. This paper pro- poses a domain-specific multi-objective evolutionary framework for the prospective deployment of electric buses on Ecuadorian intercantonal routes. The problem is formulated as a joint route bus charging station assignment task that maximizes passenger coverage and annual savings while minimizing implementation cost, payback, energy requirements, and constraint violations. A realistic planning scenario is built from candidate intercan- tonal routes, electric-bus models, and charging stations under technical and economic feasibility criteria. DS-NSGA-II and DS- MOEA-D are compared with a multi-objective random-search baseline using a robust five-seed experimental design. Results show that DS-MOEA-D achieves the best feasible hypervolume and Pareto-front diversity, while DS-NSGA-II identifies stronger extreme solutions in savings, payback, and demand coverage. The framework provides feasible electrification portfolios to support staged deployment decisions under infrastructure, budget, and operational constraints."
+  },
+  {
+    "id": "321",
+    "title": "Smart Charging and Renewable Integration in University Campuses: A View of Optimization Opportunities for Smart Cities",
+    "authors": "Andrés García; Boris Cárdenas; David Arizaga; Johan Cepeda; Josué Cevallos; Rudy López; Michelle Tolozano; Luis Ugarte",
+    "track": "Smart Cities & Mobility",
+    "keywords": [
+      "View of Optimization Opportunities",
+      "University Campuses",
+      "Smart Charging and Renewable Integration",
+      "Smart city",
+      "Battery"
+    ],
+    "shortAbstract": "The growing adoption of electric vehicles (EVs) creates new challenges for power systems, especially in locations with high charging demand. University…",
+    "abstract": "The growing adoption of electric vehicles (EVs) creates new challenges for power systems, especially in locations with high charging demand. University campuses provide suitable testbeds for analyzing smart charging strategies, renewable energy integration, battery energy storage systems, and demand-side flexibility. This paper reviews optimization opportunities for coordinated EV charging in campus environments and their potential contribution to smart city development. The analysis considers V2G, V2B, and V2Campus concepts, photovoltaic generation, battery storage, demand response, and common optimization objectives, variables, and constraints reported in the literature. The findings highlight that campus-based energy management can support the transition toward more sustainable, flexible, and resilient smart city infrastructures."
+  },
+  {
+    "id": "324",
+    "title": "Evolutionary Operators and Feasibility Mechanisms for Electric Bus Charging Infrastructure Planning: A Systematic Review",
+    "authors": "Alcibar Yánez; Gabriel Luque; Mónica Mite; Estela Yánez Benavides; Julio Barzola; Alejandra Orellana Maldonado; Luis Fernando Ugarte Vega",
+    "track": "Smart Cities & Mobility",
+    "keywords": [
+      "Evolutionary Operators and Feasibility Mechanisms",
+      "Electric Bus Charging Infrastructure Planning",
+      "SciSpace",
+      "Search",
+      "Route"
+    ],
+    "shortAbstract": "Electric bus deployment requires integrated planning of charging infrastructure, route coverage, fleet assignment, charging schedules, battery autonomy…",
+    "abstract": "Electric bus deployment requires integrated planning of charging infrastructure, route coverage, fleet assignment, charging schedules, battery autonomy, charger capacity, and budget constraints. Evolutionary algorithms and metaheuristics have been widely used to address these large-scale and highly constrained optimization problems. However, the effectiveness and reproducibility of these methods depend not only on the algorithmic label, but also on the way solutions are encoded, recombined, mutated, repaired, and evaluated under feasibility constraints. This paper presents a systematic review of evolutionary operators and feasibility mechanisms in electric bus charging infrastructure planning. Following a PRISMA-oriented protocol, searches were conducted in SciSpace Deep Search, SciSpace Full Text, SciSpace Library, and Google Scholar using 35 targeted queries related to electric buses, charging stations, fleet scheduling, route– bus–station allocation, genetic algorithms, NSGA-II, MOEA/D, memetic algorithms, ALNS, simulated annealing, local search, encoding, crossover, mutation, repair, and constraint handling. From 1,579 initial records, 1,234 remained after deduplication, 500 were screened by title and abstract, 11 were assessed in full text, and 10 studies were retained for technical synthesis. The review was complemented with methodological references on multi-objective evolutionary optimization, adaptive large neighborhood search, and constraint handling. Results show that the literature has moved toward integrated formulations and advanced metaheuristics, especially ALNS, simulated annealing, and iterated local search. Nevertheless, explicit documentation of solution encoding, crossover, mutation, and repair operators remains limited. This gap creates an opportunity for domainspecific evolutionary operators for route–bus–station assignment under autonomy, capacity, charger compatibility, budget, and territorial coverage constraints."
+  },
+  {
+    "id": "39",
+    "title": "Anthocyanins from Vaccinium floribundum as Promising Natural Sensitizers for DSSCs: A Theoretical Study",
+    "authors": "Danny Fuentes; José Gregorio Parra; Peter Iza",
+    "track": "Circuits, Systems and Electron Devices",
+    "keywords": [
+      "Vaccinium floribundum as Promising Natural Sensitizers",
+      "Anthocyanins",
+      "Fragment",
+      "Absorption",
+      "Ethanol"
+    ],
+    "shortAbstract": "Natural anthocyanins are promising eco-friendly sensitizers for dye-sensitized solar cells, although the electronic and photophysical properties of…",
+    "abstract": "Natural anthocyanins are promising eco-friendly sensitizers for dye-sensitized solar cells, although the electronic and photophysical properties of mortiño (Vaccinium floribundum) pigments remain largely unexplored. In this work, DFT and TD-DFT calculations were performed on cyanidin-3-O-galactoside and cyanidin-3-O-arabinoside, the two major mortiño anthocyanins, in gas phase and ethanol environments. The frontier molecular orbitals are mainly localized on the flavylium chromophore, indicating that the cyanidin aglycone dominates the electronic response, while the glycosidic fragment plays a minor role. Both molecules exhibit similar Kohn--Sham gaps of approximately 2.9 eV in ethanol. The first excited singlet state is dominated by a HOMO$\\rightarrow$LUMO transition with strong visible absorption and light-harvesting efficiencies above 80%. Although the calculated absorption maxima are blue-shifted relative to experiment, the predicted trends agree with reported anthocyanin behavior. The calculated frontier energy levels satisfy the thermodynamic requirements for electron injection into TiO$_2$ and dye regeneration by the I$^-$/I$_3^-$ redox couple, yielding estimated open-circuit voltages of 0.62--0.64 V. Solvation affects the orientation of the glycosidic fragment without significantly modifying the electronic structure. Overall, these results support the potential application of mortiño anthocyanins as natural sensitizers."
+  },
+  {
+    "id": "226",
+    "title": "New Approach to Design Low-Latency Asynchronous Controllers for Heterogeneous Systems",
+    "authors": "Duarte Oliveira; Rosemberg Silva; Lourenço Junior",
+    "track": "Circuits, Systems and Electron Devices",
+    "keywords": [
+      "New Approach to Design Low-Latency Asynchronous Controllers",
+      "Specification",
+      "Graph",
+      "Signals",
+      "BTG"
+    ],
+    "shortAbstract": "Asynchronous controllers are very efficient at operating as high-performance interfaces in heterogeneous synchronous/asynchronous systems. The…",
+    "abstract": "Asynchronous controllers are very efficient at operating as high-performance interfaces in heterogeneous synchronous/asynchronous systems. The specification of asynchronous controllers used in heterogeneous systems relies on two types of signals: level-sensitive signals (LSS) used as conditionals and transition-sensitive signals. However, several applications may contain signals that change from one type to the other during the controller's operation. This situation is difficult to capture in traditional specifications, such as signal transition graph (STG) and extended burst-mode (XBM). This paper proposes a new specification called burst transition graph (BTG). This specification is based on a state graph, therefore it is familiar to designers in the synchronous world. BTG makes LSS signals more flexible and increases the types of concurrency described between inputs and outputs. Also proposes a low-latency target architecture that operates in input/output mode. The proposed architecture was tested on thirteen benchmarks specified in BM/XBM and compared with the feedback sum-of-products (FSOP) architecture, which operates in the generalized fundamental mode (GFM). When analyzed in terms of literals, the proposed architecture achieved an average reduction of 11% compared to FSOP operating in GFM."
+  },
+  {
+    "id": "227",
+    "title": "An Implementation of QDI Asynchronous Logic Using Efficiently Factored Boolean Functions",
+    "authors": "Duarte Oliveira; Rosemberg Silva; Lourenço Junior",
+    "track": "Circuits, Systems and Electron Devices",
+    "keywords": [
+      "Implementation of QDI Asynchronous Logic",
+      "Efficiently Factored Boolean Functions",
+      "Circuits",
+      "Architectures",
+      "Robustness"
+    ],
+    "shortAbstract": "Quasi-delay-insensitive (QDI) circuits are a class of asynchronous circuits that provide simplified timing analysis and robustness against process, supply…",
+    "abstract": "Quasi-delay-insensitive (QDI) circuits are a class of asynchronous circuits that provide simplified timing analysis and robustness against process, supply voltage, and temperature (PVT) variations. Furthermore, they exhibit strong potential for low-power consumption. However, QDI circuits often incur significant area overhead. In this paper, we propose two new architectures for implementing QDI combinational circuits (QDI_CC). The proposed QDI_CC circuits are implemented using basic gates and C-elements, and they interact with the environment through weak indication, providing a degree of robustness in environmental interactions. To evaluate the effectiveness of the proposed architectures, we conducted experiments using a set of ten benchmark circuits and compared the results with four existing methods from the literature. The analysis demonstrates that our approach achieves significant improvements, including an average reduction of up to 60.8% in the number of required transistors."
+  },
+  {
+    "id": "100",
+    "title": "Intelligent Wearable Band for Electromyographic and Kinematic Signal Acquisition Oriented to Motion Control",
+    "authors": "Ney Coto; Henry Arauz; Andres Nenger; Jonathan Leon; Francisco Yumbla",
+    "track": "Robotics and Automation Systems",
+    "keywords": [
+      "Intelligent Wearable Band",
+      "Electromyographic and Kinematic Signal Acquisition Oriented to Motion Control",
+      "Gesture",
+      "EMG",
+      "IMU"
+    ],
+    "shortAbstract": "This work presents the development of a wearable intelligent band for the acquisition and classification of electromyographic (EMG) and inertial signals…",
+    "abstract": "This work presents the development of a wearable intelligent band for the acquisition and classification of electromyographic (EMG) and inertial signals oriented toward human--machine interaction applications. The proposed system integrates a surface electromyography sensor (sEMG), inertial measurement units (IMU), and an ESP32 microcontroller capable of performing embedded real-time processing and wireless communication through Bluetooth Low Energy (BLE). The acquired signals are segmented and transformed into the frequency domain using Fast Fourier Transform (FFT) to extract representative features associated with muscle activity and forearm motion. Subsequently, an artificial neural network model developed in Edge Impulse is used to classify four different gesture patterns. Experimental results demonstrated high classification accuracy under controlled conditions, validating the feasibility of combining EMG and IMU signals for gesture recognition tasks. In addition, simulations performed in ROS 2 and RViz, together with physical tests using a robotic hand (Leap Hand), confirmed the capability of the system to generate functional control commands in real time. The obtained results also revealed limitations related to latency and prediction variability, highlighting opportunities for future improvements in robustness, portability, and real-world deployment of the proposed wearable system."
+  },
+  {
+    "id": "101",
+    "title": "Integration and Validation of Open-Source Fixed-Wing UAV Platforms for Low-Cost Autonomous Flight Research",
+    "authors": "Steven Martinez; Joel Veloz; Jorge Hurel; Christian Tutivén; Francisco Yumbla",
+    "track": "Robotics and Automation Systems",
+    "keywords": [
+      "Integration and Validation of Open-Source Fixed-Wing UAV Platforms",
+      "Low-Cost Autonomous Flight Research",
+      "Static",
+      "Commercial",
+      "Stability"
+    ],
+    "shortAbstract": "This study addresses the methodological and financial limitations imposed by closed-source commercial unmanned aerial vehicle (UAV) platforms on applied…",
+    "abstract": "This study addresses the methodological and financial limitations imposed by closed-source commercial unmanned aerial vehicle (UAV) platforms on applied academic research. The mechatronic integration and validation of two fixed-wing platforms governed by open-source control architectures is presented: an experimental foam board prototype and a commercial Reno L250 fuselage converted to electric propulsion. The validation framework comprises three phases: (i) static test bench evaluation confirming the suppression of structural resonances through Fast Fourier Transform (FFT) analysis, maintaining dynamic accelerations below the Pixhawk safe threshold of 30 m/s$^{2}$; (ii) aerodynamic characterization via Computational Fluid Dynamics (CFD), yielding a lift slope $C_{L_\\alpha} = 2.71$ rad$^{-1}$ and a static stability margin of 7.5%, with theoretical consistency verified against Prandtl's Lifting Line correction and published low Reynolds number ($Re_c \\approx 10^5$) wind tunnel databases; and (iii) parameter transfer to a digital twin in NVIDIA Isaac Sim. Software-In-The-Loop (SITL) simulations confirmed zero-latency control response and sustained orbital stability during autonomous maneuvers."
+  },
+  {
+    "id": "105",
+    "title": "Evaluating Synthetic, Hybrid, and Real Data Training Strategies for Vision-Guided Manipulation in a Planar 5R Parallel Robot",
+    "authors": "Miguel Angel Silva Plata; Fabricio Javier Cabrera Gordillo; Nayara C. Lara Ramos; Gustavo Miranda; Yerko Garcia; Carlos Menacho Guerra",
+    "track": "Robotics and Automation Systems",
+    "keywords": [
+      "Vision-Guided Manipulation",
+      "Planar 5R Parallel Robot",
+      "Evaluating Synthetic, Hybrid, and Real Data Training Strategies",
+      "Pickup",
+      "Achieved highest"
+    ],
+    "shortAbstract": "This work presents a vision-guided manipulation system implemented on a compact and low-cost planar 5R parallel robot. A procedural pipeline was developed…",
+    "abstract": "This work presents a vision-guided manipulation system implemented on a compact and low-cost planar 5R parallel robot. A procedural pipeline was developed to generate labeled synthetic images with controlled geometric and photometric variations, enabling scalable dataset creation without extensive manual annotation. The perception module was integrated with a kinematic model of the 5R manipulator and deployed in ROS2 for real-time perception-to-action execution. Three training strategies were evaluated: synthetic-only, real-only, and a hybrid dataset combining both. Detection performance reached mAP50 values between 0.9279 and 0.9522. While the real-data model achieved the highest detection accuracy, the hybrid configuration obtained the highest precision. Different pickup point estimation methods were also evaluated. The visual point based on a distance transform achieved the highest pickup success rate (91.5%), outperforming the mass centroid (84.1%) and bounding box center (71.2%). Robotic real experiments obtained detection success rates of 85.5%, 90.9%, and 93.3% for the synthetic, hybrid, and real models respectively. Although experiments were conducted using deformable leaves (Erythroxylum coca medicinal leaves), the proposed framework can be extended to other plant species and irregular objects in robotic sorting tasks."
+  },
+  {
+    "id": "106",
+    "title": "Recognition and Localization of Cubic Box Edges Using Computer Vision",
+    "authors": "Kruger Ronquillo; Cristian Orozco; Juan Medrano; Marcelo Fajardo; Francisco Yumbla",
+    "track": "Robotics and Automation Systems",
+    "keywords": [
+      "Recognition and Localization of Cubic Box Edges",
+      "Computer Vision",
+      "Edge",
+      "Carried abb irb industrial",
+      "Artificial vision detecting"
+    ],
+    "shortAbstract": "This work presents a hybrid artificial vision system for detecting and estimating the consecutive position of box edges in automated logistics…",
+    "abstract": "This work presents a hybrid artificial vision system for detecting and estimating the consecutive position of box edges in automated logistics environments. The approach combines YOLO semantic segmentation with point-cloud geometric refinement techniques in ROS 2. To reduce RGB-D sensor limitations, such as edge noise (flying pixels), a sampling strategy called pull-inside is proposed together with linear edge interpolation to accurately reconstruct the topology of the object surface. Experimental validation was carried out using an ABB IRB 2600 industrial robot and an Intel RealSense D435 camera. The results show stable detection under critical lighting variations and spatial accuracy with variance lower than $\\pm$1 cm. The system generates approach trajectories in less than 5 seconds, validating its viability for high-throughput applications in modern industry."
+  },
+  {
+    "id": "125",
+    "title": "Centralized Multi-Robot Control Based on Overhead Vision and Artificial Potential Fields",
+    "authors": "Jhon Meneses; Jean Carlos Meneses; Holger Sanmartín; Tito Calva",
+    "track": "Robotics and Automation Systems",
+    "keywords": [
+      "Overhead Vision and Artificial Potential Fields",
+      "Centralized Multi-Robot Control",
+      "Marker",
+      "Homography",
+      "Pose"
+    ],
+    "shortAbstract": "This paper presents a centralized architecture for coordinating three differential-drive mobile robots in a shared workspace. An overhead camera connected…",
+    "abstract": "This paper presents a centralized architecture for coordinating three differential-drive mobile robots in a shared workspace. An overhead camera connected to a Raspberry Pi streams video through MJPEG, while a PC estimates robot poses using ArUco markers, computes metric coordinates through a stabilized homography, and sends differential commands to ESP32-based robots over UDP. To reduce visual mapping errors, the system combines marker hysteresis, temporal filtering, homography retention, and a parallax correction derived from the camera pose and marker height. Navigation is performed with a hybrid strategy that joins artificial potential fields with a finite state machine, allowing goal tracking, wall avoidance, and robotto- robot collision reduction. The implementation was evaluated in individual, simultaneous, and forced crossing scenarios. The system operated at 20–26 FPS, achieved pose detection rates from 85.3% to 99.1%, kept the approximate capture-to-command latency between 85 and 120 ms, and completed the evaluated trials without collisions."
+  },
+  {
+    "id": "163",
+    "title": "Efficient Collision-Free Trajectory Planning for Industrial Manipulators: A Comparative Study of PRM Variants and Graph Search Strategies",
+    "authors": "Doménica Llanos; Juan Cruz; Tonny Toscano; Angel Sappa",
+    "track": "Robotics and Automation Systems",
+    "keywords": [
+      "Comparative Study of PRM Variants and Graph Search Strategies",
+      "Efficient Collision-Free Trajectory Planning for Industrial Manipulators",
+      "Lazy PRM",
+      "Execution",
+      "Path"
+    ],
+    "shortAbstract": "Efficient collision-free trajectory planning is essential for industrial robotic manipulators operating in constrained environments with complex obstacle…",
+    "abstract": "Efficient collision-free trajectory planning is essential for industrial robotic manipulators operating in constrained environments with complex obstacle distributions. This paper analyzes PRM and Lazy PRM planning techniques combined with Dijkstra, A*, and Ant Colony Optimization search algorithms. The methods were implemented in the RoboDK simulation environment using a Kawasaki RS03N industrial manipulator performing a pick & place task. Both planners were evaluated under two graph configurations in terms of planning time, path cost, collision checks, and execution cycle time across multiple speed settings. The results indicate that Lazy PRM substantially decreases planning time due to its deferred collision-checking strategy. In terms of execution performance, ACO achieves the lowest cycle times, whereas A* provides the best balance between computational efficiency and path quality. Additionally, increasing graph density improves trajectory quality in both PRM and Lazy PRM. These results demonstrate the influence of both planner selection and roadmap configuration on the performance of sampling-based trajectory planning in industrial environments."
+  },
+  {
+    "id": "178",
+    "title": "Comparison of Local Language Models for Natural Language Command Analysis: Dobot Magician Case Study in ROS 2",
+    "authors": "Anthony Eduardo Chamba Lara; Lía Nicole Pesántez González; Pedro Esteban Carrión Zamora; Pablo-Andrés Buestán-Andrade",
+    "track": "Robotics and Automation Systems",
+    "keywords": [
+      "Dobot Magician Case Study",
+      "Comparison of Local Language Models",
+      "Natural Language Command Analysis",
+      "Voice",
+      "Qwen"
+    ],
+    "shortAbstract": "The integration of large language models (LLMs) into robotic systems enables human instructions to be transformed into executable goals. However, their…",
+    "abstract": "The integration of large language models (LLMs) into robotic systems enables human instructions to be transformed into executable goals. However, their use in robotic control requires low latency, structured output, and compatibility with kinematic planners. This paper presents a fully local Edge AI architecture to control a simulated Dobot Magician robotic arm from Spanish voice commands. The proposed pipeline captures audio, transcribes the instruction with Whisper, extracts the semantic target through a local LLM, detects colored spheres using computer vision, projects their centroids into the robot workspace through homography, and sends the goals to ROS 2, MoveIt 2, and Gazebo for collision-free trajectory generation. Qwen 2.5 (3B), Gemma 2 (2B), and Llama 3.2 (3B) were compared in 150 real voice tests divided into basic, medium, and difficult levels. The results show that Qwen 2.5 achieved the lowest semantic inference latency (163.73 ms) and the lowest global error rate (18.67%). The complete architecture reached an average End-to-End latency of 345.42 ms, below the 500 ms threshold considered suitable for fluid human–robot interaction. The analysis shows that the temporal cost is concentrated in the local cognitive layer, confirming the importance of optimizing compact neural models for edge robotics."
+  },
+  {
+    "id": "185",
+    "title": "UAV Altitude Estimation for Heterogeneous Mobile Robots Using YOLOv11 and Machine Learning Regression",
+    "authors": "Jael Osorio; Andrea Pilco; William Chamorro; Viviana Moya; Juan Pablo Vasconez",
+    "track": "Robotics and Automation Systems",
+    "keywords": [
+      "UAV Altitude Estimation",
+      "YOLOv11 and Machine Learning Regression",
+      "Heterogeneous Mobile Robots",
+      "Object detection",
+      "Tree Regression"
+    ],
+    "shortAbstract": "Accurate altitude estimation of ground robots from aerial imagery is an important capability for heterogeneous multi-robot systems, enabling aerial…",
+    "abstract": "Accurate altitude estimation of ground robots from aerial imagery is an important capability for heterogeneous multi-robot systems, enabling aerial platforms to support navigation, monitoring, and coordination tasks. Although object detection algorithms can reliably identify robotic platforms, estimating UAV altitude from image measurements remains challenging due to variations in robot geometry, scale, and viewing perspective. This paper presents a UAV-based altitude estimation framework that combines YOLOv11 object detection with supervised regression models. A custom aerial dataset was collected using a DJI Mini 2 UAV, including multiple robotic platforms such as Unitree Go2, AgileX, MUTO, and Transbot operating at different altitudes and orientations. YOLOv11 was trained to detect and classify the robots, while the diagonal length of the resulting bounding boxes was extracted as the primary geometric feature for altitude estimation. Four regression approaches were evaluated, namely Linear Regression, Polynomial Regression, Support Vector Regression (SVR), and Decision Tree Regression. Both global and class-specific regression strategies were investigated. Experimental results demonstrate that class-specific regression substantially improves estimation accuracy, with Support Vector Regression and Decision Tree Regression consistently outperforming linear approaches. The best-performing models achieved sub-meter estimation errors and coefficients of determination exceeding 0.98 for all evaluated robot classes. The proposed framework provides an efficient solution for estimating UAV altitude from monocular imagery using only object detection outputs, without requiring additional ranging sensors or camera calibration procedures."
+  },
+  {
+    "id": "188",
+    "title": "Comparative Experimental Evaluation of PID and Adaptive Fuzzy-PID Controllers for Multi-Joint Trajectory Tracking in a ROS 2 Collaborative Manipulator",
+    "authors": "Francis-Nicole Benitez-Montalvo; Lía-Nicole Pesántez-González; Ángel-Isaías Gordillo-González; Nathalia-Michelle Peralta-Vasconez",
+    "track": "Robotics and Automation Systems",
+    "keywords": [
+      "ROS 2 Collaborative Manipulator",
+      "Comparative Experimental Evaluation of PID and Adaptive Fuzzy-PID Controllers",
+      "Multi-Joint Trajectory Tracking",
+      "Control effort",
+      "classical PID"
+    ],
+    "shortAbstract": "This paper presents a comparative experimental evaluation between a classical PID controller and an adaptive Fuzzy-PID strategy for coordinated…",
+    "abstract": "This paper presents a comparative experimental evaluation between a classical PID controller and an adaptive Fuzzy-PID strategy for coordinated multi-joint trajectory tracking in a myCobot280 collaborative robotic manipulator using ROS 2 and the ros2 control framework. Unlike conventional single-joint evaluations commonly reported in the literature, the proposed experiments simultaneously control the first three manipulator joints, introducing dynamically coupled motion, variable transient conditions, and continuous changes in the manipulator center of mass during trajectory execution. These conditions generate a more realistic and demanding robotic control scenario for evaluating adaptive behavior in collaborative manipulators. Symmetrical execution tests were carried out under an identical velocity saturation boundary of ±0.20 rad/step for both systems. Quantitative performance was evaluated using RMSE, MAE, maximum absolute error, steady-state error, and control effort ISC. Experimental results demonstrated that both control strategies achieved stable tracking without highfrequency chattering or destructive oscillations. However, the proposed adaptive Fuzzy-PID controller obtained lower average tracking errors and a 13.8% reduction in total control effort compared with the classical PID approach."
+  },
+  {
+    "id": "197",
+    "title": "SCARA-Based Robotic System for Neonatal Positive Pressure Ventilation Assistance in a Simulated Environment",
+    "authors": "Kevin Daniel Gavilanes Gómez; Lizeth Pamela Casa Chacha; Juan Pablo Vásconez",
+    "track": "Robotics and Automation Systems",
+    "keywords": [
+      "Neonatal Positive Pressure Ventilation Assistance",
+      "SCARA-Based Robotic System",
+      "Simulated Environment",
+      "Mask",
+      "Positioning"
+    ],
+    "shortAbstract": "Neonatal positive-pressure ventilation (PPV) is a critical procedure during neonatal resuscitation, where proper mask positioning directly influences…",
+    "abstract": "Neonatal positive-pressure ventilation (PPV) is a critical procedure during neonatal resuscitation, where proper mask positioning directly influences ventilation effectiveness. This paper presents the design, modeling, and experimental validation of a SCARA-based robotic platform for neonatal ventilation assistance in a simulated clinical environment. The proposed system integrates a three-degree-of-freedom SCARA manipulator, a neonatal ventilation mask holder, biomedical monitoring sensors, and an ESP32-based embedded control architecture. Kinematic modeling was developed using the Denavit--Hartenberg methodology, while structural validation was performed through finite element analysis under representative operating loads. The results showed maximum stresses below 13.3 MPa and safety factors between 3.8 and 5.5, confirming adequate mechanical robustness. Experimental validation was conducted using a neonatal simulator through ten positioning trials targeting the nose--mouth region. The system achieved repeatability, precision, and accuracy values of 6.7 mm, 2.3 mm, and 5.9 mm, respectively. Statistical analysis using Student's t-test confirmed compliance with predefined clinical performance requirements. Furthermore, the positioning errors remained substantially below the effective contact diameter of the neonatal ventilation mask (35 mm), ensuring reliable mask alignment and functional sealing. The results demonstrate the feasibility of using low-cost robotic systems to automate critical positioning tasks in neonatal respiratory assistance and provide a foundation for future intelligent robotic ventilation platforms."
+  },
+  {
+    "id": "198",
+    "title": "A Low-Latency Cyber-Physical Framework for Kinesthetic Programming by Demonstration Using Torque-OFF Self-Sensing",
+    "authors": "Jholaus M. Villavicencio Lara; Tamia L. Gualán Saca; Juan P. Moreno Elizalde; José C. Reinoso López; John K. Macas Ortega; Juan Pablo Vasconez",
+    "track": "Robotics and Automation Systems",
+    "keywords": [
+      "Low-Latency Cyber-Physical Framework for Kinesthetic Programming by Demonstration",
+      "Torque-OFF Self-Sensing",
+      "Synchronization",
+      "External",
+      "Teaching"
+    ],
+    "shortAbstract": "Real-time synchronization is a key requirement for Cyber-Physical Systems (CPS), Digital Twins, and kinesthetic robot teaching. However, conventional…",
+    "abstract": "Real-time synchronization is a key requirement for Cyber-Physical Systems (CPS), Digital Twins, and kinesthetic robot teaching. However, conventional approaches often rely on computationally intensive kinematic calculations and external sensing infrastructure. This paper presents an asynchronous cyber-physical architecture for a 5-DOF robotic manipulator that combines a scalar geometric formulation with a Torque OFF self-sensing paradigm for trajectory acquisition. The proposed framework enables Programming by Demonstration without external optical tracking systems while maintaining low computational overhead. Experimental results achieved a mean positional error of $2.3 \\pm 0.8$ mm and an end-to-end latency of $48.3 \\pm 3.1$ ms. Compared with a conventional Denavit-Hartenberg implementation, the architecture reduced CPU utilization by $64.4%$ and latency by $42.3%$. The results demonstrate the feasibility of low-cost Digital Twin synchronization and kinesthetic teaching for educational and industrial robotic applications."
+  },
+  {
+    "id": "215",
+    "title": "Impact of Simultaneous Localization and Calibration on Closed-Loop Cooperative Robot Radio Navigation",
+    "authors": "Alexis Fernando Marino Salguero; Robert Pohlmann; Sofia Judith Sanchez Urresta; Emanuel Staudinger",
+    "track": "Robotics and Automation Systems",
+    "keywords": [
+      "Localization",
+      "Pose estimates",
+      "Calibration",
+      "Radio",
+      "Biases"
+    ],
+    "shortAbstract": "Control of a team of mobile robots requires accurate pose estimates, which is particularly challenging when globally referenced external localization…",
+    "abstract": "Control of a team of mobile robots requires accurate pose estimates, which is particularly challenging when globally referenced external localization systems, like GNSS, are not available. Cooperative radio navigation, where robots exchange radio signals with each other and with fixed devices known as anchors, can provide accurate and robust localization. However, in real implementations accurate calibration is challenging and effects such as temperature variations can decalibrate radio transceivers, introducing ranging biases that degrade pose estimates and, consequently, closed-loop control performance. In this work, we evaluate how biased radio ranging measurements affect trajectory tracking in a closed-loop control system, and how online calibration of these biases improves the overall navigation performance. To this end, a centralized EKF-based simultaneous localization and calibration (SLAC) framework is used to jointly estimate robot poses and node-wise ranging biases, and the resulting pose estimates are provided as feedback to a trajectory tracking controller. The SLAC-based feedback is compared with cooperative localization without bias calibration. Monte Carlo simulations show that SLAC improves both position estimation and tracking accuracy by approximately one order of magnitude compared with cooperative localization without ranging bias calibration."
+  },
+  {
+    "id": "251",
+    "title": "Neural Network-Assisted PID Control for Formation Tracking of Differential Mobile Robots: Experimental Validation",
+    "authors": "Juan Montenegro; Carlos Miranda; Gabriela M. Andaluz; Oscar Camacho; Paulo Leica",
+    "track": "Robotics and Automation Systems",
+    "keywords": [
+      "Formation Tracking of Differential Mobile Robots",
+      "Neural Network-Assisted PID Control",
+      "PID controller",
+      "Trajectory tracking",
+      "Tracking error"
+    ],
+    "shortAbstract": "This work presents a neural network-based PID controller for trajectory tracking of a triangular formation of three differential mobile robots. The…",
+    "abstract": "This work presents a neural network-based PID controller for trajectory tracking of a triangular formation of three differential mobile robots. The proposal is based on the kinematic model of the formation, represented by shape and posture variables that describe the group behavior of the robotic system. From this model, a PID controller is designed to regulate the tracking error, while an artificial neural network of the multilayer perceptron type is incorporated through an error feedback learning strategy to compensate for nonlinearities, uncertainties, and unmodeled dynamics. The proposed network operates in parallel with the PID controller, providing a corrective and adaptive action that improves the overall performance of the system. The proposal is experimentally validated using TurtleBot3 mobile robots subjected to trajectory tracking with reference changes. The obtained results are compared with those of a classical PID controller using the IAE and ISE performance indices. The experiments show a significant reduction in tracking error, indicating that the proposed controller improves the precision and robustness of the system while maintaining a simple control structure suitable for real applications."
+  },
+  {
+    "id": "37",
+    "title": "Indoor NO2 Exposure Assessment in LPG-Fueled Commercial Kitchens: Occupational Risk Implications in a Peri-Urban District of Lima, Peru",
+    "authors": "Carlos Alfredo Ugarte Alván; Kelly Grace Morocho Yauri; Maryorith Cabigail Vasquez Reyes; Joyce Carol Bottger Gamarra; Lorgio Gilberto Valdiviezo Gonzales; Rubén Victor Munive Cerrón",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "Indoor NO2 Exposure Assessment in LPG-Fueled Commercial Kitchens",
+      "Occupational Risk Implications",
+      "Peri-Urban District of Lima, Peru",
+      "Ug m3",
+      "Kitchen"
+    ],
+    "shortAbstract": "Commercial kitchen workers face prolonged daily exposure to indoor air pollutants generated by liquefied petroleum gas (LPG) combustion, yet occupational…",
+    "abstract": "Commercial kitchen workers face prolonged daily exposure to indoor air pollutants generated by liquefied petroleum gas (LPG) combustion, yet occupational exposure assessments for this population remain scarce. This study quantified indoor NO2 concentrations in four LPG-fueled restaurant kitchens in San Juan de Lurigancho, Lima, Peru, and assessed the occupational exposure implications for kitchen workers. Palmes-type passive samplers (ISO/IEC 17025-accredited) were deployed over 14 consecutive days at three positions per restaurant. Mean kitchen concentrations ranged from 88.6 to 268.8 ug/m3. Indoor-to-outdoor ratios (2.69-3.72) confirmed LPG combustion as the dominant source. Time-weighted average estimates for a 6-hour workday indicated that two of four kitchens exceed the WHO 1-hour guideline (203 ug/m3), and all four exceed the WHO annual mean guideline (40 ug/m3). Estimated annual cumulative exposures per worker ranged from 132,960 to 403,200 ug/m3·h. These findings provide baseline occupational exposure data for LPG-fueled commercial kitchens in peri-urban Latin America."
+  },
+  {
+    "id": "51",
+    "title": "Sports Inclusion for People with Visual Impairments: A Guidance System for Promoting Adapted Soccer",
+    "authors": "Juan Diego Gutierrez Enderica; Damian Roc Olivo Barzallo; Juan Marcelo Pérez Pérez; Henry Paul Tigre Avila; Anabel Sabrina Molina Astudillo",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "Sports Inclusion",
+      "Visual Impairments",
+      "Guidance System for Promoting Adapted Soccer",
+      "People visual",
+      "Wireless"
+    ],
+    "shortAbstract": "This research addresses the need to promote more autonomous and equitable participation by people with visual impairments in adapted soccer, overcoming…",
+    "abstract": "This research addresses the need to promote more autonomous and equitable participation by people with visual impairments in adapted soccer, overcoming the technical limitations of previous wired systems. The project’s objective is to develop a wireless audible guidance system that enhances athletes’ independence during training. An electronic circuit was designed based on an ESP32 microcontroller with the ESPNOW and Bluetooth communication protocols to ensure robust, wireless connectivity between the sound modules. The system integrates the use of wireless protocols in conjunction with a mobile app compatible with the TalkBack accessibility feature, ensuring that users with visual impairments could control the system autonomously. Additionally, pilot tests demonstrated the operational effectiveness and stability of the wireless system on various open-air fields. Discussion: The study significantly validated the importance of implementing technological resources focused on people with visual impairments. The successful implementation of the system confirms that wireless and accessible technology increases the autonomy of people with visual impairments, directly contributing to their social development and sports integration."
+  },
+  {
+    "id": "66",
+    "title": "Mobile-U Net-based Architectures for Pulmonary Nodule Segmentation and Classification",
+    "authors": "Eduardo Benavides; Edwin Valarezo",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "Pulmonary Nodule Segmentation and Classification",
+      "Mobile-U Net-based Architectures",
+      "Mobile-UNet",
+      "CT",
+      "Diagnostic"
+    ],
+    "shortAbstract": "Lung cancer continues to be a leading cause of global cancer-related mortality, needing advanced triage and diagnostic follow-up via computed tomography…",
+    "abstract": "Lung cancer continues to be a leading cause of global cancer-related mortality, needing advanced triage and diagnostic follow-up via computed tomography (CT) imaging. This study introduces a computer-aided diagnosis (CAD) pipeline leveraging a hybrid Mobile-UNet architecture for the joint semantic segmentation and binary classification of pulmonary nodules. The proposed framework utilizes a Mobile-UNet variant that integrates MobileNetV2 inverted residual blocks with linear bottlenecks into the standard U-Net topology, enabling the preservation of fine boundary information while reducing the computational and memory footprint. To enhance diagnostic consistency, a focused bounding-box (bbox) module concentrates the classification analysis on specific regions of interest (ROIs), utilizing a MobileNetV2-based classifier to distinguish between solid and non-solid radiographic texture phenotypes after label binarization. The implementation incorporates Focal Loss to address the inherent class imbalance between nodule and background pixels, alongside regularization techniques such as dropout and early stopping to mitigate overfitting. The proposed model was validated on a public multi-reader CT dataset using a fixed patient-level split, the proposed approach achieved a Mean Dice coefficient of 0.91, an Intersection over Union (IoU) of 0.84, and an Area Under the Curve (AUC-ROC) of 0.92. The findings indicate that the integration of a focused bbox-driven approach with a lightweight architecture provides a robust, computationally efficient solution suitable for deployment in resource-constrained clinical environments."
+  },
+  {
+    "id": "79",
+    "title": "7-DOF Kinematic Model of the Upper Limb in Left Hemiparesis, a Kinematic Redundancy Analysis and Swivel Angle Estimation",
+    "authors": "Fabricio Tipantocta; Edwin Valarezo; Juan Carlos Cajo",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "7-DOF Kinematic Model of the Upper Limb",
+      "Swivel angle",
+      "Volume reduced relative",
+      "Reduced relative normative values",
+      "Dof severe deficits"
+    ],
+    "shortAbstract": "This paper presents a 7-degree-of-freedom (DOF) kinematic model of the human upper limb applied to a person with congenital left hemiparesis. The model…",
+    "abstract": "This paper presents a 7-degree-of-freedom (DOF) kinematic model of the human upper limb applied to a person with congenital left hemiparesis. The model, based on the formulation of Kim et al., incorporates the swivel angle as a redundancy variable and employs a criterion that maximizes the projection of the manipulability ellipsoid major axis onto the virtual wrist-to-head trajectory, yielding a closed-form solution. Joint range of motion (ROM) was measured with a digital goniometer across all seven DOF. Results show severe deficits in radial/ulnar deviation (56.7%), pronation/supination (50.0%), and shoulder internal rotation (47.2%), with a mean deficit of 35.8%. The swivel angle difference of 2.4° indicates minimal postural compensation. Workspace volume is reduced by 47.3% relative to normative values (507,499 vs. 267,088 cm3). The model was implemented in MATLAB and constitutes a quantitative tool for functional assessment and robot-assisted rehabilitation strategy design."
+  },
+  {
+    "id": "91",
+    "title": "Development and Validation of a Low-Cost Embedded System Based on ESP32 and Python for Force-Displacement Testing in Biomechanical and Materials Applications",
+    "authors": "Liliana Jorquera; Angel Custodio; Momchil Semerdjiev; Martin Arriagada",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "Force-Displacement Testing",
+      "Biomechanical and Materials Applications",
+      "ESP32 and Python",
+      "Mm min",
+      "Range mm"
+    ],
+    "shortAbstract": "This paper describes the design, implementation, and experimental validation of a low-cost embedded force-displacement testing system primarily intended…",
+    "abstract": "This paper describes the design, implementation, and experimental validation of a low-cost embedded force-displacement testing system primarily intended for biomechanical applications and the characterization of soft materials. Its potential application lies in the mechanical analysis of biological tissues such as tendons, knee patellas, and intervertebral discs, where it is important to analyze properties related to deformation, strength, and structural behavior under controlled loads. The developed system consists of a load cell, a DC linear actuator, a resistive linear position sensor, and an ESP32 microcontroller, operating at a sampling rate of 200 Hz. The firmware was implemented in C++ and incorporates a variable-speed control algorithm with a position loop, allowing for programmable cyclic tests at speeds ranging from 10 to 300 mm/min over a travel range of 0 to 150 mm. The graphical interface was developed in Python using the ttkbootstrap and matplotlib libraries, allowing for the configuration of tests, the visualization of variables in real time, and the export of experimental data in CSV format for further analysis. During the experimental validation phase, two-cycle tests were performed in a range from 20 to 50 mm at 300 mm/min, yielding a total of 5,240 data points with a resolution of 5 ms per sample, and maximum recorded forces of 213.85 N. The tests conducted demonstrated satisfactory inter-cycle repeatability, low hysteresis, and a modular architecture that facilitates adaptation to different testing protocols. The total implementation cost was less than $350, positioning the system as an affordable alternative to commercial testing equipment that costs over $10,000"
+  },
+  {
+    "id": "116",
+    "title": "Adaptive IoT-Based UVC Sterilization for Resilient Healthcare Spaces",
+    "authors": "Alejandra Marcia Ayala Allende; Edgar Roberto Ramos Silvestre; Eynar Calle Viles; Marcelo Greby Rojas Fernández",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "Resilient Healthcare Spaces",
+      "Adaptive IoT-Based UVC Sterilization",
+      "Disinfection",
+      "Environmental conditions integrates",
+      "integrates UVC emitters"
+    ],
+    "shortAbstract": "This paper presents the design and implementation of an IoT-based ultraviolet-C (UVC) disinfection system aimed at improving infection control in…",
+    "abstract": "This paper presents the design and implementation of an IoT-based ultraviolet-C (UVC) disinfection system aimed at improving infection control in healthcare environments. UVC radiation is widely recognized for its effectiveness in inactivating pathogenic microorganisms; however, its performance depends on controlled operational parameters such as exposure time, distance, and environmental conditions. The proposed system integrates UVC emitters with a microcontroller-based architecture and incorporates IoT capabilities for monitoring and control, enabling more consistent and automated disinfection processes. The system was designed to enhance safety and optimize resource utilization. Experimental validation was conducted to evaluate system performance under different operating conditions, demonstrating reliable operation and effective disinfection capability. The results highlight the potential of the proposed solution as a low-cost, scalable, and accessible approach to strengthen biosecurity and reduce healthcare-associated infections."
+  },
+  {
+    "id": "129",
+    "title": "Wavelet Based ERD/ERS Energy Analysis of Interhemispheric Asymmetry in Resting State EEG",
+    "authors": "Alberto M. Peralta-Orellana; Freddy L. Bueno-Palomeque",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "Wavelet Based ERD/ERS Energy Analysis of Interhemispheric Asymmetry",
+      "Resting State EEG",
+      "Filters",
+      "Delta",
+      "Bands"
+    ],
+    "shortAbstract": "This study investigates interhemispheric asymmetry in EEG activity from a healthy subject under resting state conditions by comparing cortical energy and…",
+    "abstract": "This study investigates interhemispheric asymmetry in EEG activity from a healthy subject under resting state conditions by comparing cortical energy and the ERD/ERS index between homologous right and left electrode pairs. The analysis was performed across the Delta, Theta, Alpha, and Beta frequency bands, considering the influence of Coiflet, Symlet, and Daubechies wavelet filters on energy estimation. The results show that interhemispheric asymmetry strongly depends on the analyzed frequency band. The Delta band exhibited the largest ERD/ERS power differences, exceeding 150% in some frontal and temporal electrode pairs, suggesting a more heterogeneous bilateral response at low frequencies. In contrast, Theta and Beta bands showed lower differences, generally below 70%, indicating a tendency toward more balanced interhemispheric synchronization. Additionally, Coiflet filters showed greater sensitivity to energy variations in low-frequency bands, particularly Delta and Alpha, whereas Daubechies filters tended to smooth interhemispheric differences and produce more stable responses in mid frequency ranges. These preliminary findings suggest that ERD/ERS dynamics are highly dependent on both frequency content and the filtering approach applied during EEG processing. Although this study was conducted on a single healthy subject, the results highlight the importance of filter selection when analyzing hemispheric asymmetry in EEG signals. Future work will include a larger cohort and controlled conditioning stimuli to validate the observed patterns."
+  },
+  {
+    "id": "202",
+    "title": "Deep Learning Architectures for the Histopathological Classification of Colorectal Adenocarcinoma through Adaptive Contrast Enhancement and Monte Carlo Validation",
+    "authors": "Erika Severeyn Varela; Alexandra La Cruz; Mónica Huerta; Jesus Velasquez; Erwin Sacoto-Cabrera",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "Adaptive Contrast Enhancement and Monte Carlo Validation",
+      "Histopathological Classification of Colorectal Adenocarcinoma",
+      "Deep Learning Architectures",
+      "Colorectal cancer",
+      "ResNet50"
+    ],
+    "shortAbstract": "Colorectal cancer remains a significant global health challenge, requiring precise early detection to improve patient survival rates. This study proposes…",
+    "abstract": "Colorectal cancer remains a significant global health challenge, requiring precise early detection to improve patient survival rates. This study proposes a deep learning framework for the automated binary classification of colorectal adenocarcinoma and benign tissue using a subset of 10,000 images from the LC25000 dataset. To standardize staining variability and enhance structural clarity, images were processed in the CIE Lab* color space and subjected to Contrast Limited Adaptive Histogram Equalization (CLAHE). Three architectures; a Custom CNN, fine-tuned ResNet50, and MobileNetV2 were evaluated through a 20-iteration Monte Carlo cross-validation loop to ensure statistical robustness. Hardware throughput was optimized via dynamic buffered prefetching. Results demonstrate that ResNet50 achieved the highest diagnostic stability, with a mean accuracy of 99.98% and a recall of 1.0000. MobileNetV2 also exhibited exceptional performance (99.88% accuracy). The findings were integrated into a Streamlit-based web application for real-time clinical decision support, providing a robust system for high- precision colorectal cancer screening."
+  },
+  {
+    "id": "205",
+    "title": "Comparative Analysis of Machine Learning Architectures and Convolutional Neural Networks for the Automated Identification of Brain Neoplasms in Structural MRI",
+    "authors": "Erika Severeyn Varela; Alexandra La Cruz; Mónica Huerta; Jesus Velasquez; Erwin Sacoto-Cabrera",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "Automated Identification of Brain Neoplasms",
+      "Structural MRI",
+      "Machine Learning Architectures and Convolutional Neural Networks",
+      "CNN",
+      "Clinical"
+    ],
+    "shortAbstract": "Brain tumor diagnosis via Magnetic Resonance Imaging (MRI) is essential yet challenging due to subjective manual interpretation. This study presents a…",
+    "abstract": "Brain tumor diagnosis via Magnetic Resonance Imaging (MRI) is essential yet challenging due to subjective manual interpretation. This study presents a comparative analysis of 15 computational architectures, comprising five classical machine learning models and ten customized Convolutional Neural Network (CNN) variants, for the automated identification of brain neoplasms. To ensure statistical reliability and prevent data leakage, a rigorous Monte Carlo Cross-Validation (MCCV) framework with 100 iterations was implemented on a dataset of 253 MRI images. Results indicate that the Dense-Strong CNN and Dropout CNN architectures achieved the most stable performance with F1-scores of approximately 0.87. In contrast, the GlobalAvg CNN exhibited a critical specificity failure (7.6%), while Batchnorm CNN showed high instability. Unlike many existing studies reporting near-perfect accuracies, our results offer a more realistic estimation of diagnostic utility by mitigating optimism bias. Furthermore, we integrated the top-performing models into a real-time web application, Brain Cancer Detector, developed using Streamlit and TensorFlow, to facilitate clinical adoption through a consensus-based diagnostic interface. This framework provides a robust foundation for developing reliable Computer-Aided Diagnosis systems suitable for real-world clinical integration."
+  },
+  {
+    "id": "219",
+    "title": "Experimental evaluation of sustainable antibacterial hydrogels using quinoa saponins and silver nanoparticles",
+    "authors": "Oscar Ivan Analuiza Maiza",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "Experimental evaluation of sustainable antibacterial hydrogels",
+      "quinoa saponins and silver nanoparticles",
+      "Formulations",
+      "Viscosity",
+      "Functional"
+    ],
+    "shortAbstract": "The development of sustainable antibacterial biomaterials represents a significant challenge in biomedical applications due to the need to simultaneously…",
+    "abstract": "The development of sustainable antibacterial biomaterials represents a significant challenge in biomedical applications due to the need to simultaneously improve the rheological stability, antimicrobial activity and functional compatibility of hydrogels. However, many conventional formulations have limitations associated with low structural stability, loss of viscosity and a limited correlation between composition and functional performance. In this study, antibacterial hydrogels based on quinoa saponin and silver nanoparticles incorporated into hydroalcoholic matrices were developed, characterized and experimentally evaluated. The methodology included the preparation of multiple hybrid formulations, rheological evaluation via viscosity analysis and pseudoplastic behavior, as well as antibacterial performance and functional stability testing. The results showed pseudoplastic non-Newtonian behavior in the evaluated formulations, as well as significant variations in viscosity associated with the concentration of nanoparticles and organic compounds. The GAM3, GAM6 and GAM7 formulations achieved the best experimental performance and improved functional stability, with GAM6 exhibiting the most favorable overall performance among the formulations. The results demonstrated the potential of sustainable nanostructured hydrogels for biomedical applications and functional antibacterial materials."
+  },
+  {
+    "id": "223",
+    "title": "Multi-Zone mmWave Radar Array and Random Forest for Non-Contact Clinical Respiratory Monitoring",
+    "authors": "Dayanna Pazmiño-Yauli; Freddy Ajila-Zaquinaula; Henry Mayorga Pérez; Alberto Guapi; France Andreina Maldonado González; César Palacios-Arias",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "Multi-Zone mmWave Radar Array and Random Forest",
+      "Non-Contact Clinical Respiratory Monitoring",
+      "Obstruction",
+      "Chest belts cannulas",
+      "Anatomical regions captures localized"
+    ],
+    "shortAbstract": "Continuous respiratory monitoring is a cornerstone of critical care, yet conventional contact-based sensors (e.g., chest belts, cannulas) often cause skin…",
+    "abstract": "Continuous respiratory monitoring is a cornerstone of critical care, yet conventional contact-based sensors (e.g., chest belts, cannulas) often cause skin irritation and limit mobility. This paper presents a contactless IoT telemetry system that employs a 2x3 array of 24 GHz FMCW radars to monitor thoracic micro-movements. By segmenting the torso into six distinct anatomical regions, the system captures localized dynamics of lung expansion. A Random Forest classifier was trained on data from a SimMan 3G clinical simulator, achieving an accuracy of 92.17% across six respiratory patterns: normal, severe rigidity, left obstruction, bilateral obstruction, and COPD/mild asthma obstructions. The system integrates an Edge-Computing architecture using MQTT and Node-RED, providing real-time clinical visualization with a latency of 150 ms."
+  },
+  {
+    "id": "229",
+    "title": "Simulation and Analysis of Molecular Communications Systems for Tumor Cells Detection",
+    "authors": "Yesenia Cevallos; Elvis Pilligua; Luis Tello-Oquendo; Jesus B. Alonso; Paola Vinueza-Naranjo; Albert Espinal; Deysi Inca; Alejandra Pozo; Daniel Haro-Mendoza",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "Simulation and Analysis of Molecular Communications Systems",
+      "Tumor Cells Detection",
+      "Blood",
+      "Malignant",
+      "Cell"
+    ],
+    "shortAbstract": "Molecular Communications (MCs) are the essential mechanisms that living beings use to transmit information regarding vital functions for survival or even…",
+    "abstract": "Molecular Communications (MCs) are the essential mechanisms that living beings use to transmit information regarding vital functions for survival or even to transmit diseases. In addition, telecommunications and network computer systems provide the communications infrastructure for analyzing and simulating biological communications in futuristic medical applications, such as IoMT, B-IoT, IoHT, IoNMT, IoE, and IoBNT. Then, MCs establish the foundational methods by which nanotechnology and its advances can be applied in healthcare, supported by traditional communication systems. These promising technologies, however, must be suitably emulated for human safety. Then, simulators seem to be a reasonable option for analyzing these MCs systems. This paper simulates malignant cell detection and their behavior using MolComML. Then, the first MCs system presented is composed of a Tumor Cell (TC) as a transmitter, a blood vessel as a communication channel, and the receiver is a transparent Tumor Cell Receptor (TCRx). The red blood cells, the white blood cells, and the platelets are found in the molecular channel to define a realistic system for analyzing the malignant cells' behavior. The interaction between the malignant cells and their receptors regarding the central axis of the blood vessel is also analyzed."
+  },
+  {
+    "id": "259",
+    "title": "Evaluating VTOL UAVs and Resilient Navigation Models for Medical Logistics in the Ecuadorian Amazon",
+    "authors": "Marlon Estuardo Guadalupe Intriago; Guillermo Armando Veliz-Velez; Jonathan Paul Zambrano Arriaga; Anibal Isaac Pruna Santillán; Ginger Yuleixy Rivera Ayón",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "Evaluating VTOL UAVs and Resilient Navigation Models",
+      "Medical Logistics",
+      "Ecuadorian Amazon",
+      "Resilient autonomous navigation hybrid",
+      "Reduce transit"
+    ],
+    "shortAbstract": "Medical logistics in the Ecuadorian Amazon are severely hindered by an inefficient bimodal (land-fluvial) infras- tructure, directly compromising the…",
+    "abstract": "Medical logistics in the Ecuadorian Amazon are severely hindered by an inefficient bimodal (land-fluvial) infras- tructure, directly compromising the “golden hour” for critical medical emergencies. This paper presents a comprehensive state- of-the-art review of Unmanned Aerial Vehicle (UAV) systems applied to the transport of biological and medical supplies. We evaluate the kinematic and technical viability of Vertical Take-Off and Landing (VTOL) architectures compared to tra- ditional multirotors in the Puyo-Arajuno (50 km) and Macas- Taisha (75 km) corridors. By modeling flight autonomy and analyzing Visual-Simultaneous Localization and Mapping (V- SLAM) algorithms for GPS-denied environments, the results demonstrate that VTOL configurations reduce transit times by approximately 44% and operational costs by 83.32% compared to traditional light aircraft. The study concludes that the integration of resilient autonomous navigation and hybrid airframes is the primary technical pathway to ensuring healthcare sovereignty in high-density forest regions."
+  },
+  {
+    "id": "277",
+    "title": "Low-Cost Instrumentation for Knee Strength Assessment: Hardware Design, Calibration, and Validation of a System Based on Load Cells and ESP32",
+    "authors": "Liliana Jorquera; Angel Custodio",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "Knee Strength Assessment",
+      "Hardware Design, Calibration, and Validation of a System",
+      "Load Cells and ESP32",
+      "ADC",
+      "Cell"
+    ],
+    "shortAbstract": "This paper presents the design, implementation, and experimental validation of a low-cost instrumentation system for measuring knee muscle force, with an…",
+    "abstract": "This paper presents the design, implementation, and experimental validation of a low-cost instrumentation system for measuring knee muscle force, with an emphasis on the hardware acquisition chain. The system employs two bending beam load cells connected to 24-bit HX711 amplifiers, controlled by an ESP32 microcontroller that transmits data to the computer via a structured USB-CDC serial protocol at 115,200 baud with delimiter-based validation. The metrological performance of each channel was characterized independently, yielding calibration factors of 1/1496 N/ADC for Cell 1 and 1/1445 N/ADC for Cell 2 using traceable weights. The hardware architecture is complemented by ESP32 firmware optimized to minimize acquisition jitter and an ASCII delimited frame protocol that discards corrupted packets without the need for CRC. In six validation tests, the system achieved sampling rates between 43 and 69 Hz, a maximum tracking error of 2.63 N, and a plateau CoV of 4.45%, demonstrating that the proposed hardware chain offers sufficient resolution and stability for clinical neuromuscular assessment at a fraction of the cost of commercial equipment."
+  },
+  {
+    "id": "294",
+    "title": "IoT-Based Wearable System for Real-Time Dorsolumbar Posture Monitoring with Vibrotactile Biofeedback Capability",
+    "authors": "Felipe Matovelle-Romero; Gustavo Lozada-Castro; Francisco Alvarado-Salinas; Gabriela Aguirre-Vicuña; Diego Almeida-Galárraga",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "IoT-Based Wearable System",
+      "Real-Time Dorsolumbar Posture Monitoring",
+      "Vibrotactile Biofeedback Capability",
+      "Postural",
+      "Vibrotactile feedback"
+    ],
+    "shortAbstract": "Musculoskeletal disorders (MSDs), particularly chronic lower back pain (LBP), are highly prevalent among sedentary office workers due to prolonged static…",
+    "abstract": "Musculoskeletal disorders (MSDs), particularly chronic lower back pain (LBP), are highly prevalent among sedentary office workers due to prolonged static flexion of the spine and cumulative mechanical loading of lumbar tissues. This paper presents the design, development, and preliminary pilot evaluation of a low-cost, IoT-enabled wearable system for real-time dorsolumbar posture monitoring with vibrotactile feedback capability. The device integrates an ESP8266 microcontroller with an MPU6050 Inertial Measurement Unit (IMU) to estimate the angles of spinal inclination in real time. A vibrotactile actuator was implemented to provide haptic alerts when the user deviates from a calibrated neutral range; however, during pilot validation, this function was disabled to characterize baseline postural behavior without external intervention. Data was transmitted via Wi-Fi to a Firebase Realtime Database for remote logging. The system was evaluated with 10 office workers during 45-minute monitoring sessions. The results indicated relevant postural deviations, with recorded inclination angles that generally ranged between 45° and 60°. The system successfully identified suboptimal postural patterns and supported cloudbased monitoring, demonstrating feasibility as a teleergonomic monitoring tool. The corrective effect of vibrotactile feedback remains to be evaluated in future controlled studies."
+  },
+  {
+    "id": "300",
+    "title": "Multimodal Active Glove Prototype for Rehabilitation: A Preliminary Study",
+    "authors": "Andrea Rojas-Buñay; Tamara Suarez-Minchala; Ana Cecilia Villa-Parra",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "Multimodal Active Glove Prototype for Rehabilitation",
+      "Hand",
+      "Rehabilitation platform",
+      "Usability",
+      "Functional"
+    ],
+    "shortAbstract": "Functional alterations of the hand caused by neurological and musculoskeletal disorders can significantly limit the performance of activities of daily…",
+    "abstract": "Functional alterations of the hand caused by neurological and musculoskeletal disorders can significantly limit the performance of activities of daily living, reducing functional independence and quality of life. To support the continuity of rehabilitation processes, this study presents the development of a multimodal active hand glove that integrates repetitive motor training, assisted mirror therapy, and vibrotactile stimulation within a single rehabilitation platform. A preliminary electrical safety assessment was conducted through insulation resistance and leakage current measurements, while usability was evaluated in 19 healthy participants using the System Usability Scale (SUS). The obtained results support the preliminary feasibility of the proposed system as a hand rehabilitation platform and provide valuable insights for guiding future improvements and design refinements."
+  },
+  {
+    "id": "308",
+    "title": "Design and Validation of an IoT Wearable System for Tremor Quantification in Patients with Parkinson's Disease",
+    "authors": "Jessica Balseca; Monica Huerta; Erwin Sacoto-Cabrera; Esteban-Fernando Ordoñez-Morales; Roger Clotet",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "Parkinson's Disease",
+      "Tremor Quantification",
+      "IoT Wearable System",
+      "Patients",
+      "RMS amplitude"
+    ],
+    "shortAbstract": "Parkinson's disease is characterized by motor impairments, including resting tremor, whose clinical assessment often relies on sporadic and subjective…",
+    "abstract": "Parkinson's disease is characterized by motor impairments, including resting tremor, whose clinical assessment often relies on sporadic and subjective observations. This limitation hinders continuous and objective monitoring of symptom progression. This paper presents the design and preliminary validation of an Internet of Things (IoT)-based wearable system for real-time tremor quantification in patients with Parkinson's disease. The proposed wrist-worn device integrates an ESP32 microcontroller, an MPU6050 inertial sensor, wireless connectivity, cloud-based data storage, and a digital visualization platform. The system acquires motion signals, processes them locally, and estimates quantitative parameters such as dominant frequency and root mean square (RMS) amplitude. A preliminary experimental evaluation was conducted with four patients diagnosed with Parkinson's disease and two healthy control participants. In the evaluated patients, the average dominant frequency ranged from 6.49 Hz to 8.46 Hz, while the average RMS amplitude ranged from 0.006 to 0.012. In healthy participants, the average RMS amplitude was approximately 0.004. The system recorded measurements every 2 s and enabled real-time visualization through the IoT platform. The results demonstrate the technical feasibility of the proposed system for remote and objective tremor monitoring. Although further validation with a larger sample and standardized clinical assessments is required, the proposed platform may complement traditional clinical evaluation and support longitudinal follow-up in patients with Parkinson's disease."
+  },
+  {
+    "id": "315",
+    "title": "Acquisition of muscle signals based on Optomyography for hand gesture classification using infrared sensors and Machine Learning",
+    "authors": "Joel Flores-Delgado; David Zurita; Alan Tierra-Llanga; Jorge Paredes; Alexandra Pazmiño-Armijos; Ramiro Isa-Jara",
+    "track": "Engineering in Medicine and Biology",
+    "keywords": [
+      "hand gesture classification",
+      "Acquisition of muscle signals",
+      "infrared sensors and Machine Learning",
+      "Feedforward Neural",
+      "Gestures"
+    ],
+    "shortAbstract": "This research presents the development of a signal acquisition system using near-infrared (NIR) sensors for the detection and classification of hand…",
+    "abstract": "This research presents the development of a signal acquisition system using near-infrared (NIR) sensors for the detection and classification of hand gestures using Machine Learning. The methodology is structured into six stages: 1) the detection and storage of muscle signals using an array of infrared sensors embedded in a 3D-printed model positioned around the forearm; 2) signal conditioning and processing using a Teensy 4.1 development board; 3) wireless transmission and data storage to a computer; 4) a graphical user interface to manage data in real-time; 5) the deployment of a Feedforward Neural Network for pattern recognition; and 6) the real-time classification of four distinct gestures. Validation tests demonstrated a normal data distribution using the Shapiro-Wilk test with a p-value of 0.92, and a significant difference in the operational amplifier gains, which has been verified through a Student's T-test. The Feedforward Neural Network achieved precision, recall, and F1-score exceeding 0.98. The system offers a reliable, degradation-free technological alternative compared to conventional electromyography."
+  },
+  {
+    "id": "32",
+    "title": "Automated Appointment Notification Module for Intelligent Healthcare Resource Optimization",
+    "authors": "Juan Sebastián Sánchez-Gómez",
+    "track": "Computer and Software Engineering",
+    "keywords": [
+      "Automated Appointment Notification Module",
+      "Intelligent Healthcare Resource Optimization",
+      "Notifications",
+      "No-show",
+      "EPS"
+    ],
+    "shortAbstract": "This paper presents the design and prototype-level assessment of an automated notification module for medical appointment management in an anonymized…",
+    "abstract": "This paper presents the design and prototype-level assessment of an automated notification module for medical appointment management in an anonymized Colombian health-promoting company (EPS). The problem addressed is appointment non-attendance, which produces unused clinical capacity, delayed access, and administrative inefficiency. The proposed module combines eHealth notification workflows, artificial intelligence–supported risk identification, and interoperability principles to support confirmation, cancellation, reassignment, traceability, and real-time administrative monitoring. Methodologically, the work followed an Agile/Scrum-oriented engineering process, structured around requirements analysis, user stories, interface prototyping, predictive-model specification, and dashboard design. The system architecture considered REST APIs and HL7 FHIR as integration mechanisms with existing appointment-management services. The prototype incorporated patient-facing desktop and mobile interfaces, automated multichannel notifications, notification history, and an administrative dashboard for confirmations, cancellations, reassignments, and monthly no-show visualization. The study-reported results indicate a decrease in the no-show rate from 12.6% to 10.2%, an increase in cancelled-appointment reassignment within 24 hours from 68% to 91%, user satisfaction improvement from 3.4 to 4.6 on a five-point scale, 99% service availability, processing capacity of 50,000 notifications per hour, 82% predictive accuracy, and first-year ROI of 145%. These findings suggest that automated, interoperable, and analytics-driven appointment management can improve operational efficiency in EPS contexts effectively."
+  },
+  {
+    "id": "65",
+    "title": "Operational Viability of Random Forest Classifiers for DDoS Detection on Commodity Hardware",
+    "authors": "Darwin Pillo; Galo Puetate; Diego Pabon",
+    "track": "Computer and Software Engineering",
+    "keywords": [
+      "Operational Viability of Random Forest Classifiers",
+      "DDoS Detection on Commodity Hardware",
+      "SYN",
+      "institutional WiFi",
+      "Offline accuracy"
+    ],
+    "shortAbstract": "Distributed Denial-of-Service attacks, particularly TCP SYN Floods, threaten institutional WiFi network availability. Traditional intrusion detection…",
+    "abstract": "Distributed Denial-of-Service attacks, particularly TCP SYN Floods, threaten institutional WiFi network availability. Traditional intrusion detection systems incur operational latencies of 4.0–14.9 seconds, creating critical vulnerability windows. Recent machine learning approaches prioritize offline accuracy while omitting real-time deployment validation on resource-constrained hardware. This study proposes a web-based Random Forest intrusion detection system validated through 50 independent SYN Flood injection trials on institutional WiFi (802.11ac) using standard commodity hardware (Intel Core i5, 8 GB RAM) without GPU acceleration. Operationally, the system achieved 100% detection accuracy (50/50 true positives) with 0% false positive rate across 1,301+ benign flows. Classification latency remained at 11.4 ms (P50) and end-to-end detection time averaged 3.318 seconds, consuming merely 12% CPU overhead. This represents a 68% reduction in detection window compared to signature-based systems while maintaining 99.69% offline accuracy. We demonstrate empirically that lightweight ensemble classifiers are operationally viable for institutional deployment, shifting the research focus from theoretical accuracy to practical deployment feasibility on standard infrastructure."
+  },
+  {
+    "id": "99",
+    "title": "Methodological Framework for Fine-Tuning LLMs in Secure Code Generation: An Integrated Barrier Mitigation Approach",
+    "authors": "Samuel Lascano; Anderson Granizo; Nadia N. Sánchez-Pozo",
+    "track": "Computer and Software Engineering",
+    "keywords": [
+      "Integrated Barrier Mitigation Approach",
+      "Fine-Tuning LLMs",
+      "Secure Code Generation",
+      "VFR",
+      "Efficient Fine-Tuning"
+    ],
+    "shortAbstract": "Fine-tuning large language models (LLMs) for secure code generation has become a transformative paradigm in software engineering. However, its effective…",
+    "abstract": "Fine-tuning large language models (LLMs) for secure code generation has become a transformative paradigm in software engineering. However, its effective adoption faces multiple technical and methodological barriers. This article presents an integrated four-phase methodological framework —Secure Data Preparation, Efficient Fine-Tuning, Validation with Feedback, and Secure Deployment— derived from a PRISMA 2020 systematic review of 136 primary studies published between January 2021 and March 2026. Experimental validation on CodeLlama-7B-Instruct with 600 vulnerable-patched pairs from the Big-Vul dataset demonstrates that applying Phases 1 and 2 via LoRA increases the vulnerability fix rate (VFR) from 41.2% to 68.7% (+27.5 pp), consuming only 11.8 GB VRAM and 72 min training ( 17× more efficient than full fine-tuning). A Phase 3 pilot with FDSP and Bandit raises VFR to 78.0% after one iteration on residual samples and to 76.4% on an independent test set."
+  },
+  {
+    "id": "112",
+    "title": "Data Preparation Matters: A Reproducible and Fairness-Aware Pipeline for Academic Recommender Systems",
+    "authors": "Marco Aguirre; Carlos Ayala-Tipan; Angel Chuncho; Lorena Recalde; Diana Martinez-Mosquera; Gabriela Suntaxi",
+    "track": "Computer and Software Engineering",
+    "keywords": [
+      "Reproducible and Fairness-Aware Pipeline for Academic Recommender Systems",
+      "Data Preparation Matters",
+      "Metadata",
+      "Bibliometric",
+      "Affiliation"
+    ],
+    "shortAbstract": "Large-scale bibliometric datasets are core infrastructure for scientometric analysis, research evaluation, and academic recommender systems. While major…",
+    "abstract": "Large-scale bibliometric datasets are core infrastructure for scientometric analysis, research evaluation, and academic recommender systems. While major bibliographic databases offer curated access to scholarly metadata, data retrieved through public APIs often exhibits quality issues such as incomplete affiliations, fragmented institutional representations, and unresolved author identities. These limitations become critical when bibliometric data is reused in downstream analytical and decision-support systems, where preprocessing choices directly affect visibility, representativeness, and fairness. This paper presents a reproducible data preparation pipeline for academic recommender systems using bibliometric data accessed via the Scopus APIs, using Ecuador as a case study. The pipeline integrates large-scale data extraction, metadata cleaning, affiliation normalization, and controlled entity resolution, explicitly designed to operate under realistic constraints including heterogeneous metadata, multilingual representations, and API-induced limitations. Rather than attempting full disambiguation, the approach adopts a conservative resolution strategy that prioritizes structural integrity and avoids false-positive merges. Evaluation results show that the pipeline preserves dataset completeness and schema consistency while substantially reducing artificial fragmentation in affiliation metadata. The paper also discusses implications for academic recommender systems, where data-induced distortions can affect topic recommendation, funding matching, team formation, and institutional diversity. Overall, this work provides a transparent and reproducible foundation for fairness-aware academic recommender systems grounded in real-world bibliometric data."
+  },
+  {
+    "id": "140",
+    "title": "TOGAF-Based Enterprise Architecture with N8n Workflow Automation for CRM Process Optimization in Ecuadorian Educational Institutions",
+    "authors": "Esau Hernan Moreno Murillo; Noel Batista Hernández; Maikel Yalandi Leyva Vázquez",
+    "track": "Computer and Software Engineering",
+    "keywords": [
+      "N8n Workflow Automation",
+      "TOGAF-Based Enterprise Architecture",
+      "Ecuadorian Educational Institutions",
+      "CRM",
+      "TOGAF"
+    ],
+    "shortAbstract": "Educational institutions in emerging economies manage CRM processes through fragmented manual workflows that generate enrollment bottlenecks…",
+    "abstract": "Educational institutions in emerging economies manage CRM processes through fragmented manual workflows that generate enrollment bottlenecks, communication failures, and compliance gaps. This paper presents a TOGAF-based enterprise architecture design for CRM process automation at the Ecomundo Babahoyo Educational Unit (Ecuador), using N8n as the workflow automation layer implementing TOGAF ADM architectural specifications. The solution was selected as the optimal strategy (Ci*=0.87) through SVNS-TOPSIS multicriteria analysis over five digital transformation alternatives, validated by a hybrid expert-LLM panel (Spearman rho=0.91). The architecture follows Design Science Research (DSR) methodology across four phases: diagnosis, TOGAF architectural design, N8n workflow implementation specification, and KPI-based impact evaluation. Projected outcomes: 35% improvement in process response times, 28% reduction in manual administrative tasks, and LOPDP 2021-compliant student data management. The N8n automation layer executes five core CRM workflows -- enrollment, academic records, institutional communication, document management, and service standardization -- as executable graph implementations of TOGAF ADM application architecture specifications. The framework is designed for replication across Ecuador's 5,000+ private educational institutions."
+  },
+  {
+    "id": "152",
+    "title": "Operative Prompt Chains as Engineering Artifacts: A Quality Rubric for AI-Assisted Software Development with Governed Agent Autonomy and Run ID Audit Traceability",
+    "authors": "Manuel-Enrique Puebla-Martínez; Maikel Yelandi Leyva Vazquez; Florentin Smarandache",
+    "track": "Computer and Software Engineering",
+    "keywords": [
+      "Operative Prompt Chains as Engineering Artifacts",
+      "Governed Agent Autonomy and Run ID Audit Traceability",
+      "AI-Assisted Software Development",
+      "Rubric",
+      "HERA"
+    ],
+    "shortAbstract": "Current practice in AI-assisted software engineering treats operative prompts as ephemeral conversational text rather than technical artifacts with…",
+    "abstract": "Current practice in AI-assisted software engineering treats operative prompts as ephemeral conversational text rather than technical artifacts with quality criteria, version control, and traceability requirements. This paper formalizes operative prompt chains as first-class engineering artifacts and presents a two-level quality rubric: a 10-criterion individual prompt rubric (scored 0-2) and a 7-criterion conversational chain coherence rubric, both grounded in the HERA 2.0 methodology for human-governed agentic software development. The rubrics address a documented industrial failure mode: agents following AI-DLC workflows correctly while executing on incomplete or misspecified operative instructions. A Run ID anti-old-instruction mechanism (HERA V7) serves as the traceability layer linking each operative prompt to its execution run, evidence artifacts, and audit record. The paper applies the rubric framework to the anonymized POS-switch timeout/compensation case, demonstrating that the 7-step HERA operative chain achieves full coverage of the chain coherence dimensions while a hypothetical 2-step direct chain fails on reorientation, adversarial review, and closure. The prompt quality rubric is positioned as a replicable evaluation instrument for comparing direct human-written and ChatGPT-assisted prompts in controlled studies."
+  },
+  {
+    "id": "162",
+    "title": "Embedded Document Reader for Visually Impaired Users Using Gemini 2.5 Flash: ROUGE and TAM Evaluation",
+    "authors": "Oscar M. Cumbicus-Pineda; Hernan Leonardo Torres Carrión; Pablo Fernando Ordoñez Ordoñez; Francisco Álvarez Pineda; Juan Pablo Torres Calva; Luis Daniel Cobos Arevalo; David Alejandro Rodriguez Celi",
+    "track": "Computer and Software Engineering",
+    "keywords": [
+      "Gemini 2.5 Flash",
+      "Embedded Document Reader",
+      "ROUGE and TAM Evaluation",
+      "Tables",
+      "Printed"
+    ],
+    "shortAbstract": "Visual impairment affects an estimated 2.2 billion people globally, with 58,388 persons with visual disability registered in Ecuador as of November 2025…",
+    "abstract": "Visual impairment affects an estimated 2.2 billion people globally, with 58,388 persons with visual disability registered in Ecuador as of November 2025 (CONADIS). For students in higher education, printed documents containing tables and statistical graphs remain inaccessible to screen readers and standard optical character recognition (OCR) tools. This paper presents the E-Reader, an embedded assistive reading system integrating the NVIDIA Jetson Nano (4GB) with the Google Gemini 2.5 Flash multimodal API and Google Text-to-Speech (gTTS) within a custom 3D-printed enclosure. The system interprets printed text, tables, and statistical graphs via a numeric keypad and delivers structured audio descriptions in real time. Content quality was evaluated using ROUGE-1/2/L metrics over 70 printed academic documents across six content categories, yielding F1 scores of 0.949 (ROUGE-L, text), 0.901 (ROUGE-1, tables), and 0.926 (ROUGE-1, graphs). User acceptance was assessed through a Technology Acceptance Model (TAM) study with 8 participants with visual impairment (7 valid responses), yielding a global score of 4.69/5.0 (93.8%) with all five TAM hypotheses confirmed (p < 0.05). Total hardware cost is approximately $534 USD (excluding VAT)."
+  },
+  {
+    "id": "291",
+    "title": "Comparative Analysis of LSB and Patchwork Steganographic Techniques: A Statistical Evaluation of Visual Imperceptibility",
+    "authors": "Maicol Brayan Llivisaca; Víctor José Huilca; Alexandra Macarena Flores",
+    "track": "Computer and Software Engineering",
+    "keywords": [
+      "LSB and Patchwork Steganographic Techniques",
+      "Statistical Evaluation of Visual Imperceptibility",
+      "Statistically",
+      "BMP",
+      "FI"
+    ],
+    "shortAbstract": "Digital steganography plays a critical role in information security by concealing the existence of hidden messages within carrier files. Among available…",
+    "abstract": "Digital steganography plays a critical role in information security by concealing the existence of hidden messages within carrier files. Among available techniques, Least Significant Bit (LSB) and Patchwork are widely referenced, yet direct experimental comparisons in BMP format using multimedia payloads and inferential statistical validation remain scarce in the literature. This study presents a controlled comparative analysis of LSB and Patchwork steganographic techniques applied to ten BMP images using a video file as the hidden payload. Both algorithms were implemented under standardized conditions, including a fixed pseudorandom seed, uniform payload size, and integrity verification per image. Visual imperceptibility was quantified using Peak Signal-to-Noise Ratio (PSNR), Structural Similarity Index Measure (SSIM), and Fidelity Index (FI). A paired Student's t-test was applied after Shapiro-Wilk normality validation to determine statistical significance of observed differences. Results demonstrate that Patchwork achieved a mean PSNR of 51.22 dB versus 49.33 dB for LSB, a statistically significant difference (t = -2.948, p = 0.016). Both techniques surpassed the 40 dB imperceptibility threshold. SSIM and FI differences were not statistically significant, indicating structural equivalence. These findings provide statistically validated evidence for informed steganographic algorithm selection in digital security applications."
+  },
+  {
+    "id": "41",
+    "title": "Ecuador's Cybersecurity Commitment-Capability Gap: A Multi-Index Assessment",
+    "authors": "Luis Alberto Herrera Lara; Roberto Carlos Herrera Lara",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "Ecuador's Cybersecurity Commitment-Capability Gap",
+      "NCSI",
+      "National",
+      "Global Cybersecurity",
+      "GCI"
+    ],
+    "shortAbstract": "This paper assesses Ecuador's national cybersecurity posture through a mixed-methods framework combining quantitative index benchmarking with qualitative…",
+    "abstract": "This paper assesses Ecuador's national cybersecurity posture through a mixed-methods framework combining quantitative index benchmarking with qualitative gap analysis across four international frameworks: the ITU Global Cybersecurity Index (GCI), the National Cyber Security Index (NCSI), the OAS-IDB Cybersecurity Capacity Maturity Model, and the WEF Global Cybersecurity Outlook. The analysis identifies a 46.35-point gap between Ecuador's GCI score (87.18) and its March 2026 NCSI score (40.83, rank 92). Under the March 2026 NCSI taxonomy, Ecuador scores 0% in cyber threat analysis, incident response, and crisis management, and 17% in cybersecurity of digital enablers. Estimates of cybercrime underreporting range from 80% to 92%, fewer than 35% of public institutions report alignment with ISO/IEC 27001 or NIST practices, and the national CSIRT has operated with nine staff on equipment dating to 2013. These results identify four gaps—implementation, critical infrastructure, talent and awareness, and measurement—suggesting that legal and institutional progress has not translated into proportional operational readiness. The paper concludes with four prioritized policy recommendations."
+  },
+  {
+    "id": "46",
+    "title": "Semantic Image Transmission for Industrial Visible Light Communications",
+    "authors": "Alejandro Arratia Pavat; Pablo Palacios; María Camila Reyes; Cesar Azurdia Meza; Alberto Castro; David Zabala-Blanco; Ismael Soto; Iván Sánchez; Milton Román",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "Industrial Visible Light Communications",
+      "Semantic Image Transmission",
+      "VLC",
+      "Normalized energy",
+      "Huffman"
+    ],
+    "shortAbstract": "Visible light communication (VLC) is a promising option for indoor industrial wireless links, yet image transmission remains costly in the presence of…",
+    "abstract": "Visible light communication (VLC) is a promising option for indoor industrial wireless links, yet image transmission remains costly in the presence of optical noise, interference, multipath, and stochastic blockage events. Under such conditions, conventional bit-accurate transmission may be inefficient when monitoring tasks require preservation of scene content rather than exact pixel values. This paper compares three end-to-end image transmission schemes over a realistic industrial VLC simulator: direct pixel transmission, lossless Huffman coding, and semantic communication based on a convolutional autoencoder with squeeze-and-excitation (SE) attention. The evaluation considers transmission distance, receiver field of view (FoV), ambient light, optical interference, inter-symbol interference (ISI), and stochastic blockage events, and reports bit error rate (BER), signal-to-noise ratio (SNR), goodput, transmission energy, computational energy, and normalized energy efficiency. The results show that the semantic scheme reduces the payload from 1,204,224 bits to 4,096 bits per image (approximately 294:1), achieves the highest normalized energy efficiency, and preserves perceptual structure under harsh channel conditions in which Huffman coding degrades catastrophically. These findings indicate that semantic communication is a strong candidate for energy-constrained industrial visual monitoring over VLC links."
+  },
+  {
+    "id": "55",
+    "title": "Artificial Intelligence in Visible Light Communication (VLC) State of the Art",
+    "authors": "Angel Guevara; José Luis Lázaro-Galilea; Álvaro De la Llana Calvo; Héctor Chinchero; Juan Landazuri",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "Visible Light Communication (VLC) State of the Art",
+      "Artificial Intelligence",
+      "Nonlinear",
+      "Learning dl reinforcement",
+      "Inter-symbol interference isi phenomena"
+    ],
+    "shortAbstract": "This work presents a review of the state of the art of Visible Light Communication (VLC) systems, focusing on Artificial Intelligence (AI) as the key…",
+    "abstract": "This work presents a review of the state of the art of Visible Light Communication (VLC) systems, focusing on Artificial Intelligence (AI) as the key driver to enhance the performance and adaptability of these systems. Currently, the implementation of VLC is subject to critical limitations of the physical layer, such as the nonlinear response of LED devices and signal degradation due to inter-symbol interference (ISI), phenomena resulting from restricted modulation bandwidth and multipath propagation. However, this work explores how various data-driven techniques, including Deep Learning (DL) and Reinforcement Learning (RL), could mitigate nonlinear distortion and information loss in the optical channel. The study concludes with a comparative discussion of performance metrics and computational complexity, evaluating the viability of these solutions against traditional methods to proposing scalable architectures in dynamic environments."
+  },
+  {
+    "id": "56",
+    "title": "IoT Angle Measurement System for a Microwave Breast Imaging Device Employing Kalman Filter and Rodrigues’ Rotation Formula",
+    "authors": "Rodrigo Patta; Álec Yoshida; Leandro Amorim; Alexandre de Jesus Aragão",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "IoT Angle Measurement System",
+      "Handheld",
+      "Rotation",
+      "Bluetooth energy",
+      "Processed"
+    ],
+    "shortAbstract": "This work presents the assessment of an Internet of Things embedded sensor tile programmed for the measurement of the rotation angle of a handheld device…",
+    "abstract": "This work presents the assessment of an Internet of Things embedded sensor tile programmed for the measurement of the rotation angle of a handheld device designed for microwave imaging breast cancer detection. The chosen portable hardware platform holds a 32-bit microcontroller embedded with several sensors, including Bluetooth Low Energy communication, all powered by a battery, constituting a wireless Internet of Things low-power system. The 3-axis accelerometer and gyroscope were utilized to detect the 3D rotation angle, capturing the dynamic handheld position. The raw data were processed employing Rodrigues'rotation formula to convert rotation data into a usable mathematical form, taking into account the patient's lay-down angle. A Kalman filter was applied, fusing both sensors' data to reduce noise and improve accuracy. Processed data were then transmitted via Bluetooth Low Energy to a developed mobile application, which supports calibration steps and receives detected angles. Tests were conducted in a test station with a goniometer and then on a constructed handheld device on a female mannequin. Results showed the applied correction suppressed the average error of the raw reading from 7.65% to only 0.93%. The implementation of the Kalman filter demonstrated its robustness in sensor fusion, absorbing residual fluctuations and reducing the final error to 0.57%."
+  },
+  {
+    "id": "68",
+    "title": "Domain-Adaptive Preprocessing and Temporal Attention for Cybersecurity Anomaly Detection in Legacy Industrial Control Systems",
+    "authors": "Roberto Carlos Herrera Lara; Mario Aragones Lozano",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "Domain-Adaptive Preprocessing and Temporal Attention",
+      "Cybersecurity Anomaly Detection",
+      "Legacy Industrial Control Systems",
+      "Water treatment",
+      "Sherlock"
+    ],
+    "shortAbstract": "Most deep learning models for anomaly detection in Industrial Control Systems (ICS) are trained and evaluated on a single benchmark. When such a model…",
+    "abstract": "Most deep learning models for anomaly detection in Industrial Control Systems (ICS) are trained and evaluated on a single benchmark. When such a model encounters a dataset from a different sector (one with different feature distributions, value ranges, or protocol semantics), detection performance can degrade to the point of being operationally useless. This paper presents a three-stage domain-adaptive preprocessing framework that selects the scaling strategy and feature subset according to the statistical profile of each dataset. Combined with a lightweight temporal attention mechanism, the framework is evaluated across water treatment (Secure Water Treatment, SWaT), power generation (HAI), and power distribution (Sherlock) datasets. On Sherlock, uniform preprocessing yielded an Area Under the Receiver Operating Characteristic Curve (ROC AUC) of 0.82; adaptive preprocessing raised it to 0.999. The final architecture achieved F1 scores of 98.73%, 98.72%, and 96.55% on the three sectors, respectively. Temporal attention added 5.12 percentage points of F1 on the hardest dataset. The preprocessing gap exceeded the architectural differences observed in our controlled experiments, which rarely surpassed 2–3 percentage points on the same benchmark."
+  },
+  {
+    "id": "161",
+    "title": "Cybersecurity Resilience for Cooperative Financial Institutions: A Humanitarian Approach to Protecting Vulnerable Communities’ Financial Services in Ecuador",
+    "authors": "Janner Alcivar; Juan Jose Calle de la A; Dayron Rumbaut Rangel; Maykel Leyva Vazquez",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "Cybersecurity Resilience for Cooperative Financial Institutions",
+      "Humanitarian Approach to Protecting Vulnerable Communities’ Financial Services",
+      "CSF maturity",
+      "Clients",
+      "Vendor"
+    ],
+    "shortAbstract": "Cooperative financial institutions serve as critical financial lifelines for underserved communities in Latin America. In Ecuador, cybersecurity incidents…",
+    "abstract": "Cooperative financial institutions serve as critical financial lifelines for underserved communities in Latin America. In Ecuador, cybersecurity incidents increasingly threaten these institutions, with national losses exceeding $600 million annually. This paper presents a humanitarian-oriented cybersecurity resilience framework applied to a cooperative serving 15,000 active clients in Guayaquil. Combining ISO/IEC 27001:2022 governance, NIST CSF 2.0 maturity assessment, and a Neutrosophic AHP-TOPSIS vendor selection model, the framework addresses the triple challenge of limited resources, regulatory compliance (LOPDP, Superintendencia de Bancos), and protecting vulnerable populations from digital financial exclusion caused by cyberattacks. Baseline diagnosis reveals a NIST CSF maturity of 1.8/5, with 70% of supplier contracts lacking security clauses—a critical gap exposing clients’ financial data. The neutrosophic decision model (CR=0.042) identifies the optimal vendor configuration (Ci=0.668) under } uncertainty. Results connect to SDG 16 (strong institutions) and SDG 1 (financial inclusion), offering a replicable framework for the 600+ cooperatives operating in Ecuador."
+  },
+  {
+    "id": "168",
+    "title": "Self-Supervised Near-Optimal Combining Weights for Indoor Multi-Cell VLC With Angle-Diversity Receivers",
+    "authors": "Jairo Morales Huaman; Pablo Palacios; María Camila Reyes; Cesar Azurdia Meza; Alberto Castro; David Zabala-Blanco; Iván Sánchez; Milton Román",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "Angle-Diversity Receivers",
+      "Self-Supervised Near-Optimal Combining Weights",
+      "Indoor Multi-Cell VLC",
+      "MRC",
+      "ICI"
+    ],
+    "shortAbstract": "Conventional maximal-ratio combining (MRC) in angle-diversity receivers (ADRs) assigns branch weights from the per-photodiode…",
+    "abstract": "Conventional maximal-ratio combining (MRC) in angle-diversity receivers (ADRs) assigns branch weights from the per-photodiode signal-to-noise-plus-interference ratio (SNIR), thereby ignoring the joint structure of desired signal, inter-cell interference (ICI), and noise across branches. This paper proposes a self-supervised deep neural network (DNN) that maps the received desired-signal, inter-cell-interference, and branch-noise-power vectors, denoted by \\(\\{S,ICI,R\\}\\), of a four-photodiode ADR to near-optimal combining weights without labeled targets. The network is trained by directly maximizing \\(SNIR_{\\text{DNN}}/SNIR_{\\text{MRC}}\\) relative to the conventional MRC baseline. In a simulated four-cell indoor MIMO-VLC scenario with random 3D receiver positions, the proposed method consistently outperforms MRC on three evaluation planes, \\(z \\in \\{0.35, 0.85, 1.75\\}\\,m\\), achieving mean linear-SNIR gains of 3.42, 7.86, and 7.48. The percentage of improved points exceeds 99.9% on all planes. Because inference avoids per-sample numerical search, the method is well suited to low-latency VLC receivers."
+  },
+  {
+    "id": "169",
+    "title": "Toward ITU-T Y.1541-Oriented Latency Control for Videoconferencing over Shared Cellular Tethering: A Low-Cost QoS Gateway Pilot in Ecuador",
+    "authors": "Eduardo Alvarado",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "Low-Cost QoS Gateway Pilot",
+      "Videoconferencing over Shared Cellular Tethering",
+      "Toward ITU-T Y.1541-Oriented Latency Control",
+      "Microsoft Teams",
+      "HTB"
+    ],
+    "shortAbstract": "Cellular tethering is widely used in Ecuadorian households when fixed broadband is unavailable, unreliable, or unaffordable. However, tethered links may…",
+    "abstract": "Cellular tethering is widely used in Ecuadorian households when fixed broadband is unavailable, unreliable, or unaffordable. However, tethered links may experience reduced effective capacity due to operator traffic management, leading to bufferbloat and latency spikes that degrade real-time video conferencing. This paper presents a low-cost residential Quality of Service (QoS) gateway based on Raspberry Pi 5 that applies DiffServ using Linux iptables, ipset, and tc. The gateway identifies outbound UDP traffic to Zoom, Microsoft Teams, Google Meet, and Cisco Webex through 164 destination prefixes and prioritizes marked flows with an HTB/SFQ hierarchy calibrated below the measured tethered uplink capacity. The system was evaluated in Guayaquil through controlled scenarios using kernel default fq_codel, the proposed HTB/SFQ+ipset policy, and OpenWrt SQM/CAKE, as well as real Microsoft Teams sessions with competing traffic. In the real-session evaluation, the proposed QoS policy kept 95th-percentile latency at 102 ms, within a 150 ms ITU-T Y.1541-derived operational target, whereas the unmanaged baseline reached 159 ms. Under the same bandwidth constraint, the proposed policy also achieved tighter aggregate P95 latency than SQM/CAKE, with 82 ms versus 92 ms, and improved inter session stability. A same-day interleaved stress test with controlled upstream saturation further confirmed the effect: across four ON/OFF pairs on a single serving cell, P95 latency remained at 111 ms with QoS but rose to 569 ms without QoS. The study also reports behavior consistent with operator-side tethering policing, including an approximately 56:1 uplink reduction, and documents the shaper-calibration procedure required to move queue control into the gateway. The results are presented as pilot, Y.1541 oriented operational evidence rather than formal conformance certification."
+  },
+  {
+    "id": "172",
+    "title": "LoRaWAN-Based IoT Architecture for Real-Time Monitoring of Agro-Environmental Variables in Coffee Farming Systems",
+    "authors": "Franklin Jiménez; Marianela Carrión; Jordy Cabrera",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "Real-Time Monitoring of Agro-Environmental Variables",
+      "Coffee Farming Systems",
+      "LoRaWAN-Based IoT Architecture",
+      "Prototype",
+      "Transmission"
+    ],
+    "shortAbstract": "This study presents the design, development, and implementation of a prototype wireless sensor network aimed at monitoring agro-environmental variables in…",
+    "abstract": "This study presents the design, development, and implementation of a prototype wireless sensor network aimed at monitoring agro-environmental variables in coffee crops. The system enables real-time acquisition of key parameters, including ambient temperature, relative humidity, soil moisture, precipitation, and ultraviolet (UV) radiation index. The proposed architecture is based on LoRaWAN technology for long-range, low-power data transmission and is integrated with a Firebasebased IoT platform for storage, management, and visualization of information. The results demonstrate the system’s ability to perform continuous and reliable monitoring, ensuring data integrity during acquisition, transmission, and storage. The prototype constitutes an efficient and scalable solution for monitoring agroenvironmental conditions in coffee production systems."
+  },
+  {
+    "id": "189",
+    "title": "Energy Decomposition of a LoRaWAN Class A Node: From Time-on-Air Modeling to Hardware Efficiency Constraints",
+    "authors": "Giovanny Cuzco",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "Energy Decomposition of a LoRaWAN Class A Node",
+      "From Time-on-Air Modeling to Hardware Efficiency Constraints",
+      "Bytes",
+      "Standby",
+      "MCU"
+    ],
+    "shortAbstract": "The energy consumption of LoRaWAN Class A nodes depends on both link-layer configuration and the quiescent characteristics of the underlying hardware…",
+    "abstract": "The energy consumption of LoRaWAN Class A nodes depends on both link-layer configuration and the quiescent characteristics of the underlying hardware platform. In this work, a state-based model driven by Time-on-Air (ToA) is developed for an environmental monitoring node built on the TTGO LoRa32 platform, which integrates an ESP32 microcontroller with an SX1276-class LoRa transceiver. The operating cycle is decomposed into Sleep, MCU, TX, RX1, and RX2 states, and the energy consumed per cycle is estimated from per-state average currents and transmission duration under US915 operation. The model is evaluated across the five US915 uplink data rates (DR0-DR4), payloads of 10, 20, and 50 bytes, and reporting intervals from 30 s to 1800 s. The analysis quantifies, for each configuration, the crossover interval T* at which quiescent-state energy surpasses the combined active-state energy (MCU + TX + RX). For the evaluated platform, T* ranges from 14 s (DR4, 10 bytes) to 48 s (DR0, 50 bytes), indicating that for virtually all practical IoT duty cycles, standby energy already dominates. To examine the hardware efficiency gap, the board standby current (0.8 mA) is compared with a low-leakage target of 5 uA. Under a 300 s reporting interval, the model projects an autonomy improvement of 91.1%. These results show that standby current is the binding energy constraint in low-duty-cycle LoRaWAN nodes, and that hardware design must be addressed jointly with protocol configuration to achieve meaningful autonomy gains."
+  },
+  {
+    "id": "193",
+    "title": "A Virtual Instrumentation Framework for Low-Cost Metrological Evaluation of Protected Management Frames in Dense Wireless Networks.",
+    "authors": "David Cardenas Villacres",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "Low-Cost Metrological Evaluation of Protected Management Frames",
+      "Virtual Instrumentation Framework",
+      "Dense Wireless Networks.",
+      "Frame",
+      "Diagnostic"
+    ],
+    "shortAbstract": "This paper presents the design and implementation of a virtual instrumentation framework tailored for the empirical diagnostic audit and metrological…",
+    "abstract": "This paper presents the design and implementation of a virtual instrumentation framework tailored for the empirical diagnostic audit and metrological characterization of link-layer vulnerabilities in local area networks. By integrating an embed- ded hardware architecture based on the ESP32 transceiver with a MATLAB analytical computing platform, passive spectrum monitoring and systematic data acquisition were conducted in dense urban environments. The core focus of the investigation centers on assessing the deployment compliance of Protected Management Frames (PMF) stipulated by the IEEE 802.11w standard. Extracted data parameters including Received Sig- nal Strength Indication (RSSI), beacon densities, and frame configuration matrices were structured via serial encapsulation and parsed into specialized metrics. The experimental results reveal a widespread absence of active management frame pro- tection mechanisms within the surveyed infrastructure, thereby exposing a critical susceptibility to deauthentication-driven denial of service vectors. It is demonstrated that integrated low-cost embedded nodes represent a precise, mathematically viable alternative to conventional laboratory-grade analyzers for large- scale network resilience diagnostic evaluation."
+  },
+  {
+    "id": "195",
+    "title": "IoT ULEAM: A Platform for Multidisciplinary Topics",
+    "authors": "Willian Zamora; Carlos T Calafate; Mike Machuca; Robert Moreira Centeno; Edison Almeida; Oscar Gonzalez",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "Multidisciplinary Topics",
+      "IoT ULEAM",
+      "Layer",
+      "MQTT",
+      "Categories"
+    ],
+    "shortAbstract": "his paper presents IoT ULEAM, a web-based Internet of Things platform developed at Universidad Laica Eloy Alfaro de Manabí (ULEAM) to support…",
+    "abstract": "his paper presents IoT ULEAM, a web-based Internet of Things platform developed at Universidad Laica Eloy Alfaro de Manabí (ULEAM) to support multidisciplinary research and institutional monitoring. The platform implements a three-tier architecture: a Mosquitto MQTT connectivity layer, a Python/Django/PostgreSQL processing layer with WebSocket support and rule-based threshold alerting, and a React.js presentation layer with a real time dashboard and geospatial map. Data is organized around independent, administrator-managed categories that allow heterogeneous research groups to share a single infrastructure without code changes; five active categories currently span air quality monitoring, aquaculture parameter control, and student-facing validation exercises. Performance evaluation of the MQTT broker shows a mean publish-to-subscribe latency below 9 ms for operational payloads, a sustained throughput of 54.1 msg/s (peak 77 msg/s), and a 100% delivery rate with up to 100 concurrent publishers; under a realistic workload of 20 simultaneous devices, mean latency was 0.28 ms with zero packet loss. These results confirm that commodity server hardware suffices for a university-scale deployment, establishing IoT ULEAM as a scalable, open data infrastructure for interdisciplinary research in the Manabí region."
+  },
+  {
+    "id": "211",
+    "title": "Interpretable Transmission Quality Classification in PON Access Networks Using Random Forest",
+    "authors": "Berenice Arguero; Christian Tipantuña; Germán V. Arévalo; Danilo Sigcha",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "PON Access Networks",
+      "Random Forest",
+      "Interpretable Transmission Quality Classification",
+      "Optical",
+      "Acceptable"
+    ],
+    "shortAbstract": "Monitoring transmission quality in passive optical access networks is a relevant challenge due to the variation of the physical link conditions and the…",
+    "abstract": "Monitoring transmission quality in passive optical access networks is a relevant challenge due to the variation of the physical link conditions and the need to identify degradations in a timely manner. In this context, this work develops an interpretable approach based on Random Forest to classify transmission quality in PON networks. The model was trained using an experimental dataset composed of 6064 samples and 20 input variables associated with optical, electrical, radio frequency, and link configuration parameters. The target variable, named Transmission Quality, was categorized into three classes: Acceptable, Degraded, and Excellent. To improve model generalization, hyperparameter tuning was performed using RandomizedSearchCV with five-fold cross-validation. The optimized model achieved an average validation accuracy of 0.8710 and a test accuracy of 0.88. In addition, F1-scores of 0.87, 0.87, and 0.90 were obtained for the Acceptable, Degraded, and Excellent classes, respectively. The feature importance analysis identified the received optical power, PRx (dBm); the modulator bias voltage, Vbias (V); and the variable optical attenuator attenuation, Attenuation VOA (dB), as the most influential variables in the classification process. The results show that Random Forest allows classifying transmission quality with consistent performance and relating the model decisions to relevant physical parameters of the link. Therefore, the proposed approach constitutes a useful alternative to support monitoring, diagnosis, and proactive maintenance in PON access networks."
+  },
+  {
+    "id": "213",
+    "title": "Technical, Economic, and Social Impact of FM Band Reorganization in Colombia",
+    "authors": "Hernan Paz Penagos; Nibia A. Morales-Chiw; Jose D. Velasco-Melo",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "Technical, Economic, and Social Impact of FM Band Reorganization",
+      "Migration",
+      "DRM Plus",
+      "Hybrid plan",
+      "Colombia"
+    ],
+    "shortAbstract": "Colombia's 88–108 MHz frequency-modulation (FM) band is close to saturation, limiting new assignments, analog-to-digital migration and quality…",
+    "abstract": "Colombia's 88–108 MHz frequency-modulation (FM) band is close to saturation, limiting new assignments, analog-to-digital migration and quality improvements for incumbent stations. This paper assesses how spectrum can be released while protecting continuous service for analog listeners and safeguarding aeronautical navigation systems. The study combines a geo-referenced inventory of 1,550 stations with ITU-R curve-to-curve coverage modeling, adjacent-channel interference analysis and a cost-benefit evaluation. Three alternatives are compared: extending FM into 76–88 MHz with 100 kHz spacing, replacing urban FM with DRM Plus single-frequency networks, and adopting a phased hybrid plan that combines 100 kHz channelization, extended FM, HD Radio in major markets and DRM Plus for regional multiplexes. Results indicate that the hybrid plan can double effective spectrum capacity, reduce first-adjacent collisions by more than 80%, lower residual congestion to approximately 45%, and save about 9 GWh of electricity per year without forcing an immediate FM switch-off. A five-year simulcast period and a support fund for community and ethnic broadcasters are proposed to reduce migration risk. The main contribution is a verifiable geo-economic model that links coverage overlap, migration cost and energy savings into an implementable refarming roadmap for Colombia."
+  },
+  {
+    "id": "220",
+    "title": "Experimental Analysis of Crosstalk Between two LTE Carriers in a Hybrid RoF-PON Architecture",
+    "authors": "Adriana Riofrio; Berenice Arguero",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "Experimental Analysis of Crosstalk Between two LTE Carriers",
+      "Hybrid RoF-PON Architecture",
+      "SOI",
+      "BLER",
+      "Interfering"
+    ],
+    "shortAbstract": "This paper analyzes the impact of crosstalk in a hybrid radio-over-fiber (RoF) architecture for the transmission of two adjacent LTE signals at 380 MHz…",
+    "abstract": "This paper analyzes the impact of crosstalk in a hybrid radio-over-fiber (RoF) architecture for the transmission of two adjacent LTE signals at 380 MHz and 400 MHz configured on the Universal Software Radio Peripheral (USRP 2944R); these frequencies are isolated from external interference sources but are close to Band 87 of the 3GPP standard. Three scenarios were evaluated. The first was designed to characterize both the signal of interest (SOI) and the interfering signal individually and determine their optimal operating points in terms of transmit power (PTX), achieving a robust link with no impact on performance and a Block Error Rate (BLER) of zero. In the second scenario, the two carriers were transmitted simultaneously, showing an increase in the Interference-to-Signal Ratio (ISR) to 10 dB, a reduction in the Signal-to-Interference-plus-Noise Ratio (SINR), an increase in the BLER to 100% with an interfering PTX of -4 dBm, and progressive degradation of the Physical Downlink Control Channel (PDCCH) and Physical Downlink Shared Channel (PDSCH) as a result of crosstalk due to the 2 MHz free spectral separation (guard band). Finally, in the third scenario, the impact of reducing optical power in the PON network was analyzed to determine the sensitivity value of the optical link, corresponding to -16,14 dBm, to ensure the transmission of the SOI signal without affecting the reliability and availability of LTE services carried over a wireless RoF-PON link"
+  },
+  {
+    "id": "276",
+    "title": "On the Impact of Oracle Imperfections in Cryptographic Algorithms",
+    "authors": "Michael Paucar",
+    "track": "Communications, IoT & Cybersecurity",
+    "keywords": [
+      "On the Impact of Oracle Imperfections",
+      "Cryptographic Algorithms",
+      "Epsilon",
+      "Quantum",
+      "Adversary"
+    ],
+    "shortAbstract": "Cryptographic security proofs often rely on idealized oracle models, yet practical implementations introduce approximation, numerical error, and other…",
+    "abstract": "Cryptographic security proofs often rely on idealized oracle models, yet practical implementations introduce approximation, numerical error, and other deviations that can alter correctness and security guarantees. This paper studies the effect of oracle imperfections in cryptographic algorithms through a formal model in which an oracle returns an incorrect response with probability at most $\\epsilon$ per query. We prove that, for any probabilistic polynomial-time adversary making at most $q$ oracle queries, the statistical distance between the ideal and imperfect executions is bounded by $q\\epsilon$; as a consequence, the adversary's advantage degrades by at most $q\\epsilon$ in standard cryptographic games. We show this dependence is tight up to constant factors. Beyond the classical results, we extend the oracle-fidelity viewpoint to the quantum setting and establish a formal preliminary: an $\\epsilon$-approximate quantum oracle degrades output-state fidelity by at most $O(q\\epsilon)$, providing a quantitative foundation for future analysis of fault-tolerant quantum search and amplitude amplification."
+  },
+  {
+    "id": "10",
+    "title": "Evidence-Driven Co-Design of Diagnosis and Recovery for Offshore Wind Turbines",
+    "authors": "Yat Ping Lam; Silvio Simani",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "Offshore Wind Turbines",
+      "Evidence-Driven Co-Design of Diagnosis and Recovery",
+      "Structural",
+      "Availability",
+      "Supervision remains transparent engineering"
+    ],
+    "shortAbstract": "Offshore wind turbines must preserve energy production, structural integrity, and availability under fluctuating winds, waves, and component degradations…",
+    "abstract": "Offshore wind turbines must preserve energy production, structural integrity, and availability under fluctuating winds, waves, and component degradations. This paper proposes an evidence-driven co-design framework that links early controller choices, diagnostic coverage, and recovery policies within a single verification loop. The method proceeds through three connected stages. First, candidate supervisory designs are explored against energy and load objectives while exposing diagnosability and controllability margins. Second, detection logic and accommodation rules are engineered jointly so that post-fault trajectories remain inside an explicit safety envelope rather than being corrected only after alarms appear. Third, the combined design is verified with a digital replica under weighted wind-wave scenarios and injected faults, with uncertainty reported for the primary indicators. The resulting workflow improves traceability because assumptions made at design time propagate directly to thresholds, derating actions, and system-level evidence. A representative offshore case study shows higher availability, shorter off-nominal episodes, improved recovery behaviour, and lower structural stress than sequential design-only or diagnosis-only baselines. The overall outcome is a practical route towards dependable offshore supervision that remains transparent enough for engineering audit and strong enough for critical review."
+  },
+  {
+    "id": "17",
+    "title": "Comparative Analysis of PID-Based Controllers for Seismic Active Structural Control",
+    "authors": "Luis Caiza; Pablo Torres-Rodas; Diego S. Benitez; Fabricio Yepez; Noel Pérez-Pérez; Oscar Camacho",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "PID-Based Controllers",
+      "Seismic Active Structural Control",
+      "Fractional-order",
+      "PID",
+      "Nonlinear"
+    ],
+    "shortAbstract": "This paper presents a comparative study of linear, nonlinear, and fractional-order PID controllers for reducing seismic response in buildings. The…",
+    "abstract": "This paper presents a comparative study of linear, nonlinear, and fractional-order PID controllers for reducing seismic response in buildings. The objective is to reduce the structural displacements around the equilibrium position under seismic excitations. A single-degree-of-freedom model is considered to represent the dominant dynamic behavior of the structure. A nonlinear PID controller with state-dependent gains is proposed to enhance adaptability under large structural responses. In addition, a fractional-order PID (FOPID) controller is implemented to provide improved flexibility in shaping the system damping characteristics. The performance of the proposed controllers is evaluated through numerical simulations under seismic disturbances. The comparison is based on the maximum displacement, vibration attenuation, and control effort. The results show that the nonlinear and fractional-order controllers outperform the classical PID in reducing structural response, with improved transient response and more efficient disturbance rejection."
+  },
+  {
+    "id": "40",
+    "title": "A Proportional-Integral Retarded Reaching Law for Sliding Mode Control of Time-Delay Processes",
+    "authors": "Oscar Camacho; Sebastian Vega; Florindo A. de C. Ayres Jr; Juan J. Gude; Fernando Auat-Chein; Antonio Di Teodoro",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "Proportional-Integral Retarded Reaching Law",
+      "Sliding Mode Control of Time-Delay Processes",
+      "Reaching phase",
+      "Control smc",
+      "PIR"
+    ],
+    "shortAbstract": "This work proposes a proportional–retarded PID (PIR) formulation for the reaching phase of sliding mode control (SMC) in nonlinear time-delay systems. The…",
+    "abstract": "This work proposes a proportional–retarded PID (PIR) formulation for the reaching phase of sliding mode control (SMC) in nonlinear time-delay systems. The approach replaces the derivative term with a delayed proportional action, reducing noise amplification and chattering while preserving the simplicity of PID-based control. Within the SMC framework, the sliding surface is defined by a PID structure, while the reaching phase is governed by the proposed PIR mechanism. The inclusion of a tunable delay enhances robustness and disturbance rejection, yielding smoother control signals. Simulation results demonstrate improved transient performance and reduced noise sensitivity, making the approach suitable for practical implementation."
+  },
+  {
+    "id": "75",
+    "title": "Real-Time Modeling of Synchronous Reluctance Machines for Hardware-in-the-Loop Simulation: A State-of-the-Art Review",
+    "authors": "Joaquín Córdova; Johnny Rengifo",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "Real-Time Modeling of Synchronous Reluctance Machines",
+      "Hardware-in-the-Loop Simulation",
+      "SynRM",
+      "PWM",
+      "High-fidelity"
+    ],
+    "shortAbstract": "Synchronous reluctance machines (SynRMs) are increasingly adopted in high-efficiency variable-speed drives, yet their pronounced magnetic nonlinearities…",
+    "abstract": "Synchronous reluctance machines (SynRMs) are increasingly adopted in high-efficiency variable-speed drives, yet their pronounced magnetic nonlinearities pose a persistent challenge for high-fidelity real-time modeling. This paper surveys the literature on SynRM electromagnetic modeling published between 2018 and 2025, organizing the reviewed works into five families: analytical, FEM/LUT-based, data-driven, magnetic equivalent circuit (MEC), and hybrid. Each family is assessed against the 1/100 real-time rule: for a 10 kHz PWM carrier, the plant model integration step must not exceed 1 $\\mu$s. The review identifies three open gaps: no high-fidelity model capturing all major SynRM phenomena has been validated in real time; the only HIL implementation with a nonlinear, saturated plant operates at 100 $\\mu$s, which is incompatible with industrial PWM frequencies; and data-driven flux models for SynRM lack systematic real-time benchmarking."
+  },
+  {
+    "id": "81",
+    "title": "Performance Comparison of PI and Deep Reinforcement Learning Controllers for PMSM Current Control in a Real-Time Simulation Environment",
+    "authors": "Luis Muñoz; Patricia Pasmay; Síxifo Falcones",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "PMSM Current Control",
+      "Performance Comparison of PI and Deep Reinforcement Learning Controllers",
+      "Real-Time Simulation Environment",
+      "Deterministic Policy Gradient",
+      "Deep Deterministic"
+    ],
+    "shortAbstract": "This paper presents a comparative evaluation of a classical proportional integral (PI) controller and four deep reinforcement learning (DRL) controllers…",
+    "abstract": "This paper presents a comparative evaluation of a classical proportional integral (PI) controller and four deep reinforcement learning (DRL) controllers for current regulation in a permanent magnet synchronous motor (PMSM) drive. The evaluated DRL algorithms are Proximal Policy Optimization (PPO), Soft Actor Critic (SAC), Twin Delayed Deep Deterministic Policy Gradient (TD3), and Deep Deterministic Policy Gradient (DDPG). The control objective is to regulate the direct-axis and quadrature-axis currents by generating voltage commands in the synchronous reference frame. The evaluation is performed using a real-time simulation oriented environment, where the control actions are normalized voltage commands and the observation vector includes current tracking errors, measured currents, and rotor speed. The controllers are tested under a piecewise current reference profile with zero, positive, and negative operating regions. The results show that the PPO based controller achieved the best overall current tracking performance, reducing the root mean square error by approximately 49.3% and the integral absolute error by approximately 62.4% compared with the classical PI controller. The results also show that not all reinforcement learning algorithms directly outperform classical control, since SAC and DDPG exhibited weaker tracking behavior under the tested conditions."
+  },
+  {
+    "id": "85",
+    "title": "Performance Trade-Offs in Nonlinear Fractional-Order PID Controllers.",
+    "authors": "Antonio Di Teodoro; Juan J. Gude; Hanna Aboukheir; Oscar Camacho",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "Nonlinear Fractional-Order PID Controllers.",
+      "Control effort",
+      "FOPID",
+      "Disturbance",
+      "Rejection"
+    ],
+    "shortAbstract": "This paper presents a comparative analysis of nonlinear fractional-order PID (FOPID) controllers under disturbance rejection, reference tracking, and…",
+    "abstract": "This paper presents a comparative analysis of nonlinear fractional-order PID (FOPID) controllers under disturbance rejection, reference tracking, and noise conditions. Several nonlinear parameterizations are evaluated and compared with the standard FOPID controller using performance indices and control effort metrics. The results show that nonlinear configurations can improve transient response and disturbance rejection, but often at the cost of increased control activity and noise sensitivity. Among the evaluated alternatives, a Han’s-based nonlinear controller (FOPID-H) provides the best overall tradeoff between performance, robustness, and control effort. The findings highlight that nonlinear strategies should be selected based on application requirements rather than assumed to be universally superior."
+  },
+  {
+    "id": "170",
+    "title": "An Active Fault-Diagnosis Framework for the 8/6 Switched Reluctance Motor: Idle-Phase Probing, Bayesian Belief, and Safety Constraints",
+    "authors": "Franklin Sánchez; Maria Milanes; Enrique Romero; Jose Manuel Aller Castro",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "8/6 Switched Reluctance Motor",
+      "Active Fault-Diagnosis Framework",
+      "Idle-Phase Probing, Bayesian Belief, and Safety Constraints",
+      "Passive",
+      "Over-current constraint"
+    ],
+    "shortAbstract": "Inter-turn short circuits in switched reluctance mo- tor (SRM) windings are difficult to detect at an incipient stage because the circulating current in…",
+    "abstract": "Inter-turn short circuits in switched reluctance mo- tor (SRM) windings are difficult to detect at an incipient stage because the circulating current in the shorted turns is largely invisible to converter-terminal measurements, which are the basis of most passive diagnostic methods. This paper proposes an active fault-diagnosis framework that replaces passive classification with deliberate machine interrogation. During intervals in which a phase produces no torque, a diagnostic agent injects a small voltage pulse and measures the resulting current response. The response magnitude reflects the phase effective inductance and thus reveals the presence of shorted turns through an otherwise inaccessible observable. The proposed framework comprises four components: (i) a diagnostic probing action that exposes the hidden fault signature, (ii) a constrained Markov decision process formulation, (iii) an interpretable Bayesian belief over fault hypotheses used as the decision state, and (iv) an explicit winding over-current constraint enforced through both a Lagrangian penalty and a hard safety shield. The framework is evaluated on a four-phase 8/6 SRM with magnetic characteristics obtained from finite-element analysis and thirteen fault hypotheses. Results show that active interrogation improves full phase-and-severity diagnosis accuracy by more than an order of magnitude com- pared with passive monitoring, while satisfying the over-current constraint with no probe-induced violations. The remaining clas- sification errors are concentrated in the incipient-fault regime, where early detection is most valuable. As one realization of the acquisition policy, a proximal policy optimization agent achieves performance comparable to that of a principled information-gain strategy without access to the underlying heuristic, demonstrating that the framework supports both engineered and learned poli- cies. The study constitutes a simulation-based proof of concept."
+  },
+  {
+    "id": "183",
+    "title": "Data-Driven Predictive Control with Extended State Kalman Estimation for Nonlinear Systems",
+    "authors": "Hanna Aboukheir; Pedro Teppa",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "Extended State Kalman Estimation",
+      "Data-Driven Predictive Control",
+      "Control law",
+      "Explicit",
+      "Nonlinear"
+    ],
+    "shortAbstract": "This paper presents a data-driven predictive control strategy for nonlinear systems with unknown dynamics. The proposed approach combines an Extended…",
+    "abstract": "This paper presents a data-driven predictive control strategy for nonlinear systems with unknown dynamics. The proposed approach combines an Extended State Kalman Filter (ESKF) for real-time estimation of system states and lumped disturbances with a one-step-ahead predictive model, enabling the derivation of an explicit closed-form control law. By relying solely on measured data, the method eliminates the need for an explicit mathematical model while maintaining robustness against uncertainties, noise, and time-varying delays. The control law is obtained through the minimization of a quadratic cost function, avoiding the need for online optimization and resulting in low computational complexity. The effectiveness of the approach is validated through a nonlinear mixing process in simulation and a real-time temperature control laboratory setup. Results demonstrate accurate reference tracking, smooth control action, and strong disturbance rejection capabilities. The proposed method provides a practical and efficient alternative for industrial control applications where model identification is challenging, contributing to the advancement of resilient and adaptive control technologies aligned with Sustainable Development Goal 9 (Industry, Innovation, and Infrastructure)."
+  },
+  {
+    "id": "196",
+    "title": "Comparative Evaluation of Controllers and Bio-Inspired Optimization Algorithms for Ball-and-Beam Systems",
+    "authors": "Juan Valencia Castañeda; Andrea Pilco; Oswaldo Menéndez; Robert Guamán Rivera; Juan Pablo Vásconez",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "Comparative Evaluation of Controllers and Bio-Inspired Optimization Algorithms",
+      "ABC",
+      "Settling overshoot",
+      "Controller optimized",
+      "Simscape environment"
+    ],
+    "shortAbstract": "The Ball-and-Beam (BnB) system is a classical benchmark in control engineering due to its nonlinear, underactuated, and inherently unstable dynamics. This…",
+    "abstract": "The Ball-and-Beam (BnB) system is a classical benchmark in control engineering due to its nonlinear, underactuated, and inherently unstable dynamics. This paper presents a comparative study of seven controller architectures, namely PD, Digital PD, PID, Digital PID, Lead Compensator (Root Locus and Frequency-Domain), and State-Space control. Controller tuning was performed using four bio-inspired optimization algorithms: Genetic Algorithm (GA), Particle Swarm Optimization (PSO), Ant Colony Optimization (ACO), and Artificial Bee Colony (ABC). Performance was evaluated using both a transfer-function-based mathematical model and a high-fidelity Simscape environment. The results showed that the State-Space controller optimized using GA achieved the best theoretical performance, reaching a settling time of 0.44 s with less than 5% overshoot. However, validation in the Simscape environment revealed that the Digital PID controller optimized using ABC provided the best practical performance, achieving a settling time of 11.43 s and an overshoot of only 0.51%. Furthermore, PSO exhibited the highest convergence consistency, whereas ABC demonstrated the best transferability to realistic nonlinear conditions. The obtained results confirm the effectiveness of bio-inspired optimization techniques for automatic controller tuning and highlight the importance of validating controller performance using realistic simulation environments."
+  },
+  {
+    "id": "204",
+    "title": "Training-Data Coverage Governs Open-Phase Fault Response in Offline Reinforcement Learning for Induction Motor Drives",
+    "authors": "Franklin Sánchez; María Isabel Milanés Montero; Enrique Romero Cadaval",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "Induction Motor Drives",
+      "Offline Reinforcement Learning",
+      "Training-Data Coverage Governs Open-Phase Fault Response",
+      "Seeds",
+      "Flag"
+    ],
+    "shortAbstract": "Fault-tolerant control of induction motor drives is usually built on an explicit fault detector coupled to a hand- designed reconfiguration law. This…",
+    "abstract": "Fault-tolerant control of induction motor drives is usually built on an explicit fault detector coupled to a hand- designed reconfiguration law. This paper asks a narrower, data- centric question: with the policy class, the state representation, and the learning algorithm all held fixed, does the coverage of the offline training data by itself decide whether a learned controller responds correctly to an open-phase fault. The plant is a squirrel-cage induction motor modeled in the gym-electric- motor framework with a finite-control-set predictive-torque inner loop. A phase-a open circuit is injected as an exact topological disconnection by orthogonally projecting the integrator state onto the admissible-current subspace, reaching the open-phase signatures to machine precision. A fault-aware state and a ripple-sensitive reward are used to train discrete implicit Q- learning offline on two replay buffers that differ only in coverage: one spanning healthy and faulted operation, one healthy only. Evaluated over several seeds, the two agents are indistinguishable on healthy states, but on open-phase states the fault-spanning agent reliably reproduces the behavior controller while the healthy-only agent is both substantially worse and highly variable across seeds, accompanied by a larger Bellman residual and value estimates inflated toward zero, the canonical signature of off-support extrapolation. A flag-dropout study shows that the learned policy exploits both the detection flag and the faulted dy- namics, degrading gracefully rather than catastrophically when the flag is denied. The result establishes a necessary condition on the training data for fault-aware offline RL, and its scope is delineated."
+  },
+  {
+    "id": "207",
+    "title": "A Deep Learning-Based Soft-Sensor for Real-Time Angular Velocity Estimation in Three-Phase Induction Motors Under Dynamic Load Scenarios",
+    "authors": "Fernando Quinapanta; Lady Panchi",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "Deep Learning-Based Soft-Sensor",
+      "Real-Time Angular Velocity Estimation",
+      "Three-Phase Induction Motors",
+      "RPM",
+      "RMS"
+    ],
+    "shortAbstract": "Accurate real-time estimation of angular velocity (RPM) is fundamental for condition monitoring, fault diagnosis, and closed-loop control of three-phase…",
+    "abstract": "Accurate real-time estimation of angular velocity (RPM) is fundamental for condition monitoring, fault diagnosis, and closed-loop control of three-phase induction motors driven by Variable Frequency Drives (VFDs). This work presents a non-invasive soft-sensor based on a Deep Multilayer Perceptron (MLP) architecture capable of estimating motor speed from electrical variables acquired through a Fluke power quality analyzer. Feature engineering techniques based on RMS voltages, RMS currents, and three-phase apparent power were employed to improve the physical interpretability of the model. Experimental results demonstrated a coefficient of determination (R 2 ) of 0.98 and a Mean Absolute Error (MAE) below 20 RPM, validating the feasibility of implementing low-cost sensorless monitoring systems in industrial environments"
+  },
+  {
+    "id": "218",
+    "title": "Data-Driven Setpoint Correction for a Buck Converter Under a Voltage-Sensor Fault that Integral Action Cannot Reject",
+    "authors": "Franklin Sánchez; Mark Lopez",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "Buck Converter",
+      "Voltage-Sensor Fault that Integral Action Cannot Reject",
+      "Data-Driven Setpoint Correction",
+      "True output",
+      "Calibrated reference"
+    ],
+    "shortAbstract": "An affine voltage-sensor fault, in which the mea- sured output equals a gain times the true output plus a bias, causes any controller that regulates the…",
+    "abstract": "An affine voltage-sensor fault, in which the mea- sured output equals a gain times the true output plus a bias, causes any controller that regulates the measured voltage to settle the true output away from its target. Integral action does not reject this error because the loop never observes the true output; the integrator drives the measured value to the reference and leaves a true-output offset of hundreds of millivolts to over a volt. This paper presents a data-driven setpoint-correction (DDSC) method for a buck converter that removes this offset without an online observer and without inverting the fault analytically. From offline logs of a faulted converter, scored against a calibrated reference available only at commissioning, the method learns a corrected operating setpoint as an affine function of the reference, a target we justify with a short proposition. A conventional proportional-integral (PI) controller then regulates the measured voltage to this corrected setpoint, which drives the true output to target. We validate the method on a physical breadboard prototype (24 V input, 0–12 V output, 31 kHz, Arduino-in-the- loop). At the design fault, the conventional PI carries a true- output error of up to −1.41 V across the operating range, whereas DDSC reduces the mean true error to 66 mV (worst case 160 mV), tracking the calibrated reference. We also report a negative result that motivates the design: offline reinforcement learning, specifically implicit Q-learning, does not solve this problem on competent-controller logs because the advantage signal collapses and the policy reduces to imitation. The runtime controller is one multiply-add over a plain PI, deployable on a low-cost microcontroller."
+  },
+  {
+    "id": "230",
+    "title": "Analysis of Inter-Turn Faults in Three-Phase Induction Motors Under FCS-MPC Predictive Control With and Without Fault-Tolerant Strategies",
+    "authors": "Victor Vargas; Sheila Milena Salinas Castillo; Franklin Sánchez",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "Inter-Turn Faults",
+      "Three-Phase Induction Motors",
+      "FCS-MPC Predictive Control With and Without Fault-Tolerant Strategies",
+      "Ripple",
+      "Fault-tolerant strategy"
+    ],
+    "shortAbstract": "Three-phase induction motors are widely used in industrial applications due to their robustness and high reliability. However, inter-turn faults in stator…",
+    "abstract": "Three-phase induction motors are widely used in industrial applications due to their robustness and high reliability. However, inter-turn faults in stator windings constitute one of the main causes of performance degradation and loss of efficiency. This work analyzes the behavior of a squirrel-cage induction motor controlled by Finite Control Set Model Predictive Control (FCS-MPC) under different levels of inter-turn fault severity. Two main scenarios are considered: operation under fault conditions without a fault-tolerant strategy and operation under fault conditions with a fault-tolerant strategy based on faultyphase isolation. Six operating conditions of speed (30–100%) and load torque (20–95%) are evaluated for each scenario. The performance indicators analyzed include torque ripple, speed ripple, switching losses, and current imbalance. The obtained results quantify the impact of the fault and demonstrate that the fault-tolerant strategy reduces torque ripple by up to 93% and decreases switching losses by reducing the effective set of inverter voltage vectors from eight to five, while maintaining operational continuity in two-phase mode. Index Terms—Induction Motor, Inter-Turn Fault, FCS-MPC, Fault-Tolerant Control, Torque Ripple, Speed Ripple, Gym Electric Motor"
+  },
+  {
+    "id": "233",
+    "title": "Scenario-aware fault diagnosis of an induction motor using reduced current measurements and machine learning.",
+    "authors": "Iván León; Franklin Sánchez; Edgar Pallo",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "Scenario-aware fault diagnosis of an induction motor",
+      "reduced current measurements and machine learning.",
+      "Window",
+      "Fold",
+      "Windows"
+    ],
+    "shortAbstract": "This paper presents a scenario-aware validation framework for electrical fault diagnosis in a squirrel-cage induction motor using reduced current…",
+    "abstract": "This paper presents a scenario-aware validation framework for electrical fault diagnosis in a squirrel-cage induction motor using reduced current measurements and machine learning. The study addresses two common weaknesses in data-driven motor diagnosis: overly optimistic validation based on random window splits and limited physical discussion of the signals used by the classifier. The motor was simulated with the gym-electric-motor (GEM) toolbox under twenty operating scenarios that include constant-speed, variable-speed, transient-startup, and variable-load conditions. Three motor states were evaluated: healthy operation, open phase A, and short circuit between phases A--B. The main scenario dataset contains 13,040 labeled windows, including 2,480 healthy samples and 5,280 samples for each fault class. Time-domain and FFT descriptors were extracted from currents, torque, and speed. The main validation used GroupKFold, leaving one complete operating scenario out in each fold. The phases A-B configuration achieved a macro F1-score of 1.000, while a single-phase A reached 0.9963. As an additional 80/20 validation audit, a Stratified 5-Fold test was first applied to the regenerated 90,520-window dataset and produced a low macro F1-score of 0.5268. After analyzing this result, the window labels were physically refined by retaining only healthy windows and fault windows whose center time was inside the injected fault interval. With this 7,000-window filtered dataset, the same 5-Fold protocol reached F1 = 1.000 for phases A--B. Noise tests, window-overlap sensitivity, classifier benchmarking, feature importance, and representative motor signals are also reported. The results show that reduced-current diagnosis is feasible, with phases A-B providing the most robust reduced-sensing option for the simulated faults."
+  },
+  {
+    "id": "269",
+    "title": "Fractional-Order Control Optimization for Differential Mobile Robots Using Improved PSO",
+    "authors": "Edwin Palacios; Luis Herrera Baños; Efrén Herrera Baños; Karla Jacome; Pablo Palacios; Efrén Herrera Muentes",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "Differential Mobile Robots",
+      "Improved PSO",
+      "Fractional-Order Control Optimization",
+      "FOPID",
+      "Trajectory-tracking"
+    ],
+    "shortAbstract": "This paper investigates the trajectory-tracking problem of differential drive mobile robots using a fractional-order PID (FOPID) controller tuned through…",
+    "abstract": "This paper investigates the trajectory-tracking problem of differential drive mobile robots using a fractional-order PID (FOPID) controller tuned through an improved particle swarm optimization (PSO) strategy. The proposed approach combines adaptive inertia weighting and elitist Gaussian mutation in order to improve the exploration capability of the optimization process and reduce premature convergence during parameter tuning. The controller performance is evaluated using nonlinear trajectory-tracking simulations under identical operating conditions for PID, standard FOPID, and improved PSO-based FOPID controllers. Performance assessment is carried out in terms of integral absolute error (IAE), settling time, and control signal variation (TVu). Simulation results show that the proposed approach reduces tracking error and transient response time while maintaining bounded control signals throughout the trajectory-following task. Robustness is further analyzed through 500 Monte Carlo trials considering randomized initial conditions and additive measurement noise. The obtained results indicate consistent closed-loop behavior under small perturbations and uncertain operating conditions. These findings suggest that the combination of fractional-order control and improved evolutionary optimization can provide an effective alternative for trajectory tracking in differential mobile robots."
+  },
+  {
+    "id": "288",
+    "title": "Hardware Modernization and Digital Control of a Coupled pH–Temperature Process Using Stoichiometric Feedforward: Experimental Validation on a Didactic Plant",
+    "authors": "Dennys Cortez; Carlos Salazar; Joaquín Rendón; Erik Moncayo; Adriana Aguirre; Andrés Salazar",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "Stoichiometric Feedforward",
+      "Experimental Validation on a Didactic Plant",
+      "Hardware Modernization and Digital Control of a Coupled pH",
+      "Actuators",
+      "Exhibiting"
+    ],
+    "shortAbstract": "This paper presents the design, implementation, and experimental validation of a digital control strategy applied to a coupled pH–temperature process…",
+    "abstract": "This paper presents the design, implementation, and experimental validation of a digital control strategy applied to a coupled pH–temperature process exhibiting multivariable dynamics. Due to the highly non-linear, logarithmic nature of pH dynamics and the inherent dead-time of industrial actuators, controlling such coupled variables simultaneously represents a significant challenge in process automation. The experimental station was modernized using a LabJack U3-HV data acquisition board interfaced with MATLAB/Simulink. Actuators consist of industrial thermoelectric Peltier cells for thermal regulation and peristaltic pumps exhibiting a measured dead-time of 4.12 seconds for pH neutralization. System identification and localized linearization around the operating point were performed to design a robust digital loop integrated with stoichiometric feedforward decoupling. Experimental results demonstrate that the proposed control strategy effectively tracks reference changes, minimizes steady-state error, and maintains robustness against external disturbances, proving to be a highly effective academic platform for advanced control systems training."
+  },
+  {
+    "id": "289",
+    "title": "Robust PID Control and Cyber-Physical SCADA Supervision for Steam Turbine Seal Pressure Regulation Based on Industrial Data",
+    "authors": "Carlos Salazar; Denisse Fiallos; Adriana Aguirre; Andrés Salazar",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "Steam Turbine Seal Pressure Regulation",
+      "Robust PID Control and Cyber-Physical SCADA Supervision",
+      "Relief",
+      "Parameter",
+      "Loop"
+    ],
+    "shortAbstract": "Proper seal steam pressure regulation is required to maintain the thermodynamic performance and operational reliability of industrial steam turbines, as…",
+    "abstract": "Proper seal steam pressure regulation is required to maintain the thermodynamic performance and operational reliability of industrial steam turbines, as inadequate control causes steam leakage and vacuum degradation along the shaft. This paper presents the data-driven characterization, robust parameter tuning, and multi-software simulation validation of a decoupled dual-valve seal steam regulator. Grounded on an operational dataset from a power plant, continuous-time transfer functions are identified, capturing the linear and equalpercentage characteristics of the supply and pressure relief valves with validation fit scores exceeding 92% and 89%, respectively. To assess closed-loop stability under parameter variations and steam load fluctuations, a robust parallel Proportional-IntegralDerivative (PID) control framework is synthesized. Frequencydomain evaluations validate the system margins, achieving a phase margin of 89.51◦(ωgc ≈ 0.006 rad/s) for the supply loop and 89.12◦(ωgc ≈ 0.066 rad/s) for the relief loop, coupled with a peak sensitivity norm of ∥S∥∞ ≈ 1.01 and stability verification via the Nyquist criterion. The practical deployability of the control laws is verified through a synchronized multi-platform simulation pipeline linking Siemens TIA Portal, KEPServerEX, and Indusoft Web Studio. Real-time data streams and synchronous data mapping ensure tracking and alarm-based supervisory monitoring within the operational pressure envelope of 0.3 bar to 0.7 bar. This integrated framework bridges the gap between control theory and practical automation deployment."
+  },
+  {
+    "id": "292",
+    "title": "Gain-Scheduled PID Control of a 1DoF Helicopter via Quasi-LPV Modeling",
+    "authors": "Galo Guzmán; Henry Maldonado; Ismael Minchala",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "Gain-Scheduled PID Control of a 1DoF Helicopter",
+      "Quasi-LPV Modeling",
+      "Nonlinearities",
+      "Circ",
+      "Polytopic"
+    ],
+    "shortAbstract": "Gain-scheduled control of nonlinear systems is commonly limited by the proliferation of scheduling parameters that arise when multiple structural…",
+    "abstract": "Gain-scheduled control of nonlinear systems is commonly limited by the proliferation of scheduling parameters that arise when multiple structural nonlinearities are present, leading to high-dimensional polytopic representations that are computationally expensive to synthesize. This paper addresses that challenge for a custom-built one-degree-of-freedom helicopter (H1DoF) whose pitch dynamics exhibit three structural nonlinearities: a gravitational torque depending on $\\sin(\\beta-\\theta)$ and two Stribeck-type friction terms. Through a careful affine formulation, all three nonlinearities are exactly embedded into a single scalar scheduling parameter $w(t)$, yielding a two-vertex quasi-linear-parameter-varying (quasi-LPV) model with no approximation error. A gain-scheduled PID controller with a Clegg-based anti-windup integrator was synthesized from this polytopic model and implemented on a low-cost ESP32 microcontroller at a $10\\,\\text{ms}$ sampling period. Experimental validation at five reference pitch angles ($10^\\circ$--$30^\\circ$) confirmed settling times not exceeding $5\\,\\text{s}$, negligible steady-state error, and satisfactory disturbance rejection across the full operating range. The proposed approach demonstrates that exact quasi-LPV embeddings of multiple nonlinearities into a minimal polytope are feasible and computationally tractable even on resource-constrained embedded hardware."
+  },
+  {
+    "id": "295",
+    "title": "Multivariable control of a temperature system using decoupling, PIR and FOPID controllers",
+    "authors": "José Castillo; Nathaly Guijarro; Oscar Camacho",
+    "track": "Industrial Electronics, Systems Control & Signal Processing",
+    "keywords": [
+      "decoupling, PIR and FOPID controllers",
+      "Multivariable control of a temperature system",
+      "Interaction",
+      "Strategies",
+      "Matrix calculated"
+    ],
+    "shortAbstract": "This paper presents the analysis, design, and comparison of multivariable control strategies applied to the TCLab device in its TITO configuration. First…",
+    "abstract": "This paper presents the analysis, design, and comparison of multivariable control strategies applied to the TCLab device in its TITO configuration. First, the system model is obtained, and the Bristol matrix is calculated to determine the level of process interaction. If significant interaction is identified, decoupling strategies are considered to improve system performance. Subsequently, PIR and FOPID controllers are implemented and compared. The performance of each strategy is evaluated under set point-tracking and disturbance-rejection tests, using metrics such as ISE, ISCO, maximum overshoot, and settling time."
+  },
+  {
+    "id": "29",
+    "title": "A Workflow-Based Architecture for Academic Process Automation Through REST API Integration: Empirical Evaluation in a Public Higher Education Institution",
+    "authors": "Susana Patiño; Junior Rojas Rosado; Javier Quiñónez Quiñónez; Néstor Quiñónez",
+    "track": "Technology and Engineering Management",
+    "keywords": [
+      "REST API Integration",
+      "Workflow-Based Architecture",
+      "Public Higher Education Institution",
+      "Unenrollment",
+      "Enrollment"
+    ],
+    "shortAbstract": "This paper presents the design, implementation, and empirical evaluation of a workflow-based architecture for automating academic enrollment and…",
+    "abstract": "This paper presents the design, implementation, and empirical evaluation of a workflow-based architecture for automating academic enrollment and unenrollment processes through REST API integration between the Institutional Academic System SIAD and Moodle. The artifact was developed following a Design Science Research approach and implemented with n8n, Docker, read-only academic database views, dataset comparison rules, and Moodle REST web services. The proposed architecture automates two critical workflows: student enrollment and student unenrollment. The previous process relied on CSV-based enrollment procedures and manual or non-systematic Moodle unenrollment operations, which required significant technical effort and limited the synchronization between official academic records and virtual classrooms. The evaluation focuses on operational metrics directly relevant to institutional process improvement: processing time, average time per record, throughput, error rate, success rate, time reduction, and traceability. For student enrollment, the workflow reduced processing time from 13.32 hours to approximately 25.6 minutes, equivalent to a 96.8% reduction, with an average throughput of 6.87 records per second and 0% error across three evaluated executions. For student unenrollment, 1,694 records were completed in 45.5 minutes; compared with a manual baseline of 84 seconds per record, the estimated time reduction was 98.08%. The findings suggest that open-source workflow automation combined with REST API integration is a viable, low-cost, and replicable strategy for improving academic process integration in public higher education institutions."
+  },
+  {
+    "id": "30",
+    "title": "Integrated Lean Six Sigma Planning Model for Perfect Order Reliability in UPS Electrical Installation Projects: Emerging-Market Evidence",
+    "authors": "Fernando Maradiegue",
+    "track": "Technology and Engineering Management",
+    "keywords": [
+      "Integrated Lean Six Sigma Planning Model",
+      "UPS Electrical Installation Projects",
+      "Perfect Order Reliability",
+      "Orders",
+      "Emerging-market"
+    ],
+    "shortAbstract": "One of the main dependability issues in emerging-market infrastructure is schedule non-compliance in UPS electrical installation projects. The company…",
+    "abstract": "One of the main dependability issues in emerging-market infrastructure is schedule non-compliance in UPS electrical installation projects. The company analyzed exhibits a Perfect Order (PO) of 68.42% — measured directly as the proportion of fully compliant orders across 95 UPS work orders — and a gap of 21.58 percentage points below the ≥90% service benchmark, resulting in annual losses of USD 87,240. Current techniques employ DMAIC, Weighted Scoring Matrix (WSM), 5S and Last Planner System (LPS) independently, not integrated in a consolidated PO-driven architecture. This study presents MIPEC-UPS, an integrated planning model that connects these tools sequentially with the support of an Industry 4.0 roadmap. The model was evaluated through a dual approach: benchmarking of 95 UPS work orders and discrete-event simulation (Simio, 30 runs). The results project a rise in PO to 91.50% (+23.08 p.p.), decreasing annual losses by USD 29,426 (to USD 57,814) with a payback of less than one month. Results show that integrated Lean Six Sigma planning enables low-cost reliability improvements in electrical SMEs, offering MIPEC-UPS as a scalable solution for digital transformation in emerging-market contexts."
+  },
+  {
+    "id": "44",
+    "title": "Integrated Management System Design for ISO 9001 and ISO 45001 Integration in a Private Security Company",
+    "authors": "Marcela Coronel; Jorge Chávez",
+    "track": "Technology and Engineering Management",
+    "keywords": [
+      "Private Security Company",
+      "ISO 9001 and ISO 45001 Integration",
+      "Compliance",
+      "Quality occupational",
+      "Checklist"
+    ],
+    "shortAbstract": "Private security firms increasingly depend on standardized quality and occupational health and safety systems, yet parallel implementation can weaken…",
+    "abstract": "Private security firms increasingly depend on standardized quality and occupational health and safety systems, yet parallel implementation can weaken process control, resource coordination, and managerial decision-making. This study addressed the lack of integration between ISO 9001:2015 and ISO 45001:2018 in an Ecuadorian private security company. A qualitative, non-experimental, descriptive, and cross-sectional case study was conducted using documentary analysis, a compliance checklist, a Likert-scale survey applied to 262 employees from a population of 817, and a management-level interview. Based on UNE 66177:2005, the study designed an Integrated Management System framework supported by common processes, shared documentation, performance indicators, risk management, internal auditing, and a 24-week implementation roadmap. The diagnosis showed high perceived training coverage (76.63%) and resource availability (81.99%), but also a reactive approach to process findings (73.95%) and limited use of indicators for decision-making. The checklist classified overall compliance as 20% full compliance and 80% partial compliance. The proposed framework offers a practical management roadmap for integrating quality and occupational safety systems in service organizations requiring regulatory control and continuous improvement."
+  },
+  {
+    "id": "89",
+    "title": "Evaluation of a Business Intelligence Framework for Academic Decision-Making at the University of Guayaquil",
+    "authors": "Jorge Misael Merchán Riera",
+    "track": "Technology and Engineering Management",
+    "keywords": [
+      "Business Intelligence Framework",
+      "Academic Decision-Making at the University of Guayaquil",
+      "Institutional",
+      "Utilization",
+      "Strengthening"
+    ],
+    "shortAbstract": "Digital transformation in higher education institutions has significantly increased the generation of academic and administrative data, creating the need…",
+    "abstract": "Digital transformation in higher education institutions has significantly increased the generation of academic and administrative data, creating the need for mechanisms capable of transforming such information into useful knowledge for decision-making processes. This study evaluates a Business Intelligence framework aimed at strengthening academic and institutional management at the University of Guayaquil. The research adopts an applied case study approach in a higher education institution with more than 56,000 students, 17 faculties, and 56 undergraduate programs offered in face-to-face, virtual, and hybrid modalities. The framework integrates multiple data sources through dashboards developed in Power BI and organized into three main components: academic analytics based on syllabus monitoring and student perception, learning environment utilization analytics, and institutional improvement plan monitoring. The results demonstrate improvements related to information centralization, reduced report generation time, and strengthened institutional monitoring and decision-support processes. Furthermore, the framework enabled the identification of academic trends, infrastructure utilization patterns, and institutional progress through analytical visualization and real-time monitoring. The study concludes that Business Intelligence frameworks represent an effective alternative for strengthening data-driven university management."
+  },
+  {
+    "id": "234",
+    "title": "A DATA PRIVACY COMPLIANCE MANAGEMENT MODEL FOR PUBLIC INSTITUTIONS: AN ICN-BASED FRAMEWORK ALIGNED WITH ECUADOR’S LOPDP",
+    "authors": "Carlos Caraguay",
+    "track": "Technology and Engineering Management",
+    "keywords": [
+      "DATA PRIVACY COMPLIANCE MANAGEMENT MODEL FOR PUBLIC INSTITUTIONS",
+      "ECUADOR’S LOPDP",
+      "ICN-BASED FRAMEWORK ALIGNED",
+      "ICN",
+      "Instrument"
+    ],
+    "shortAbstract": "Ecuador’s Organic Law on Personal Data Protection (LOPDP, 2021) establishes legally binding obligations for public institutions, yet compliance remains…",
+    "abstract": "Ecuador’s Organic Law on Personal Data Protection (LOPDP, 2021) establishes legally binding obligations for public institutions, yet compliance remains fragmented due to the absence of sector-specific management models. This paper proposes a Data Privacy Compliance Management Model (DP-CMM) designed to guide Ecuadorian public institutions toward systematic LOPDP adherence. The model integrates Design Science Research (DSR) as its epistemological backbone and relies on a multiple case-study protocol applied to three public institutions in Loja, Ecuador. The central instrument is the Normative Compliance Index (ICN), a 28-item, three-dimensional Likert-scale tool (range 0–100) validated through Aiken’s V coefficient with a panel of 3–5 domain experts. The framework aligns with internationally recognized standards including ISO/IEC 27001:2022, COBIT 2019, NIST CSF 2.0, and TOGAF 10. The paper presents the theoretical foundations, the ICN instrument design, and the three-phase validation protocol. Empirical results from the pilot are ongoing and will be reported in subsequent work. This contribution addresses a critical gap in Latin American public e-governance by providing a replicable, standards-aligned compliance artifact."
+  },
+  {
+    "id": "266",
+    "title": "Do specialized chatbots outperform free AI tools? A comparative study among higher education students",
+    "authors": "Sandra Nadyedja Landázuri Espinoza",
+    "track": "Technology and Engineering Management",
+    "keywords": [
+      "Chatbot",
+      "Course",
+      "AI",
+      "University students",
+      "Perceived learning"
+    ],
+    "shortAbstract": "Abstract— This study compares the perceived learning outcomes between university students using an institutional chatbot specific to their discipline and…",
+    "abstract": "Abstract— This study compares the perceived learning outcomes between university students using an institutional chatbot specific to their discipline and those using free, general-purpose AI tools. A cross-sectional mixed-methods design was applied to 84 third-year students at an Ecuadorian university. All 84 students were enrolled in a Statistics course and used freely available AI tools (ChatGPT, Claude, Copilot, among others). Of these, 74 were enrolled in a Marketing course and had access to a chatbot trained exclusively on the course content (created on the POE platform). Eight outcome variables were measured using five-point Likert-type items, administered at the end of the semester, and compared using independent samples t-tests. The results show that the chatbot group reported significantly higher course satisfaction (t(156) = 5.77, p < .001, d = 0.92). Conversely, the free AI group showed significantly higher scores in academic performance support (d = 0.44), conceptual understanding supported by relevant examples (d = 0.48), and availability as a learning support tool outside of class time (d = 0.32). No significant differences were found in perceived learning, tool usefulness, teacher dependence, or critical thinking. These findings suggest a trade-off between disciplinary specialization and explanatory breadth, with practical implications for the integration of AI in Latin American higher education."
+  },
+  {
+    "id": "31",
+    "title": "Multi-Pulse Drive Migration for Harmonic Mitigation in ESP Systems",
+    "authors": "Jonathan Michael Gonzalez Espinosa",
+    "track": "Industry Applications and Reliability",
+    "keywords": [
+      "Harmonic Mitigation",
+      "Multi-Pulse Drive Migration",
+      "Six-pulse",
+      "Twelve-pulse drives",
+      "Properly configured"
+    ],
+    "shortAbstract": "This paper evaluates harmonic mitigation in electric submersible pump (ESP) systems using field data from 43 variable-speed drives (VSDs) installed in an…",
+    "abstract": "This paper evaluates harmonic mitigation in electric submersible pump (ESP) systems using field data from 43 variable-speed drives (VSDs) installed in an Ecuadorian oil block. The fleet comprised 16 six-pulse drives, 14 twelve-pulse drives effectively operating as six-pulse units, and 13 properly configured twelve-pulse drives. The fleet diagnosis grouped the records by topology and summarized current total harmonic distortion (ITHD), voltage total harmonic distortion (VTHD), and displacement power factor (DPF). A migration case then compared equivalent six- and twenty-four-pulse configurations. Mean ITHD was 40.6% for six-pulse drives and 41.7% for twelve-pulse drives operating as six-pulse units, versus 9.53% for properly configured twelve-pulse drives. In the six- to twenty- four-pulse comparison, average line current decreased from 0.251 kA to 0.155 kA, input apparent power from 0.210 MVA to 0.131 MVA, and total power factor increased from 0.621 to 0.984, whereas active power changed only from 0.131 to 0.129 MW. Because measurements were not taken at a common point of common coupling (PCC) and short-circuit data were unavailable, the results are interpreted as equipment-level indicators rather than as a formal IEEE 519 compliance demonstration. Even with that scope, the study shows that multi-pulse migration yields greater improvement than partial mitigation measures and provides a substantial apparent-capacity margin in ESP installations."
+  },
+  {
+    "id": "47",
+    "title": "An Improvement Model Based on Poka-Yoke 4.0 and TPM 4.0 for Defect Reduction in Injection Molding within the Pharmaceutical Industry",
+    "authors": "Melanie Hospina; Genesis Caqui; Gabriela Cauvi",
+    "track": "Industry Applications and Reliability",
+    "keywords": [
+      "Injection Molding within the Pharmaceutical Industry",
+      "Poka-Yoke 4.0 and TPM 4.0",
+      "Defect Reduction",
+      "Maintenance",
+      "Control calibration"
+    ],
+    "shortAbstract": "This study proposes an improvement model aimed at reducing the high rate of defective products in the injection molding process of bottles in a…",
+    "abstract": "This study proposes an improvement model aimed at reducing the high rate of defective products in the injection molding process of bottles in a pharmaceutical company. The initial diagnosis revealed a defect rate of 10.34%, exceeding industry standards, mainly attributed to intermittent parameter control, calibration errors, and maintenance deficiencies. To address this issue, the integration of tools such as Statistical Process Control (SPC), Total Productive Maintenance (TPM), and Poka-Yoke systems is proposed under an Industry 4.0 approach. The expected results indicate a significant reduction in defects, improved equipment reliability, and enhanced operational efficiency. This model contributes to improving quality and competitiveness in the pharmaceutical industry."
+  },
+  {
+    "id": "48",
+    "title": "TPM-SMED-Standardized Work Model with IoT- Based Predictive Maintenance and Industry 4.0 for Optimizing Operational Efficiency in Bronze Bushing Machining in a Metalworking SME",
+    "authors": "Reich Sanchez; Luciana Montes; Gabriela Cauvi",
+    "track": "Industry Applications and Reliability",
+    "keywords": [
+      "Bronze Bushing Machining",
+      "Metalworking SME",
+      "Optimizing Operational Efficiency",
+      "Soles",
+      "Efficiency standard"
+    ],
+    "shortAbstract": "Low operational efficiency (77.94%) in the bronze bushing machining process at a metalworking SME in Lima, Peru, generated a technical gap of 7.25…",
+    "abstract": "Low operational efficiency (77.94%) in the bronze bushing machining process at a metalworking SME in Lima, Peru, generated a technical gap of 7.25 percentage points below the sector operational efficiency standard of 85% and annual economic losses of 70,161.50 Peruvian soles, equivalent to 12.55% of total revenue. Root causes include excessive CNC lathe and precision grinder setup times, non-compliance with maintenance schedules, dimensional variability-driven rework, and inspection and delivery delays. To address this, an integrated model comprising four sequential components was designed: organizational change management under the ADKAR model, standardized work through standard operating procedures and Andon systems, setup optimization via SMED, and predictive maintenance with IoT sensors on ESP32 microcontrollers connected to the ThingSpeak platform for real-time monitoring of temperature, vibration, and electric current, aligned with Industry 4.0 principles. Validation through discrete-event simulation in Arena software with 100 replications over a 2,880-hour horizon demonstrated an operational efficiency improvement from 77.94% to 86.17%, exceeding the sector operational efficiency standard of 85%; a cycle time reduction from 5.1 to 3.8 hours (25.49%); a machine availability increases from 89.50% to 95.20%; and a rework rate stabilization at 3.20%. Economic evaluation confirmed project viability with a net present value of 41,561 Peruvian soles, an internal rate of return of 52% — 3.6 times the weighted average cost of capital of 14.35% — and a payback period of 1.5 years, validating the model replicability in other metalworking SMEs facing similar operational inefficiency challenges."
+  },
+  {
+    "id": "49",
+    "title": "Improvement proposal using TPM, 5S and Poka-Yoke with Industry 4.0 support for order fulfillment in a wood pallet SME",
+    "authors": "Fernando Maradiegue",
+    "track": "Industry Applications and Reliability",
+    "keywords": [
+      "TPM, 5S and Poka-Yoke",
+      "Industry 4.0 support",
+      "order fulfillment",
+      "OTIF",
+      "MILP-Pallet"
+    ],
+    "shortAbstract": "Abstract—This paper presents MILP-Pallet (Integrated Model Lean-Pallet), a Lean-Industry 4.0 methodology, which automates Predictive Analytic Insights…",
+    "abstract": "Abstract—This paper presents MILP-Pallet (Integrated Model Lean-Pallet), a Lean-Industry 4.0 methodology, which automates Predictive Analytic Insights with Edge- Computing and Anomaly Detection to measure the effectiveness of the Integrated Lean Tactics of Total Productive Maintenance (TPM), 5S, and Poka-Yoke coupled with Low-Cost IoT Sensors and Digital Dashboards to enhance the On-Time In-Full (OTIF) metrics of an SME in Peru and Ecuador have average OTIF of 59.8%, low-digitalization cases of 5, and a 1.0 International Hierarchy (IH) digitalization-maturity index, they are financially uncompetitive, reporting losses due to failing to reach a 90% world-class benchmark. The integrated deployment of TPM, 5S, and Poka-Yoke has been studied and published, yet no approaches have been reported that centers an OTIF approach on affordable Industry 4.0 enablers. MILP-Pallet addresses this gap though four sequential phases: (1) Diagnosis and Value Stream Mapping, (2) Lean Standardization through 5S, TPM, and Poka-Yoke, (3) Progressive IoT Digitalization, and (4) Consolidation via PDCA cycles, Validation combines twelve months of real plant data with discrete-event simulation and benchmarking of indexed literature from 2022 to 2025. Results project an OTIF improvement of +32.69 p.p. (42.31%  75%), OEE +13.4 p.p., MTBF +47.3%, MTTR -51.7%, and defect rate -53.75%"
+  },
+  {
+    "id": "50",
+    "title": "Lean Green Model and Industry 4.0 for Defect Reduction and Waste Valorization in Plywood Manufacturing",
+    "authors": "Fernando Maradiegue",
+    "track": "Industry Applications and Reliability",
+    "keywords": [
+      "Plywood Manufacturing",
+      "Defect Reduction and Waste Valorization",
+      "Lean Green Model and Industry 4.0",
+      "LCA",
+      "Batches"
+    ],
+    "shortAbstract": "Plywood manufacturing in emerging markets faces critical quality and sustainability challenges: up to 55% of processed volume is discarded and defect…",
+    "abstract": "Plywood manufacturing in emerging markets faces critical quality and sustainability challenges: up to 55% of processed volume is discarded and defect rates exceed 5%, increasing the need for reprocessing and the environmental footprint. Although tools such as RCM, SPC, DRP and LCA have been applied in the past, their standalone use limits sustainable improvements due to the capital, technology and digital maturity constraints of Latin American SMEs. This study presents MILG-Plywood, an integrated four-phase Lean Green model that combines RCM and FMECA to improve equipment reliability, SPC and machine learning to reduce variability, DRP, FIFO and ABC to optimize inventory, and LCA and waste valorization from a circular economy perspective. Validated at Triplay Martin S.A.C. on 7,539 annual batches with a defect rate of 27.98% and an economic impact of $215,644, the model predicts improvements in MTBF (+108.3%), MTTR (−50%), waste (−65.1%), energy consumption (−26.7%), out-of-control batches (−75%) and defect types (−80%). The conclusion is that the Lean Green architecture integrated with machine learning is a potential option for improving quality, competitiveness and sustainability in plywood manufacturing companies."
+  },
+  {
+    "id": "54",
+    "title": "Integrated Production Planning and Inventory Control Model with Machine Learning and Slotting to Improve Fill Rate in Artisanal Beverage MSMEs",
+    "authors": "Fernando Maradiegue",
+    "track": "Industry Applications and Reliability",
+    "keywords": [
+      "Artisanal Beverage MSMEs",
+      "Integrated Production Planning and Inventory Control Model",
+      "Machine Learning and Slotting to Improve Fill Rate",
+      "IPIC-MSME",
+      "Counting slotting"
+    ],
+    "shortAbstract": "Abstract–Peruvian artisanal beverage MSMEs suffer from repeated failures to fulfill orders. The Fill Rate for the organization in the study was 72.43%…",
+    "abstract": "Abstract–Peruvian artisanal beverage MSMEs suffer from repeated failures to fulfill orders. The Fill Rate for the organization in the study was 72.43% which is 23.57 percentage points below the industry norm of 96% and resulting in annual losses of USD 22,300 or 10.9% of revenue. Root-cause analysis traces 64.98% of failures to deficient demand planning and 31.65% to inaccurate inventory records. Existing literature applies aggregate production planning, master production scheduling, cycle counting, slotting, and 5S in isolation; no integrated, Fill-Rate-centered framework exists for low-digitalization MSMEs. This paper introduces IPIC-MSME (Integrated Planning and Intelligent Control Model for MSMEs), a two-component architecture coupling machine learning demand forecasting with APP and MPS for stockout reduction, and ABC-based cycle counting, slotting, 5S, and Power BI dashboards for inventory control. Validated through benchmarking analysis of 31,746 customer orders and Monte Carlo simulation (N = 1,000), the model projects a mean Fill Rate of 93.9%, approaching the 96% industry benchmark, stock out reduction from 27.57% to 10%, IRA improvement from 74.41% to 95%, and LRA improvement from 64.34% to 90%. Total investment stands at USD 10,400 with a nine-month payback period. IPIC-MSME delivers a low-cost, Industry 4.0-compatible competitive advantage for artisanal beverage MSMEs in emerging markets."
+  },
+  {
+    "id": "63",
+    "title": "Improvement model for On- Time Delivery (OTD) in suspension manufacturing: based on TPM Planned Maintenance - IoT in Machine Learning",
+    "authors": "Carlos Maceda; Daniela Cristobal; Carlos Baca",
+    "track": "Industry Applications and Reliability",
+    "keywords": [
+      "based on TPM Planned Maintenance - IoT",
+      "On- Time Delivery (OTD)",
+      "suspension manufacturing",
+      "Downtime",
+      "SLP"
+    ],
+    "shortAbstract": "The objective of this study is to improve On -Time Delivery (OTD) in the manufacturing of semi-trailer parts at a metalworking company, where delivery…",
+    "abstract": "The objective of this study is to improve On -Time Delivery (OTD) in the manufacturing of semi-trailer parts at a metalworking company, where delivery delays were caused by equipment failures, excessive setup times, unnecessary movements due to a poor layout, and a lack of standardized operating procedures. Initially, it was determined that only 62.91% of orders were delivered on time in 2024, representing a 17.09% technical gap compared to the industry standard. The proposed solution is based on the implementation of Industry 4.0 tools, such as TPM 4.0, SMED, SLP, and standardized work, with the aim of improving operational availability, reducing downtime, and optimizing workflow. Furthermore, IoT technologies were applied to monitor critical machines in real time, enabling the anticipation of failures and reducing unplanned downtime, resulting in a 10% improvement in equipment availability. Implementing the SMED methodology reduced setup times by approximately 35%, which in turn decreased unproductive hours by about 31.7% each month. Redesigning the layout with SLP reduced material handling time by 34%, optimizing workflow. Furthermore, implementing standardized work processes contributed to a 24.48% reduction in rework, improving final product quality and operational efficiency. As a result, the proposed model increased on-time delivery (OTD) from 62.91% to 85%, significantly reducing delivery delays. This improvement optimized productivity and efficiency, leading to greater customer satisfaction. This comprehensive approach establishes a solid foundation for continuous improvement, offering a replicable solution for similar companies within the metalworking sector."
+  },
+  {
+    "id": "148",
+    "title": "Integrated model based on Standard Work, Autonomous Maintenance, Planned Maintenance and IoT to improve the overall efficiency of equipment in a company in the plastics sector",
+    "authors": "Jorge Estelo-Marcos; Cristhian Lopez-Guzman; Iliana Macassi; Jose C. Alvarez Merino; Orkun Yildiz",
+    "track": "Industry Applications and Reliability",
+    "keywords": [
+      "plastics sector",
+      "Planned Maintenance",
+      "Iot autonomous",
+      "Autonomous Maintenance",
+      "Maintenance standard"
+    ],
+    "shortAbstract": "In recent years, the plastics industry has faced a decline in overall equipment efficiency due to machinery shutdowns and rework. The objective of this…",
+    "abstract": "In recent years, the plastics industry has faced a decline in overall equipment efficiency due to machinery shutdowns and rework. The objective of this research is to propose a model to increase the overall efficiency of equipment in the production of advertising items in a company in the plastics sector, applying tools such as IoT, Autonomous Maintenance, Planned Maintenance and Standard Work. These approaches seek to transform the operation into a more reliable, agile and controlled system. A preliminary diagnosis identified deficiencies in autonomous and planned maintenance activities, as well as low performance levels and frequent interruptions in operations. The study proposes a comprehensive strategy based on the integration of advanced technologies, with the aim of improving availability, performance, quality and OEE. The results show that implementing these strategies can improve overall equipment efficiency by 85%, aligning with industry standards. Therefore, it is highlighted that the integration of IoT, Autonomous Maintenance, Standard Work, and Planned Maintenance can be significantly improved."
+  },
+  {
+    "id": "245",
+    "title": "Methodological Proposal for Interpreting Dielectric Oil Test Results in Power Transformers",
+    "authors": "Alexander Cespedes; Jimmy Vásquez; Karent Martínez",
+    "track": "Industry Applications and Reliability",
+    "keywords": [
+      "Interpreting Dielectric Oil Test Results",
+      "Power Transformers",
+      "Maintenance",
+      "Conclusions",
+      "Physicochemical"
+    ],
+    "shortAbstract": "This work presents a methodological guide for analyzing and interpreting physicochemical tests of dielectric oil to improve consistency between laboratory…",
+    "abstract": "This work presents a methodological guide for analyzing and interpreting physicochemical tests of dielectric oil to improve consistency between laboratory results and maintenance recommendations for oil-immersed transformers. The methodology integrates technical criteria, standards from ASTM, IEC, and IEEE, and operational practices commonly used in Colombia. It emphasizes correlating multiple test types and interpreting results within the context of the transformer’s actual operating conditions, avoiding isolated evaluations that may lead to inaccurate conclusions. The guide aims to support more reliable diagnostics, better-informed maintenance decisions, and comprehensive insulation management. A brief technical description is provided for each physicochemical test included, followed by an association between test results and recommended maintenance actions. Key technical parameters and procedural steps of the methodology are outlined, including a case study. Finally, the main conclusions of the work are discussed, highlighting the guide’s role as a practical tool for improving transformer maintenance and insulation assessment."
+  },
+  {
+    "id": "263",
+    "title": "Migration of MOVIMOT Decentralized Drives to a Centralized Architecture with Danfoss VLT FC 280 Variable Frequency Drives via PROFIBUS-DP",
+    "authors": "Efrén Herrera Muentes; Erick Briones Chasi; Jhon Larreategui Ulloa; Efrén Herrera Baños; Luis Herrera Baños; Holger Cevallos Ulloa",
+    "track": "Industry Applications and Reliability",
+    "keywords": [
+      "Danfoss VLT FC 280 Variable Frequency Drives",
+      "Migration of MOVIMOT Decentralized Drives to a Centralized Architecture",
+      "PROFIBUS-DP",
+      "PLC",
+      "Automatic"
+    ],
+    "shortAbstract": "This paper presents a reliability-oriented migration of an industrial palletizing system from six MOVIMOT decentralized integrated motor drives to a…",
+    "abstract": "This paper presents a reliability-oriented migration of an industrial palletizing system from six MOVIMOT decentralized integrated motor drives to a centralized architecture based on Danfoss VLT FC 280 variable frequency drives and independent gearmotors. The industrial problem was the direct exposure of embedded power electronics to thermal gradients and mechanical vibration, which increased corrective-maintenance cost, spare-part dependency, and restoration time. The proposed solution relocates the power-conversion stage to a forced-ventilated cabinet while preserving the Siemens S7-300 PLC, the PROFIBUS-DP infrastructure, and the original sequential control logic. The methodology included IEC-based electrical protection design, FC 280 parameterization through MCT 10 and Automatic Motor Adaptation, GSD-based PROFIBUS-DP configuration, PPO Type 6 process-data exchange, and conservative PLC variable remapping. Operational validation covered node recognition, cyclic control-word/status-word monitoring, manual and automatic start-up, ramp verification, and representative load trials on the physically installed motors. The maintenance comparison was normalized per corrective intervention using project service and procurement records: corrective-response time decreased from 120 to 2 days, estimated direct corrective-service cost decreased from at least USD 9,300 to at least USD 1,000, and the system operated with 1,200 mL bundles without overcurrent trips. These results indicate improved maintainability and availability without compromising process functionality."
+  },
+  {
+    "id": "320",
+    "title": "Development of a Drone-Based Image Acquisition System with Machine Learning for Binary Classification of Pitahaya Vegetation",
+    "authors": "Paúl Quinchuela",
+    "track": "Industry Applications and Reliability",
+    "keywords": [
+      "Binary Classification of Pitahaya Vegetation",
+      "Drone-Based Image Acquisition System",
+      "Machine Learning",
+      "Multispectral",
+      "Spectral"
+    ],
+    "shortAbstract": "Precision agriculture has emerged as a fundamental approach for optimizing crop management, particularly in regions where high-value tropical fruits…",
+    "abstract": "Precision agriculture has emerged as a fundamental approach for optimizing crop management, particularly in regions where high-value tropical fruits constitute a significant economic resource. This work presents the development of an integrated system for the acquisition of multispectral images through an Unmanned Aerial Vehicle (UAV) and their subsequent processing for the binary classification of pitahaya (Selenicereus megalanthus) vegetation into healthy and diseased plants using Machine Learning techniques. Image acquisition was performed using a DJI Mavic 3 Enterprise equipped with a 4$\\times$5 MP multispectral camera covering the Green (560 nm), Red (650 nm), Red-Edge (730 nm), and Near-Infrared (860 nm) bands. A dataset comprising 2,834 images of pitahaya crops was generated, capturing different phenological stages including vegetative development, flowering, and fruiting. The methodology was structured in two stages: the first focused on the detection of pitahaya plants using a YOLOv8-based model trained over 250 epochs with a batch size of 16, while the second stage applied the Normalized Difference Vegetation Index (NDVI) to assign a binary classification of plant health status based on spectral thresholds. The detection model achieved an F1-score of 0.90, a mean Average Precision (mAP) of 0.955, and an optimal confidence threshold near 0.65, demonstrating robust performance in identifying pitahaya plants within multispectral imagery. The integration of OpenCV Stitcher for RGB images and Photoshop for the R and NIR bands enabled orthomosaic generation while preserving the spectral information required for NDVI computation. It should be noted that the reported performance metrics evaluate only the YOLOv8 plant detection stage, whereas the NDVI-based healthy/diseased classification constitutes a spectral assessment criterion and was not independently validated through agronomic field labels or expert diagnosis. The proposed system therefore provides a practical tool for automated vegetation monitoring and supports precision agriculture by facilitating the identification of potential plant health anomalies for further inspection."
+  }
+];
 (function () {
   var PAGE_SIZE = 12;
 
@@ -24,11 +2861,11 @@
   function escapeHtml(s) {
     return (s || '')
       .toString()
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;');
+      .replace(/&/g, '&')
+      .replace(/</g, '<')
+      .replace(/>/g, '>')
+      .replace(/"/g, '"')
+      .replace(/'/g, "'")
   }
 
   function collectTracks(articles) {
