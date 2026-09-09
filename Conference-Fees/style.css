@@ -59,6 +59,22 @@
     text-align: center;
 }
 
+.doc-link {
+    color: #0b5ed7;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.doc-link:hover {
+    color: #084298;
+}
+
+.doc-link:focus-visible {
+    outline: 3px solid rgba(61, 165, 255, 0.35);
+    outline-offset: 2px;
+}
+
 table {
     border-collapse: collapse;
     width: 60%;

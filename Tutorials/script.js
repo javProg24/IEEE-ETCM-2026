@@ -35,6 +35,46 @@ const tutorials = [
         "Over the years, the research team has worked on major academic and industrial projects, resulting in more than 230 research articles in top-tier international peer-reviewed journals and conferences, more than 90 technical reports, and two patents — one filed by Psymetrix Ltd and the other by the University of Melbourne."
       ]
     }
+  },
+  {
+    title:"Building Critical Infrastructure Resilience Against Natural Hazards: Technical, Economic, and Social Aspects",
+    summary:[
+      "Critical infrastructure systems are increasingly exposed to natural hazards that can damage physical assets, disrupt essential services, and generate significant economic and social consequences. Earthquakes, volcanic eruptions, lahars, floods, wildfires, and extreme weather events can affect electricity, transportation, telecommunications, water supply, healthcare, and other interconnected systems.",
+      "This tutorial introduces the fundamental concepts, frameworks, and methods used to assess and strengthen critical infrastructure resilience. It integrates technical assessment with economic analysis, social considerations, and public policy, addressing topics such as hazard exposure, infrastructure vulnerability, system interdependencies, cascading failures, resilience metrics, service restoration, and risk-informed planning.",
+      "Real-world examples from Latin America, including applications to Ecuadorian infrastructure and power systems, will illustrate how resilience strategies can support infrastructure investment, emergency preparedness, institutional coordination, and the protection of communities and essential services. The tutorial is intended for participants from engineering, economics, policymaking, risk management, and related disciplines."
+    ],
+    duration:"4 hours (Theory and practical exercises)",
+    requirements:[
+      [
+        {text:"Install Python (Anaconda). Download — "},
+        {link:"anaconda.com/products/distribution", href:"https://www.anaconda.com/download/success?reg=skipped"}
+      ],
+      [
+        {text:"Microsoft Excel"}
+      ],
+      [
+        {text:"Install the "},
+        {code:"pandapower"},
+        {text:" module in your Python environment — "},
+        {link:"pandapower.org", href:"https://www.pandapower.org/"}
+      ],
+      [
+        {text:"Materials and practical exercises will be shared after registration"}
+      ]
+    ],
+    speaker:{
+      foto:"https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/Alex-Villamarin.jpg",
+      fotoPosition:"center 15%",
+      nombre:"Dr. Alex Villamarin",
+      rol:"Professor, Universidad de las Fuerzas Armadas ESPE, Ecuador",
+      country:"Ecuador",
+      bandera:"https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg",
+      bio:[
+        "Alex Villamarín is a Professor in the Department of Electrical, Electronics, and Telecommunications Engineering at Universidad de las Fuerzas Armadas ESPE. He holds a PhD and an MSc in Electrical Engineering from the University of Chile. He also serves as a Project Leader at the Instituto Sistemas Complejos de Ingeniería (ISCI) and as a researcher at the Centro de Energía ENLACE. In these roles, he has participated in and led research and consulting projects for industry associations, public institutions, and electric utilities in Chile",
+        "With over ten years of experience in the energy sector, his work focuses on power system planning and operation, infrastructure resilience to natural hazards, energy storage, and the long-term energy transition. His research has addressed the technical and socioeconomic impacts of disruptive events, including earthquakes, volcanic hazards, and extreme hydrological conditions. He currently leads several research and collaborative projects involving academic, public, and private-sector institutions in Ecuador.",
+        "He has authored more than 30 peer-reviewed journal and conference publications. He is an IEEE Senior Member, a member of the IEEE Ecuador Section Young Professionals Committee, Technical Program Lead for the IEEE PES Young Professionals Region 9 Committee, and Lead for Regions 1–7 and 9 of the IEEE PES Student Chapters Committee Event of the Month Program."
+      ]
+    }
   }
 ];
 
