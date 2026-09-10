@@ -183,6 +183,12 @@ code {
   flex-wrap: wrap;
 }
 
+.speaker + .speaker {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px dashed var(--line);
+}
+
 .speaker-photo-col {
   text-align: center;
   width: 150px;
@@ -267,6 +273,16 @@ code {
   margin-bottom: 0;
 }
 
+@media (min-width: 761px) {
+  .speaker-bio .collapsible-content {
+    max-height: none;
+  }
+
+  .speaker-bio .collapse-toggle {
+    display: none;
+  }
+}
+
 @media (max-width: 760px) {
   .page-shell {
     padding: 1rem 0.625rem 4rem;
@@ -279,5 +295,9 @@ code {
 
   .top-nav {
     padding: 1.1rem 1.4rem;
+  }
+
+  .speaker {
+    justify-content: center;
   }
 }
