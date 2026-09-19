@@ -64,6 +64,15 @@
       image: 'https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/Alejandra_Santamaria_CV-Alejandra-Santamaria.jpeg'
     },
     {
+      role: 'Tutorial Chair',
+      name: 'Ana Tapia-Rosero Ph.D.',
+      institution: 'Escuela Superior Politécnica del Litoral (ESPOL)',
+      email: 'atapia@espol.edu.ec',
+      linkedin: 'https://www.linkedin.com/in/ana-tapia-rosero-23851a14a',
+      scholar: 'https://scholar.google.com/citations?user=WodQF-QAAAAJ&hl=es&oi=sra',
+      image:'https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/Ana-Tapia-Rosero-Ph.D.jpg'
+    },
+    {
       role: 'Financiar chair',
       name: 'Alcibar Homero Yanez Escobar',
       institution: 'Universidad de Málaga',
@@ -102,11 +111,17 @@
       return '';
     }
 
-    if (/^https?:\/\//i.test(url)) {
+    var lower = url.toLowerCase();
+
+    if (lower.indexOf('http://') === 0 || lower.indexOf('https://') === 0) {
       return url;
     }
 
-    return 'https://' + url.replace(/^\/+/, '');
+    while (url.charAt(0) === '/') {
+      url = url.slice(1);
+    }
+
+    return 'https://' + url;
   }
 
   function createCard(member) {
@@ -180,15 +195,16 @@
     modalRole.textContent = decodeHTML(member.role);
     modalName.textContent = decodeHTML(member.name);
     modalInstitution.textContent = decodeHTML(member.institution || 'Institution pending');
-    modalEmail.textContent = decodeHTML(member.email);
-    if (member.email && member.email !== 'Not available') {
-      modalEmail.href = 'mailto:' + member.email;
-      modalEmail.classList.remove('is-disabled');
-      modalEmail.setAttribute('aria-disabled', 'false');
-    } else {
+    var email = decodeHTML(member.email || '');
+    modalEmail.textContent = email;
+    if (!email || email === 'Not available') {
       modalEmail.removeAttribute('href');
       modalEmail.classList.add('is-disabled');
       modalEmail.setAttribute('aria-disabled', 'true');
+    } else {
+      modalEmail.href = 'mailto:' + email;
+      modalEmail.classList.remove('is-disabled');
+      modalEmail.setAttribute('aria-disabled', 'false');
     }
     setLink(modalLinkedin, member.linkedin, 'LinkedIn Profile');
     setLink(modalScholar, member.scholar, 'Google Scholar Profile');
@@ -216,7 +232,7 @@
     middleRow.appendChild(createCard(member));
   });
 
-  committee.slice(6, 9).forEach(function (member) {
+  committee.slice(6).forEach(function (member) {
     bottomRow.appendChild(createCard(member));
   });
 
@@ -225,8 +241,10 @@
   });
 
   document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
-      closeModal();
+    if (event.key !== 'Escape' || !modal.classList.contains('is-open')) {
+      return;
     }
+
+    closeModal();
   });
 })();
