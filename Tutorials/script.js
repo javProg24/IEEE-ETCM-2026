@@ -43,7 +43,7 @@ const tutorials = [
       "This tutorial introduces the fundamental concepts, frameworks, and methods used to assess and strengthen critical infrastructure resilience. It integrates technical assessment with economic analysis, social considerations, and public policy, addressing topics such as hazard exposure, infrastructure vulnerability, system interdependencies, cascading failures, resilience metrics, service restoration, and risk-informed planning.",
       "Real-world examples from Latin America, including applications to Ecuadorian infrastructure and power systems, will illustrate how resilience strategies can support infrastructure investment, emergency preparedness, institutional coordination, and the protection of communities and essential services. The tutorial is intended for participants from engineering, economics, policymaking, risk management, and related disciplines."
     ],
-    duration:"4 hours (Theory and practical exercises)",
+    duration:"3 hours (Theory and practical exercises)",
     requirements:[
       [
         {text:"Install Python (Anaconda). Download — "},
