@@ -14,7 +14,6 @@
   /* ---------- datos del programa ---------- */
   var PROGRAM_DATA = {
     "meta": {
-      "title": "Program at a Glance",
       "subtitle": "Four days of tutorials, keynotes, technical sessions and networking in Guayaquil, Ecuador — October 21–24, 2026.",
       "note": "Technical paper sessions run in parallel across different rooms, in 15-minute slots. Browse the approved papers on the Accepted Papers page.",
       "acceptedPapersUrl": "https://attend.ieee.org/etcm-2026/scientific-articles-catalog/"
