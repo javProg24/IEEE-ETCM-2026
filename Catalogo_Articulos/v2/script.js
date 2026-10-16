@@ -45,7 +45,7 @@
     'virtual 4': '#b8457a'
   };
 
-  var state = { data: null, day: null, query: '', room: '', track: '' };
+  var state = { data: null, day: null, query: '', room: '', track: '', slot: null };
   var root;
 
   /* ---------------- utilidades ---------------- */
@@ -158,14 +158,14 @@
       '</details>';
   }
 
-  function renderDayBody(day, filter) {
+  function renderDayBody(day, filter, openAll) {
     var blocks = blocksOf(day.sessions);
     var html = '';
     blocks.forEach(function (b) {
       var parts = [], total = 0;
       b.sessions.forEach(function (s) {
         var ps = filter ? s.papers.filter(function (p) { return filter(p, s); }) : s.papers;
-        if (ps.length) { parts.push(renderSession(s, ps, !!filter)); total += ps.length; }
+        if (ps.length) { parts.push(renderSession(s, ps, !!filter || !!openAll)); total += ps.length; }
       });
       if (!parts.length) return;
       var mode = b.sessions[0].mode === 'virtual' ? 'Virtual sessions' : 'In-person sessions';
@@ -181,6 +181,39 @@
         '</div>';
     });
     return html;
+  }
+
+  // Bloque del día que contiene la hora pedida (o el más cercano)
+  function slotBlock(day, time) {
+    var blocks = blocksOf(day.sessions), best = null;
+    blocks.forEach(function (b) {
+      if (!best && time >= b.start && time < b.end) best = b;
+    });
+    if (!best) blocks.forEach(function (b) {
+      if (!best && b.start >= time) best = b;
+    });
+    return best || null;
+  }
+
+  function slotFromUrl() {
+    var q = window.location.search || '';
+    var day = (/[?&]day=([a-z]{3})/i.exec(q) || [])[1];
+    var time = (/[?&]time=(\d{1,2}:\d{2})/.exec(decodeURIComponent(q)) || [])[1];
+    if (!day || !time) return null;
+    if (time.length === 4) time = '0' + time;
+    var d = state.data.days.filter(function (x) { return x.id === day.toLowerCase(); })[0];
+    if (!d) return null;
+    var b = slotBlock(d, time);
+    return b ? { day: d.id, start: b.start, end: b.end } : null;
+  }
+
+  function clearSlotUrl() {
+    state.slot = null;
+    try {
+      if (window.history && history.replaceState) {
+        history.replaceState(null, '', window.location.pathname + window.location.hash);
+      }
+    } catch (e) {}
   }
 
   function renderTabs() {
@@ -270,6 +303,23 @@
   function renderBodyInner() {
     var body = root.querySelector('.ap-body');
     var info = root.querySelector('.ap-result');
+    if (!hasFilters() && state.slot) {
+      var sd = state.data.days.filter(function (d) { return d.id === state.slot.day; })[0];
+      var sl = state.slot;
+      var inSlot = { day: sd.id, sessions: sd.sessions.filter(function (s) {
+        return s.start >= sl.start && s.start < sl.end;
+      }) };
+      var cnt = inSlot.sessions.reduce(function (n, s) { return n + s.papers.length; }, 0);
+      // Vista enfocada: solo los papers de la franja; el resto de la interfaz se oculta (CSS .is-slot)
+      root.classList.add('is-slot');
+      info.innerHTML =
+        '<span class="ap-slot-title">' + esc(sd.weekday + ', ' + sd.dateLabel) + ' \u00b7 ' + esc(dash(sl.start, sl.end)) + '</span>' +
+        '<span class="ap-slot-meta">' + esc(sd.venue) + ' \u00b7 ' +
+          plural(inSlot.sessions.length, 'parallel room') + ' \u00b7 ' + plural(cnt, 'paper') + '</span>';
+      body.innerHTML = renderDayBody(inSlot, null, true);
+      return;
+    }
+    root.classList.remove('is-slot');
     if (!hasFilters()) {
       var day = state.data.days.filter(function (d) { return d.id === state.day; })[0];
       info.innerHTML = '<strong>' + esc(day.weekday + ', ' + day.dateLabel) + '</strong> · ' +
@@ -328,6 +378,7 @@
     input.addEventListener('input', function () {
       clearTimeout(timer);
       timer = setTimeout(function () {
+        clearSlotUrl();
         state.query = input.value;
         root.querySelector('.ap-tabs').innerHTML = renderTabs();
         renderBody();
@@ -339,14 +390,16 @@
       root.querySelector('.ap-tabs').innerHTML = renderTabs();
       renderBody();
     }
-    roomSel.addEventListener('change', function () { state.room = roomSel.value; refresh(); });
-    trackSel.addEventListener('change', function () { state.track = trackSel.value; refresh(); });
+    roomSel.addEventListener('change', function () { clearSlotUrl(); state.room = roomSel.value; refresh(); });
+    trackSel.addEventListener('change', function () { clearSlotUrl(); state.track = trackSel.value; refresh(); });
     function clearFilters() {
       state.query = ''; state.room = ''; state.track = '';
       input.value = ''; roomSel.value = ''; trackSel.value = '';
     }
     root.querySelector('.ap-toolbar').addEventListener('click', function (e) {
-      if (e.target && e.target.className === 'ap-clear') { clearFilters(); refresh(); }
+      if (!e.target || !e.target.classList) return;
+      if (e.target.classList.contains('ap-fullday')) { clearSlotUrl(); refresh(); return; }
+      if (e.target.classList.contains('ap-clear')) { clearFilters(); refresh(); }
     });
     var toggleAll = root.querySelector('.ap-toggle-all');
     toggleAll.addEventListener('click', function () {
@@ -360,6 +413,7 @@
       var btn = e.target.closest ? e.target.closest('.ap-tab') : null;
       if (!btn) return;
       state.day = btn.getAttribute('data-day');
+      clearSlotUrl();
       clearFilters();
       refresh();
     });
@@ -382,7 +436,9 @@
   function init(data) {
     state.data = data;
     var hashDay = dayFromHash();
-    state.day = hashDay || data.days[0].id;
+    // ?day=thu&time=11:00 → solo los papers de esa franja (enlace desde el programa)
+    state.slot = hashDay ? null : slotFromUrl();
+    state.day = hashDay || (state.slot && state.slot.day) || data.days[0].id;
     render();
     if (hashDay) {
       var el = document.getElementById(window.location.hash.slice(1));

@@ -644,13 +644,21 @@
       '</div>';
   }
 
-  function renderRow(r, meta) {
+  // Enlace a Accepted Papers filtrado por día y hora del bloque (?day=thu&time=11:00)
+  function papersUrl(base, dayId, time) {
+    var start = (/(\d{1,2}:\d{2})/.exec(time || '') || [])[1];
+    if (!dayId || !start) return base;
+    return base + (base.indexOf('?') === -1 ? '?' : '&') +
+      'day=' + encodeURIComponent(dayId) + '&time=' + encodeURIComponent(start);
+  }
+
+  function renderRow(r, meta, dayId) {
     var type = r.type || 'item';
     var time = '<div class="pg-time">' + esc(r.time) + '</div>';
 
     if (type === 'parallel') {
       var btn = (r.papersLink && isReady(meta.acceptedPapersUrl))
-        ? '<a class="pg-btn" href="' + esc(meta.acceptedPapersUrl) + '">View accepted papers</a>' : '';
+        ? '<a class="pg-btn" href="' + esc(papersUrl(meta.acceptedPapersUrl, dayId, r.time)) + '">View accepted papers</a>' : '';
       return '<div class="pg-row pg-row-parallel" role="row">' + time +
         '<div class="pg-parallel" role="cell">' +
         '<div class="pg-parallel-label">Technical Paper Sessions <span>· parallel rooms</span></div>' +
@@ -686,7 +694,7 @@
       '<div class="pg-table" role="table" aria-label="' + esc(d.day + ', ' + d.date) + '">' +
       '<div class="pg-row pg-row-th" role="row"><div role="columnheader">Time</div>' +
       '<div role="columnheader">Activity</div><div role="columnheader">Location</div></div>' +
-      d.rows.map(function (r) { return renderRow(r, meta); }).join('') +
+      d.rows.map(function (r) { return renderRow(r, meta, d.id); }).join('') +
       '</div></section>';
   }
 

@@ -261,6 +261,19 @@
 #ieee-accepted .ap-loading, #ieee-accepted .ap-foot { color: var(--ink-soft) !important; font-size: 13px; margin-top: 18px; }
 #ieee-accepted .ap-loading { padding: 40px 0; text-align: center; }
 
+/* ---------- vista enfocada (?day=&time= desde el programa) ---------- */
+#ieee-accepted.is-slot .ap-header,
+#ieee-accepted.is-slot .ap-search,
+#ieee-accepted.is-slot .ap-tabs,
+#ieee-accepted.is-slot .ap-toggle-all,
+#ieee-accepted.is-slot .ap-foot,
+#ieee-accepted.is-slot .ap-bhead { display: none !important; }
+#ieee-accepted.is-slot .ap-toolbar { margin: 0 0 18px; padding-bottom: 14px; border-bottom: 1px solid var(--rule); }
+#ieee-accepted.is-slot .ap-result { display: flex; flex-direction: column; gap: 4px; }
+#ieee-accepted .ap-slot-title { font-size: 22px; font-weight: 700; color: var(--navy) !important; line-height: 1.3; }
+#ieee-accepted .ap-slot-meta { font-size: 14px; color: var(--ink-soft) !important; }
+#ieee-accepted.is-slot .ap-block { margin-top: 0; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 860px) {
   #ieee-accepted .ap-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
