@@ -1,0 +1,280 @@
+/* IEEE ETCM 2026 — Accepted Papers (v2, chronological)
+   Todo scoped en #ieee-accepted; !important en propiedades visuales para resistir el tema */
+
+#ieee-accepted {
+  --navy: #0a1b38;
+  --accent: #0f5fa8;
+  --accent-dark: #0c4c86;
+  --gold: #e0a100;
+  --ink: #1d2530;
+  --ink-soft: #59626f;
+  --rule: #d7dde5;
+  --soft: #f3f6fa;
+  --head: #e8eff7;
+
+  box-sizing: border-box;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 0 56px;
+  background: #fff !important;
+  color: var(--ink) !important;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
+  font-size: 15px;
+  line-height: 1.5;
+}
+#ieee-accepted *, #ieee-accepted *::before, #ieee-accepted *::after { box-sizing: border-box; }
+#ieee-accepted p, #ieee-accepted ul, #ieee-accepted h2, #ieee-accepted h3 { margin: 0; padding: 0; }
+
+/* ---------- header ---------- */
+#ieee-accepted .ap-header {
+  background: var(--navy) !important;
+  color: #fff !important;
+  padding: 36px 32px;
+  border-radius: 2px !important;
+}
+#ieee-accepted .ap-sub {
+  color: rgba(255,255,255,.85) !important;
+  max-width: 60ch;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ---------- search ---------- */
+#ieee-accepted .ap-search { margin-top: 22px; }
+#ieee-accepted .ap-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px !important;
+  border: 1px solid var(--rule) !important;
+  border-radius: 2px !important;
+  background: #fff !important;
+  color: var(--ink) !important;
+  font: inherit !important;
+  font-size: 15px !important;
+  box-shadow: none !important;
+  outline: none;
+}
+#ieee-accepted .ap-input:focus { border-color: var(--accent) !important; box-shadow: 0 0 0 3px rgba(15,95,168,.15) !important; }
+
+#ieee-accepted .ap-filters { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+#ieee-accepted .ap-field { display: flex; align-items: center; gap: 10px; margin: 0 !important; }
+#ieee-accepted .ap-field > span {
+  flex: none; font-size: 12px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase !important; color: var(--ink-soft) !important;
+}
+#ieee-accepted .ap-select {
+  flex: 1; min-width: 0; width: 100%; height: 42px;
+  padding: 0 36px 0 12px !important; margin: 0 !important;
+  border: 1px solid var(--rule) !important; border-radius: 2px !important;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230c4c86' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 12px center !important;
+  color: var(--ink) !important; font: inherit !important; font-size: 14px !important;
+  -webkit-appearance: none; -moz-appearance: none; appearance: none;
+  box-shadow: none !important; cursor: pointer; text-transform: none !important;
+}
+#ieee-accepted .ap-select:focus { outline: none; border-color: var(--accent) !important; box-shadow: 0 0 0 3px rgba(15,95,168,.15) !important; }
+#ieee-accepted .ap-clear {
+  margin-left: 6px; padding: 0 !important; border: 0 !important; background: none !important;
+  color: var(--accent) !important; font: inherit !important; font-size: 13px !important; font-weight: 600 !important;
+  text-decoration: underline !important; cursor: pointer; text-transform: none !important; box-shadow: none !important;
+}
+#ieee-accepted .ap-tab.is-empty { opacity: .5; }
+
+/* ---------- day tabs ---------- */
+#ieee-accepted .ap-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--rule);
+}
+#ieee-accepted .ap-tab {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+  padding: 14px 16px !important;
+  background: #fff !important;
+  border: 1px solid var(--rule) !important;
+  border-bottom: 3px solid transparent !important;
+  border-radius: 6px !important;
+  color: var(--ink) !important;
+  text-align: left;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  cursor: pointer;
+  font: inherit !important;
+  box-shadow: none !important;
+  transition: background .15s, border-color .15s;
+}
+#ieee-accepted .ap-tab:hover { background: var(--soft) !important; }
+#ieee-accepted .ap-tab.is-active {
+  background: var(--head) !important;
+  border-color: #b9cce0 !important;
+  border-bottom-color: var(--gold) !important;
+}
+#ieee-accepted .ap-tday {
+  font-size: 18px; font-weight: 700; text-transform: uppercase !important;
+  color: var(--navy) !important; letter-spacing: .01em;
+}
+#ieee-accepted .ap-tdate { font-size: 12.5px; color: var(--ink-soft) !important; }
+#ieee-accepted .ap-tab.is-active .ap-tdate { color: var(--accent-dark) !important; font-weight: 500; }
+#ieee-accepted .ap-tmode {
+  margin-top: 4px; font-size: 10.5px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase !important; color: var(--ink-soft) !important;
+}
+
+#ieee-accepted .ap-result { margin: 16px 0 6px; color: var(--ink-soft) !important; font-size: 14px; }
+#ieee-accepted .ap-result strong { color: var(--ink) !important; }
+#ieee-accepted .ap-dayhead {
+  margin: 28px 0 4px !important; font-size: 20px !important; font-weight: 700 !important;
+  color: var(--navy) !important; text-transform: none !important;
+}
+
+/* ---------- time block ---------- */
+#ieee-accepted .ap-block { margin-top: 22px; }
+#ieee-accepted .ap-bhead {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px;
+  padding-bottom: 10px; margin-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+}
+#ieee-accepted .ap-blabel {
+  font-size: 15px; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase !important; color: var(--accent-dark) !important;
+}
+#ieee-accepted .ap-binfo { font-size: 13px; color: var(--ink-soft) !important; }
+
+/* ---------- session card ---------- */
+#ieee-accepted .ap-session {
+  border: 1px solid var(--rule) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  margin-bottom: 18px;
+  background: #fff !important;
+}
+#ieee-accepted .ap-shead {
+  display: grid; grid-template-columns: 1fr auto; gap: 8px 12px; align-items: center;
+  cursor: pointer; list-style: none; user-select: none;
+  padding: 14px 18px !important;
+  background: var(--head) !important;
+  border-left: 4px solid var(--room) !important;
+}
+#ieee-accepted .ap-shead::-webkit-details-marker { display: none; }
+#ieee-accepted .ap-shead::marker { content: ''; }
+#ieee-accepted .ap-shead:hover { background: #dde8f3 !important; }
+#ieee-accepted .ap-shead:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+#ieee-accepted .ap-session:not([open]) .ap-shead { border-bottom: 0 !important; }
+#ieee-accepted .ap-session[open] .ap-shead { border-bottom: 1px solid var(--rule) !important; }
+#ieee-accepted .ap-chev {
+  width: 28px; height: 28px; flex: none; border-radius: 50% !important;
+  background: #fff !important; border: 1px solid var(--rule) !important; position: relative;
+}
+#ieee-accepted .ap-chev::before {
+  content: ''; position: absolute; left: 50%; top: 50%;
+  width: 7px; height: 7px; margin: -5px 0 0 -4px;
+  border-right: 2px solid var(--accent-dark); border-bottom: 2px solid var(--accent-dark);
+  transform: rotate(45deg); transition: transform .2s;
+}
+#ieee-accepted .ap-session[open] .ap-chev::before { transform: rotate(-135deg); margin-top: -2px; }
+#ieee-accepted .ap-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 16px 0 6px; }
+#ieee-accepted .ap-toolbar .ap-result { margin: 0; }
+#ieee-accepted .ap-toggle-all {
+  flex: none; padding: 6px 14px !important; font: inherit !important; font-size: 13px !important; font-weight: 600 !important;
+  background: #fff !important; color: var(--accent-dark) !important;
+  border: 1px solid var(--rule) !important; border-radius: 999px !important;
+  text-transform: none !important; letter-spacing: normal !important; cursor: pointer; box-shadow: none !important;
+}
+#ieee-accepted .ap-toggle-all:hover { background: var(--soft) !important; }
+#ieee-accepted .ap-stitle { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+#ieee-accepted .ap-dot { width: 11px; height: 11px; border-radius: 50%; background: var(--room) !important; flex: none; }
+#ieee-accepted .ap-sname { font-weight: 700; font-size: 16px; color: var(--navy) !important; }
+#ieee-accepted .ap-room { font-size: 13px; font-weight: 600; color: var(--room) !important; }
+#ieee-accepted .ap-stime { font-size: 13px; color: var(--ink-soft) !important; }
+#ieee-accepted .ap-sright { display: flex; align-items: center; gap: 10px; }
+#ieee-accepted .ap-count {
+  font-size: 12px; font-weight: 600; padding: 4px 12px !important;
+  background: #fff !important; color: var(--accent-dark) !important;
+  border: 1px solid var(--rule) !important; border-radius: 999px !important; white-space: nowrap;
+}
+#ieee-accepted .ap-chips { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; }
+#ieee-accepted .ap-chip {
+  font-size: 11.5px; padding: 2px 9px !important;
+  background: rgba(255,255,255,.7) !important; color: var(--ink-soft) !important;
+  border: 1px solid var(--rule) !important; border-radius: 3px !important;
+}
+
+/* ---------- rows ---------- */
+#ieee-accepted .ap-thead,
+#ieee-accepted .ap-row {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 18px;
+  padding: 0 18px;
+}
+#ieee-accepted .ap-thead {
+  padding-top: 10px !important; padding-bottom: 10px !important;
+  font-size: 11px; font-weight: 600; letter-spacing: .1em;
+  text-transform: uppercase !important; color: var(--ink-soft) !important;
+  border-bottom: 1px solid var(--rule) !important;
+}
+#ieee-accepted .ap-row {
+  padding-top: 16px !important; padding-bottom: 16px !important;
+  border-bottom: 1px solid #e9edf2 !important;
+}
+#ieee-accepted .ap-row:last-child { border-bottom: 0 !important; }
+#ieee-accepted .ap-row:nth-of-type(odd) { background: #fafbfd !important; }
+#ieee-accepted .ap-row.is-target { background: #fff6dc !important; }
+#ieee-accepted .ap-time { font-weight: 700; font-size: 14px; color: var(--ink) !important; white-space: nowrap; font-variant-numeric: tabular-nums; }
+#ieee-accepted .ap-ptitle { font-weight: 500; font-size: 15px; color: var(--navy) !important; line-height: 1.4; }
+#ieee-accepted .ap-pmeta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; margin-top: 6px; }
+#ieee-accepted .ap-id {
+  font-size: 11px; font-weight: 700; padding: 2px 9px !important;
+  background: var(--accent-dark) !important; color: #fff !important;
+  border-radius: 999px !important; white-space: nowrap;
+}
+#ieee-accepted .ap-track { font-size: 12px; color: var(--ink-soft) !important; }
+
+#ieee-accepted .ap-abs { margin-top: 8px; }
+#ieee-accepted .ap-abs summary {
+  display: inline-block; cursor: pointer; list-style: none;
+  font-size: 12.5px; font-weight: 600; color: var(--accent) !important;
+}
+#ieee-accepted .ap-abs summary::-webkit-details-marker { display: none; }
+#ieee-accepted .ap-abs summary::before { content: '+ '; }
+#ieee-accepted .ap-abs[open] summary::before { content: '\2212  '; }
+#ieee-accepted .ap-abs p { margin-top: 8px !important; font-size: 13.5px; color: var(--ink) !important; line-height: 1.6; text-align: left; }
+#ieee-accepted .ap-kws { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+#ieee-accepted .ap-kw {
+  font-size: 11.5px; padding: 2px 8px !important;
+  border: 1px solid var(--rule) !important; border-radius: 3px !important;
+  color: var(--ink-soft) !important; background: #fff !important;
+}
+
+#ieee-accepted .ap-authors { font-size: 14px; color: var(--ink) !important; }
+#ieee-accepted .ap-author { white-space: normal; }
+#ieee-accepted sup { font-size: 10px; line-height: 0; color: var(--accent-dark) !important; margin-left: 1px; }
+#ieee-accepted .ap-affs { list-style: none !important; margin-top: 6px !important; }
+#ieee-accepted .ap-affs li {
+  list-style: none !important; margin: 0 0 2px !important; padding: 0 !important;
+  font-size: 12.5px; color: var(--ink-soft) !important; line-height: 1.4;
+}
+#ieee-accepted .ap-affs li::before { content: none !important; }
+#ieee-accepted .ap-affs sup { margin: 0 3px 0 0; }
+
+#ieee-accepted .ap-loading, #ieee-accepted .ap-foot { color: var(--ink-soft) !important; font-size: 13px; margin-top: 18px; }
+#ieee-accepted .ap-loading { padding: 40px 0; text-align: center; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 860px) {
+  #ieee-accepted .ap-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #ieee-accepted .ap-thead { display: none; }
+  #ieee-accepted .ap-row { grid-template-columns: 1fr; gap: 6px; }
+  #ieee-accepted .ap-people { padding-top: 4px; }
+}
+@media (max-width: 520px) {
+  #ieee-accepted .ap-filters { grid-template-columns: 1fr; }
+  #ieee-accepted .ap-field > span { width: 52px; }
+  #ieee-accepted .ap-header { padding: 26px 20px; }
+  #ieee-accepted .ap-tab { padding: 12px !important; }
+  #ieee-accepted .ap-tday { font-size: 16px; }
+  #ieee-accepted .ap-shead { padding: 12px 14px !important; }
+  #ieee-accepted .ap-toolbar { flex-wrap: wrap; }
+  #ieee-accepted .ap-row, #ieee-accepted .ap-thead { padding-left: 14px; padding-right: 14px; }
+}
