@@ -1306,7 +1306,7 @@ var ETCM_ARTICLES = [
   },
   {
     "id": "224",
-    "title": "Advances in BIM-IoT-Digital Twin Integration Toward Autonomous Smart Buildings",
+    "title": "BIM-IoT-Digital Twin Integration for Autonomous Smart Buildings: A Systematic Review",
     "authors": "Luis Antonio Andrade Matute; Juan Diego Belesaca; Fabian Astudillo-Salinas",
     "track": "Smart Cities & Mobility",
     "keywords": [
