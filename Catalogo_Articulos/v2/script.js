@@ -21,7 +21,7 @@
 
   // Fuentes del JSON en orden: carpeta del script (jsDelivr o local) y respaldos.
   // Subir DATA_VERSION cada vez que cambie catalogo-data.json (evita caché vieja).
-  var DATA_VERSION = '2026-10-16';
+  var DATA_VERSION = '2026-10-17';
   var REPO_PATH = 'javProg24/IEEE-ETCM-2026';
   var DATA_PATH = 'Catalogo_Articulos/v2/' + DATA_FILE;
   var DATA_SOURCES = [
