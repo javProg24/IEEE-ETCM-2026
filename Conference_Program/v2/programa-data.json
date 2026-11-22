@@ -11,6 +11,11 @@
       "description": "All four days on one page",
       "url": "https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/General-Program-ETCM-2026-v4.pdf"
     },
+    "agenda": {
+      "label": "ETCM 2026 Agenda",
+      "description": "Full conference agenda (PDF)",
+      "url": "REEMPLAZAR_URL_AGENDA"
+    },
     "groups": [
       {
         "mode": "virtual",

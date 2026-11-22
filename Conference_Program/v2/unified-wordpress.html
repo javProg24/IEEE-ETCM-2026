@@ -49,6 +49,10 @@
 }
 #ieee-glance .pg-dl-main { display: flex; }
 #ieee-glance .pg-dlgroups { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+#ieee-glance .pg-dl-agenda { grid-column: 1 / -1; display: flex; }
+#ieee-glance .pg-dl-wide { padding: 14px 18px !important; border-radius: 12px !important; }
+#ieee-glance .pg-dl-wide svg { width: 22px; height: 22px; }
+#ieee-glance .pg-dl-wide .pg-dl-text strong { font-size: 15px !important; }
 #ieee-glance .pg-dlgroup {
   padding: 14px !important; background: #fff !important;
   border: 1px solid var(--pg-line) !important; border-radius: 12px !important;
@@ -247,6 +251,11 @@
         "label": "General Program",
         "description": "All four days on one page",
         "url": "https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/General-Program-ETCM-2026-v4.pdf"
+      },
+      "agenda": {
+        "label": "ETCM 2026 Agenda",
+        "description": "Full conference agenda (PDF)",
+        "url": "REEMPLAZAR_URL_AGENDA"
       },
       "groups": [
         {
@@ -844,6 +853,7 @@
     return '<section class="pg-downloads" aria-label="Downloads">' +
       '<div class="pg-dl-main">' + dlLink(dl.general, 'pg-dl-primary') + '</div>' +
       '<div class="pg-dlgroups">' + groups + '</div>' +
+      (dl.agenda ? '<div class="pg-dl-agenda">' + dlLink(dl.agenda, 'pg-dl-wide') + '</div>' : '') +
       '</section>';
   }
 
@@ -956,6 +966,7 @@
       var pending = [];
       if (!isReady(d.meta.acceptedPapersUrl)) pending.push('meta.acceptedPapersUrl');
       if (!isReady(d.downloads.general.url)) pending.push('downloads.general');
+      if (d.downloads.agenda && !isReady(d.downloads.agenda.url)) pending.push('downloads.agenda');
       d.downloads.groups.forEach(function (g) {
         g.files.forEach(function (f) { if (!isReady(f.url)) pending.push(g.title + ' → ' + f.label); });
       });

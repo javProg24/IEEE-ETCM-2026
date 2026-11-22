@@ -24,6 +24,11 @@
         "description": "All four days on one page",
         "url": "https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/General-Program-ETCM-2026-v4.pdf"
       },
+      "agenda": {
+        "label": "ETCM 2026 Agenda",
+        "description": "Full conference agenda (PDF)",
+        "url": "https://attend.ieee.org/etcm-2026/wp-content/uploads/sites/825/Agenda-IEEE-ETCM-2026.pdf"
+      },
       "groups": [
         {
           "mode": "virtual",
@@ -620,6 +625,7 @@
     return '<section class="pg-downloads" aria-label="Downloads">' +
       '<div class="pg-dl-main">' + dlLink(dl.general, 'pg-dl-primary') + '</div>' +
       '<div class="pg-dlgroups">' + groups + '</div>' +
+      (dl.agenda ? '<div class="pg-dl-agenda">' + dlLink(dl.agenda, 'pg-dl-wide') + '</div>' : '') +
       '</section>';
   }
 
@@ -740,6 +746,7 @@
       var pending = [];
       if (!isReady(d.meta.acceptedPapersUrl)) pending.push('meta.acceptedPapersUrl');
       if (!isReady(d.downloads.general.url)) pending.push('downloads.general');
+      if (d.downloads.agenda && !isReady(d.downloads.agenda.url)) pending.push('downloads.agenda');
       d.downloads.groups.forEach(function (g) {
         g.files.forEach(function (f) { if (!isReady(f.url)) pending.push(g.title + ' → ' + f.label); });
       });
